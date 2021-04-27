@@ -19,8 +19,8 @@
         <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
-        <title>Raque - Education & Online Courses HTML Template</title>
-        <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <title>National Youth Council Sri Lanka</title>
+        <link rel="icon" type="image/png" href="assets/img/logo-nysc.png">
     </head>
     <body>
 
@@ -36,7 +36,7 @@
             <div class="top-header top-header-style-three">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-8 col-md-8">
+                        <div class="col-lg-9 col-md-8">
                             <ul class="top-header-contact-info">
                                 <li>
                                     Call:
@@ -51,23 +51,18 @@
                                 <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4">
+                        <div class="col-lg-3 col-md-4">
                             <ul class="top-header-contact-info">
-                                <li>
+                                <li style="float: right;">
                                     <a href="#">  සිංහල</a>
                                 </li>
                             </ul>
-                            <div class="top-header-social">
-
+                             
+                            <div class="top-header-social" style="float: right;">
                                 <a href="#">  English</a>
-
-
                             </div>
-                            <div class="top-header-social">
-
+                            <div class="top-header-social" style="float: right;">
                                 <a href="#">  தமிழ்</a>
-
-
                             </div>
 
                         </div>
@@ -80,8 +75,8 @@
                     <div class="container">
                         <div class="raque-responsive-menu">
                             <div class="logo">
-                                <a href="index-4.html">
-                                    <img src="assets/img/black-logo.png" alt="logo">
+                                <a href="#">
+                                    <img src="assets/img/black-logo.png" alt="logo" style="width: 50%">
                                 </a>
                             </div>
                         </div>
@@ -90,8 +85,8 @@
                 <div class="raque-nav">
                     <div class="container">
                         <nav class="navbar navbar-expand-md navbar-light">
-                            <a class="navbar-brand" href="index-4.html">
-                                <img src="assets/img/black-logo.png" alt="logo">
+                            <a class="navbar-brand" href="#">
+                                <img src="assets/img/black-logo.png" alt="logo" alt="logo" style="width: 50%">
                             </a>
                             <div class="collapse navbar-collapse mean-menu">
                                 <ul class="navbar-nav">
@@ -143,157 +138,47 @@
                 <div class="raque-nav">
                     <div class="container">
                         <nav class="navbar navbar-expand-md navbar-light">
-                            <a class="navbar-brand" href="index-4.html">
-                                <img src="assets/img/black-logo.png" alt="logo">
+                            <a class="navbar-brand" href="#">
+                                <img src="assets/img/black-logo.png" alt="logo"  style="width: 50%">
                             </a>
                             <div class="collapse navbar-collapse">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item"><a href="#" class="nav-link active">Home <i class='bx bx-chevron-down'></i></a>
+                                 <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="#" class="nav-link active">Home  </a>   </li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Division <i class='bx bx-chevron-right'></i></a>
                                         <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="index.html" class="nav-link">Distant Learning</a></li>
-                                            <li class="nav-item"><a href="index-2.html" class="nav-link">Course Portal Online</a></li>
-                                            <li class="nav-item"><a href="index-3.html" class="nav-link">Modern Teaching</a></li>
-                                            <li class="nav-item"><a href="index-4.html" class="nav-link active">Online Education Portal</a></li>
-                                            <li class="nav-item"><a href="index-5.html" class="nav-link">Online Schooling</a></li>
-                                            <li class="nav-item"><a href="index-6.html" class="nav-link">Learning School Online</a></li>
-                                            <li class="nav-item"><a href="index-7.html" class="nav-link">Remote Training Online</a></li>
-                                            <li class="nav-item"><a href="index-8.html" class="nav-link">Business Coaching</a></li>
-                                            <li class="nav-item"><a href="index-9.html" class="nav-link">Health Coaching</a></li>
-                                            <li class="nav-item"><a href="index-10.html" class="nav-link">Language School</a></li>
-                                            <li class="nav-item"><a href="index-11.html" class="nav-link">Gym Coaching</a></li>
+                                            <li class="nav-item"><a href="#">Administrative Division</a></li>
+                                            <li class="nav-item"><a href="#">Finance Division</a></li>
+                                            <li class="nav-item"><a href="#">Legal Investigation </a> </li>
+                                            <li class="nav-item"><a href="#">National Youth Awards</a></li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Pages <i class='bx bx-chevron-down'></i></a>
+                                    <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class='bx bx-chevron-right'></i></a>
                                         <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="#" class="nav-link">About <i class='bx bx-chevron-right'></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="about-style-1.html" class="nav-link">About Style 1</a></li>
-                                                    <li class="nav-item"><a href="about-style-2.html" class="nav-link">About Style 2</a></li>
-                                                    <li class="nav-item"><a href="about-style-3.html" class="nav-link">About Style 3</a></li>
-                                                    <li class="nav-item"><a href="about-style-4.html" class="nav-link">About Style 4</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Instructor <i class='bx bx-chevron-right'></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="team-1.html" class="nav-link">Instructor Style 1</a></li>
-                                                    <li class="nav-item"><a href="team-2.html" class="nav-link">Instructor Style 2</a></li>
-                                                    <li class="nav-item"><a href="team-3.html" class="nav-link">Instructor Style 3</a></li>
-                                                    <li class="nav-item"><a href="single-instructor.html" class="nav-link">Instructor Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Events <i class='bx bx-chevron-right'></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
-                                                    <li class="nav-item"><a href="single-events.html" class="nav-link">Events Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-                                            <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
-                                            <li class="nav-item"><a href="partner.html" class="nav-link">Partner</a></li>
-                                            <li class="nav-item"><a href="login.html" class="nav-link">Log In</a></li>
-                                            <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
-                                            <li class="nav-item"><a href="faqs.html" class="nav-link">FAQ's</a></li>
-                                            <li class="nav-item"><a href="error-404.html" class="nav-link">404 Error</a></li>
-                                            <li class="nav-item"><a href="coming-soon.html" class="nav-link">Comign Soon</a></li>
+                                            <li class="nav-item"><a href="#">Discover</a></li>
+                                            <li class="nav-item"><a href="#">Nearest Youth Office</a></li>
+                                            <li class="nav-item"><a href="#">Benefits  </a> </li>
+                                            <li class="nav-item"><a href="#">Youth Club News</a></li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses <i class='bx bx-chevron-down'></i></a>
+                                    <li class="nav-item"><a href="#" class="nav-link">Courses <i class='bx bx-chevron-right'></i></a>
                                         <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="#" class="nav-link">Courses Category <i class='bx bx-chevron-right'></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="courses-category-style-1.html" class="nav-link">Category Style 1</a></li>
-                                                    <li class="nav-item"><a href="courses-category-style-2.html" class="nav-link">Category Style 2</a></li>
-                                                    <li class="nav-item"><a href="courses-category-style-3.html" class="nav-link">Category Style 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="courses-list.html" class="nav-link">Courses List</a></li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Courses Grid Style 1 <i class='bx bx-chevron-right'></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="courses-2-columns-style-1.html" class="nav-link">2 Columns</a></li>
-                                                    <li class="nav-item"><a href="courses-3-columns-style-1.html" class="nav-link">3 Columns</a></li>
-                                                    <li class="nav-item"><a href="courses-4-columns-style-1.html" class="nav-link">4 Columns Full Width</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Courses Grid Style 2 <i class='bx bx-chevron-right'></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="courses-2-columns-style-2.html" class="nav-link">2 Columns</a></li>
-                                                    <li class="nav-item"><a href="courses-3-columns-style-2.html" class="nav-link">3 Columns</a></li>
-                                                    <li class="nav-item"><a href="courses-4-columns-style-2.html" class="nav-link">4 Columns Full Width</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Courses Grid Style 3 <i class='bx bx-chevron-right'></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="courses-2-columns-style-3.html" class="nav-link">2 Columns</a></li>
-                                                    <li class="nav-item"><a href="courses-3-columns-style-3.html" class="nav-link">3 Columns</a></li>
-                                                    <li class="nav-item"><a href="courses-4-columns-style-3.html" class="nav-link">4 Columns Full Width</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Courses Details <i class='bx bx-chevron-right'></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="single-courses.html" class="nav-link">Courses Details 1</a></li>
-                                                    <li class="nav-item"><a href="single-courses-2.html" class="nav-link">Courses Details 2</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="my-account.html" class="nav-link">My Account</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Find Courses</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Apply Now</a></li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Blog <i class='bx bx-chevron-down'></i></a>
+                                    <li class="nav-item"><a href="#" class="nav-link">Programs  </a>   </li>
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
                                         <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="blog-style-1.html" class="nav-link">Blog Grid</a></li>
-                                            <li class="nav-item"><a href="blog-style-2.html" class="nav-link">Blog Right Sidebar</a></li>
-                                            <li class="nav-item"><a href="blog-style-3.html" class="nav-link">Blog Grid Full Width</a></li>
-                                            <li class="nav-item"><a href="single-blog.html" class="nav-link">Blog Details</a></li>
+                                            <li class="nav-item"><a href="#">GYM</a> </li>
+                                            <li class="nav-item"><a href="#">Auditorium</a></li>
+                                            <li class="nav-item"><a href="#">Youth Band</a></li>
+                                            <li class="nav-item"><a href="#">Video Wall</a></li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Shop <i class='bx bx-chevron-down'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="shop-grid.html" class="nav-link">Shop Grid</a></li>
-                                            <li class="nav-item"><a href="shop-grid-fullwidth.html" class="nav-link">Shop Grid FullWidth</a></li>
-                                            <li class="nav-item"><a href="single-product.html" class="nav-link">Products Details</a></li>
-                                            <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
-                                            <li class="nav-item"><a href="checkout.html" class="nav-link">Checkout</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
                                 </ul>
-                                <div class="others-option">
-                                    <div class="dropdown language-switcher d-inline-block">
-                                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <img src="assets/img/us-flag.jpg" class="shadow" alt="image">
-                                            <span>Eng <i class='bx bx-chevron-down'></i></span>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/germany-flag.jpg" class="shadow-sm" alt="flag">
-                                                <span>Ger</span>
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/france-flag.jpg" class="shadow-sm" alt="flag">
-                                                <span>Fre</span>
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/spain-flag.jpg" class="shadow-sm" alt="flag">
-                                                <span>Spa</span>
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/russia-flag.jpg" class="shadow-sm" alt="flag">
-                                                <span>Rus</span>
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/italy-flag.jpg" class="shadow-sm" alt="flag">
-                                                <span>Ita</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <a href="cart.html" class="cart-wrapper-btn d-inline-block">
-                                        <i class='bx bx-cart-alt'></i>
-                                        <span>01</span>
-                                    </a>
-                                    <div class="search-box d-inline-block">
-                                        <i class='bx bx-search'></i>
-                                    </div>
-                                </div>
                             </div>
                         </nav>
                     </div>
@@ -1325,7 +1210,7 @@
 
                             <h3>Contact Us</h3>
                             <div class="logo " style="margin-bottom: 20px;">
-                                <a href="#" class="d-inline-block"><img src="assets/img/logo.png" alt="image"></a>
+                                <a href="#" class="d-inline-block"><img src="assets/img/logo-f.png" alt="image" style="width: 60%"></a>
                             </div>
                             <ul class="contact-us-link">
                                 <li>
