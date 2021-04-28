@@ -87,7 +87,7 @@ img {
     background-color: #e4feff;
 }
 .bg-f8e8e9 {
-    background-color: #f8e8e9;
+    background-color: #fdc6ca;
 }
 .bg-F7F9FB {
     background-color: #f7f9fb;
@@ -585,19 +585,20 @@ textarea.form-control {
 .top-header-social {
     display: inline-block;
     margin-left: 20px;
-    border-left: 1px solid #4a4646;
+/*    border-left: 1px solid #4a4646;*/
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
+    float: right
 }
 .top-header-social span {
     display: inline-block;
-    color: #ccc;
+    color: #fff;
     margin-right: 5px;
 }
 .top-header-social a {
     display: inline-block;
-    color: #ccc;
+    color: #fff;
     position: relative;
     top: 2px;
     font-size: 17px;
@@ -2573,7 +2574,7 @@ textarea.form-control {
 .single-boxes-item {
     padding: 40px;
     position: relative;
-    background-color: #f8f8f8;
+    background-color: #d4d4d4;
     z-index: 1;
     min-height: 210px;
 }
