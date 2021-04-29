@@ -2721,12 +2721,13 @@ textarea.form-control {
 .about-content h6 {
     margin-bottom: 14px;
     line-height: 1.6;
+    margin-top: 15px;
 }
 .about-content .features-text {
     margin-top: 25px;
 }
 .about-content .features-text h5 {
-    margin-bottom: 22px;
+    margin-bottom: 0px;
     position: relative;
     font-size: 17px;
     font-weight: 600;
@@ -3914,9 +3915,9 @@ textarea.form-control {
 }
 .funfacts-inner {
     overflow: hidden;
-    background-color: #ff1949;
+    background-color: #cdd0ff;
     border-radius: 15px;
-    padding: 50px;
+    padding: 15px;
     position: relative;
     z-index: 1;
     text-align: center;
