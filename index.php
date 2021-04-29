@@ -286,20 +286,20 @@
                                 <div class="others-option">
                                     <div class="dropdown language-switcher d-inline-block">
                                         <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <img src="assets/img/us-flag.jpg" class="shadow" alt="image">
+                                            <img src="assets/img/trans.png" class="shadow" alt="image">
                                             <span>සිංහල <i class="bx bx-chevron-down"></i></span>
                                         </button>
                                         <div class="dropdown-menu">
                                             <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/germany-flag.jpg" class="shadow-sm" alt="flag">
+                                                <img src="assets/img/trans.png" class="shadow-sm" alt="flag">
                                                 <span>English</span>
                                             </a>
                                             <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/germany-flag.jpg" class="shadow-sm" alt="flag">
+                                                <img src="assets/img/trans.png" class="shadow-sm" alt="flag">
                                                 <span>සිංහල </span>
                                             </a>
                                             <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/france-flag.jpg" class="shadow-sm" alt="flag">
+                                                <img src="assets/img/trans.png" class="shadow-sm" alt="flag">
                                                 <span> தமிழ</span>
                                             </a>
 
@@ -365,20 +365,20 @@
                                 <div class="others-option">
                                     <div class="dropdown language-switcher d-inline-block">
                                         <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <img src="assets/img/us-flag.jpg" class="shadow" alt="image">
+                                            <img src="assets/img/trans.png" class="shadow" alt="image">
                                             <span>සිංහල <i class="bx bx-chevron-down"></i></span>
                                         </button>
                                         <div class="dropdown-menu">
                                             <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/germany-flag.jpg" class="shadow-sm" alt="flag">
+                                                <img src="assets/img/trans.png" class="shadow-sm" alt="flag">
                                                 <span>English</span>
                                             </a>
                                             <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/germany-flag.jpg" class="shadow-sm" alt="flag">
+                                                <img src="assets/img/trans.png" class="shadow-sm" alt="flag">
                                                 <span>සිංහල </span>
                                             </a>
                                             <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/france-flag.jpg" class="shadow-sm" alt="flag">
+                                                <img src="assets/img/trans.png" class="shadow-sm" alt="flag">
                                                 <span> தமிழ</span>
                                             </a>
 
