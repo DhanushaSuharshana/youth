@@ -211,17 +211,17 @@
                             </ul>
                         </div>
                         <div class="col-lg-4">
-                            
-                               <div class="top-header-social">
-                                        <span>Follow us :</span>
-                                          <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
-                                        <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
-                                        <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                                        <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
-                                    </div>
-<!--                            <div class="top-header-btn">
-                                <a href="login.html" class="default-btn"><i class="bx bx-log-in icon-arrow before"></i><span class="label">Log In</span><i class="bx bx-log-in icon-arrow after"></i></a>
-                            </div>-->
+
+                            <div class="top-header-social">
+                                <span>Follow us :</span>
+                                <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                                <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                                <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                                <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            </div>
+                            <!--                            <div class="top-header-btn">
+                                                            <a href="login.html" class="default-btn"><i class="bx bx-log-in icon-arrow before"></i><span class="label">Log In</span><i class="bx bx-log-in icon-arrow after"></i></a>
+                                                        </div>-->
                         </div>
                     </div>
                 </div>
@@ -246,43 +246,43 @@
                                 <img src="assets/img/black-logo.png" alt="logo" style="width: 60%">
                             </a>
                             <div class="collapse navbar-collapse mean-menu" style="display: block;">
-                              <ul class="navbar-nav">
-                                            <li class="nav-item"><a href="#" class="nav-link active">Home  </a>   </li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Division <i class='bx bx-chevron-right'></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="#">Administrative Division</a></li>
-                                                    <li class="nav-item"><a href="#">Finance Division</a></li>
-                                                    <li class="nav-item"><a href="#">Legal Investigation </a> </li>
-                                                    <li class="nav-item"><a href="#">National Youth Awards</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class='bx bx-chevron-right'></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="#">Discover</a></li>
-                                                    <li class="nav-item"><a href="#">Nearest Youth Office</a></li>
-                                                    <li class="nav-item"><a href="#">Benefits  </a> </li>
-                                                    <li class="nav-item"><a href="#">Youth Club News</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Courses <i class='bx bx-chevron-right'></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="#" class="nav-link">Find Courses</a></li>
-                                                    <li class="nav-item"><a href="#" class="nav-link">Apply Now</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Programs  </a>   </li>
-        
-                                            <li class="nav-item"><a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="#">GYM</a> </li>
-                                                    <li class="nav-item"><a href="#">Auditorium</a></li>
-                                                    <li class="nav-item"><a href="#">Youth Band</a></li>
-                                                    <li class="nav-item"><a href="#">Video Wall</a></li>
-                                                </ul>
-                                            </li>
-        
-                                            <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="#" class="nav-link active">Home  </a>   </li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Division <i class='bx bx-chevron-right'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="#">Administrative Division</a></li>
+                                            <li class="nav-item"><a href="#">Finance Division</a></li>
+                                            <li class="nav-item"><a href="#">Legal Investigation </a> </li>
+                                            <li class="nav-item"><a href="#">National Youth Awards</a></li>
                                         </ul>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class='bx bx-chevron-right'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="#">Discover</a></li>
+                                            <li class="nav-item"><a href="#">Nearest Youth Office</a></li>
+                                            <li class="nav-item"><a href="#">Benefits  </a> </li>
+                                            <li class="nav-item"><a href="#">Youth Club News</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Courses <i class='bx bx-chevron-right'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="#" class="nav-link">Find Courses</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Apply Now</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Programs  </a>   </li>
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="#">GYM</a> </li>
+                                            <li class="nav-item"><a href="#">Auditorium</a></li>
+                                            <li class="nav-item"><a href="#">Youth Band</a></li>
+                                            <li class="nav-item"><a href="#">Video Wall</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                                </ul>
                                 <div class="others-option">
                                     <div class="dropdown language-switcher d-inline-block">
                                         <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -302,13 +302,13 @@
                                                 <img src="assets/img/france-flag.jpg" class="shadow-sm" alt="flag">
                                                 <span> தமிழ</span>
                                             </a>
-                                       
+
                                         </div>
                                     </div>
-                                  
-<!--                                    <div class="search-box d-inline-block">
-                                        <i class="bx bx-search"></i>
-                                    </div>-->
+
+                                    <!--                                    <div class="search-box d-inline-block">
+                                                                            <i class="bx bx-search"></i>
+                                                                        </div>-->
                                 </div>
                             </div>
                         </nav>
@@ -325,43 +325,43 @@
                                 <img src="assets/img/black-logo.png" alt="logo"style="width: 65%;">
                             </a>
                             <div class="collapse navbar-collapse">
-                            <ul class="navbar-nav">
-                                            <li class="nav-item"><a href="#" class="nav-link active">Home  </a>   </li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Division <i class="bx bx-chevron-right"></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="#">Administrative Division</a></li>
-                                                    <li class="nav-item"><a href="#">Finance Division</a></li>
-                                                    <li class="nav-item"><a href="#">Legal Investigation </a> </li>
-                                                    <li class="nav-item"><a href="#">National Youth Awards</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class="bx bx-chevron-right"></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="#">Discover</a></li>
-                                                    <li class="nav-item"><a href="#">Nearest Youth Office</a></li>
-                                                    <li class="nav-item"><a href="#">Benefits  </a> </li>
-                                                    <li class="nav-item"><a href="#">Youth Club News</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Courses <i class="bx bx-chevron-right"></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="#" class="nav-link">Find Courses</a></li>
-                                                    <li class="nav-item"><a href="#" class="nav-link">Apply Now</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Programs  </a>   </li>
-        
-                                            <li class="nav-item"><a href="#" class="nav-link">Services <i class="bx bx-chevron-down"></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a href="#">GYM</a> </li>
-                                                    <li class="nav-item"><a href="#">Auditorium</a></li>
-                                                    <li class="nav-item"><a href="#">Youth Band</a></li>
-                                                    <li class="nav-item"><a href="#">Video Wall</a></li>
-                                                </ul>
-                                            </li>
-        
-                                            <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="#" class="nav-link active">Home  </a>   </li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Division <i class="bx bx-chevron-right"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="#">Administrative Division</a></li>
+                                            <li class="nav-item"><a href="#">Finance Division</a></li>
+                                            <li class="nav-item"><a href="#">Legal Investigation </a> </li>
+                                            <li class="nav-item"><a href="#">National Youth Awards</a></li>
                                         </ul>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class="bx bx-chevron-right"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="#">Discover</a></li>
+                                            <li class="nav-item"><a href="#">Nearest Youth Office</a></li>
+                                            <li class="nav-item"><a href="#">Benefits  </a> </li>
+                                            <li class="nav-item"><a href="#">Youth Club News</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Courses <i class="bx bx-chevron-right"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="#" class="nav-link">Find Courses</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Apply Now</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Programs  </a>   </li>
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Services <i class="bx bx-chevron-down"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="#">GYM</a> </li>
+                                            <li class="nav-item"><a href="#">Auditorium</a></li>
+                                            <li class="nav-item"><a href="#">Youth Band</a></li>
+                                            <li class="nav-item"><a href="#">Video Wall</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                                </ul>
                                 <div class="others-option">
                                     <div class="dropdown language-switcher d-inline-block">
                                         <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -381,13 +381,13 @@
                                                 <img src="assets/img/france-flag.jpg" class="shadow-sm" alt="flag">
                                                 <span> தமிழ</span>
                                             </a>
-                                       
+
                                         </div>
                                     </div>
-                                  
-<!--                                    <div class="search-box d-inline-block">
-                                        <i class="bx bx-search"></i>
-                                    </div>-->
+
+                                    <!--                                    <div class="search-box d-inline-block">
+                                                                            <i class="bx bx-search"></i>
+                                                                        </div>-->
                                 </div>
                             </div>
                         </nav>
@@ -479,32 +479,43 @@
                 </div>
             </div>
         </section>
-
+      
         <section class="about-area ptb-100">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
+                        
                         <div class="about-image   ">
                             <img src="assets/img/about/1.jpg" class="shadow" alt="image">
                             <img src="assets/img/about/2.jpg" class="shadow" alt="image">
-<!--                            <div class=" text-box">
-                                <div class="inner">
-                                    Trusted By
-                                    <span>75K+</span>
-                                </div>
-                            </div>-->
+                            <!--                            <div class=" text-box">
+                                                            <div class="inner">
+                                                                Trusted By
+                                                                <span>75K+</span>
+                                                            </div>
+                                                        </div>-->
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
+                          <section class="funfacts-area">
+            <div class="">
+                <div class="funfacts-inner">
+                    <div class="row">
+                        <img src="assets/img/banner1.png">
+                    </div>
+<!--                    <div id="particles-js-circle-bubble"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1620" height="297"></canvas></div>
+-->                </div>
+            </div>
+        </section>
                         <div class="about-content">
-                            <span class="sub-title">About Us</span>
-                            <h2>Learn New Skills to go ahead for Your Career</h2>
+<!--                            <span class="sub-title">About Us</span>-->
+<!--                            <h2>Learn New Skills to go ahead for Your Career</h2>-->
                             <h6>We can support student forum 24/7 for national and international students.</h6>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia laborum.</p>
                             <div class="features-text">
                                 <h5><i class="bx bx-planet"></i>A place where you can achieve</h5>
 <!--                                <p>Education encompasses both the teaching and learning of knowledge, proper conduct, and technical competency.</p>
--->                            </div>
+                                -->                            </div>
                             <a href="courses-2-columns-style-1.html" class="default-btn"><i class="bx bx-move-horizontal icon-arrow before"></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
                         </div>
                     </div>
