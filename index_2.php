@@ -256,6 +256,7 @@
                 </div>
             </div>
         </div> 
+        
         <div class="hero-banner">
             <div class="d-table">
                 <div class="d-table-cell">
@@ -362,6 +363,7 @@
             </div>
             <div id="particles-js-circle-bubble-3"></div>
         </section>
+        
         <section class="offer-area pt-100 jarallax" data-jarallax='{"speed": 0.3}' >
             <div class="container">
                 <div class="section-title">

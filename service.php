@@ -19,42 +19,17 @@
         <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
-        <title>Raque - Education & Online Courses HTML Template</title>
+        <title>National </title>
         <link rel="icon" type="image/png" href="assets/img/favicon.png">
     </head>
     <body>
 
-        <div class="preloader">
-            <div class="loader">
-                <div class="shadow"></div>
-                <div class="box"></div>
-            </div>
-        </div>
-
+      
 
         <?php include './header.php'; ?>
 
 
-        <div class="search-overlay">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="search-overlay-layer"></div>
-                    <div class="search-overlay-layer"></div>
-                    <div class="search-overlay-layer"></div>
-                    <div class="search-overlay-close">
-                        <span class="search-overlay-close-line"></span>
-                        <span class="search-overlay-close-line"></span>
-                    </div>
-                    <div class="search-overlay-form">
-                        <form>
-                            <input type="text" class="input-search" placeholder="Search here...">
-                            <button type="submit"><i class='bx bx-search-alt'></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+       
 
         <div class="page-title-area item-bg2 jarallax" data-jarallax='{"speed": 0.3}'>
             <div class="container">
@@ -192,43 +167,43 @@
                                         Introduction
                                     </li>
                                     <li>
-                                        <span class="number">1.</span> Secret 1: Sell The Problem, Not The Solution (14:37)
+                                        <span class="number">1.</span> Other Services 
                                     </li>
                                     <li>
                                         Quiz - Secret 1: Sell The Problem, Not The Solution
                                     </li>
                                     <li>
-                                        <span class="number">2.</span> Secret 2: Think Like a Magazine, Not a Salesman (4:30)
+                                        <span class="number">2.</span> Other Services 
                                     </li>
                                     <li>
                                         Quiz - Secret 2: Think Like a Magazine, Not a Salesman
                                     </li>
                                     <li>
-                                        <span class="number">3.</span> Secret 3: Content Is King, but Consistency Is Queen (3:56)
+                                        <span class="number">3.</span> Other Services 
                                     </li>
                                     <li>
                                         Quiz - Secret 3: Content Is King, but Consistency Is Queen
                                     </li>
                                     <li>
-                                        <span class="number">4.</span> Secret 4: Punch Above Your Weight Class (11:00)
+                                        <span class="number">4.</span> Other Services 
                                     </li>
                                     <li>
-                                        <span class="number">5.</span> Secret 5: Ethically Steal Your Competitors' Customers (8:12)
+                                        <span class="number">5.</span> Other Services 
                                     </li>
                                     <li>
-                                        <span class="number">6.</span> Secret 6: Bulid an Audience By Borrowing (10:25)
+                                        <span class="number">6.</span> Other Services 
                                     </li>
                                     <li>
                                         Quiz - Secret 6: Bulid an Audience By Borrowing
                                     </li>
                                     <li>
-                                        <span class="number">7.</span> Secret 7: Be a Shadow, Not a Ghost (5:19)
+                                        <span class="number">7.</span> Other Services 
                                     </li>
                                     <li>
-                                        <span class="number">8.</span> Bonus: Tips to Be a 5 Stars Freelancer (16:07)
+                                        <span class="number">8.</span> Other Services 
                                     </li>
                                     <li>
-                                        <span class="number">9.</span> Closing Thoughts (3:15)
+                                        <span class="number">9.</span> Other Services 
                                     </li>
                                     <li>
                                         Quiz - Secret 7: Be a Shadow, Not a Ghost

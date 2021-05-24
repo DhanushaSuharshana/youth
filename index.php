@@ -27,6 +27,7 @@
       
        
         <?php include './header.php'; ?>
+        
         <div class="hero-banner">
             <div class="d-table">
                 <div class="d-table-cell">
@@ -263,8 +264,8 @@
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user1.jpg" class="shadow" alt="image">
-                                                    <span>Steven Smith</span>
+                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
+                                                    <span>Teacher Name</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
@@ -279,7 +280,7 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
+                                            <h3><a href="single-courses.html" class="d-inline-block">Raque Professional cooking Expert Certificate Course</a></h3>
                                             <p>Education encompasses both the teaching and learning of knowledge.</p>
                                         </div>
                                         <div class="courses-box-footer">
@@ -305,8 +306,8 @@
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user2.jpg" class="shadow" alt="image">
-                                                    <span>Sarah Taylor</span>
+                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
+                                                    <span>Teacher Name</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
@@ -347,8 +348,8 @@
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user3.jpg" class="shadow" alt="image">
-                                                    <span>Anderson</span>
+                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
+                                                    <span>Teacher Name</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
@@ -389,7 +390,7 @@
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user4.jpg" class="shadow" alt="image">
+                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
                                                     <span>Liam King</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
@@ -432,8 +433,8 @@
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user5.jpg" class="shadow" alt="image">
-                                                    <span>Lina</span>
+                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
+                                                    <span>Teacher Name</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
@@ -474,8 +475,8 @@
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user6.jpg" class="shadow" alt="image">
-                                                    <span>David Warner</span>
+                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
+                                                    <span>Teacher Name</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
@@ -520,8 +521,8 @@
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user1.jpg" class="shadow" alt="image">
-                                                    <span>Steven Smith</span>
+                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
+                                                    <span>Teacher Name</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
@@ -562,8 +563,8 @@
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user2.jpg" class="shadow" alt="image">
-                                                    <span>Sarah Taylor</span>
+                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
+                                                    <span>Teacher Name</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
@@ -604,8 +605,8 @@
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user3.jpg" class="shadow" alt="image">
-                                                    <span>Anderson</span>
+                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
+                                                    <span>Teacher Name</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
@@ -646,8 +647,8 @@
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user4.jpg" class="shadow" alt="image">
-                                                    <span>Liam King</span>
+                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
+                                                    <span>Teacher Name</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
@@ -688,8 +689,8 @@
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user5.jpg" class="shadow" alt="image">
-                                                    <span>Lina</span>
+                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
+                                                    <span>Teacher Name</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
@@ -730,7 +731,7 @@
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user6.jpg" class="shadow" alt="image">
+                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
                                                     <span>David Warner</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
@@ -1807,6 +1808,28 @@
 
         <?php include './footer.php'; ?>
 
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5d1323e736eab97211194730/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+
+<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103053993-5"></script> <script> window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-103053993-5');</script>        </div>
+
+
+
         <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
@@ -1826,5 +1849,5 @@
         <script src="assets/js/contact-form-script.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
-
+ 
 </html>

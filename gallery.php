@@ -19,41 +19,16 @@
         <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
-        <title>Raque - Education & Online Courses HTML Template</title>
-        <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <title>NYSC Gallery Page</title>
+        <link rel="icon" type="image/png" href="assets/img/logo.png">
     </head>
     <body>
 
-        <div class="preloader">
-            <div class="loader">
-                <div class="shadow"></div>
-                <div class="box"></div>
-            </div>
-        </div>
 
 
         <?php include './header.php'; ?>
 
-
-        <div class="search-overlay">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="search-overlay-layer"></div>
-                    <div class="search-overlay-layer"></div>
-                    <div class="search-overlay-layer"></div>
-                    <div class="search-overlay-close">
-                        <span class="search-overlay-close-line"></span>
-                        <span class="search-overlay-close-line"></span>
-                    </div>
-                    <div class="search-overlay-form">
-                        <form>
-                            <input type="text" class="input-search" placeholder="Search here...">
-                            <button type="submit"><i class='bx bx-search-alt'></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+ 
 
 
         <div class="page-title-area item-bg3 jarallax" data-jarallax='{"speed": 0.3}'>
