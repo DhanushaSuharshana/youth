@@ -1,7 +1,3 @@
-
-
-
-
 <header class="header-area">
     <div class="top-header-style-two">
         <div class="container">
@@ -55,15 +51,15 @@
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="index.php">Home</a></li>
                                     <li class="nav-item"><a href="index_1.php">Home 01</a></li>
-                                    <li class="nav-item"><a href="index_2.php">Home 02 </a> </li> 
+                                    <li class="nav-item"><a href="index_2.php">Home 02 </a> </li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">About Us <i class='bx bx-chevron-right'></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="#">The NYSC</a></li> 
-                                    <li class="nav-item"><a href="#">Vision & Mission</a></li> 
-                                    <li class="nav-item"><a href="#">History & Evolution</a></li> 
-                                    <li class="nav-item"><a href="#">Wishes</a></li> 
+                                    <li class="nav-item"><a href="#">The NYSC</a></li>
+                                    <li class="nav-item"><a href="#">Vision & Mission</a></li>
+                                    <li class="nav-item"><a href="#">History & Evolution</a></li>
+                                    <li class="nav-item"><a href="#">Wishes</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">Division <i class='bx bx-chevron-right'></i></a>
@@ -78,17 +74,17 @@
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="#">Discover</a></li>
                                     <li class="nav-item"><a href="#">Nearest Youth Office</a></li>
-                                    <li class="nav-item"><a href="#">Benefits  </a> </li>
+                                    <li class="nav-item"><a href="#">Benefits </a> </li>
                                     <li class="nav-item"><a href="#">Youth Club News</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">Courses <i class='bx bx-chevron-right'></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="nysc-course-list.php" class="nav-link">Find Courses</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Apply Now</a></li>
+                                    <li class="nav-item"><a href="apply now.php" class="nav-link">Apply Now</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href="programe.php" class="nav-link">Programs  </a>   </li>
+                            <li class="nav-item"><a href="programe.php" class="nav-link">Programs </a> </li>
 
                             <li class="nav-item"><a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
@@ -106,16 +102,16 @@
                             <div class="dropdown language-switcher d-inline-block">
                                 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                                    <span>English  <i class="bx bx-chevron-down"></i></span>
+                                    <span>English <i class="bx bx-chevron-down"></i></span>
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item d-flex align-items-center"> 
+                                    <a href="#" class="dropdown-item d-flex align-items-center">
                                         <span>සිංහල </span>
                                     </a>
                                     <a href="#" class="dropdown-item d-flex align-items-center">
 
                                         <span> தமிழ</span>
-                                    </a>   
+                                    </a>
                                 </div>
                             </div>
 
@@ -137,15 +133,15 @@
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="index.php">Home</a></li>
                                     <li class="nav-item"><a href="index_1.php">Home 01</a></li>
-                                    <li class="nav-item"><a href="index_2.php">Home 02 </a> </li> 
+                                    <li class="nav-item"><a href="index_2.php">Home 02 </a> </li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">About Us <i class='bx bx-chevron-right'></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="#">The NYSC</a></li> 
-                                    <li class="nav-item"><a href="#">Vision & Mission</a></li> 
-                                    <li class="nav-item"><a href="#">History & Evolution</a></li> 
-                                    <li class="nav-item"><a href="#">Wishes</a></li> 
+                                    <li class="nav-item"><a href="#">The NYSC</a></li>
+                                    <li class="nav-item"><a href="#">Vision & Mission</a></li>
+                                    <li class="nav-item"><a href="#">History & Evolution</a></li>
+                                    <li class="nav-item"><a href="#">Wishes</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">Division <i class='bx bx-chevron-right'></i></a>
@@ -160,7 +156,7 @@
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="#">Discover</a></li>
                                     <li class="nav-item"><a href="#">Nearest Youth Office</a></li>
-                                    <li class="nav-item"><a href="#">Benefits  </a> </li>
+                                    <li class="nav-item"><a href="#">Benefits </a> </li>
                                     <li class="nav-item"><a href="#">Youth Club News</a></li>
                                 </ul>
                             </li>
@@ -170,7 +166,7 @@
                                     <li class="nav-item"><a href="#" class="nav-link">Apply Now</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href="programe.php" class="nav-link">Programs  </a>   </li>
+                            <li class="nav-item"><a href="programe.php" class="nav-link">Programs </a> </li>
 
                             <li class="nav-item"><a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
@@ -188,16 +184,16 @@
                             <div class="dropdown language-switcher d-inline-block">
                                 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                                    <span>English  <i class="bx bx-chevron-down"></i></span>
+                                    <span>English <i class="bx bx-chevron-down"></i></span>
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item d-flex align-items-center"> 
+                                    <a href="#" class="dropdown-item d-flex align-items-center">
                                         <span>සිංහල </span>
                                     </a>
                                     <a href="#" class="dropdown-item d-flex align-items-center">
 
                                         <span> தமிழ</span>
-                                    </a>   
+                                    </a>
                                 </div>
                             </div>
 
@@ -209,4 +205,3 @@
     </div>
 
 </header>
-
