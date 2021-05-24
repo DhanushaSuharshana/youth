@@ -38,42 +38,113 @@
 
         <section class="courses-area ptb-100">
             <div class="container">
-                <div class="courses-topbar">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-4">
-                            <div class="topbar-result-count">
-                                <p>Showing 1 – 6 of 54</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-8">
-                            <div class="topbar-ordering-and-search">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-3 col-md-5 offset-lg-4 offset-md-1">
-                                        <div class="topbar-ordering">
-                                            <select>
-                                                <option>Sort by popularity</option>
-                                                <option>Sort by latest</option>
-                                                <option>Default sorting</option>
-                                                <option>Sort by rating</option>
-                                                <option>Sort by new</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-md-6">
-                                        <div class="topbar-search">
-                                            <form>
-                                                <label><i class="bx bx-search"></i></label>
-                                                <input type="text" class="input-search" placeholder="Search here...">
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                 
                 <div class="row">
-                    <div class="col-lg-8 col-md-12">
+                    <div class="col-lg-3 col-md-12">
+                        <aside class="widget-area">
+<!--                            <section class="widget widget_raque_posts_thumb">
+                                <h3 class="widget-title">Popular Courses</h3>
+                                <article class="item">
+                                    <a href="view-courses.php" class="thumb">
+                                        <span class="fullimage cover bg1" role="img"></span>
+                                    </a>
+                                    <div class="info">
+                                      
+                                        <h4 class="title usmall"><a href="view-courses.php">Making Peace With The Feast Or Famine Of Freelancing</a></h4>
+                                    </div>
+                                    <div class="clear"></div>
+                                </article>
+                                <article class="item">
+                                    <a href="view-courses.php" class="thumb">
+                                        <span class="fullimage cover bg2" role="img"></span>
+                                    </a>
+                                    <div class="info">
+                                        
+                                        <h4 class="title usmall"><a href="view-courses.php">I Used The Web For A Day On A 50 MB Budget</a></h4>
+                                    </div>
+                                    <div class="clear"></div>
+                                </article>
+                                <article class="item">
+                                    <a href="view-courses.php" class="thumb">
+                                        <span class="fullimage cover bg3" role="img"></span>
+                                    </a>
+                                    <div class="info">
+                                       
+                                        <h4 class="title usmall"><a href="view-courses.php">How To Create A Responsive Popup Gallery?</a></h4>
+                                    </div>
+                                    <div class="clear"></div>
+                                </article>
+                            </section>-->
+                            <section class="widget widget_categories">
+                                <h3 class="widget-title">Categories</h3>
+                                <ul>
+                                    <li><a href="#">Design <span class="post-count">(03)</span></a></li>
+                                    <li><a href="#">Lifestyle <span class="post-count">(05)</span></a></li>
+                                    <li><a href="#">Script <span class="post-count">(10)</span></a></li>
+                                    <li><a href="#">Device <span class="post-count">(08)</span></a></li>
+                                    <li><a href="#">Tips <span class="post-count">(01)</span></a></li>
+                                </ul>
+                            </section>
+                            <section class="widget widget_tag_cloud">
+                                <h3 class="widget-title">Raque Tags</h3>
+                                <div class="tagcloud">
+                                    <a href="#">IT <span class="tag-link-count"> (3)</span></a>
+                                    <a href="#">Raque <span class="tag-link-count"> (3)</span></a>
+                                    <a href="#">Games <span class="tag-link-count"> (2)</span></a>
+                                    <a href="#">Fashion <span class="tag-link-count"> (2)</span></a>
+                                    <a href="#">Travel <span class="tag-link-count"> (1)</span></a>
+                                    <a href="#">Smart <span class="tag-link-count"> (1)</span></a>
+                                    <a href="#">Marketing <span class="tag-link-count"> (1)</span></a>
+                                    <a href="#">Tips <span class="tag-link-count"> (2)</span></a>
+                                </div>
+                            </section>
+                            <section class="widget widget_instagram">
+                                <h3 class="widget-title">Instagram</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="d-block">
+                                            <img src="assets/img/blog/1.jpg" alt="image">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-block">
+                                            <img src="assets/img/blog/2.jpg" alt="image">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-block">
+                                            <img src="assets/img/blog/3.jpg" alt="image">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-block">
+                                            <img src="assets/img/blog/4.jpg" alt="image">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-block">
+                                            <img src="assets/img/blog/5.jpg" alt="image">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-block">
+                                            <img src="assets/img/blog/6.jpg" alt="image">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="widget widget_contact">
+                                <div class="text">
+                                    <div class="icon">
+                                        <i class='bx bx-phone-call'></i>
+                                    </div>
+                                    <span>Contact Now</span>
+                                    <a href="#">+94-4834-873</a>
+                                </div>
+                            </section>
+                        </aside>
+                    </div>
+                    <div class="col-lg-9 col-md-12">
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
                                 <div class="single-courses-list-box mb-30">
@@ -369,110 +440,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12">
-                        <aside class="widget-area">
-<!--                            <section class="widget widget_raque_posts_thumb">
-                                <h3 class="widget-title">Popular Courses</h3>
-                                <article class="item">
-                                    <a href="view-courses.php" class="thumb">
-                                        <span class="fullimage cover bg1" role="img"></span>
-                                    </a>
-                                    <div class="info">
-                                      
-                                        <h4 class="title usmall"><a href="view-courses.php">Making Peace With The Feast Or Famine Of Freelancing</a></h4>
-                                    </div>
-                                    <div class="clear"></div>
-                                </article>
-                                <article class="item">
-                                    <a href="view-courses.php" class="thumb">
-                                        <span class="fullimage cover bg2" role="img"></span>
-                                    </a>
-                                    <div class="info">
-                                        
-                                        <h4 class="title usmall"><a href="view-courses.php">I Used The Web For A Day On A 50 MB Budget</a></h4>
-                                    </div>
-                                    <div class="clear"></div>
-                                </article>
-                                <article class="item">
-                                    <a href="view-courses.php" class="thumb">
-                                        <span class="fullimage cover bg3" role="img"></span>
-                                    </a>
-                                    <div class="info">
-                                       
-                                        <h4 class="title usmall"><a href="view-courses.php">How To Create A Responsive Popup Gallery?</a></h4>
-                                    </div>
-                                    <div class="clear"></div>
-                                </article>
-                            </section>-->
-                            <section class="widget widget_categories">
-                                <h3 class="widget-title">Categories</h3>
-                                <ul>
-                                    <li><a href="#">Design <span class="post-count">(03)</span></a></li>
-                                    <li><a href="#">Lifestyle <span class="post-count">(05)</span></a></li>
-                                    <li><a href="#">Script <span class="post-count">(10)</span></a></li>
-                                    <li><a href="#">Device <span class="post-count">(08)</span></a></li>
-                                    <li><a href="#">Tips <span class="post-count">(01)</span></a></li>
-                                </ul>
-                            </section>
-                            <section class="widget widget_tag_cloud">
-                                <h3 class="widget-title">Raque Tags</h3>
-                                <div class="tagcloud">
-                                    <a href="#">IT <span class="tag-link-count"> (3)</span></a>
-                                    <a href="#">Raque <span class="tag-link-count"> (3)</span></a>
-                                    <a href="#">Games <span class="tag-link-count"> (2)</span></a>
-                                    <a href="#">Fashion <span class="tag-link-count"> (2)</span></a>
-                                    <a href="#">Travel <span class="tag-link-count"> (1)</span></a>
-                                    <a href="#">Smart <span class="tag-link-count"> (1)</span></a>
-                                    <a href="#">Marketing <span class="tag-link-count"> (1)</span></a>
-                                    <a href="#">Tips <span class="tag-link-count"> (2)</span></a>
-                                </div>
-                            </section>
-                            <section class="widget widget_instagram">
-                                <h3 class="widget-title">Instagram</h3>
-                                <ul>
-                                    <li>
-                                        <a href="#" class="d-block">
-                                            <img src="assets/img/blog/1.jpg" alt="image">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block">
-                                            <img src="assets/img/blog/2.jpg" alt="image">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block">
-                                            <img src="assets/img/blog/3.jpg" alt="image">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block">
-                                            <img src="assets/img/blog/4.jpg" alt="image">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block">
-                                            <img src="assets/img/blog/5.jpg" alt="image">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-block">
-                                            <img src="assets/img/blog/6.jpg" alt="image">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </section>
-                            <section class="widget widget_contact">
-                                <div class="text">
-                                    <div class="icon">
-                                        <i class='bx bx-phone-call'></i>
-                                    </div>
-                                    <span>Contact Now</span>
-                                    <a href="#">+94-4834-873</a>
-                                </div>
-                            </section>
-                        </aside>
-                    </div>
+                    
                 </div>
             </div>
         </section>

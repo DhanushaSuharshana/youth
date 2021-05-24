@@ -8,6 +8,7 @@ body {
     font-family: poppins, sans-serif;
     font-size: 15px;
 }
+
 a {
     text-decoration: none;
     -webkit-transition: 0.5s;
@@ -672,7 +673,7 @@ textarea.form-control {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
-    float: right
+/*    float: right*/
 }
 .top-header-social span {
     display: inline-block;
@@ -1149,10 +1150,10 @@ textarea.form-control {
     visibility: visible;
 }
 .navbar-area.header-sticky.scrollUp {
-    -webkit-transform: translateY(-85px);
+/*    -webkit-transform: translateY(-85px);
     transform: translateY(-85px);
     opacity: 0;
-    visibility: hidden;
+    visibility: hidden;*/
 }
 .navbar-style-two {
     background-color: transparent;
