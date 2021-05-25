@@ -20,14 +20,14 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
         <title>National Youth Council Sri Lanka</title>
-        <link rel="icon" type="image/png" href="assets/img/logo-nysc.png">
+        <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
     </head>
     <body>
 
-      
-       
+
+
         <?php include './header.php'; ?>
-        
+
         <div class="hero-banner">
             <div class="d-table">
                 <div class="d-table-cell">
@@ -35,12 +35,12 @@
                         <div class="row align-items-center" style="margin-top: 12%;">
                             <div class="col-lg-6 col-md-12">
                                 <div class="hero-banner-content">
-                                    <span class="sub-title">ENJOY SMOOTH LEARNING</span>
-                                    <h1>Convenient Easy Way of Learning New Skills!</h1>
-                                    <p>Learn from Raque online platform by following our proven ways to achieve the Best Skills for your present and future career.</p>
+                                    <span class="sub-title">AN EMPOWERED SRI LANKA YOUTH.</span>
+                                    <h1>NATIONAL YOUTH SERVICE COUNCIL OF SRI LANKA.! </h1>
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                     <div class="btn-box">
-                                        <a href="courses-2-columns-style-1.html" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
-                                        <a href="contact.html" class="optional-btn">Get Started Free</a>
+                                        <a href="#" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                                        <a href="#" class="optional-btn">Get Started Free</a>
                                     </div>
                                 </div>
                             </div>
@@ -62,28 +62,28 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="single-boxes-item">
                             <h3>Youth GYM</h3>
-                            <p>Like business analytics, graphic design, Python, and more.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-boxes-item bg-image">
                             <h3>Youth Band</h3>
-                            <p>In high-demand fields like IT, AI and cloud engineering.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
                             <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-boxes-item bg-color">
                             <h3>Youth Auditorium</h3>
-                            <p>From a leading university in business, computer science, and more.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
                             <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-boxes-item">
                             <h3>Youth Video Wall</h3>
-                            <p>With on-demand training and development programs.</p>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
                             <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                         </div>
                     </div>
@@ -391,7 +391,7 @@
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="course-author d-flex align-items-center">
                                                     <img src="assets/img/member.jpg" class="shadow" alt="image">
-                                                    <span>Liam King</span>
+                                                    <span>Teacher Name</span>
                                                 </div>
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
@@ -406,7 +406,7 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Web Design for Developing Technology with Joy</a></h3>
+                                            <h3><a href="single-courses.html" class="d-inline-block">Web Design for Developing Technology  </a></h3>
                                             <p>Education encompasses both the teaching and learning of knowledge.</p>
                                         </div>
                                         <div class="courses-box-footer">
@@ -1466,9 +1466,7 @@
                                                     </div>
                                                 </div>
                                             </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i class="flaticon-arrows"></i></button><button type="button" role="presentation" class="owl-next"><i class="flaticon-right-arrow"></i></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button></div></div>
-                            <div class="feedback-info">
-                                <p>Not a member yet?​ <a href="register.html">Register now</a></p>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
@@ -1808,46 +1806,46 @@
 
         <?php include './footer.php'; ?>
 
-<script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/5d1323e736eab97211194730/default';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-    })();
-</script>
-<!--End of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            (function () {
+                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/5d1323e736eab97211194730/default';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
 
-<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103053993-5"></script> <script> window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-103053993-5');</script>        </div>
+        <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103053993-5"></script> <script> window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-103053993-5');</script>        </div>
 
 
 
-        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/mixitup.min.js"></script>
-        <script src="assets/js/parallax.min.js"></script>
-        <script src="assets/js/jquery.appear.min.js"></script>
-        <script src="assets/js/odometer.min.js"></script>
-        <script src="assets/js/particles.min.js"></script>
-        <script src="assets/js/meanmenu.min.js"></script>
-        <script src="assets/js/jquery.nice-select.min.js"></script>
-        <script src="assets/js/viewer.min.js"></script>
-        <script src="assets/js/slick.min.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-        <script src="assets/js/form-validator.min.js"></script>
-        <script src="assets/js/contact-form-script.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
- 
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
+    <script src="assets/js/parallax.min.js"></script>
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/meanmenu.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/viewer.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/form-validator.min.js"></script>
+    <script src="assets/js/contact-form-script.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>

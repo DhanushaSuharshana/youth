@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="assets/css/responsive.css">
         <title>National Youth Council Sri Lanka</title>
         <link rel="icon" type="image/png" href="assets/img/logo-nysc.png">
-    </head>
+        </head>
     <body>
 
 
@@ -256,20 +256,20 @@
                 </div>
             </div>
         </div> 
-        
+
         <div class="hero-banner">
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="container-fluid">
-                        <div class="row align-items-center" style="margin-top: 12%;">
+                        <div class="row align-items-center" >
                             <div class="col-lg-6 col-md-12">
                                 <div class="hero-banner-content">
-                                    <span class="sub-title">ENJOY SMOOTH LEARNING</span>
-                                    <h1>Convenient Easy Way of Learning New Skills!</h1>
-                                    <p>Learn from Raque online platform by following our proven ways to achieve the Best Skills for your present and future career.</p>
+                                    <span class="sub-title">AN EMPOWERED SRI LANKA YOUTH.</span>
+                                    <h1>NATIONAL YOUTH SERVICE COUNCIL OF SRI LANKA.! </h1>
+                                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                     <div class="btn-box">
-                                        <a href="courses-2-columns-style-1.html" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
-                                        <a href="contact.html" class="optional-btn">Get Started Free</a>
+                                        <a href="#" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                                        <a href="#" class="optional-btn">Get Started Free</a>
                                     </div>
                                 </div>
                             </div>
@@ -291,28 +291,28 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="single-boxes-item">
                             <h3>Youth GYM</h3>
-                            <p>Like business analytics, graphic design, Python, and more.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-boxes-item bg-image">
                             <h3>Youth Band</h3>
-                            <p>In high-demand fields like IT, AI and cloud engineering.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-boxes-item bg-color">
                             <h3>Youth Auditorium</h3>
-                            <p>From a leading university in business, computer science, and more.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-boxes-item">
                             <h3>Youth Video Wall</h3>
-                            <p>With on-demand training and development programs.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                         </div>
                     </div>
@@ -363,7 +363,7 @@
             </div>
             <div id="particles-js-circle-bubble-3"></div>
         </section>
-        
+
         <section class="offer-area pt-100 jarallax" data-jarallax='{"speed": 0.3}' >
             <div class="container">
                 <div class="section-title">

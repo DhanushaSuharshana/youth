@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
         <title>NYSC Gallery Page</title>
-        <link rel="icon" type="image/png" href="assets/img/logo.png">
+        <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
     </head>
     <body>
 
