@@ -56,10 +56,10 @@
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">About Us <i class='bx bx-chevron-right'></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="#">The NYSC</a></li>
-                                    <li class="nav-item"><a href="#">Vision & Mission</a></li>
-                                    <li class="nav-item"><a href="#">History & Evolution</a></li>
-                                    <li class="nav-item"><a href="#">Wishes</a></li>
+                                    <li class="nav-item"><a href="about-us.php">The NYSC</a></li>
+                                    <li class="nav-item"><a href="#">Board Of Directoers</a></li>
+                                    <li class="nav-item"><a href="#">Our Network</a></li>
+                                    <li class="nav-item"><a href="#">Organizational Structure</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">Division <i class='bx bx-chevron-right'></i></a>
@@ -81,7 +81,7 @@
                             <li class="nav-item"><a href="#" class="nav-link">Courses <i class='bx bx-chevron-right'></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="nysc-course-list.php" class="nav-link">Find Courses</a></li>
-                                    <li class="nav-item"><a href="apply now.php" class="nav-link">Apply Now</a></li>
+                                    <li class="nav-item"><a href="apply-now.php" class="nav-link">Apply Now</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="programe.php" class="nav-link">Programs </a> </li>
