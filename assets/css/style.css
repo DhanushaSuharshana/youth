@@ -13443,7 +13443,7 @@ blockquote::after,
 
 .footer-area {
     background-color: #12141b;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .single-footer-widget h3 {
@@ -13656,11 +13656,11 @@ blockquote::after,
 }
 
 .footer-bottom-area {
-    margin-top: 70px;
+    margin-top: 30px;
     text-align: center;
     background-color: #090a0e;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .footer-bottom-area .logo {
