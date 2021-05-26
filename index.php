@@ -25,234 +25,8 @@
     <body>
 
 
+        <?php include './header.php'; ?>
 
-        <div id="loader" class="loader preloader">
-            <div class="loader-container">
-                <div class="loader-icon">
-                    <img src="assets/img/pre-logo.png" alt="">
-                </div>
-            </div>
-        </div>
-
-        <header class="header-area">
-            <div class="top-header top-header-style-four">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-8 col-md-8">
-                            <ul class="top-header-contact-info">
-                                <li>
-                                    Call:
-                                    <a href="tel:502464674">+502 464 674</a>
-                                </li>
-                            </ul>
-                            <div class="top-header-social">
-                                <span>Follow us:</span>
-                                <a href="#" target="_blank"><i class="bx bxl-facebook"></i></a>
-                                <a href="#" target="_blank"><i class="bx bxl-twitter"></i></a>
-                                <a href="#" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                                <a href="#" target="_blank"><i class="bx bxl-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <ul class="top-header-login-register">
-                                <li><a href="login.html"><i class="bx bx-log-in"></i> Login</a></li>
-                                <li><a href="register.html"><i class="bx bx-log-in-circle"></i> Register</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="navbar-area">
-                <div class="raque-responsive-nav">
-                    <div class="container">
-                        <div class="raque-responsive-menu">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="assets/img/black-logo.png" alt="logo">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="raque-nav">
-                    <div class="container">
-                        <nav class="navbar navbar-expand-md navbar-light">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="assets/img/black-logo.png" alt="logo" style="width: 60%">
-                            </a>
-                            <div class="collapse navbar-collapse mean-menu" style="display: block;">
-                                <ul class="navbar-nav">
-
-                                    <li class="nav-item"><a href="#" class="nav-link active">Home <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="index.php">Home</a></li>
-                                            <li class="nav-item"><a href="index_1.php">Home 01</a></li>
-                                            <li class="nav-item"><a href="index_2.php">Home 02 </a> </li> 
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Division <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="view-division.php">Administrative Division</a></li>
-                                            <li class="nav-item"><a href="view-division.php">Finance Division</a></li>
-                                            <li class="nav-item"><a href="view-division.php">Legal Investigation </a> </li>
-                                            <li class="nav-item"><a href="view-division.php">National Youth Awards</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="#">Discover</a></li>
-                                            <li class="nav-item"><a href="#">Nearest Youth Office</a></li>
-                                            <li class="nav-item"><a href="#">Benefits  </a> </li>
-                                            <li class="nav-item"><a href="#">Youth Club News</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="nysc-course-list.php" class="nav-link">Find Courses</a></li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Apply Now</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Programs  </a>   </li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="#">GYM</a> </li>
-                                            <li class="nav-item"><a href="#">Auditorium</a></li>
-                                            <li class="nav-item"><a href="#">Youth Band</a></li>
-                                            <li class="nav-item"><a href="#">Video Wall</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact Us</a></li>
-                                </ul>
-                                <div class="others-option">
-                                    <div class="dropdown language-switcher d-inline-block">
-                                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                             
-                                            <span>සිං<i class="bx bx-chevron-down"></i></span>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a href="#" class="dropdown-item d-flex align-items-center">
-                                               
-                                                <span>En</span>
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center">
-                                          
-                                                <span>සිං </span>
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center"> 
-                                                <span> தம</span>
-                                            </a>
-
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="navbar-area header-sticky">
-                <div class="raque-nav">
-                    <div class="container">
-                        <nav class="navbar navbar-expand-md navbar-light">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="assets/img/black-logo.png" alt="logo"style="width: 65%;">
-                            </a>
-                            <div class="collapse navbar-collapse">
-                                <ul class="navbar-nav">
-
-                                    <li class="nav-item"><a href="#" class="nav-link active">Home <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="index.php">Home</a></li>
-                                            <li class="nav-item"><a href="index_1.php">Home 01</a></li>
-                                            <li class="nav-item"><a href="index_2.php">Home 02 </a> </li> 
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Division <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="view-division.php">Administrative Division</a></li>
-                                            <li class="nav-item"><a href="view-division.php">Finance Division</a></li>
-                                            <li class="nav-item"><a href="view-division.php">Legal Investigation </a> </li>
-                                            <li class="nav-item"><a href="view-division.php">National Youth Awards</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="#">Discover</a></li>
-                                            <li class="nav-item"><a href="#">Nearest Youth Office</a></li>
-                                            <li class="nav-item"><a href="#">Benefits  </a> </li>
-                                            <li class="nav-item"><a href="#">Youth Club News</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Courses <i class='bx bx-chevron-right'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="nysc-course-list.php" class="nav-link">Find Courses</a></li>
-                                            <li class="nav-item"><a href="#" class="nav-link">Apply Now</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Programs  </a>   </li>
-
-                                    <li class="nav-item"><a href="#" class="nav-link">Services <i class='bx bx-chevron-down'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="#">GYM</a> </li>
-                                            <li class="nav-item"><a href="#">Auditorium</a></li>
-                                            <li class="nav-item"><a href="#">Youth Band</a></li>
-                                            <li class="nav-item"><a href="#">Video Wall</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact Us</a></li>
-                                </ul>
-                                <div class="others-option">
-                                    <div class="dropdown language-switcher d-inline-block">
-                                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                                            <span>English  <i class="bx bx-chevron-down"></i></span>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a href="#" class="dropdown-item d-flex align-items-center"> 
-                                                <span>සිංහල </span>
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center">
-
-                                                <span> தமிழ</span>
-                                            </a>   
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-
-        </header>
-        <div class="search-overlay">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="search-overlay-layer"></div>
-                    <div class="search-overlay-layer"></div>
-                    <div class="search-overlay-layer"></div>
-                    <div class="search-overlay-close">
-                        <span class="search-overlay-close-line"></span>
-                        <span class="search-overlay-close-line"></span>
-                    </div>
-                    <div class="search-overlay-form">
-                        <form>
-                            <input type="text" class="input-search" placeholder="Search here...">
-                            <button type="submit"><i class='bx bx-search-alt'></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> 
         <div class="hero-banner">
             <div class="d-table">
                 <div class="d-table-cell">
@@ -989,7 +763,7 @@
                         <div class="tabs-item" style="display: none;">
                             <div class="row">
                                 <div class="row">
-                                     <div class="col-lg-4 col-md-6">
+                                    <div class="col-lg-4 col-md-6">
                                         <a href="view-courses.php">
                                             <div class="single-courses-item mb-30">
                                                 <div class="courses-image">
@@ -1071,7 +845,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                       <div class="col-lg-4 col-md-6">
+                                    <div class="col-lg-4 col-md-6">
                                         <a href="view-courses.php">
                                             <div class="single-courses-item mb-30">
                                                 <div class="courses-image">
@@ -1112,7 +886,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                   
+
                                     <div class="col-lg-4 col-md-6">
                                         <a href="view-courses.php">
                                             <div class="single-courses-item mb-30">
