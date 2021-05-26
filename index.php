@@ -19,11 +19,10 @@
         <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
-        <title>National Youth Council Sri Lanka</title>
+        <title>Youth Service || Home</title>
         <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
     </head>
     <body>
-
 
 
         <?php include './header.php'; ?>
@@ -55,7 +54,7 @@
             </div>
         </div>
 
-
+ 
         <section class="boxes-area">
             <div class="container-fluid">
                 <div class="row">
