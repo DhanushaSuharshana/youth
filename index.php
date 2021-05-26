@@ -262,10 +262,7 @@
                                         </div>
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
-                                                    <span>Teacher Name</span>
-                                                </div>
+
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
                                                                                                         <i class="bx bxs-star"></i>
@@ -279,8 +276,8 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Raque Professional cooking Expert Certificate Course</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <h3><a href="single-courses.html" class="d-inline-block">National Certificate Computer Graphic Designing </a></h3>
+                                            <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
                                         </div>
                                         <div class="courses-box-footer">
                                             <ul>
@@ -304,10 +301,7 @@
                                         </div>
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
-                                                    <span>Teacher Name</span>
-                                                </div>
+
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
                                                                                                         <i class="bx bxs-star"></i>
@@ -321,8 +315,8 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Certified Graphic Design with Free Project Course</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <h3><a href="single-courses.html" class="d-inline-block">National Certificate - Automobile A/C Mechanic</a></h3>
+                                            <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field.</p>
                                         </div>
                                         <div class="courses-box-footer">
                                             <ul>
@@ -346,10 +340,7 @@
                                         </div>
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
-                                                    <span>Teacher Name</span>
-                                                </div>
+
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
                                                                                                         <i class="bx bxs-star"></i>
@@ -363,8 +354,8 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Photography Crash Course for Photographer</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <h3><a href="single-courses.html" class="d-inline-block">National Certificate - Pastry and bakery</a></h3>
+                                            <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field.</p>
                                         </div>
                                         <div class="courses-box-footer">
                                             <ul>
@@ -388,10 +379,7 @@
                                         </div>
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
-                                                    <span>Teacher Name</span>
-                                                </div>
+
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
                                                                                                         <i class="bx bxs-star"></i>
@@ -405,8 +393,8 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Web Design for Developing Technology  </a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <h3><a href="single-courses.html" class="d-inline-block">National Certificate - Jewellery Stone Setter</a></h3>
+                                            <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field.</p>
                                         </div>
                                         <div class="courses-box-footer">
                                             <ul>
@@ -431,10 +419,7 @@
                                         </div>
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
-                                                    <span>Teacher Name</span>
-                                                </div>
+
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
                                                                                                         <i class="bx bxs-star"></i>
@@ -448,8 +433,8 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Information About UI/UX Design Degree</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <h3><a href="single-courses.html" class="d-inline-block">National Certificate - Automobile Mechanic</a></h3>
+                                            <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field.</p>
                                         </div>
                                         <div class="courses-box-footer">
                                             <ul>
@@ -469,14 +454,11 @@
                                 <div class="col-lg-4 col-md-6">
                                     <div class="single-courses-item mb-30">
                                         <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/6.jpg" alt="image"></a>
+                                            <a href="" class="d-block"><img src="assets/img/courses/6.jpg" alt="image"></a>
                                         </div>
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/member.jpg" class="shadow" alt="image">
-                                                    <span>Teacher Name</span>
-                                                </div>
+
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
                                                                                                         <i class="bx bxs-star"></i>
@@ -490,8 +472,8 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Photography Photo modify and Beautiful</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <h3><a href="" class="d-inline-block">National Certificate - building and construction</a></h3>
+                                            <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field</p>
                                         </div>
                                         <div class="courses-box-footer">
                                             <ul>
@@ -779,6 +761,7 @@
                                                     <img src="assets/img/user1.jpg" class="shadow" alt="image">
                                                     <span>Steven Smith</span>
                                                 </div>
+
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
                                                                                                         <i class="bx bxs-star"></i>
@@ -792,8 +775,8 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <h3><a href="single-courses.html" class="d-inline-block">National Certificate Computer Graphic Designing </a></h3>
+                                            <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
                                         </div>
                                         <div class="courses-box-footer">
                                             <ul>
@@ -817,10 +800,7 @@
                                         </div>
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user2.jpg" class="shadow" alt="image">
-                                                    <span>Sarah Taylor</span>
-                                                </div>
+
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
                                                                                                         <i class="bx bxs-star"></i>
@@ -834,8 +814,8 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Certified Graphic Design with Free Project Course</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <h3><a href="single-courses.html" class="d-inline-block">National Certificate - Automobile A/C Mechanic</a></h3>
+                                            <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field.</p>
                                         </div>
                                         <div class="courses-box-footer">
                                             <ul>
@@ -859,10 +839,7 @@
                                         </div>
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user3.jpg" class="shadow" alt="image">
-                                                    <span>Anderson</span>
-                                                </div>
+
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
                                                                                                         <i class="bx bxs-star"></i>
@@ -876,8 +853,8 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Photography Crash Course for Photographer</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <h3><a href="single-courses.html" class="d-inline-block">National Certificate - Pastry and bakery</a></h3>
+                                            <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field.</p>
                                         </div>
                                         <div class="courses-box-footer">
                                             <ul>
@@ -901,10 +878,7 @@
                                         </div>
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user4.jpg" class="shadow" alt="image">
-                                                    <span>Liam King</span>
-                                                </div>
+
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
                                                                                                         <i class="bx bxs-star"></i>
@@ -918,8 +892,8 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Web Design for Developing Technology with Joy</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <h3><a href="single-courses.html" class="d-inline-block">National Certificate - Jewellery Stone Setter</a></h3>
+                                            <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field.</p>
                                         </div>
                                         <div class="courses-box-footer">
                                             <ul>
@@ -930,6 +904,7 @@
                                                     <i class="bx bx-book-open"></i> 6 lessons
                                                 </li>
                                                 <li class="courses-price">
+
                                                     View
                                                 </li>
                                             </ul>
@@ -943,10 +918,7 @@
                                         </div>
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user5.jpg" class="shadow" alt="image">
-                                                    <span>Lina</span>
-                                                </div>
+
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
                                                                                                         <i class="bx bxs-star"></i>
@@ -960,8 +932,8 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Information About UI/UX Design Degree</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <h3><a href="single-courses.html" class="d-inline-block">National Certificate - Automobile Mechanic</a></h3>
+                                            <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field.</p>
                                         </div>
                                         <div class="courses-box-footer">
                                             <ul>
@@ -981,14 +953,11 @@
                                 <div class="col-lg-4 col-md-6">
                                     <div class="single-courses-item mb-30">
                                         <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/6.jpg" alt="image"></a>
+                                            <a href="" class="d-block"><img src="assets/img/courses/6.jpg" alt="image"></a>
                                         </div>
                                         <div class="courses-content">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user6.jpg" class="shadow" alt="image">
-                                                    <span>David Warner</span>
-                                                </div>
+
                                                 <!--                                                <div class="courses-rating">
                                                                                                     <div class="review-stars-rated">
                                                                                                         <i class="bx bxs-star"></i>
@@ -1002,8 +971,8 @@
                                                                                                     </div>
                                                                                                 </div>-->
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Photography Photo modify and Beautiful</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <h3><a href="" class="d-inline-block">National Certificate - building and construction</a></h3>
+                                            <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field</p>
                                         </div>
                                         <div class="courses-box-footer">
                                             <ul>
@@ -1022,6 +991,7 @@
                                 </div>
                             </div>
                         </div>
+                       
                     </div>
                 </div>
             </div>
@@ -1380,15 +1350,8 @@
             <div id="particles-js-circle-bubble-2"></div>
         </section>-->
 
-
-
-
-
-
-
-
-
-
+       
+            
         <section class="funfacts-and-feedback-area bg-f8e8e9 ptb-100">
             <div class="container">
                 <div class="row align-items-center">

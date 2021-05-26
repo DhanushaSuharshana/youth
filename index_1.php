@@ -482,768 +482,761 @@
                         <div class="tabs-item" style="display: block;">
                             <div class="row">
                                 <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/1.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user1.jpg" class="shadow" alt="image">
-                                                    <span>Steven Smith</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star-half"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.5 (2)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/1.jpg" alt="image"></div>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
-                                        </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 10 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 6 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/2.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user2.jpg" class="shadow" alt="image">
-                                                    <span>Sarah Taylor</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star-half"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.5 (2)
-                                                                                                    </div>
-                                                                                                </div>-->
-                                            </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Certified Graphic Design with Free Project Course</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
-                                        </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 15 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 10 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/3.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user3.jpg" class="shadow" alt="image">
-                                                    <span>Anderson</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bx-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.0 (1)
-                                                                                                    </div>
-                                                                                                </div>-->
-                                            </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Photography Crash Course for Photographer</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
-                                        </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 5 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 5 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/4.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user4.jpg" class="shadow" alt="image">
-                                                    <span>Liam King</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bx-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.0 (1)
-                                                                                                    </div>
-                                                                                                </div>-->
-                                            </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Web Design for Developing Technology with Joy</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
-                                        </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 10 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 6 lessons
-                                                </li>
-                                                <li class="courses-price">
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
 
-                                                    View
-                                                </li>
-                                            </ul>
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
+                                                </div>
+                                                <h3><div class="d-inline-block"> 
+
+                                                        National Diploma in Culinary & Cookery</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/5.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user5.jpg" class="shadow" alt="image">
-                                                    <span>Lina</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        5.0 (1)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/2.jpg" alt="image"></div>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Information About UI/UX Design Degree</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
+                                                </div>
+                                                <h3><div class="d-inline-block">National Certificate - Automobile Electrician</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 5 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 5 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/6.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user6.jpg" class="shadow" alt="image">
-                                                    <span>David Warner</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bx-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.0 (1)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/3.jpg" alt="image"></div>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Photography Photo modify and Beautiful</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
-                                        </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 11 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 1 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tabs-item" style="display: none;">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/1.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user1.jpg" class="shadow" alt="image">
-                                                    <span>Steven Smith</span>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
                                                 </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star-half"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.5 (2)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                                <h3><div class="d-inline-block">National Certificate - Pastry and bakery</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 10 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 6 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/2.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user2.jpg" class="shadow" alt="image">
-                                                    <span>Sarah Taylor</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star-half"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.5 (2)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/4.jpg" alt="image"></div>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Certified Graphic Design with Free Project Course</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
+                                                </div>
+                                                <h3><div class="d-inline-block">National Certificate - Jewellery Stone Setter</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 15 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 10 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/3.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user3.jpg" class="shadow" alt="image">
-                                                    <span>Anderson</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bx-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.0 (1)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/5.jpg" alt="image"></div>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Photography Crash Course for Photographer</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
+                                                </div>
+                                                <h3><div class="d-inline-block">National Certificate - Automobile Mechanic</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 5 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 5 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/4.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user4.jpg" class="shadow" alt="image">
-                                                    <span>Liam King</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bx-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.0 (1)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/6.jpg" alt="image"></div>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Web Design for Developing Technology with Joy</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
-                                        </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 10 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 6 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/5.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user5.jpg" class="shadow" alt="image">
-                                                    <span>Lina</span>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
                                                 </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        5.0 (1)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                                <h3><div class="d-inline-block">National Certificate - Building and Construction </div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Information About UI/UX Design Degree</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
-                                        </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 5 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 5 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/6.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user6.jpg" class="shadow" alt="image">
-                                                    <span>David Warner</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bx-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.0 (1)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Photography Photo modify and Beautiful</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
                                         </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 11 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 1 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="tabs-item" style="display: none;">
                             <div class="row">
                                 <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/1.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user1.jpg" class="shadow" alt="image">
-                                                    <span>Steven Smith</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star-half"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.5 (2)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/5.jpg" alt="image"></div>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
+                                                </div>
+                                                <h3><div class="d-inline-block">National Certificate - Automobile Mechanic</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 10 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 6 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/2.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user2.jpg" class="shadow" alt="image">
-                                                    <span>Sarah Taylor</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star-half"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.5 (2)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/4.jpg" alt="image"></div>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Certified Graphic Design with Free Project Course</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
+                                                </div>
+                                                <h3><div class="d-inline-block">National Certificate - Jewellery Stone Setter</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 15 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 10 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/6.jpg" alt="image"></div>
+                                            </div>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
+                                                </div>
+                                                <h3><div class="d-inline-block">National Certificate - Building and Construction </div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/3.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user3.jpg" class="shadow" alt="image">
-                                                    <span>Anderson</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bx-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.0 (1)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/1.jpg" alt="image"></div>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Photography Crash Course for Photographer</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
+                                                </div>
+                                                <h3><div class="d-inline-block"> 
+
+                                                        National Diploma in Culinary & Cookery</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 5 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 5 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/3.jpg" alt="image"></div>
+                                            </div>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
+                                                </div>
+                                                <h3><div class="d-inline-block">National Certificate - Pastry and bakery</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/4.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user4.jpg" class="shadow" alt="image">
-                                                    <span>Liam King</span>
-                                                </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bx-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.0 (1)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/2.jpg" alt="image"></div>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Web Design for Developing Technology with Joy</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
+                                                </div>
+                                                <h3><div class="d-inline-block">National Certificate - Automobile Electrician</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 10 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 6 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/5.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user5.jpg" class="shadow" alt="image">
-                                                    <span>Lina</span>
+
+                            </div>
+                        </div>
+                        <div class="tabs-item" style="display: none;">
+                            <div class="row">
+                                <div class="row">
+                                     <div class="col-lg-4 col-md-6">
+                                        <a href="view-courses.php">
+                                            <div class="single-courses-item mb-30">
+                                                <div class="courses-image">
+                                                    <div class="d-block"><img src="assets/img/courses/2.jpg" alt="image"></div>
                                                 </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        5.0 (1)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                                <div class="courses-content">
+                                                    <div class="d-flex justify-content-between align-items-center">
+
+                                                        <!--                                                <div class="courses-rating">
+                                                                                                            <div class="review-stars-rated">
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star-half"></i>
+                                                                                                            </div>
+                                                                                                            <div class="rating-total">
+                                                                                                                4.5 (2)
+                                                                                                            </div>
+                                                                                                        </div>-->
+                                                    </div>
+                                                    <h3><div class="d-inline-block">National Certificate - Automobile Electrician</div></h3>
+                                                    <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                                </div>
+                                                <div class="courses-box-footer">
+                                                    <ul>
+                                                        <li class="students-number">
+                                                            <i class="bx bx-user"></i> 10 students
+                                                        </li>
+                                                        <li class="courses-lesson">
+                                                            <i class="bx bx-book-open"></i> 6 lessons
+                                                        </li>
+                                                        <li class="courses-price">
+                                                            View
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Information About UI/UX Design Degree</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
-                                        </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 5 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 5 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="single-courses-item mb-30">
-                                        <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/6.jpg" alt="image"></a>
-                                        </div>
-                                        <div class="courses-content">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="course-author d-flex align-items-center">
-                                                    <img src="assets/img/user6.jpg" class="shadow" alt="image">
-                                                    <span>David Warner</span>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="view-courses.php">
+                                            <div class="single-courses-item mb-30">
+                                                <div class="courses-image">
+                                                    <div class="d-block"><img src="assets/img/courses/5.jpg" alt="image"></div>
                                                 </div>
-                                                <!--                                                <div class="courses-rating">
-                                                                                                    <div class="review-stars-rated">
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bxs-star"></i>
-                                                                                                        <i class="bx bx-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="rating-total">
-                                                                                                        4.0 (1)
-                                                                                                    </div>
-                                                                                                </div>-->
+                                                <div class="courses-content">
+                                                    <div class="d-flex justify-content-between align-items-center">
+
+                                                        <!--                                                <div class="courses-rating">
+                                                                                                            <div class="review-stars-rated">
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star-half"></i>
+                                                                                                            </div>
+                                                                                                            <div class="rating-total">
+                                                                                                                4.5 (2)
+                                                                                                            </div>
+                                                                                                        </div>-->
+                                                    </div>
+                                                    <h3><div class="d-inline-block">National Certificate - Automobile Mechanic</div></h3>
+                                                    <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                                </div>
+                                                <div class="courses-box-footer">
+                                                    <ul>
+                                                        <li class="students-number">
+                                                            <i class="bx bx-user"></i> 10 students
+                                                        </li>
+                                                        <li class="courses-lesson">
+                                                            <i class="bx bx-book-open"></i> 6 lessons
+                                                        </li>
+                                                        <li class="courses-price">
+                                                            View
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <h3><a href="single-courses.html" class="d-inline-block">Photography Photo modify and Beautiful</a></h3>
-                                            <p>Education encompasses both the teaching and learning of knowledge.</p>
-                                        </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class="bx bx-user"></i> 11 students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class="bx bx-book-open"></i> 1 lessons
-                                                </li>
-                                                <li class="courses-price">
-                                                    View
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        </a>
+                                    </div>
+                                       <div class="col-lg-4 col-md-6">
+                                        <a href="view-courses.php">
+                                            <div class="single-courses-item mb-30">
+                                                <div class="courses-image">
+                                                    <div class="d-block"><img src="assets/img/courses/3.jpg" alt="image"></div>
+                                                </div>
+                                                <div class="courses-content">
+                                                    <div class="d-flex justify-content-between align-items-center">
+
+                                                        <!--                                                <div class="courses-rating">
+                                                                                                            <div class="review-stars-rated">
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star-half"></i>
+                                                                                                            </div>
+                                                                                                            <div class="rating-total">
+                                                                                                                4.5 (2)
+                                                                                                            </div>
+                                                                                                        </div>-->
+                                                    </div>
+                                                    <h3><div class="d-inline-block">National Certificate - Pastry and bakery</div></h3>
+                                                    <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                                </div>
+                                                <div class="courses-box-footer">
+                                                    <ul>
+                                                        <li class="students-number">
+                                                            <i class="bx bx-user"></i> 10 students
+                                                        </li>
+                                                        <li class="courses-lesson">
+                                                            <i class="bx bx-book-open"></i> 6 lessons
+                                                        </li>
+                                                        <li class="courses-price">
+                                                            View
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                   
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="view-courses.php">
+                                            <div class="single-courses-item mb-30">
+                                                <div class="courses-image">
+                                                    <div class="d-block"><img src="assets/img/courses/4.jpg" alt="image"></div>
+                                                </div>
+                                                <div class="courses-content">
+                                                    <div class="d-flex justify-content-between align-items-center">
+
+                                                        <!--                                                <div class="courses-rating">
+                                                                                                            <div class="review-stars-rated">
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star-half"></i>
+                                                                                                            </div>
+                                                                                                            <div class="rating-total">
+                                                                                                                4.5 (2)
+                                                                                                            </div>
+                                                                                                        </div>-->
+                                                    </div>
+                                                    <h3><div class="d-inline-block">National Certificate - Jewellery Stone Setter</div></h3>
+                                                    <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                                </div>
+                                                <div class="courses-box-footer">
+                                                    <ul>
+                                                        <li class="students-number">
+                                                            <i class="bx bx-user"></i> 10 students
+                                                        </li>
+                                                        <li class="courses-lesson">
+                                                            <i class="bx bx-book-open"></i> 6 lessons
+                                                        </li>
+                                                        <li class="courses-price">
+                                                            View
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="view-courses.php">
+                                            <div class="single-courses-item mb-30">
+                                                <div class="courses-image">
+                                                    <div class="d-block"><img src="assets/img/courses/6.jpg" alt="image"></div>
+                                                </div>
+                                                <div class="courses-content">
+                                                    <div class="d-flex justify-content-between align-items-center">
+
+                                                        <!--                                                <div class="courses-rating">
+                                                                                                            <div class="review-stars-rated">
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star-half"></i>
+                                                                                                            </div>
+                                                                                                            <div class="rating-total">
+                                                                                                                4.5 (2)
+                                                                                                            </div>
+                                                                                                        </div>-->
+                                                    </div>
+                                                    <h3><div class="d-inline-block">National Certificate - Building and Construction </div></h3>
+                                                    <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                                </div>
+                                                <div class="courses-box-footer">
+                                                    <ul>
+                                                        <li class="students-number">
+                                                            <i class="bx bx-user"></i> 10 students
+                                                        </li>
+                                                        <li class="courses-lesson">
+                                                            <i class="bx bx-book-open"></i> 6 lessons
+                                                        </li>
+                                                        <li class="courses-price">
+                                                            View
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="view-courses.php">
+                                            <div class="single-courses-item mb-30">
+                                                <div class="courses-image">
+                                                    <div class="d-block"><img src="assets/img/courses/1.jpg" alt="image"></div>
+                                                </div>
+                                                <div class="courses-content">
+                                                    <div class="d-flex justify-content-between align-items-center">
+
+                                                        <!--                                                <div class="courses-rating">
+                                                                                                            <div class="review-stars-rated">
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star"></i>
+                                                                                                                <i class="bx bxs-star-half"></i>
+                                                                                                            </div>
+                                                                                                            <div class="rating-total">
+                                                                                                                4.5 (2)
+                                                                                                            </div>
+                                                                                                        </div>-->
+                                                    </div>
+                                                    <h3><div class="d-inline-block"> 
+
+                                                            National Diploma in Culinary & Cookery</div></h3>
+                                                    <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                                </div>
+                                                <div class="courses-box-footer">
+                                                    <ul>
+                                                        <li class="students-number">
+                                                            <i class="bx bx-user"></i> 10 students
+                                                        </li>
+                                                        <li class="courses-lesson">
+                                                            <i class="bx bx-book-open"></i> 6 lessons
+                                                        </li>
+                                                        <li class="courses-price">
+                                                            View
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1612,125 +1605,124 @@
 
 
 
-
-
-
-        <section class="funfacts-and-feedback-area bg-f8e8e9 ptb-100">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="feedback-slides-content">
-                            <span class="sub-title">Distance learning</span>
-                            <h2>Flexible Study at Your Own Pace, According to Your Own Needs</h2>
-                            <p>With the Raque, you can study whenever and wherever you choose. We have students in over 175 countries and a global reputation as a pioneer in the field of flexible learning. Our teaching also means, if you travel often or need to relocate, you can continue to study wherever you go.</p>
-                            <div class="feedback-slides-two owl-carousel owl-theme owl-loaded owl-drag">
-
-
-
-                                <div class="owl-stage-outer owl-height" style="height: 315px;"><div class="owl-stage" style="transform: translate3d(-2544px, 0px, 0px); transition: all 0s ease 0s; width: 4452px;"><div class="owl-item cloned" style="width: 636px;"><div class="single-feedback-slides-item">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                                <div class="client-info d-flex align-items-center">
-                                                    <img src="assets/img/user2.jpg" class="rounded-circle" alt="image">
-                                                    <div class="title">
-                                                        <h3>Sarah Taylor</h3>
-                                                        <span>PHP Developer</span>
-                                                    </div>
-                                                </div>
-                                            </div></div><div class="owl-item cloned" style="width: 636px;"><div class="single-feedback-slides-item">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                                <div class="client-info d-flex align-items-center">
-                                                    <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
-                                                    <div class="title">
-                                                        <h3>David Warner</h3>
-                                                        <span>QA Developer</span>
-                                                    </div>
-                                                </div>
-                                            </div></div><div class="owl-item" style="width: 636px;"><div class="single-feedback-slides-item">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                                <div class="client-info d-flex align-items-center">
-                                                    <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
-                                                    <div class="title">
-                                                        <h3>John Smith</h3>
-                                                        <span>Python Developer</span>
-                                                    </div>
-                                                </div>
-                                            </div></div><div class="owl-item" style="width: 636px;"><div class="single-feedback-slides-item">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                                <div class="client-info d-flex align-items-center">
-                                                    <img src="assets/img/user2.jpg" class="rounded-circle" alt="image">
-                                                    <div class="title">
-                                                        <h3>Sarah Taylor</h3>
-                                                        <span>PHP Developer</span>
-                                                    </div>
-                                                </div>
-                                            </div></div><div class="owl-item active" style="width: 636px;"><div class="single-feedback-slides-item">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                                <div class="client-info d-flex align-items-center">
-                                                    <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
-                                                    <div class="title">
-                                                        <h3>David Warner</h3>
-                                                        <span>QA Developer</span>
-                                                    </div>
-                                                </div>
-                                            </div></div><div class="owl-item cloned" style="width: 636px;"><div class="single-feedback-slides-item">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                                <div class="client-info d-flex align-items-center">
-                                                    <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
-                                                    <div class="title">
-                                                        <h3>John Smith</h3>
-                                                        <span>Python Developer</span>
-                                                    </div>
-                                                </div>
-                                            </div></div><div class="owl-item cloned" style="width: 636px;"><div class="single-feedback-slides-item">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                                <div class="client-info d-flex align-items-center">
-                                                    <img src="assets/img/user2.jpg" class="rounded-circle" alt="image">
-                                                    <div class="title">
-                                                        <h3>Sarah Taylor</h3>
-                                                        <span>PHP Developer</span>
-                                                    </div>
-                                                </div>
-                                            </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i class="flaticon-arrows"></i></button><button type="button" role="presentation" class="owl-next"><i class="flaticon-right-arrow"></i></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button></div></div>
-                            <div class="feedback-info">
-                                <p>Not a member yet?​ <a href="register.html">Register now</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="funfacts-list">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="single-funfacts-box">
-                                        <h3><span class="odometer odometer-auto-theme" data-count="1926"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">6</span></span></span></span></span></div></span></h3>
-                                        <p>Finished Sessions</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="single-funfacts-box">
-                                        <h3><span class="odometer odometer-auto-theme" data-count="3279"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span></span></span></span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">7</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span></div></span></h3>
-                                        <p>Enrolled Learners</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="single-funfacts-box">
-                                        <h3><span class="odometer odometer-auto-theme" data-count="250"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">5</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></span></h3>
-                                        <p>Online Instructors</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="single-funfacts-box">
-                                        <h3><span class="odometer odometer-auto-theme" data-count="100"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></span>%</h3>
-                                        <p>Satisfaction Rate</p>
+        <!--
+                <section class="funfacts-and-feedback-area bg-f8e8e9 ptb-100">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="feedback-slides-content">
+                                    <span class="sub-title">Distance learning</span>
+                                    <h2>Flexible Study at Your Own Pace, According to Your Own Needs</h2>
+                                    <p>With the Raque, you can study whenever and wherever you choose. We have students in over 175 countries and a global reputation as a pioneer in the field of flexible learning. Our teaching also means, if you travel often or need to relocate, you can continue to study wherever you go.</p>
+                                    <div class="feedback-slides-two owl-carousel owl-theme owl-loaded owl-drag">
+        
+        
+        
+                                        <div class="owl-stage-outer owl-height" style="height: 315px;"><div class="owl-stage" style="transform: translate3d(-2544px, 0px, 0px); transition: all 0s ease 0s; width: 4452px;"><div class="owl-item cloned" style="width: 636px;"><div class="single-feedback-slides-item">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                                        <div class="client-info d-flex align-items-center">
+                                                            <img src="assets/img/user2.jpg" class="rounded-circle" alt="image">
+                                                            <div class="title">
+                                                                <h3>Sarah Taylor</h3>
+                                                                <span>PHP Developer</span>
+                                                            </div>
+                                                        </div>
+                                                    </div></div><div class="owl-item cloned" style="width: 636px;"><div class="single-feedback-slides-item">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                                        <div class="client-info d-flex align-items-center">
+                                                            <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
+                                                            <div class="title">
+                                                                <h3>David Warner</h3>
+                                                                <span>QA Developer</span>
+                                                            </div>
+                                                        </div>
+                                                    </div></div><div class="owl-item" style="width: 636px;"><div class="single-feedback-slides-item">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                                        <div class="client-info d-flex align-items-center">
+                                                            <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
+                                                            <div class="title">
+                                                                <h3>John Smith</h3>
+                                                                <span>Python Developer</span>
+                                                            </div>
+                                                        </div>
+                                                    </div></div><div class="owl-item" style="width: 636px;"><div class="single-feedback-slides-item">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                                        <div class="client-info d-flex align-items-center">
+                                                            <img src="assets/img/user2.jpg" class="rounded-circle" alt="image">
+                                                            <div class="title">
+                                                                <h3>Sarah Taylor</h3>
+                                                                <span>PHP Developer</span>
+                                                            </div>
+                                                        </div>
+                                                    </div></div><div class="owl-item active" style="width: 636px;"><div class="single-feedback-slides-item">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                                        <div class="client-info d-flex align-items-center">
+                                                            <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
+                                                            <div class="title">
+                                                                <h3>David Warner</h3>
+                                                                <span>QA Developer</span>
+                                                            </div>
+                                                        </div>
+                                                    </div></div><div class="owl-item cloned" style="width: 636px;"><div class="single-feedback-slides-item">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                                        <div class="client-info d-flex align-items-center">
+                                                            <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
+                                                            <div class="title">
+                                                                <h3>John Smith</h3>
+                                                                <span>Python Developer</span>
+                                                            </div>
+                                                        </div>
+                                                    </div></div><div class="owl-item cloned" style="width: 636px;"><div class="single-feedback-slides-item">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur rr adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                                        <div class="client-info d-flex align-items-center">
+                                                            <img src="assets/img/user2.jpg" class="rounded-circle" alt="image">
+                                                            <div class="title">
+                                                                <h3>Sarah Taylor</h3>
+                                                                <span>PHP Developer</span>
+                                                            </div>
+                                                        </div>
+                                                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i class="flaticon-arrows"></i></button><button type="button" role="presentation" class="owl-next"><i class="flaticon-right-arrow"></i></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button></div></div>
+                                    <div class="feedback-info">
+                                        <p>Not a member yet?​ <a href="register.html">Register now</a></p>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="funfacts-list">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="single-funfacts-box">
+                                                <h3><span class="odometer odometer-auto-theme" data-count="1926"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">6</span></span></span></span></span></div></span></h3>
+                                                <p>Finished Sessions</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="single-funfacts-box">
+                                                <h3><span class="odometer odometer-auto-theme" data-count="3279"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span></span></span></span><span class="odometer-formatting-mark">,</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">7</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span></div></span></h3>
+                                                <p>Enrolled Learners</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="single-funfacts-box">
+                                                <h3><span class="odometer odometer-auto-theme" data-count="250"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">5</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></span></h3>
+                                                <p>Online Instructors</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="single-funfacts-box">
+                                                <h3><span class="odometer odometer-auto-theme" data-count="100"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></span>%</h3>
+                                                <p>Satisfaction Rate</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="business-shape6"><img src="assets/img/business-coaching/business-shape5.png" alt="image"></div>
-        </section>
-        <section class="faq-area bg-f8e8e9 pb-100">
+                    <div class="business-shape6"><img src="assets/img/business-coaching/business-shape5.png" alt="image"></div>
+                </section>-->
+
+        <section class="faq-area bg-f8e8e9 pb-100 pt-100">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
@@ -1785,6 +1777,52 @@
             </div>
             <div class="divider bg-f9f9f9"></div>
         </section>
+
+
+
+        <section class="testimonials-area pt-100 pb-100">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">Testimonials</span>
+                    <h2>What Students Says</h2>
+                </div>
+                <div class="testimonials-slides owl-carousel owl-theme">
+                    <div class="single-testimonials-item">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="info">
+                            <img src="assets/img/user1.jpg" class="shadow rounded-circle" alt="image">
+                            <h3>John Smith</h3>
+                            <span>Student</span>
+                        </div>
+                    </div>
+                    <div class="single-testimonials-item">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="info">
+                            <img src="assets/img/user2.jpg" class="shadow rounded-circle" alt="image">
+                            <h3>Sarah Taylor</h3>
+                            <span>Student</span>
+                        </div>
+                    </div>
+                    <div class="single-testimonials-item">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="info">
+                            <img src="assets/img/user3.jpg" class="shadow rounded-circle" alt="image">
+                            <h3>David Warner</h3>
+                            <span>Student</span>
+                        </div>
+                    </div>
+                    <div class="single-testimonials-item">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="info">
+                            <img src="assets/img/user4.jpg" class="shadow rounded-circle" alt="image">
+                            <h3>James Anderson</h3>
+                            <span>Student</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section class="events-area bg-f9f9f9 pt-100 pb-70">
 
