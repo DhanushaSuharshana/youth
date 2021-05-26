@@ -35,38 +35,29 @@
         </div>
 
         <header class="header-area">
-            <div class="top-header">
+            <div class="top-header top-header-style-four">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-8">
                             <ul class="top-header-contact-info">
                                 <li>
-                                    <i class="bx bx-phone-call"></i>
-                                    <span>Contact Number</span>
-                                    <a href="tel:502464674">+94 913 1234</a>
-                                </li>
-                                <li>
-                                    <i class="bx bx-map"></i>
-                                    <span>Head Office</span>
-                                    <a href="#">Maharagama</a>
-                                </li>
-                                <li>
-                                    <i class="bx bx-envelope"></i>
-                                    <span>Contact email</span>
-                                    <a href=""><span class="__cf_email__" >info@nysc.lk</span></a>
+                                    Call:
+                                    <a href="tel:502464674">+502 464 674</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="col-lg-4">
-
-                            <div class="top-header-social" style="float: right; ">
-                                <span>Follow us :</span>
-                                <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
-                                <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
-                                <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                                <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            <div class="top-header-social">
+                                <span>Follow us:</span>
+                                <a href="#" target="_blank"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" target="_blank"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="bx bxl-instagram"></i></a>
                             </div>
-
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <ul class="top-header-login-register">
+                                <li><a href="login.html"><i class="bx bx-log-in"></i> Login</a></li>
+                                <li><a href="register.html"><i class="bx bx-log-in-circle"></i> Register</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -138,21 +129,20 @@
                                 <div class="others-option">
                                     <div class="dropdown language-switcher d-inline-block">
                                         <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <img src="assets/img/trans.png" class="shadow" alt="image">
-                                            <span>සිංහල <i class="bx bx-chevron-down"></i></span>
+                                             
+                                            <span>සිං<i class="bx bx-chevron-down"></i></span>
                                         </button>
                                         <div class="dropdown-menu">
                                             <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/english.jpg" class="shadow-sm" alt="flag">
-                                                <span>English</span>
+                                               
+                                                <span>En</span>
                                             </a>
                                             <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/sinhala.jpg" class="shadow-sm" alt="flag">
-                                                <span>සිංහල </span>
+                                          
+                                                <span>සිං </span>
                                             </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center">
-                                                <img src="assets/img/tamil.jpg" class="shadow-sm" alt="flag">
-                                                <span> தமிழ</span>
+                                            <a href="#" class="dropdown-item d-flex align-items-center"> 
+                                                <span> தம</span>
                                             </a>
 
                                         </div>
