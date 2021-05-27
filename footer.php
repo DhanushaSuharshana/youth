@@ -76,7 +76,7 @@
     <div class="footer-bottom-area">
         <div class="container">
 
-            <p><i class='bx bx-copyright'></i><?php echo date('Y') ?> <a href="#" target="_blank">National Youth Counsil </a> Designed By <a href="#" target="_blank">ICT Unit Youth</a> | All rights reserved.</p>
+            <p><i class='bx bx-copyright'></i><?php echo date('Y') ?> <a href="#" target="_blank">National Youth Counsil </a> Designed By <a href="#" target="_blank">Youth Service LTD </a> | All rights reserved.</p>
         </div>
     </div>
 </footer>

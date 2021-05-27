@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
-        <title>National Youth Council Sri Lanka</title>
+        <title>Youth Council || Sri Lanka</title>
         <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
     </head>
     <body>
@@ -36,7 +36,7 @@
                                 <div class="hero-banner-content">
                                     <span class="sub-title">AN EMPOWERED SRI LANKA YOUTH.</span>
                                     <h1>NATIONAL YOUTH SERVICE COUNCIL OF SRI LANKA.! </h1>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    <p>Youth of Sri lanka are also having an undertaking for economic and social upliftment of the country. </p>
                                     <div class="btn-box">
                                         <a href="#" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
                                         <a href="#" class="optional-btn">Get Started Free</a>
@@ -61,28 +61,28 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="single-boxes-item">
                             <h3>Youth GYM</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Enhance youth fitness with high quality equipments with qulified trainer.</p>
                             <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-boxes-item bg-image">
                             <h3>Youth Band</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Best place for ivolve youth musical skills and introduce them to field with us.</p>
                             <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-boxes-item bg-color">
                             <h3>Youth Auditorium</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>We have over 175+ seats and modern sound controllers with air conditioned.</p>
                             <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-boxes-item">
                             <h3>Youth Video Wall</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Brodcast commercial for goverment and private sectors with affordable prices.</p>
                             <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                                                                 Trusted By
                                                                 <span>75K+</span>
                                                             </div>
-                                                        </div>-->
+                                                        </div> -->
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
@@ -120,8 +120,13 @@
                         <div class="about-content">
 <!--                            <span class="sub-title">About Us</span>-->
                             <!--                            <h2>Learn New Skills to go ahead for Your Career</h2>-->
-                            <h6>We can support student forum 24/7 for national and international students.</h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia laborum.</p>
+                            <h6>We can support students forum 24/7 for national and international students in all over the world. </h6>
+                            <p style="text-align: justify">
+                                Youth of Sri Lanka are also having an undertaking for economic and social upliftment of the country.
+                                It is important to inculcate self-reliance in youths and directing them towards winning over those goals.
+                                TheNational Youth Services Council in Sri Lanka has been established with the aim of guiding the Sri Lankan
+                                youth in the proper direction to enable them to empower themselves to the fullest potential while contributing
+                            </p>
                             <div class="features-text">
                                 <h5><i class="bx bx-planet"></i>A place where you can achieve</h5>
 <!--                                <p>Education encompasses both the teaching and learning of knowledge, proper conduct, and technical competency.</p>
@@ -137,8 +142,8 @@
             <div class="container">
                 <div class="section-title">
                     <span class="sub-title">Make Connections</span>
-                    <h2>What We Offer For Growth</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea.</p>
+                    <h2>What We Offer For Your Future.</h2>
+                    <p> Down here take path what is most criticaly needed.</p>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6">
@@ -146,7 +151,7 @@
                             <div class="icon">
                                 <i class='bx bx-book-reader'></i>
                             </div>
-                            <h3>Exclusive Advisor</h3>
+                            <h3>Procruement Notices</h3>
                             <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                         </div>
                     </div>
@@ -155,7 +160,7 @@
                             <div class="icon">
                                 <i class='bx bx-target-lock'></i>
                             </div>
-                            <h3>Reached Your Goals</h3>
+                            <h3>Exam and Results</h3>
                             <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                         </div>
                     </div>
@@ -164,7 +169,7 @@
                             <div class="icon">
                                 <i class='bx bxs-thermometer'></i>
                             </div>
-                            <h3>Digital Laboratory</h3>
+                            <h3>Downloads and Vacancy</h3>
                             <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                         </div>
                     </div>
@@ -187,7 +192,7 @@
                                 <img src="assets/img/1.jpg" alt="images">
                             </div>
                             <div class="member-content">
-                                <h3><a href="#">Minister - Hon. Namal Rajapaksa </a></h3>
+                                <h3><a href="#">Hon. Namal Rajapaksa </a></h3>
                                 <span>Ministry of Youth and Sports</span>
                                 <ul class="social">
                                     <li><a href="#" class="facebook" target="_blank"><i class='bx bxl-facebook'></i></a></li>

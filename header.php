@@ -5,13 +5,13 @@
                 <div class="col-lg-6 col-md-6">
                     <ul class="top-header-contact-info">
                         <li>
-                            Call:
-                            <a href="tel:+94 0112 850 986">+94 0112 850 986</a>
+                           <a href="tel:+94 0112 850 986"> Call:
+                            +94 0112 850 986</a>
                         </li>
                         <div class="top-header-social">
                             <li>
-                                Email:
-                                <a href="mailto:info@nysc.lk">info@nysc.lk</a>
+                             <a href="mailto:info@nysc.lk">   Email:
+                                info@nysc.lk</a>
                             </li>
                         </div>
                     </ul>
@@ -28,9 +28,9 @@
                         <li>
                             <div class="top-header-social">
                                 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent;
-                                        border: none;"> 
+                                        border: none; color: white"> 
 
-                                    <span>සිං</span>
+                                    <span style="color: white">සිං</span>
                                 </button>
                                 <div class="dropdown-menu">
                                     <a href="#" class="dropdown-item d-flex align-items-center">
@@ -79,7 +79,7 @@
                         <ul class="navbar-nav">
 
                             <li class="nav-item"><a href="index.php" class="nav-link active">Home  </a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Division <i class="bx bx-chevron-right"></i></a>
+                            <li class="nav-item"><a href="#" class="nav-link">Division <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="view-division.php">Administrative Division</a></li>
                                     <li class="nav-item"><a href="view-division.php">Finance Division</a></li>
@@ -87,7 +87,7 @@
                                     <li class="nav-item"><a href="view-division.php">National Youth Awards</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class="bx bx-chevron-right"></i></a>
+                            <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="#">Discover</a></li>
                                     <li class="nav-item"><a href="#">Nearest Youth Office</a></li>
@@ -95,7 +95,7 @@
                                     <li class="nav-item"><a href="#">Youth Club News</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href="#" class="nav-link">Student <i class="bx bx-chevron-right"></i></a>
+                            <li class="nav-item"><a href="#" class="nav-link">Student <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="nysc-course-list.php" class="nav-link">Find Courses</a></li>
                                     <li class="nav-item"><a href="apply-now.php" class="nav-link">Apply Now</a></li>
@@ -127,7 +127,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/black-logo.png" alt="logo" style="width: 65%;">
+                        <img src="assets/img/black-logo.png" alt="logo" style="width: 55%;">
                     </a>
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav">
@@ -175,24 +175,7 @@
 
                             <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact Us</a></li>
                         </ul>
-                        <div class="others-option">
-                            <div class="dropdown language-switcher d-inline-block">
-                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                                    <span>English  <i class="bx bx-chevron-down"></i></span>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item d-flex align-items-center"> 
-                                        <span>සිංහල </span>
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center">
-
-                                        <span> தமிழ</span>
-                                    </a>   
-                                </div>
-                            </div>
-
-                        </div>
+                         
                     </div>
                 </nav>
             </div>
