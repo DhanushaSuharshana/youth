@@ -36,14 +36,14 @@
                                 <div class="hero-banner-content">
                                     <span class="sub-title">AN EMPOWERED SRI LANKA YOUTH.</span>
                                     <h1>NATIONAL YOUTH SERVICE COUNCIL OF SRI LANKA.! </h1>
-                                    <p>Youth of Sri lanka are also having an undertaking for economic and social upliftment of the country. </p>
+                                    <p class="dis-none">Youth of Sri lanka are also having an undertaking for economic and social upliftment of the country. </p>
                                     <div class="btn-box">
                                         <a href="#" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
                                         <a href="#" class="optional-btn">Get Started Free</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12">
+                            <div class="col-lg-6 col-md-12 dis-none">
                                 <div class="hero-banner-image text-center">
                                     <img src="assets/img/banner-img1.jpg" alt="image">
                                 </div>
@@ -95,7 +95,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
 
-                        <div class="about-image   ">
+                        <div class="about-image  dis-none ">
                             <img src="assets/img/about/1.jpg" class="shadow" alt="image">
                             <img src="assets/img/about/2.jpg" class="shadow" alt="image">
                             <!--                            <div class=" text-box">
@@ -131,7 +131,7 @@
                                 <h5><i class="bx bx-planet"></i>A place where you can achieve</h5>
 <!--                                <p>Education encompasses both the teaching and learning of knowledge, proper conduct, and technical competency.</p>
                                 -->                            </div>
-                            <a href="courses-2-columns-style-1.html" class="default-btn"><i class="bx bx-move-horizontal icon-arrow before"></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                            <a href="our-centers.php" class="default-btn"><i class="bx bx-move-horizontal icon-arrow before"></i><span class="label">View Our Centers</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
                         </div>
                     </div>
                 </div>

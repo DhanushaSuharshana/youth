@@ -5,13 +5,13 @@
                 <div class="col-lg-6 col-md-6">
                     <ul class="top-header-contact-info">
                         <li>
-                           <a href="tel:+94 0112 850 986"> Call:
-                            +94 0112 850 986</a>
+                            <a href="tel:+94 0112 850 986"> Call:
+                                +94 0112 850 986</a>
                         </li>
                         <div class="top-header-social">
-                            <li>
-                             <a href="mailto:info@nysc.lk">   Email:
-                                info@nysc.lk</a>
+                            <li >
+                                <a href="mailto:info@nysc.lk">   Email:
+                                    info@nysc.lk</a>
                             </li>
                         </div>
                     </ul>
@@ -20,17 +20,17 @@
                 <div class="col-lg-6 col-md-6">
                     <ul class="top-header-login-register">
                         <li>
-                            <a href="#" target="_blank"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" target="_blank"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                            <a href="#" target="_blank"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="bx bxl-facebook font-18"></i></a>
+                            <a href="#" target="_blank"><i class="bx bxl-twitter font-18"></i></a>
+                            <a href="#" target="_blank"><i class="bx bxl-linkedin font-18"></i></a>
+                            <a href="#" target="_blank"><i class="bx bxl-instagram font-18"></i></a>
                         </li>
                         <li>
                             <div class="top-header-social">
                                 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent;
                                         border: none; color: white"> 
 
-                                    <span style="color: white">සිං</span>
+                                    <span style="color: white" class="font-18">සිං</span>
                                 </button>
                                 <div class="dropdown-menu">
                                     <a href="#" class="dropdown-item d-flex align-items-center">
@@ -114,6 +114,7 @@
                             </li>
 
                             <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact Us</a></li>
+                            <li class="nav-item"><a href="our-centers.php" class="nav-link">Our Centers</a></li>
                         </ul> 
                     </div>
                 </nav>
@@ -134,10 +135,7 @@
 
                             <li class="nav-item"><a href="#" class="nav-link active">Home <i class="bx bx-chevron-right"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="index.php">Home</a></li>
-                                    <li class="nav-item"><a href="index_1.php">Home 01</a></li>
-                                    <li class="nav-item"><a href="index_2.php">Home 02 </a> </li> 
-                                </ul>
+                                    <li class="nav-item"><a href="index.php">Home</a></li>                                </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">Division <i class="bx bx-chevron-right"></i></a>
                                 <ul class="dropdown-menu">
@@ -174,8 +172,10 @@
                             </li>
 
                             <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact Us</a></li>
+                            <li class="nav-item"><a href="our-centers.php" class="nav-link">Our Centers</a></li>
+
                         </ul>
-                         
+
                     </div>
                 </nav>
             </div>
