@@ -93,6 +93,9 @@ img {
     margin-top: 30px;
 }
 
+.font-18{
+    font-size: 18px;
+}
 .playfair-display {
     font-family: playfair display, serif;
 }
@@ -766,7 +769,7 @@ textarea.form-control {
 .top-header-login-register li a i {
     position: absolute;
     left: 0;
-    top: -10px;
+    top: -13px;
 }
 
 .top-header-login-register li a:hover,
@@ -829,7 +832,7 @@ textarea.form-control {
 .top-header-style-four .top-header-contact-info li a {
     font-size: 14px;
     color: #fff;
-    font-weight: 500;
+    font-weight: 0;
 }
 
 .top-header-style-four .top-header-social {

@@ -19,6 +19,9 @@
     body {
         font-size: 14px;
     }
+    .dis-none{
+        display: none!important;
+    }
     .ptb-100 {
         padding-top: 60px;
         padding-bottom: 60px;
