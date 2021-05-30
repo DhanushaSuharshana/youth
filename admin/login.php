@@ -16,8 +16,9 @@
         <!-- Icons Css -->
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <!-- App Css-->
+        <link href="assets/css/jquery.formValid.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-
+        <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
     </head>
 
     <body class="authentication-bg">
@@ -43,17 +44,19 @@
                                     <p class="text-muted">Sign in to continue to Minible.</p>
                                 </div>
                                 <div class="p-2 mt-4">
-                                    <form action="index.html">
+                                    <form id="form">
 
                                         <div class="mb-3">
                                             <label class="form-label" for="username">Username</label>
-                                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                                            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username"   data-field="username">
+                                            <div class="valid-message"></div>
                                         </div>
 
                                         <div class="mb-3">
-                                           
+
                                             <label class="form-label" for="userpassword">Password</label>
-                                            <input type="password" class="form-control" id="userpassword" placeholder="Enter password">
+                                            <input type="password" class="form-control"  name="password" id="password" data-field="password" placeholder="Enter password">
+                                            <div class="valid-message"></div>
                                         </div>
 
                                         <div class="form-label">
@@ -63,15 +66,11 @@
                                         <div class="mt-3 text-end">
                                             <button class="btn btn-primary w-sm waves-effect waves-light" type="submit">Log In</button>
                                         </div>
- 
+
                                     </form>
                                 </div>
-
                             </div>
                         </div>
-
-                         
-
                     </div>
                 </div>
                 <!-- end row -->
@@ -90,6 +89,10 @@
 
         <!-- App js -->
         <script src="assets/js/app.js"></script>
+        <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
 
+        <script src="assets/js/jquery.formValid.js" type="text/javascript"></script>
+        <script src="ajax/js/login.js" type="text/javascript"></script>
     </body>
+
 </html>
