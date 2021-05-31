@@ -118,9 +118,9 @@
                                             </div>
                                         </div> 
                                         <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Linkind URL</label>
+                                            <label for="example-url-input" class="col-md-2 col-form-label">  Description</label>
                                             <div class="col-md-10">
-                                                <textarea id="elm1" name="area"></textarea>
+                                                <textarea id="description" name="area"></textarea>
                                             </div>
                                         </div> 
                                         <div class="row">
@@ -180,36 +180,35 @@
         <!-- Datatable init js -->
         <script src="assets/js/pages/datatables.init.js"></script>
 
-        <!-- ckeditor -->
-        
-
-        <!-- JAVASCRIPT -->
-        <script src="assets/libs/jquery/jquery.min.js"></script>
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/node-waves/waves.min.js"></script>
-        <script src="assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
-        <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
-
-        <!-- ckeditor -->
-        <script src="assets/libs/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
-
-        <!--tinymce js-->
-        <script src="assets/libs/tinymce/tinymce.min.js"></script>
-
-        <!-- init js -->
-        <script src="assets/js/pages/form-editor.init.js"></script>
 
         <!-- App js -->
         <script src="assets/js/app.js"></script>
 
+        <script src="tinymce/js/tinymce/tinymce.min.js" type="text/javascript"></script>
         <script>
-            ClassicEditor
-                    .create(document.querySelector('#classic-editor'))
-                    .catch(error => {
-                        console.error(error);
-                    });
+            tinymce.init({
+                selector: "#description",
+                // ===========================================
+                // INCLUDE THE PLUGIN
+                // ===========================================
+
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table contextmenu paste"
+                ],
+                // ===========================================
+                // PUT PLUGIN'S BUTTON on the toolbar
+                // ===========================================
+
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
+                // ===========================================
+                // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
+                // ===========================================
+
+                relative_urls: false
+
+            });
         </script>
 
     </body>

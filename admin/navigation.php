@@ -34,20 +34,20 @@
 
                 <li>
                     <a href="index.php">
-                        <i class="uil-home-alt"></i>
+                        <i class="bx bx-home "></i>
                         <span>Dashboard</span>
                     </a>
                 </li>  
                 <li>
                     <a href="manage-leaders.php" class=" waves-effect">
-                        <i class="uil-comments-alt"></i> 
+                        <i class="bx bx-user"></i> 
                         <span>Manage Leaders</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-store"></i>
+                        <i class="bx bx-book"></i>
                         <span>About us</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -58,7 +58,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-store"></i>
+                        <i class="bx bx-chart "></i>
                         <span>Courses</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -70,7 +70,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-envelope"></i>
+                        <i class="bx bx-news"></i>
                         <span>News</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -80,7 +80,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-envelope"></i>
+                        <i class="bx bx-calendar "></i>
                         <span>Event</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -90,7 +90,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-envelope"></i>
+                        <i class="bx bx-aperture bx bx-sitemap "></i>
                         <span>Devision</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -100,17 +100,17 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-envelope"></i>
+                        <i class="bx bx-aperture "></i>
                         <span>Services</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="create-devision.php">Add Services</a></li>
+                        <li><a href="create-service.php">Add Services</a></li>
                         <li><a href="manage-devision.php">Manage Services</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-envelope"></i>
+                        <i class="bx bx-images"></i>
                         <span>Photo Album</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -121,7 +121,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-share-alt"></i>
+                        <i class="bx bx-crosshair "></i>
                         <span>Youth Club</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">

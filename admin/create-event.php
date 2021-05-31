@@ -108,7 +108,7 @@
                                         <div class="mb-3 row">
                                             <label for="example-url-input" class="col-md-2 col-form-label">Linkind URL</label>
                                             <div class="col-md-10">
-                                                <input class="form-control" type="url"   id="example-url-input">
+                                                <textarea id="description"></textarea>
                                             </div>
                                         </div> 
                                         <div class="row">
@@ -122,7 +122,7 @@
                             </div> <!-- end col -->
                         </div>
                         <!-- end row -->
-                         
+
 
                         <!-- end row -->
 
@@ -149,6 +149,32 @@
 
         <!-- App js -->
         <script src="assets/js/app.js"></script>
+        <script src="tinymce/js/tinymce/tinymce.min.js" type="text/javascript"></script>
+        <script>
+            tinymce.init({
+                selector: "#description",
+                // ===========================================
+                // INCLUDE THE PLUGIN
+                // ===========================================
+
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table contextmenu paste"
+                ],
+                // ===========================================
+                // PUT PLUGIN'S BUTTON on the toolbar
+                // ===========================================
+
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
+                // ===========================================
+                // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
+                // ===========================================
+
+                relative_urls: false
+
+            });
+        </script>
 
     </body>
 </html>
