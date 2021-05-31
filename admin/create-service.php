@@ -115,7 +115,7 @@
                                             </div>
                                         </div> 
                                         <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Linkind URL</label>
+                                            <label for="example-url-input" class="col-md-2 col-form-label">Description</label>
                                             <div class="col-md-10">
                                                 <textarea id="description" name="area"></textarea>
                                             </div>
@@ -157,36 +157,8 @@
         <script src="assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
         <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
 
-        <!-- Required datatable js -->
-        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-        <!-- Buttons examples -->
-        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-        <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
-        <script src="assets/libs/jszip/jszip.min.js"></script>
-        <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
-        <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
-        <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-        <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-        <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
-
-        <!-- Responsive examples -->
-        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-
-        <!-- Datatable init js -->
-        <script src="assets/js/pages/datatables.init.js"></script>
-
-        <!-- ckeditor --> 
-
-        <!-- ckeditor -->
-        <script src="assets/libs/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
-
-        <!--tinymce js-->
-        <script src="assets/libs/tinymce/tinymce.min.js"></script>
-
-        <!-- init js -->
-        <script src="assets/js/pages/form-editor.init.js"></script>
+          
+ 
 
         <!-- App js -->
         <script src="assets/js/app.js"></script>
