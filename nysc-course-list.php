@@ -146,298 +146,257 @@
                     </div>
                     <div class="col-lg-9 col-md-12">
                         <div class="row">
-                            <div class="col-lg-12 col-md-12">
-                                <div class="single-courses-list-box mb-30">
-                                    <div class="box-item">
-                                        <div class="courses-image">
-                                            <div class="image bg-1">
-                                                <img src="assets/img/courses/1.jpg" alt="image">
-                                                <a href="view-courses.php" class="link-btn"></a>
-                                                <div class="courses-tag">
-                                                    <a href="#" class="d-block">Design</a>
-                                                </div>
+                            <div class="col-lg-4 col-md-6">
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/1.jpg" alt="image"></div>
                                             </div>
-                                        </div>
-                                        <div class="courses-desc">
                                             <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
 
-                                                <h3><a href="view-courses.php" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
-                                                <div class="courses-rating">
-                                                    <div class="review-stars-rated">
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                    </div>
-                                                    <div class="rating-total">
-                                                        5.0 (1 rating)
-                                                    </div>
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
                                                 </div>
-                                                <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                                <h3><div class="d-inline-block"> 
+
+                                                        National Diploma in Culinary & Cookery</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
                                             </div>
                                             <div class="courses-box-footer">
                                                 <ul>
                                                     <li class="students-number">
-                                                        <i class='bx bx-user'></i> Max 40 students
+                                                        <i class="bx bx-user"></i> 10 students
                                                     </li>
                                                     <li class="courses-lesson">
-                                                        <i class='bx bx-book-open'></i> 6 lessons
+                                                        <i class="bx bx-book-open"></i> 6 lessons
                                                     </li>
                                                     <li class="courses-price">
-                                                        <a href="nysc-course-list.php"> View Details </a>
+                                                        View
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="single-courses-list-box mb-30">
-                                    <div class="box-item">
-                                        <div class="courses-image">
-                                            <div class="image bg-2">
-                                                <img src="assets/img/courses/2.jpg" alt="image">
-                                                <a href="view-courses.php" class="link-btn"></a>
-                                                <div class="courses-tag">
-                                                    <a href="#" class="d-block">Design</a>
-                                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/2.jpg" alt="image"></div>
                                             </div>
-                                        </div>
-                                        <div class="courses-desc">
                                             <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
 
-                                                <h3><a href="view-courses.php" class="d-inline-block">Certified Graphic Design with Free Project Course</a></h3>
-                                                <div class="courses-rating">
-                                                    <div class="review-stars-rated">
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star-half'></i>
-                                                    </div>
-                                                    <div class="rating-total">
-                                                        4.5 (2 rating)
-                                                    </div>
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
                                                 </div>
-                                                <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                                <h3><div class="d-inline-block">National Certificate - Automobile Electrician</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
                                             </div>
                                             <div class="courses-box-footer">
                                                 <ul>
                                                     <li class="students-number">
-                                                        <i class='bx bx-user'></i> Max 40 students
+                                                        <i class="bx bx-user"></i> 10 students
                                                     </li>
                                                     <li class="courses-lesson">
-                                                        <i class='bx bx-book-open'></i> 6 lessons
-                                                    </li>
-                                                  <li class="courses-price">
-                                                        <a href="nysc-course-list.php"> View Details </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="single-courses-list-box mb-30">
-                                    <div class="box-item">
-                                        <div class="courses-image">
-                                            <div class="image bg-3">
-                                                <img src="assets/img/courses/3.jpg" alt="image">
-                                                <a href="view-courses.php" class="link-btn"></a>
-                                                <div class="courses-tag">
-                                                    <a href="#" class="d-block">Development</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="courses-desc">
-                                            <div class="courses-content">
-
-                                                <h3><a href="view-courses.php" class="d-inline-block">Photography Crash Course for Photographer</a></h3>
-                                                <div class="courses-rating">
-                                                    <div class="review-stars-rated">
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bx-star'></i>
-                                                    </div>
-                                                    <div class="rating-total">
-                                                        4.0 (1 rating)
-                                                    </div>
-                                                </div>
-                                                <p>Education encompasses both the teaching and learning of knowledge.</p>
-                                            </div>
-                                            <div class="courses-box-footer">
-                                                <ul>
-                                                    <li class="students-number">
-                                                        <i class='bx bx-user'></i> Max 40 students
-                                                    </li>
-                                                    <li class="courses-lesson">
-                                                        <i class='bx bx-book-open'></i> 6 lessons
-                                                    </li>
-                                                  <li class="courses-price">
-                                                        <a href="nysc-course-list.php"> View Details </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="single-courses-list-box mb-30">
-                                    <div class="box-item">
-                                        <div class="courses-image">
-                                            <div class="image bg-4">
-                                                <img src="assets/img/courses/4.jpg" alt="image">
-                                                <a href="view-courses.php" class="link-btn"></a>
-                                                <div class="courses-tag">
-                                                    <a href="#" class="d-block">Language</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="courses-desc">
-                                            <div class="courses-content">
-
-                                                <h3><a href="view-courses.php" class="d-inline-block">Web Design for Developing Technology with Joy</a></h3>
-                                                <div class="courses-rating">
-                                                    <div class="review-stars-rated">
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                    </div>
-                                                    <div class="rating-total">
-                                                        5.0 (1 rating)
-                                                    </div>
-                                                </div>
-                                                <p>Education encompasses both the teaching and learning of knowledge.</p>
-                                            </div>
-                                            <div class="courses-box-footer">
-                                                <ul>
-                                                    <li class="students-number">
-                                                        <i class='bx bx-user'></i> Max 40 students
-                                                    </li>
-                                                    <li class="courses-lesson">
-                                                        <i class='bx bx-book-open'></i> 6 lessons
+                                                        <i class="bx bx-book-open"></i> 6 lessons
                                                     </li>
                                                     <li class="courses-price">
-                                                        <a href="nysc-course-list.php"> View Details </a>
+                                                        View
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="single-courses-list-box mb-30">
-                                    <div class="box-item">
-                                        <div class="courses-image">
-                                            <div class="image bg-5">
-                                                <img src="assets/img/courses/5.jpg" alt="image">
-                                                <a href="view-courses.php" class="link-btn"></a>
-                                                <div class="courses-tag">
-                                                    <a href="#" class="d-block">Management</a>
-                                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/3.jpg" alt="image"></div>
                                             </div>
-                                        </div>
-                                        <div class="courses-desc">
                                             <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
 
-                                                <h3><a href="view-courses.php" class="d-inline-block">Information About UI/UX Design Degree</a></h3>
-                                                <div class="courses-rating">
-                                                    <div class="review-stars-rated">
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                    </div>
-                                                    <div class="rating-total">
-                                                        5.0 (1 rating)
-                                                    </div>
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
                                                 </div>
-                                                <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                                <h3><div class="d-inline-block">National Certificate - Pastry and bakery</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
                                             </div>
                                             <div class="courses-box-footer">
                                                 <ul>
                                                     <li class="students-number">
-                                                        <i class='bx bx-user'></i> Max 40 students
+                                                        <i class="bx bx-user"></i> 10 students
                                                     </li>
                                                     <li class="courses-lesson">
-                                                        <i class='bx bx-book-open'></i> 6 lessons
+                                                        <i class="bx bx-book-open"></i> 6 lessons
                                                     </li>
                                                     <li class="courses-price">
-                                                        <a href="nysc-course-list.php"> View Details </a>
+                                                        View
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="single-courses-list-box mb-30">
-                                    <div class="box-item">
-                                        <div class="courses-image">
-                                            <div class="image bg-6">
-                                                <img src="assets/img/courses/6.jpg" alt="image">
-                                                <a href="view-courses.php" class="link-btn"></a>
-                                                <div class="courses-tag">
-                                                    <a href="#" class="d-block">Photography</a>
-                                                </div>
+                               <div class="col-lg-4 col-md-6">
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/1.jpg" alt="image"></div>
                                             </div>
-                                        </div>
-                                        <div class="courses-desc">
                                             <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
 
-                                                <h3><a href="view-courses.php" class="d-inline-block">Photography Photo modify and Beautiful</a></h3>
-                                                <div class="courses-rating">
-                                                    <div class="review-stars-rated">
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                        <i class='bx bxs-star'></i>
-                                                    </div>
-                                                    <div class="rating-total">
-                                                        5.0 (1 rating)
-                                                    </div>
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
                                                 </div>
-                                                <p>Education encompasses both the teaching and learning of knowledge.</p>
+                                                <h3><div class="d-inline-block"> 
+
+                                                        National Diploma in Culinary & Cookery</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
                                             </div>
                                             <div class="courses-box-footer">
                                                 <ul>
                                                     <li class="students-number">
-                                                        <i class='bx bx-user'></i> Max 40 students
+                                                        <i class="bx bx-user"></i> 10 students
                                                     </li>
                                                     <li class="courses-lesson">
-                                                        <i class='bx bx-book-open'></i> 6 lessons
+                                                        <i class="bx bx-book-open"></i> 6 lessons
                                                     </li>
                                                     <li class="courses-price">
-                                                        <a href="nysc-course-list.php"> View Details </a>
+                                                        View
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <div class="pagination-area text-center">
-                                    <span class="page-numbers current" aria-current="page">1</span>
-                                    <a href="#" class="page-numbers">2</a>
-                                    <a href="#" class="page-numbers">3</a>
-                                    <a href="#" class="page-numbers">4</a>
-                                    <a href="#" class="page-numbers">5</a>
-                                    <a href="#" class="next page-numbers"><i class='bx bx-chevron-right'></i></a>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/3.jpg" alt="image"></div>
+                                            </div>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
+                                                </div>
+                                                <h3><div class="d-inline-block">National Certificate - Pastry and bakery</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="view-courses.php">
+                                        <div class="single-courses-item mb-30">
+                                            <div class="courses-image">
+                                                <div class="d-block"><img src="assets/img/courses/2.jpg" alt="image"></div>
+                                            </div>
+                                            <div class="courses-content">
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <!--                                                <div class="courses-rating">
+                                                                                                        <div class="review-stars-rated">
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star"></i>
+                                                                                                            <i class="bx bxs-star-half"></i>
+                                                                                                        </div>
+                                                                                                        <div class="rating-total">
+                                                                                                            4.5 (2)
+                                                                                                        </div>
+                                                                                                    </div>-->
+                                                </div>
+                                                <h3><div class="d-inline-block">National Certificate - Automobile Electrician</div></h3>
+                                                <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class="bx bx-user"></i> 10 students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class="bx bx-book-open"></i> 6 lessons
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                         </div>
                     </div>
                     
