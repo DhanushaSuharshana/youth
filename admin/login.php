@@ -1,16 +1,14 @@
 <!doctype html>
+<?php
+include_once(dirname(__FILE__) . '/../class/include.php');
+?>
 <html lang="en">
-
     <head>
-
         <meta charset="utf-8" />
-        <title>Login | Minible - Admin & Dashboard Template</title>
+        <title>Login | Sri Lanka Youth Services</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-        <meta content="Themesbrand" name="author" />
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
-
+        <meta content="NYSC" name="author" />
         <!-- Bootstrap Css -->
         <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
@@ -20,18 +18,12 @@
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
     </head>
-
     <body class="authentication-bg">
         <div class="account-pages my-5 pt-sm-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="text-center">
-                            <a href="index.html" class="mb-5 d-block auth-logo">
-                                <img src="assets/images/logo-dark.png" alt="" height="22" class="logo logo-dark">
-                                <img src="assets/images/logo-light.png" alt="" height="22" class="logo logo-light">
-                            </a>
-                        </div>
+
                     </div>
                 </div>
                 <div class="row align-items-center justify-content-center">
@@ -40,8 +32,14 @@
 
                             <div class="card-body p-4"> 
                                 <div class="text-center mt-2">
-                                    <h5 class="text-primary">Welcome Back !</h5>
-                                    <p class="text-muted">Sign in to continue to Minible.</p>
+                                    <div class="text-center">
+                                        <a href="" class="mb-3 d-block auth-logo">
+                                            <img src="assets/images/logo-dark.png" alt="" height="80" class="logo logo-dark">
+                                            <img src="assets/images/logo-light.png" alt="" height="80" class="logo logo-light">
+                                        </a>
+                                    </div>
+                                    <h5 class="text-primary">Sign in to continue to Website CMS.</h5>
+
                                 </div>
                                 <div class="p-2 mt-4">
                                     <form id="form">
@@ -60,7 +58,7 @@
                                         </div>
 
                                         <div class="form-label">
-                                            <a href="auth-recoverpw.html" class="text-muted">Forgot password?</a>
+                                            <a href="#" class="text-muted">Forgot password?</a>
                                         </div>
 
                                         <div class="mt-3 text-end">

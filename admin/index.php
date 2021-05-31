@@ -1,16 +1,18 @@
 <!doctype html>
+<?php 
+include_once(dirname(__FILE__) . '/../class/include.php');
+include_once(dirname(__FILE__) . '/auth.php');
+?>
 <html lang="en">
 
     <head>
 
         <meta charset="utf-8" />
-        <title>Dark Sidebar | Minible - Admin & Dashboard Template</title>
+        <title>CMS : Sri Lanka Youth Services</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-        <meta content="Themesbrand" name="author" />
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
-
+        <meta content="NYSC" name="author" />
+   
         <!-- Bootstrap Css -->
         <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->

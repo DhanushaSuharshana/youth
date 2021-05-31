@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="raque-responsive-menu">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="./">
                             <img src="assets/img/black-logo.png" alt="logo">
                         </a>
                     </div>
@@ -72,7 +72,7 @@
         <div class="raque-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="./">
                         <img src="assets/img/black-logo.png" alt="logo" style="width: 60%">
                     </a>
                     <div class="collapse navbar-collapse mean-menu" style="display: block;">
