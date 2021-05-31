@@ -1,0 +1,102 @@
+
+
+
+.filter_lg {
+    position: absolute;
+    top: 310px;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.filter_xlg {
+    position: absolute;
+    top: 380px;
+    width: 100%;
+    border-bottom: 0px;
+    z-index: 10;
+
+}
+
+/* ////////////////////////////////////Tabs////////////////////////// */
+
+
+
+nav > .nav.nav-tabs{
+
+  border: none;
+    color:#fff;
+    background:#272e38;
+    border-radius: 5px;
+
+}
+nav > div a.nav-item.nav-link,
+nav > div a.nav-item.nav-link.active
+{
+  border: none;
+    padding: 10px 20px;
+    color:#fff;
+    background:#272e38;
+    border-radius:5px;
+}
+
+nav > div a.nav-item.nav-link.active:after
+ {
+  content: "";
+  position: relative;
+  bottom: -60px;
+  left: -10%;
+  border: 15px solid transparent;
+  border-top-color: #e74c3c ;
+}
+.tab-content{
+  background: #fdfdfd;
+    line-height: 25px;
+   
+    border-top:5px solid #e74c3c;
+    border-bottom:5px solid #e74c3c;
+    padding:30px 25px;
+}
+
+nav > div a.nav-item.nav-link:hover,
+nav > div a.nav-item.nav-link:focus
+{
+  border: none;
+    background: #e74c3c;
+    color:#fff;
+    border-radius:0;
+    transition:background 0.20s linear;
+}
+
+.carousel-inner img {
+    width: 100%
+}
+
+.carousel-item img {
+    width: 650px;
+    height: 350px !important
+}
+
+#myCarousel .carousel-indicators {
+    position: static;
+    margin-top: 0px;
+}
+
+#myCarousel .carousel-indicators>li {
+    width: 100px;
+        padding-bottom: 50px;
+}
+
+#myCarousel .carousel-indicators li img {
+    display: block;
+    opacity: 0.5;
+    
+}
+
+#myCarousel .carousel-indicators li.active img {
+    opacity: 1;
+}
+
+#myCarousel .carousel-indicators li:hover img {
+    opacity: 0.75;
+}
