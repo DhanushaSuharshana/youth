@@ -186,57 +186,30 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea.</p>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-instructor-member mb-30">
-                            <div class="member-image">
-                                <img src="assets/img/1.jpg" alt="images">
-                            </div>
-                            <div class="member-content">
-                                <h3><a href="#">Hon. Namal Rajapaksa </a></h3>
-                                <span>Ministry of Youth and Sports</span>
-                                <ul class="social">
-                                    <li><a href="#" class="facebook" target="_blank"><i class='bx bxl-facebook'></i></a></li>
-                                    <li><a href="#" class="twitter" target="_blank"><i class='bx bxl-twitter'></i></a></li>
-                                    <li><a href="#" class="instagram" target="_blank"><i class='bx bxl-instagram'></i></a></li>
-                                    <li><a href="#" class="linkedin" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-instructor-member mb-30">
-                            <div class="member-image">
-                                <img src="assets/img/2.jpg" alt="images">
-                            </div>
-                            <div class="member-content">
-                                <h3><a href="#">Mr. Anuradha Wijekoon</a></h3>
-                                <span>Secretary Youth and Sports</span>
-                                <ul class="social">
-                                    <li><a href="#" class="facebook" target="_blank"><i class='bx bxl-facebook'></i></a></li>
-                                    <li><a href="#" class="twitter" target="_blank"><i class='bx bxl-twitter'></i></a></li>
-                                    <li><a href="#" class="instagram" target="_blank"><i class='bx bxl-instagram'></i></a></li>
-                                    <li><a href="#" class="linkedin" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                                </ul>
+                    <?php
+                    $LEADERS = new Leaders(NULL);
+                    foreach ($LEADERS->all() as $leader) {
+                        ?>
+
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-instructor-member mb-30">
+                                <div class="member-image">
+                                    <img src="<?php echo URL ?>upload/leader/<?php echo $leader['image_name'] ?>" alt="images">
+                                </div>
+                                <div class="member-content">
+                                    <h3><a href="#"><?php echo $leader['name'] ?> </a></h3>
+                                    <span><?php echo $leader['position'] ?></span>
+                                    <ul class="social">
+                                        <li><a href="<?php echo $leader['facebook'] ?>" class="facebook" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                                        <li><a href="#" class="twitter" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                                        <li><a href="#" class="instagram" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                                        <li><a href="#" class="linkedin" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
-                        <div class="single-instructor-member mb-30">
-                            <div class="member-image">
-                                <img src="assets/img/3.jpg" alt="images">
-                            </div>
-                            <div class="member-content">
-                                <h3><a href="#">Mr. Damith Wickramasinghe </a></h3>
-                                <span>Director General/Chairman </span>
-                                <ul class="social">
-                                    <li><a href="#" class="facebook" target="_blank"><i class='bx bxl-facebook'></i></a></li>
-                                    <li><a href="#" class="twitter" target="_blank"><i class='bx bxl-twitter'></i></a></li>
-                                    <li><a href="#" class="instagram" target="_blank"><i class='bx bxl-instagram'></i></a></li>
-                                    <li><a href="#" class="linkedin" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
+
 
                 </div>
             </div>

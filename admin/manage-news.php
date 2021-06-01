@@ -42,8 +42,7 @@
             <div class="main-content">
 
                 <div class="page-content">
-                    <div class="container-fluid">
-
+                    <div class="container-fluid"> 
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -69,9 +68,7 @@
                                     <h4 class="card-title">Manage News</h4>
                                 </div>
                             </div>
-                            <div class="row mt-3">
-
-
+                            <div class="row mt-3"> 
                                 <div class="col-md-6 col-xl-3"> 
                                     <!-- Simple card -->
                                     <div class="card">
@@ -84,16 +81,10 @@
                                             <div class="badge bg-pill bg-soft-danger font-size-14"><i class="fas fa-trash-alt p-1"></i></div>
                                         </div>
                                     </div> 
-                                </div><!-- end col -->
-
-
-                            </div>
-
-                        </section>
-
-                        <!-- end row -->
-
-                    </div> <!-- container-fluid -->
+                                </div> 
+                            </div> 
+                        </section>  
+                    </div>  
                 </div> 
                 <?php include './footer.php'; ?>
             </div> 
