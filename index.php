@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -10,7 +11,7 @@ require './libs/Bootstrap.php';
 require './libs/Controller.php';
 require './libs/Model.php';
 require './libs/View.php';
-//require './class/include.php';
+require './class/include.php';
 // ===========================
 //require './libs/Database.php';
 //require './libs/Validation.php';
@@ -21,6 +22,3 @@ require './libs/View.php';
 
 $bootstrap = new Bootstrap();
 $bootstrap->init();
-
-
-
