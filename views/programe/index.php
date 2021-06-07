@@ -26,7 +26,7 @@
 
 
 
-        <?php include './header.php'; ?>
+        <?php include './views/header.php'; ?>
 
 
 
@@ -316,7 +316,7 @@
         </section>
 
 
-        <?php include './footer.php'; ?>
+        <?php include './views/footer.php'; ?>
 
         <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 

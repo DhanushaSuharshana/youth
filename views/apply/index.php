@@ -1,7 +1,5 @@
 <!doctype html>
-<html lang="zxx">
-
-    <!-- Mirrored from templates.envytheme.com/raque/default/edit-account.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Apr 2021 03:12:20 GMT -->
+<html lang="zxx"> 
 
     <head>
 
@@ -26,7 +24,8 @@
     </head>
 
     <body>
-        <?php include './header.php'; ?>
+
+        <?php include './views/header.php'; ?>
 
         <div class="search-overlay">
             <div class="d-table">
@@ -188,9 +187,9 @@
             </div>
         </section>
 
-
-
-        <?php include './footer.php'; ?>
+ 
+        <?php include './views/footer.php'; ?>
+        
         <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 
         <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>

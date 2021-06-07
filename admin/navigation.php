@@ -67,11 +67,23 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-chart "></i>
+                        <span>Courses Types</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="manage-course-type.php">Manage Courses Type </a></li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-chart "></i>
                         <span>Courses</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="create-course-type.php">Add Course Type </a></li>
-                        <li><a href="email-read.html">Add New  </a></li>
+                        <li><a href="create-courses.php">Create Courses </a></li>
+                        <li><a href="manage-course.php">Manage Courses </a></li>
+
                     </ul>
                 </li>
 
@@ -110,7 +122,7 @@
                 </li>
 
                 <li>
-                    <a href="c" >
+                    <a href="create-photo-album.php" >
                         <i class="bx bx-images"></i>
                         <span>Photo Album</span>
                     </a>

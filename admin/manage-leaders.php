@@ -132,11 +132,8 @@ include_once(dirname(__FILE__) . '/auth.php');
                         <section>
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Manage Leaders.</h4>
-
-                                    <div class="mt-3">
-
-
+                                    <h4 class="card-title">Manage Leaders.</h4> 
+                                    <div class="mt-3"> 
                                         <div class="col-md-6 col-xl-3"> 
                                             <!-- Simple card -->
                                             <div class="card">
@@ -149,20 +146,11 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <div class="badge bg-pill bg-soft-danger font-size-14"><i class="fas fa-trash-alt p-1"></i></div>
                                                 </div>
                                             </div> 
-                                        </div><!-- end col -->
-
-
+                                        </div> 
                                     </div>
-                                </div>
-
-
-                            </div>
-
-
-                        </section>
-
-                        <!-- end row -->
-
+                                </div> 
+                            </div> 
+                        </section> 
                     </div> <!-- container-fluid -->
                 </div> 
                 <?php include './footer.php'; ?>
