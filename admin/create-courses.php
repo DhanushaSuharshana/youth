@@ -1,4 +1,8 @@
 <!doctype html>
+<?php
+include_once(dirname(__FILE__) . '/../class/include.php');
+include_once(dirname(__FILE__) . '/auth.php');
+?>
 <html lang="en">
 
     <head>
@@ -76,9 +80,17 @@
                                         <h4 class="card-title">Add Leader Details.</h4> 
 
                                         <div class="mb-3 row">
+                                            <label for="example-text-input" class="col-md-2 col-form-label">Select Course Type</label>
+                                            <div class="col-md-10">
+                                                <select class="form-control">
+                                                    <option> -- Please Select Course Type --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
                                             <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
                                             <div class="col-md-10">
-                                                <input class="form-control" type="text" id="example-text-input">
+                                                <input class="form-control" type="text" id="example-text-input"  >
                                             </div>
                                         </div>
                                         <div class="mb-3 row">

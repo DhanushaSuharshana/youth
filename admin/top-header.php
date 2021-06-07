@@ -95,7 +95,7 @@
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="rounded-circle header-profile-user" src="assets/images/users/<?php echo $_SESSION["id"]; ?>.jpg"
                          alt="Header Avatar">
-                    <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15"><?php echo $_SESSION["name"]; ?></span>
+                    <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15"><?php echo $_SESSION["name"]; ?> <i class="bx bx-chevron-down "></i></span>
                     <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">

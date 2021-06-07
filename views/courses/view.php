@@ -5,24 +5,24 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="assets/css/bootstrap..min.css">
-        <link rel="stylesheet" href="assets/css/boxicons.min.css">
-        <link rel="stylesheet" href="assets/css/flaticon.css">
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/css/odometer.min.css">
-        <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-        <link rel="stylesheet" href="assets/css/animate.min.css">
-        <link rel="stylesheet" href="assets/css/nice-select.min.css">
-        <link rel="stylesheet" href="assets/css/viewer.min.css">
-        <link rel="stylesheet" href="assets/css/slick.min.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/bootstrap..min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/boxicons.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/flaticon.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/odometer.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/meanmenu.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/animate.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/nice-select.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/viewer.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/slick.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/style.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
         <title>Courses National Youth Council Sri Lanka</title>
-        <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <link rel="icon" type="image/png" href="<?php echo URL ?>assets/img/favicon.png">
     </head>
     <body>
-        <?php include './header.php'; ?>
+        <?php include './views/header.php'; ?>
 
         <div class="page-title-area item-bg2 jarallax" data-jarallax='{"speed": 0.3}'>
             <div class="container">
@@ -86,7 +86,7 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="courses-details-image text-center">
-                            <img src="assets/img/courses/2.jpg" alt="image">
+                            <img src="<?php echo URL ?>assets/img/courses/2.jpg" alt="image">
                         </div>
                         <div class="courses-details-desc">
                             <h3>What you'll learn</h3>
@@ -206,7 +206,7 @@
                                                             <div class="author-profile-header"></div>
                                                             <div class="author-profile">
                                                                 <div class="author-profile-title">
-                                                                    <img src="assets/img/user1.jpg" class="shadow-sm rounded-circle" alt="image">
+                                                                    <img src="<?php echo URL ?>assets/img/user1.jpg" class="shadow-sm rounded-circle" alt="image">
                                                                     <div class="author-profile-title-details d-flex justify-content-between">
                                                                         <div class="author-profile-details">
                                                                             <h4>James Anderson</h4>
@@ -224,7 +224,7 @@
                                                         <div class="courses-review-comments">
                                                             <h3>3 Reviews</h3>
                                                             <div class="user-review">
-                                                                <img src="assets/img/user1.jpg" alt="image">
+                                                                <img src="<?php echo URL ?>assets/img/user1.jpg" alt="image">
                                                                 <div class="review-rating">
                                                                     <div class="review-stars">
                                                                         <i class='bx bxs-star'></i>
@@ -239,7 +239,7 @@
                                                                 <p>Very well built theme, couldn't be happier with it. Can't wait for future updates to see what else they add in.</p>
                                                             </div>
                                                             <div class="user-review">
-                                                                <img src="assets/img/user2.jpg" alt="image">
+                                                                <img src="<?php echo URL ?>assets/img/user2.jpg" alt="image">
                                                                 <div class="review-rating">
                                                                     <div class="review-stars">
                                                                         <i class='bx bxs-star'></i>
@@ -254,7 +254,7 @@
                                                                 <p>Was really easy to implement and they quickly answer my additional questions!</p>
                                                             </div>
                                                             <div class="user-review">
-                                                                <img src="assets/img/user3.jpg" alt="image">
+                                                                <img src="<?php echo URL ?>assets/img/user3.jpg" alt="image">
                                                                 <div class="review-rating">
                                                                     <div class="review-stars">
                                                                         <i class='bx bxs-star'></i>
@@ -276,14 +276,14 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single-courses-box mb-30">
                                         <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/1.jpg" alt="image"></a>
+                                            <a href="single-courses.html" class="d-block"><img src="<?php echo URL ?>assets/img/courses/1.jpg" alt="image"></a>
                                             <div class="courses-tag">
                                                 <a href="#" class="d-block">Business</a>
                                             </div>
                                         </div>
                                         <div class="courses-content">
                                             <div class="course-author d-flex align-items-center">
-                                                <img src="assets/img/user1.jpg" class="rounded-circle mr-2" alt="image">
+                                                <img src="<?php echo URL ?>assets/img/user1.jpg" class="rounded-circle mr-2" alt="image">
                                                 <span>Steven Smith</span>
                                             </div>
                                             <h3><a href="single-courses.html" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
@@ -318,14 +318,14 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single-courses-box mb-30">
                                         <div class="courses-image">
-                                            <a href="single-courses.html" class="d-block"><img src="assets/img/courses/2.jpg" alt="image"></a>
+                                            <a href="single-courses.html" class="d-block"><img src="<?php echo URL ?>assets/img/courses/2.jpg" alt="image"></a>
                                             <div class="courses-tag">
                                                 <a href="#" class="d-block">Design</a>
                                             </div>
                                         </div>
                                         <div class="courses-content">
                                             <div class="course-author d-flex align-items-center">
-                                                <img src="assets/img/user2.jpg" class="rounded-circle mr-2" alt="image">
+                                                <img src="<?php echo URL ?>assets/img/user2.jpg" class="rounded-circle mr-2" alt="image">
                                                 <span>Sarah Taylor</span>
                                             </div>
                                             <h3><a href="single-courses.html" class="d-inline-block">Certified Graphic Design with Free Project Course</a></h3>
@@ -481,24 +481,25 @@
             </div>
         </section>
 
-        <?php include './footer.php'; ?>
-        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/mixitup.min.js"></script>
-        <script src="assets/js/parallax.min.js"></script>
-        <script src="assets/js/jquery.appear.min.js"></script>
-        <script src="assets/js/odometer.min.js"></script>
-        <script src="assets/js/particles.min.js"></script>
-        <script src="assets/js/meanmenu.min.js"></script>
-        <script src="assets/js/jquery.nice-select.min.js"></script>
-        <script src="assets/js/viewer.min.js"></script>
-        <script src="assets/js/slick.min.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-        <script src="assets/js/form-validator.min.js"></script>
-        <script src="assets/js/contact-form-script.js"></script>
-        <script src="assets/js/main.js"></script>
+        <?php include './views/footer.php'; ?>
+
+        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="<?php echo URL ?>assets/js/jquery.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/popper.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/owl.carousel.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/mixitup.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/parallax.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/jquery.appear.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/odometer.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/particles.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/meanmenu.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/jquery.nice-select.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/viewer.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/slick.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/form-validator.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/contact-form-script.js"></script>
+        <script src="<?php echo URL ?>assets/js/main.js"></script>
     </body>
 </html>

@@ -1,19 +1,19 @@
 <?php
 
-class courses extends Controller {
+class Gallery extends Controller {
 
     function __construct() {
         parent::__construct();
     }
 
     function index() {
-        $this->view->render('courses/index');
+        $this->view->render('gallery/index');
     }
 
     function view() {
 
 //        $this->view->id = $id;
-        $this->view->render('courses/view');
+        $this->view->render('gallery/view');
     }
 
 }

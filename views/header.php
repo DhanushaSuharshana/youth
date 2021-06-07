@@ -63,7 +63,7 @@
                 <div class="raque-responsive-menu">
                     <div class="logo">
                         <a href="./">
-                            <img src="assets/img/black-logo.png" alt="logo">
+                            <img src="<?php echo URL ?>assets/img/black-logo.png" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="./">
-                        <img src="assets/img/black-logo.png" alt="logo" style="width: 60%">
+                        <img src="<?php echo URL ?>assets/img/black-logo.png" alt="logo" style="width: 60%">
                     </a>
                     <div class="collapse navbar-collapse mean-menu" style="display: block;">
                         <ul class="navbar-nav">
@@ -98,15 +98,15 @@
                             <li class="nav-item"><a href="#" class="nav-link">Student <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="<?php echo URL ?>courses" class="nav-link">Find Courses</a></li>
-                                    <li class="nav-item"><a href="apply-now.php" class="nav-link">Apply Now</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>apply" class="nav-link">Apply Now</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href="programe.php" class="nav-link">Programs  </a>   </li>
-                            <li class="nav-item"><a href="gallery.php" class="nav-link">Gallery  </a>   </li>
+                            <li class="nav-item"><a href="<?php echo URL ?>programe" class="nav-link">Programs  </a>   </li>
+                            <li class="nav-item"><a href="<?php echo URL ?>gallery" class="nav-link">Gallery  </a>   </li>
 
                             <li class="nav-item"><a href="#" class="nav-link">Services <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="#">GYM</a> </li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>services">GYM</a> </li>
                                     <li class="nav-item"><a href="#">Auditorium</a></li>
                                     <li class="nav-item"><a href="#">Youth Band</a></li>
                                     <li class="nav-item"><a href="#">Video Wall</a></li>
@@ -128,15 +128,12 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/black-logo.png" alt="logo" style="width: 55%;">
+                        <img src="<?php echo URL ?>assets/img/black-logo.png" alt="logo" style="width: 55%;">
                     </a>
+                    
                     <div class="collapse navbar-collapse">
-                        <ul class="navbar-nav">
-
-                            <li class="nav-item"><a href="#" class="nav-link active">Home <i class="bx bx-chevron-right"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="index.php">Home</a></li>                                </ul>
-                            </li>
+                        <ul class="navbar-nav"> 
+                            <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link active">Home  </a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Division <i class="bx bx-chevron-right"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="view-division.php">Administrative Division</a></li>
@@ -155,8 +152,8 @@
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">Students <i class="bx bx-chevron-right"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="nysc-course-list.php" class="nav-link">Find Courses</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Apply Now</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>courses" class="nav-link">Find Courses</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>apply" class="nav-link">Apply Now</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">Programs  </a>   </li>
@@ -174,12 +171,10 @@
                             <li class="nav-item"><a href="contact-us.php" class="nav-link">Contact Us</a></li>
                             <li class="nav-item"><a href="our-centers.php" class="nav-link">Our Centers</a></li>
 
-                        </ul>
-
+                        </ul> 
                     </div>
                 </nav>
             </div>
         </div>
-    </div>
-
+    </div> 
 </header>

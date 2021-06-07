@@ -7,7 +7,7 @@
 
                     <h3>Contact Us</h3>
                     <div class="logo " style="margin-bottom: 20px;">
-                        <a href="#" class="d-inline-block"><img src="assets/img/logo-f.png" alt="image" style="width: 60%"></a>
+                        <a href="#" class="d-inline-block"><img src="<?php echo URL ?>assets/img/logo-f.png" alt="image" style="width: 60%"></a>
                     </div>
                     <ul class="contact-us-link">
                         <li>
@@ -42,6 +42,7 @@
                         <li><a href="#">Terms</a></li>
                         <li><a href="#">Condition</a></li>
                         <li><a href="#">Policy</a></li>
+                        <li><a href="#">Help Center</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,6 +51,7 @@
                     <h3>Useful Link</h3>
                     <ul class="useful-link">
                         <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Web Development API</a></li>
                         <li><a href="#">UI/UX Design</a></li>
                         <li><a href="#">WP Development</a></li>
                         <li><a href="#">App</a></li>
