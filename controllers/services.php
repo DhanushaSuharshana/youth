@@ -1,6 +1,6 @@
 <?php
 
-class service extends Controller {
+class services extends Controller {
 
     function __construct() {
         parent::__construct();

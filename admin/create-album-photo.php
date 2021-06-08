@@ -51,31 +51,27 @@ $PHOTO_ALBUM = new PhotoAlbum($id);
             <div class="main-content">
 
                 <div class="page-content">
-                    <div class="container-fluid">
-
-                        <!-- start page title -->
+                    <div class="container-fluid"> 
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0">Create Album Photo</h4>
-
+                                    <h4 class="mb-0">Create Album Photo</h4> 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                             <li class="breadcrumb-item active">Create Album Photo</li>
                                         </ol>
-                                    </div>
-
+                                    </div> 
                                 </div>
                             </div>
-                        </div>
+                        </div> 
+                        
                         <!-- end page title -->
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <div class="card-body">
-
-                                        <h4 class="card-title">Create Album Photo  - " <?php echo $PHOTO_ALBUM->title?> "</h4> 
+                                    <div class="card-body"> 
+                                        <h4 class="card-title">Create Album Photo  - " <?php echo $PHOTO_ALBUM->title ?> "</h4> 
                                         <form id="form-data">
                                             <div class="mb-3 row">
                                                 <label for="example-text-input" class="col-md-2 col-form-label">Caption</label>
@@ -99,7 +95,7 @@ $PHOTO_ALBUM = new PhotoAlbum($id);
                                         </form>
                                     </div>
                                 </div>
-                            </div> <!-- end col -->
+                            </div> 
                         </div>  
 
                         <div class="row">
@@ -108,12 +104,28 @@ $PHOTO_ALBUM = new PhotoAlbum($id);
                                     <div class="card-body"> 
                                         <h4 class="card-title">Manage Photo Album</h4>  
                                         <div class="row mt-3"> 
-                                            
+                                            <?php
+                                            $ALBUM_PHOTO = new AlbumPhoto(NULL);
+                                            foreach ($ALBUM_PHOTO->getAlbumPhotosById($id) as $album_photo) {
+                                                ?>
+                                                <div class="col-md-6 col-xl-3"> 
+                                                    <!-- Simple card -->
+                                                    <div class="card">
+                                                        <img class="card-img-top img-fluid" src="../upload/photo-album/gallery/thumb/<?php echo $album_photo['image_name'] ?>" alt="<?php echo $album_photo['caption'] ?>">
+                                                        <div class="card-body">
+                                                            <h4 class="card-title mb-3"><?php echo $album_photo['caption'] ?></h4> 
+                                                            <a href=""><div class="badge bg-pill bg-soft-success font-size-14"><i class="fas fa-pencil-alt p-1"></i></div> </a>| 
+                                                            <a href="create-album-photo" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
+                                                            <div class="badge bg-pill bg-soft-danger font-size-14"><i class="fas fa-trash-alt p-1"></i></div>
+                                                        </div>
+                                                    </div> 
+                                                </div> 
+                                            <?php } ?>
                                         </div>
                                     </div>
                                 </div>
                             </div>  
-                        </div>   
+                        </div>    
                     </div>  
                 </div>
                 <!-- End Page-content -->

@@ -15072,8 +15072,7 @@ blockquote::after,
 }
 
 .events-box .image img {
-    display: none;
-    border-radius: 5px;
+     border-radius: 5px;
 }
 
 .events-box .image .divider-shape {

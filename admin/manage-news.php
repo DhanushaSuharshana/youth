@@ -1,4 +1,8 @@
 <!doctype html>
+<?php
+include '../class/include.php';
+include './auth.php';
+?>
 <html lang="en">
 
     <head>
@@ -47,7 +51,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0">Manage News</h4>
+                                    <h4 class="mb-0">Dashboard  </h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
@@ -62,28 +66,34 @@
                         <!-- end page title -->
 
 
-                        <section>
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Manage News</h4>
-                                </div>
-                            </div>
-                            <div class="row mt-3"> 
-                                <div class="col-md-6 col-xl-3"> 
-                                    <!-- Simple card -->
-                                    <div class="card">
-                                        <img class="card-img-top img-fluid" src="assets/images/small/img-1.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h4 class="card-title mb-3">Card title</h4>
-
-                                            <a href="edit-news.php"><div class="badge bg-pill bg-soft-success font-size-14"><i class="fas fa-pencil-alt p-1"></i></div> </a>| 
-                                            <div class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></div> |
-                                            <div class="badge bg-pill bg-soft-danger font-size-14"><i class="fas fa-trash-alt p-1"></i></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body"> 
+                                        <h4 class="card-title">Manage News</h4>  
+                                        <div class="row mt-3"> 
+                                            <?php
+                                            $NEWS = new News(NULL);
+                                            foreach ($NEWS->all() as $key => $news) {
+                                                ?>
+                                                <div class="col-md-6 col-xl-3"> 
+                                                    <!-- Simple card -->
+                                                    <div class="card">
+                                                        <img class="card-img-top img-fluid" src="../upload/news/<?php echo $news['image_name'] ?>" alt="<?php echo $news['title'] ?>">
+                                                        <div class="card-body">
+                                                            <h4 class="card-title mb-3"><?php echo $news['title'] ?></h4> 
+                                                            <a href="" ><div class="badge bg-pill bg-soft-success font-size-14"><i class="fas fa-pencil-alt p-1"></i></div> </a>| 
+                                                            <a href="create-album-photo" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
+                                                             <div class="badge bg-pill bg-soft-danger font-size-14"><i class="fas fa-trash-alt p-1"></i></div>
+                                                        </div>
+                                                    </div> 
+                                                </div> 
+                                            <?php } ?>
                                         </div>
-                                    </div> 
-                                </div> 
-                            </div> 
-                        </section>  
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>   
                     </div>  
                 </div> 
                 <?php include './footer.php'; ?>

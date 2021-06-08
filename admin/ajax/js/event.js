@@ -12,12 +12,26 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-
-
         } else if (!$('#image_name').val() || $('#image_name').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter Image..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#location').val() || $('#location').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter location..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#date').val() || $('#date').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter date..!",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
@@ -48,7 +62,7 @@ jQuery(document).ready(function () {
             var formData = new FormData($('#form-data')[0]);
 
             $.ajax({
-                url: "ajax/php/news.php",
+                url: "ajax/php/event.php",
                 type: 'POST',
                 data: formData,
                 async: false,
@@ -95,6 +109,7 @@ jQuery(document).ready(function () {
         event.preventDefault();
         tinymce.triggerSave();
 
+
         if (!$('#title').val() || $('#title').val().length === 0) {
             swal({
                 title: "Error!",
@@ -103,8 +118,6 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-
-
         } else if (!$('#image_name').val() || $('#image_name').val().length === 0) {
             swal({
                 title: "Error!",
@@ -113,10 +126,26 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
+        } else if (!$('#location').val() || $('#location').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter location..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#date').val() || $('#date').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter date..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
         } else if (!$('#short_description').val() || $('#short_description').val().length === 0) {
             swal({
                 title: "Error!",
-                text: "Please Enter Short Description..!",
+                text: "Please Enter short description..!",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
@@ -130,6 +159,7 @@ jQuery(document).ready(function () {
                 showConfirmButton: false
             });
 
+
         } else {
 
             //start preloarder
@@ -138,7 +168,7 @@ jQuery(document).ready(function () {
             var formData = new FormData($('#form-data')[0]);
 
             $.ajax({
-                url: "ajax/php/news.php",
+                url: "ajax/php/event.php",
                 type: 'POST',
                 data: formData,
                 async: false,
@@ -149,7 +179,7 @@ jQuery(document).ready(function () {
                 success: function (result) {
 
                     $('.someBlock').preloader('remove');
-                    
+
                     if (result.status === 'success') {
                         swal({
                             title: "success!",
