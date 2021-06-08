@@ -63,101 +63,189 @@ include_once(dirname(__FILE__) . '/auth.php');
 
                                 </div>
                             </div>
-                        </div>
-                        <!-- end page title -->
-
-                        <div class="row">
                             <div class="col-12">
                                 <div class="card">
                                     <form method="POST" id="form-data">
-                                    <div class="card-body">
+                                        <div class="card-body">
 
-                                        <h4 class="card-title">Add Leader Details.</h4> 
+                                            <h4 class="card-title">Add Leader Details.</h4> 
 
-                                        <div class="mb-3 row">
-                                            <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="text" id="name" name="name">
+                                            <div class="mb-3 row">
+                                                <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="text" id="name" name="name">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label for="example-search-input" class="col-md-2 col-form-label">Position</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="text"  id="position" name="position">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label for="example-search-input" class="col-md-2 col-form-label">Email</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="text"  id="email" name="email">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="file"  id="image_name" name="image">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">Facebook URL</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="url"   id="facebook" name="facebook">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">Instagram URL</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="url"  id="instagram" name="instagram">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">Linkind URL</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="url" id="linkdin" name="linkdin">
+                                                </div>
+                                            </div> 
+                                            <div class="row">
+                                                <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
+                                                    <button class="btn btn-primary " id="create" name="create" type="submit" >Submit form</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-search-input" class="col-md-2 col-form-label">Position</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="text"  id="position" name="position">
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-search-input" class="col-md-2 col-form-label">Email</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="text"  id="email" name="email">
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="file"  id="image_name" name="image">
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Facebook URL</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="url"   id="facebook" name="facebook">
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Instagram URL</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="url"  id="instagram" name="instagram">
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Linkind URL</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="url" id="linkdin" name="linkdin">
-                                            </div>
-                                        </div> 
-                                        <div class="row">
-                                            <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
-                                                <input class="form-control" type="hidden" name="create" value="TRUE">
-                                                <button class="btn btn-primary " id="create" name="create" type="submit" >Submit form</button>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                        </form>
+                                    </form>
                                 </div>
                             </div> <!-- end col -->
                         </div>
-                        <!-- end row -->
-                        <section>
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Manage Leaders.</h4> 
-                                    <div class="mt-3"> 
-                                        <div class="col-md-6 col-xl-3"> 
-                                            <!-- Simple card -->
-                                            <div class="card">
-                                                <img class="card-img-top img-fluid" src="assets/images/small/img-1.jpg" alt="Card image cap">
-                                                <div class="card-body">
-                                                    <h4 class="card-title mb-3">Card title</h4>
 
-                                                    <a href="" ><div class="badge bg-pill bg-soft-success font-size-14"><i class="fas fa-pencil-alt p-1"></i></div> </a>| 
-                                                    <div class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></div> |
-                                                    <div class="badge bg-pill bg-soft-danger font-size-14"><i class="fas fa-trash-alt p-1"></i></div>
-                                                </div>
-                                            </div> 
-                                        </div> 
+                        <!-- end row -->
+
+                        <div class="card">
+
+
+                            <div class="row">
+
+                                <div class="card-body">
+                                    <h4 class="card-title">Manage Leaders.</h4>
+                                    <div class="">
+                                        <div class="mt-3 row">
+
+                                            <?php
+                                            $LEADERS = new Leaders(NULL);
+                                            $ALL_LEADERS = $LEADERS->all();
+                                            foreach ($ALL_LEADERS as $all_leaders) {
+                                                ?>
+                                                <div class="col-md-4 col-xl-3"> 
+                                                    <!-- Simple card -->
+                                                    <div class="card">
+
+                                                        <img class="card-img-top img-fluid" src="../upload/leader/<?php echo $all_leaders['image_name']; ?>" alt="Leaders">
+                                                        <div class="card-body">
+                                                            <h4 class="card-title mb-3">  <?php echo $all_leaders['name']; ?>
+                                                            </h4>
+                                                            <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $all_leaders['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
+                                                            <div class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></div> |
+                                                            <div class="badge bg-pill bg-soft-danger font-size-14"><i class="fas fa-trash-alt p-1"></i></div>
+                                                        </div>
+                                                    </div> 
+                                                </div><!-- end col -->
+
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
                                     </div>
-                                </div> 
-                            </div> 
-                        </section> 
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- end row -->
+
                     </div> <!-- container-fluid -->
                 </div> 
                 <?php include './footer.php'; ?>
             </div> 
         </div>
         <!-- END layout-wrapper -->
-
+        <?php
+        foreach ($ALL_LEADERS as $key => $all_leaders) {
+            $key++;
+            ?>
+            <!--  Large modal example -->
+            <div class="modal fade bs-example-modal-lg-<?php echo $all_leaders['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Edit Details : <?php echo $all_leaders['name']; ?></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" id="form-data-<?php echo $all_leaders['id'];; ?>">
+                                <div class="card-body">
+                                    <div class="mb-3 row">
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control name" name="name" type="text" value="<?php echo $all_leaders['name']; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-search-input" class="col-md-2 col-form-label">Position</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control position" name="position" type="text" value="<?php echo $all_leaders['position']; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-search-input" class="col-md-2 col-form-label">Email</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control email" name="email" type="text" value="<?php echo $all_leaders['email']; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" type="file" id="image_name" name="image_name">
+                                            <img width="200" class="img-responsive" src="../upload/leader/<?php echo $all_leaders['image_name']; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-url-input" class="col-md-2 col-form-label">Facebook URL</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control facebook"  name="facebook" type="text" value="<?php echo $all_leaders['facebook']; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-url-input" class="col-md-2 col-form-label">Instagram URL</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control instagram" name="instagram" type="text" value="<?php echo $all_leaders['instagram']; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-url-input" class="col-md-2 col-form-label">Linkind URL</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control linkdin" name="linkdin" type="text" value="<?php echo $all_leaders['linkdin']; ?>">
+                                        </div>
+                                    </div> 
+                                    <div class="row">
+                                        <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
+                                            <input class="form-control id" type="hidden" value="<?php echo $all_leaders['id']; ?>">
+                                            <button class="btn btn-primary edit-data" dataId="<?php echo $all_leaders['id']; ?>" id="create" name="create" type="submit">Save Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <?php
+        }
+        ?>
 
 
         <!-- Right bar overlay-->
@@ -171,7 +259,6 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="assets/libs/node-waves/waves.min.js"></script>
         <script src="assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
         <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
-
         <!-- App js -->
         <script src="assets/js/app.js"></script>
         <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
