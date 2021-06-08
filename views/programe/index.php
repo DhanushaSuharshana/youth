@@ -23,12 +23,9 @@
         <link rel="icon" type="image/png" href="assets/img/favicon.png">
     </head>
     <body>
-
-
-
+ 
         <?php include './views/header.php'; ?>
-
-
+ 
 
         <div class="page-title-area item-bg2 jarallax" data-jarallax='{"speed": 0.3}'>
             <div class="container">

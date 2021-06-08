@@ -1,7 +1,8 @@
 <!doctype html>
+
 <html lang="zxx">
 
-     <head>
+    <head>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,23 +25,8 @@
     </head>
     <body>
 
-    <?php include './views/header.php'; ?>
+        <?php include './views/header.php'; ?>
 
-       
-
-
-        <div class="search-overlay">
-            <div class="d-table">
-                <div class="d-table-cell">  
-                    <div class="search-overlay-form">
-                        <form>
-                            <input type="text" class="input-search" placeholder="Search here...">
-                            <button type="submit"><i class='bx bx-search-alt'></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
         <div class="page-title-area item-bg1 jarallax" data-jarallax='{"speed": 0.3}'>
@@ -59,17 +45,22 @@
         <section class="shop-area ptb-100">
             <div class="container"> 
                 <div class="row"> 
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-product-box mb-30">
-                            <div class="product-image">
-                                <a href="<?php echo URL ?>gallery/view">
-                                    <img src="assets/img/shop/6.jpg" alt="image">
-                                    <img src="assets/img/shop/6-1.jpg" alt="image">
-                                </a>
-                                <a href="#" class="add-to-cart-btn">Add To Cart  </a>
-                            </div> 
-                        </div>
-                    </div> 
+                    <?php
+                    $PHOTO_ALBUM = new PhotoAlbum(NULL);
+                    foreach ($PHOTO_ALBUM->all() as $key => $photo_album) {
+                        ?>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-product-box mb-30">
+                                <div class="product-image">
+                                    <a href="<?php echo URL ?>gallery/album/<?php echo base64_encode($photo_album['id']) ?>">
+                                        <img src="<?php echo URL ?>upload/photo-album/<?php echo $photo_album['image_name'] ?>" alt="<?php echo $photo_album['title'] ?>">
+                                        <img src="<?php echo URL ?>upload/photo-album/<?php echo $photo_album['image_name'] ?>" alt="<?php echo $photo_album['title'] ?>">
+                                    </a>
+                                    <a href="#" class="add-to-cart-btn"><?php echo $photo_album['title'] ?>  </a>
+                                </div> 
+                            </div>
+                        </div> 
+                    <?php } ?>
                 </div>
             </div>
         </section>
@@ -99,4 +90,4 @@
         <script src="assets/js/main.js"></script>
     </body>
 
- </html>
+</html>

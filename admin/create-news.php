@@ -1,4 +1,8 @@
 <!doctype html>
+<?php
+include_once(dirname(__FILE__) . '/../class/include.php');
+include_once(dirname(__FILE__) . '/auth.php');
+?>
 <html lang="en">
 
     <head>
@@ -50,7 +54,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0">Create News</h4>
+                                    <h4 class="mb-0">Dashboard</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
@@ -70,54 +74,50 @@
                                     <div class="card-body">
 
                                         <h4 class="card-title">Create your News Post.</h4> 
+                                        <form id="form-data">
+                                            <div class="mb-3 row">
+                                                <label for="example-text-input" class="col-md-2 col-form-label">Title</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="text"   id="title" name="title" placeholder="Enter News Title">
+                                                </div>
+                                            </div>
 
-                                        <div class="mb-3 row">
-                                            <label for="example-text-input" class="col-md-2 col-form-label">Title</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="text"   id="title" name="title">
+                                            <div class="mb-3 row">
+                                                <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="file"  id="image_name" name="image_name">
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="mb-3 row">
-                                            <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="file"  id="image_name" name="image_name">
+                                            <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">Date</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="text"   id="date" name="date" placeholder="Enter News Date">
+                                                </div>
                                             </div>
-                                        </div>
-
-                                        <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Date</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="text"   id="date" name="date">
+                                            <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">Short Description</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="text"   id="short_description" name="short_description" placeholder="Short Description">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Short Description</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="text"   id="short_description" name="short_description">
+                                            <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">Description</label>
+                                                <div class="col-md-10">
+                                                    <textarea id="description" name="description"></textarea>
+                                                </div>
+                                            </div> 
+                                            <div class="row">
+                                                <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
+                                                    <button class="btn btn-primary " type="submit" id="create" >Create</button>
+                                                    <input type="hidden" name="create" >
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Description</label>
-                                            <div class="col-md-10">
-                                                <textarea id="description" name="description"></textarea>
-                                            </div>
-                                        </div> 
-                                        <div class="row">
-                                            <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
-                                                <button class="btn btn-primary " type="submit" id="create" >Create</button>
-
-                                            </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
-                            </div> <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-
-                        <!-- end row -->
-
+                            </div>  
+                        </div>  
                     </div> <!-- container-fluid -->
                 </div> 
                 <?php include './footer.php'; ?>
@@ -144,6 +144,8 @@
         <!-- App js -->
         <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
         <script src="assets/js/app.js"></script>
+        
+       
         <script src="tinymce/js/tinymce/tinymce.min.js" type="text/javascript"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>

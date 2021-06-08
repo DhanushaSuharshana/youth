@@ -10,7 +10,7 @@ if (isset($_POST['create'])) {
     $ALBUM_PHOTO = new AlbumPhoto(NULL);
 
 
-    $ALBUM_PHOTO->album = $_POST['id'];
+    $ALBUM_PHOTO->album = $_POST['album'];
     $ALBUM_PHOTO->caption = $_POST['caption'];
 
     $dir_dest = '../../../upload/photo-album/gallery/';

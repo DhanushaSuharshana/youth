@@ -1,4 +1,10 @@
 <!doctype html>
+<?php
+$id = '';
+$id = base64_decode($this->id);
+
+$PHOTO_ALBUM = new PhotoAlbum($id);
+?>
 <html lang="zxx">
 
     <head>
@@ -32,9 +38,9 @@
                 <div class="page-title-content">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li>Gallery</li>
+                        <li>Album Photo</li>
                     </ul>
-                    <h2>Gallery</h2>
+                    <h2><?php echo $PHOTO_ALBUM->title ?></h2>
                 </div>
             </div>
         </div>
@@ -43,56 +49,21 @@
         <section class="gallery-area pt-100 pb-70">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-gallery-item mb-30">
-                            <img src="<?php echo URL ?>assets/img/gallery/1.jpg" alt="Gallery Image" data-original="<?php echo URL ?>assets/img/gallery/1.jpg">
+                    <?php
+                    $ALBUM_PHOTO = new AlbumPhoto(NULL);
+                    foreach ($ALBUM_PHOTO->getAlbumPhotosById($id) as $album_photo) {
+                        ?> 
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-gallery-item mb-30">
+                                <img src="<?php echo URL ?>upload/photo-album/gallery/thumb/<?php echo $album_photo['image_name'] ?>" alt="<?php echo $album_photo['title'] ?>" data-original="<?php echo URL ?>upload/photo-album/gallery/<?php echo $album_photo['image_name'] ?>">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-gallery-item mb-30">
-                            <img src="<?php echo URL ?>assets/img/gallery/2.jpg" alt="Gallery Image" data-original="<?php echo URL ?>assets/img/gallery/2.jpg">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-gallery-item mb-30">
-                            <img src="<?php echo URL ?>assets/img/gallery/3.jpg" alt="Gallery Image" data-original="<?php echo URL ?>assets/img/gallery/3.jpg">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-gallery-item mb-30">
-                            <img src="<?php echo URL ?>assets/img/gallery/4.jpg" alt="Gallery Image" data-original="<?php echo URL ?>assets/img/gallery/4.jpg">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-gallery-item mb-30">
-                            <img src="<?php echo URL ?>assets/img/gallery/5.jpg" alt="Gallery Image" data-original="<?php echo URL ?>assets/img/gallery/5.jpg">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-gallery-item mb-30">
-                            <img src="<?php echo URL ?>assets/img/gallery/6.jpg" alt="Gallery Image" data-original="<?php echo URL ?>assets/img/gallery/6.jpg">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-gallery-item mb-30">
-                            <img src="<?php echo URL ?>assets/img/gallery/7.jpg" alt="Gallery Image" data-original="<?php echo URL ?>assets/img/gallery/7.jpg">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-gallery-item mb-30">
-                            <img src="<?php echo URL ?>assets/img/gallery/8.jpg" alt="Gallery Image" data-original="<?php echo URL ?>assets/img/gallery/8.jpg">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-gallery-item mb-30">
-                            <img src="<?php echo URL ?>assets/img/gallery/9.jpg" alt="Gallery Image" data-original="<?php echo URL ?>assets/img/gallery/9.jpg">
-                        </div>
-                    </div>
+                    <?php } ?>  
                 </div>
             </div>
         </section>
 
-          <?php include './views/footer.php'; ?>
+        <?php include './views/footer.php'; ?>
 
         <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 

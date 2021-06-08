@@ -45,7 +45,7 @@ class AlbumPhoto {
                 . $this->image_name . "', '"
                 . $this->caption . "', '"
                 . $this->queue . "')";
-
+      
         $db = new Database();
 
         $result = $db->readQuery($query);

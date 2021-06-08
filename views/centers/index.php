@@ -6,23 +6,24 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="assets/css/bootstrap..min.css">
-        <link rel="stylesheet" href="assets/css/boxicons.min.css">
-        <link rel="stylesheet" href="assets/css/flaticon.css">
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/css/odometer.min.css">
-        <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-        <link rel="stylesheet" href="assets/css/animate.min.css">
-        <link rel="stylesheet" href="assets/css/nice-select.min.css">
-        <link rel="stylesheet" href="assets/css/viewer.min.css">
-        <link rel="stylesheet" href="assets/css/slick.min.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/bootstrap..min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/boxicons.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/flaticon.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/owl.carousel.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/odometer.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/meanmenu.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/animate.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/nice-select.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/viewer.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/slick.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/magnific-popup.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/style.css">
+        <link rel="stylesheet" href="<?php echo URL ?>assetscss/responsive.css">
         <title>Our Centers || Youth Council </title>
-        <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <link rel="icon" type="image/png" href="<?php echo URL ?>assetsimg/favicon.png">
     </head>
     <body>
+        
         <?php include './views/header.php'; ?>
 
         <div class="page-title-area item-bg2 jarallax" data-jarallax='{"speed": 0.3}'>
@@ -47,27 +48,26 @@
             </div> 
         </section>
 
-
-
-
         <?php include './views/footer.php'; ?>
-        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/mixitup.min.js"></script>
-        <script src="assets/js/parallax.min.js"></script>
-        <script src="assets/js/jquery.appear.min.js"></script>
-        <script src="assets/js/odometer.min.js"></script>
-        <script src="assets/js/particles.min.js"></script>
-        <script src="assets/js/meanmenu.min.js"></script>
-        <script src="assets/js/jquery.nice-select.min.js"></script>
-        <script src="assets/js/viewer.min.js"></script>
-        <script src="assets/js/slick.min.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-        <script src="assets/js/form-validator.min.js"></script>
-        <script src="assets/js/contact-form-script.js"></script>
-        <script src="assets/js/main.js"></script>
+        
+        
+        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="<?php echo URL ?>assetsjs/jquery.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/popper.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/bootstrap.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/owl.carousel.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/mixitup.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/parallax.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/jquery.appear.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/odometer.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/particles.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/meanmenu.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/jquery.nice-select.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/viewer.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/slick.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/jquery.magnific-popup.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/jquery.ajaxchimp.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/form-validator.min.js"></script>
+        <script src="<?php echo URL ?>assetsjs/contact-form-script.js"></script>
+        <script src="<?php echo URL ?>assetsjs/main.js"></script>
     </body>
 </html>
