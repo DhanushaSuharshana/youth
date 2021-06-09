@@ -40,8 +40,9 @@ jQuery(document).ready(function () {
             });
             //-- ** End Error Messages
         } else {
-//            //start preloarder
-////            $('.someBlock').preloader();
+
+            //start preloarder
+            $('.someBlock').preloader();
             var formData = new FormData($('#form-data')[0]);  //grab all form data  
             formData.append("create", "TRUE");
 
@@ -56,7 +57,7 @@ jQuery(document).ready(function () {
                 dataType: 'json',
                 success: function (result) {
                     //remove preloarder
-//                    $('.someBlock').preloader('remove');
+                    $('.someBlock').preloader('remove');
                     if (result.status === 'success') {
                         swal({
                             title: "success!",
@@ -117,7 +118,7 @@ jQuery(document).ready(function () {
             //-- ** End Error Messages
         } else {
             //start preloarder
-            //$('.someBlock').preloader();
+            $('.someBlock').preloader();
             //grab all form data  
             var formData = new FormData($('#form-data-' + id)[0]);
             formData.append("update", "TRUE");
@@ -133,7 +134,7 @@ jQuery(document).ready(function () {
                 dataType: 'json',
                 success: function (result) {
                     //remove preloarder
-//                    $('.someBlock').preloader('remove');
+                    $('.someBlock').preloader('remove');
                     if (result.status === 'success') {
                         swal({
                             title: "success!",
@@ -158,6 +159,45 @@ jQuery(document).ready(function () {
             });
         }
         return false;
+    });
+
+    //-------- Start Delete Data ---------
+    $('.delete-leader').click(function () {
+
+        var id = $(this).attr("data-id");
+        //-- ** Show Confirmation MSG 
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this imaginary file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false
+        }, function () {
+            //grab all form data
+            $.ajax({
+                url: "ajax/php/leaders.php",
+                type: "POST",
+                data: {id: id, option: 'delete'},
+                dataType: "JSON",
+                success: function (jsonStr) {
+                    if (jsonStr.status) {
+
+                        swal({
+                            title: "Deleted!",
+                            text: "Your imaginary file has been deleted.",
+                            type: 'success',
+                            timer: 2000,
+                            showConfirmButton: false
+                        });
+
+                        $('#div' + id).remove();
+
+                    }
+                }
+            });
+        });
     });
 });
 
