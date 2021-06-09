@@ -76,7 +76,7 @@ include './auth.php';
                                             $NEWS = new News(NULL);
                                             foreach ($NEWS->all() as $key => $news) {
                                                 ?>
-                                                <div class="col-md-6 col-xl-3"> 
+                                                <div class="col-md-6 col-xl-3" div="<?php echo $news['id'] ?>"> 
                                                     <!-- Simple card -->
                                                     <div class="card">
                                                         <img class="card-img-top img-fluid" src="../upload/news/<?php echo $news['image_name'] ?>" alt="<?php echo $news['title'] ?>">
@@ -84,7 +84,7 @@ include './auth.php';
                                                             <h4 class="card-title mb-3"><?php echo $news['title'] ?></h4> 
                                                             <a href="" ><div class="badge bg-pill bg-soft-success font-size-14"><i class="fas fa-pencil-alt p-1"></i></div> </a>| 
                                                             <a href="create-album-photo" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
-                                                             <div class="badge bg-pill bg-soft-danger font-size-14"><i class="fas fa-trash-alt p-1"></i></div>
+                                                            <div class="badge bg-pill bg-soft-danger font-size-14"><i class="fas fa-trash-alt p-1"></i></div>
                                                         </div>
                                                     </div> 
                                                 </div> 

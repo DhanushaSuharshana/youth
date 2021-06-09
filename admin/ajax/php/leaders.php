@@ -85,3 +85,17 @@ if (isset($_POST['update'])) {
     }
 }
 //End Update Code Block
+//-- ** Start delete code 
+//--------------------------------------------------------------------------
+if ($_POST['option'] == 'delete') {
+  
+    $LEADER = new Leaders($_POST['id']);
+  
+    $result =  $LEADER->delete();
+ //-- ** End Assign Post Params
+    if ($result) {
+        $data = array("status" => TRUE);
+        header('Content-type: application/json');
+        echo json_encode($data);
+    }
+}
