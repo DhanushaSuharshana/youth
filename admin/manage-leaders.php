@@ -4,9 +4,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 ?>
 <html lang="en">
-
     <head>
-
         <meta charset="utf-8" />
         <title>Manage Leaders</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,30 +21,19 @@ include_once(dirname(__FILE__) . '/auth.php');
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/preloader.css" rel="stylesheet" type="text/css"/>
-
     </head>
 
-
     <body class="someBlock">
-
-        <!-- <body data-layout="horizontal" data-topbar="colored"> -->
-
         <!-- Begin page -->
         <div id="layout-wrapper">
-
-
             <?php include './top-header.php'; ?>
             <!-- ========== Left Sidebar Start ========== -->
             <?php include './navigation.php'; ?>
             <!-- Left Sidebar End -->
-
-
-
             <!-- ============================================================== -->
             <!-- Start right Content here -->
             <!-- ============================================================== -->
             <div class="main-content">
-
                 <div class="page-content">
                     <div class="container-fluid">
                         <!-- start page title -->
@@ -60,7 +47,6 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             <li class="breadcrumb-item active">Manage Leaders</li>
                                         </ol>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="col-12">
@@ -124,8 +110,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                         <div class="card">
                             <div class="row">
                                 <div class="card-body">
-                                    <h4 class="card-title">Manage Leaders.</h4>
-                                    <div class="">
+                                    <h4 class="card-title">Manage Leaders.</h4>                                  
                                         <div class="mt-3 row">
                                             <?php
                                             $LEADERS = new Leaders(NULL);
@@ -136,8 +121,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <div class="card">
                                                         <img class="card-img-top img-fluid" src="../upload/leader/<?php echo $all_leaders['image_name']; ?>" alt="Leaders">
                                                         <div class="card-body">
-                                                            <h4 class="card-title mb-3">  <?php echo $all_leaders['name']; ?>
-                                                            </h4>
+                                                            <h4 class="card-title mb-3">  <?php echo $all_leaders['name']; ?>  </h4>
                                                             <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $all_leaders['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
                                                             <div class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></div> |
                                                             <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-leader" data-id="<?php echo $all_leaders['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
@@ -147,13 +131,11 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 <?php
                                             }
                                             ?>
-                                        </div>
-                                    </div>
+                                        </div>                                    
                                 </div>
                             </div>
-                        </div>                      <!-- end row -->
-
-                    </div> <!-- container-fluid -->
+                        </div>                    
+                    </div> 
                 </div> 
                 <?php include './footer.php'; ?>
             </div> 

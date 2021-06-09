@@ -3,24 +3,12 @@
 include_once(dirname(__FILE__) . '/../../../class/include.php');
 header('Content-Type: application/json; charset=UTF8');
 
-
-//Create
+//-- ** Start Create Code Block
 if (isset($_POST['create'])) {
-    
-    $NEWS = new News(NULL);
-
-    $NEWS->title = $_POST['title'];
-    $NEWS->date = $_POST['date'];
-    $NEWS->short_description = $_POST['short_description'];
-    $NEWS->description = $_POST['description'];
-
-
+    //-- ** Start Create Image 
     $dir_dest = '../../../upload/news/';
-
     $handle = new Upload($_FILES['image_name']);
-
     $imgName = null;
-
     if ($handle->uploaded) {
         $handle->image_resize = true;
         $handle->file_new_name_ext = 'jpg';
@@ -28,81 +16,87 @@ if (isset($_POST['create'])) {
         $handle->file_new_name_body = Helper::randamId();
         $handle->image_x = 600;
         $handle->image_y = 440;
-
         $handle->Process($dir_dest);
-
         if ($handle->processed) {
             $info = getimagesize($handle->file_dst_pathname);
             $imgName = $handle->file_dst_name;
         }
     }
-
+    //-- ** End Create Image
+    //-- ** Start Assign Post Params
+    $NEWS = new News(NULL);
+    $NEWS->title = ucwords($_POST['title']);
+    $NEWS->date = $_POST['date'];
+    $NEWS->short_description = $_POST['short_description'];
+    $NEWS->description = $_POST['description'];
     $NEWS->image_name = $imgName;
-
     $NEWS->create();
-
+    //-- ** End Assign Post Params
     if ($NEWS) {
-        $result = [
-            "status" => 'success'
-        ];
+        $result = ["status" => 'success'];
         echo json_encode($result);
         exit();
     } else {
-        $result = [
-            "status" => 'error'
-        ];
+        $result = ["status" => 'error'];
         echo json_encode($result);
         exit();
     }
 }
-
-//Update
+//-- ** Start Create Code Block
+//--------------------------------------------------------------------------
+//Start Update Code Block
 if (isset($_POST['update'])) {
-
+    //-- ** Start Edit Image in folder location
     $dir_dest = '../../../upload/news/';
-
     $handle = new Upload($_FILES['image_name']);
     $imgName = null;
 
+    $NEWS = new News($_POST['id']);
     if ($handle->uploaded) {
         $handle->image_resize = true;
         $handle->file_new_name_body = TRUE;
         $handle->file_overwrite = TRUE;
         $handle->file_new_name_ext = FALSE;
         $handle->image_ratio_crop = 'C';
-        $handle->file_new_name_body = $_POST ["oldImageName"];
+        $handle->file_new_name_body = $NEWS->image_name;
         $handle->image_x = 600;
         $handle->image_y = 440;
-
         $handle->Process($dir_dest);
-
         if ($handle->processed) {
             $info = getimagesize($handle->file_dst_pathname);
             $imgName = $handle->file_dst_name;
         }
     }
-
-    $NEWS = new News($_POST['id']);
-    $NEWS->image_name = $_POST['oldImageName'];
-    $NEWS->title = $_POST['title'];
+    //-- ** End Edit Image in folder location
+    //-- ** Start Assign Post Params  
+    $NEWS->title = ucwords($_POST['title']);
     $NEWS->date = $_POST['date'];
     $NEWS->short_description = $_POST['short_description'];
     $NEWS->description = $_POST['description'];
-
     $NEWS->update();
-
+    //-- ** End Assign Post Params
     if ($NEWS) {
-        $result = [
-            "status" => 'success'
-        ];
+        $result = ["status" => 'success'];
         echo json_encode($result);
         exit();
     } else {
-        $result = [
-            "status" => 'error'
-        ];
+        $result = ["status" => 'error'];
         echo json_encode($result);
         exit();
+    }
+}
+//End Update Code Block
+//--------------------------------------------------------------------------
+//-- ** Start delete code  
+if ($_POST['option'] == 'delete') {
+    $NEWS = new News($_POST['id']);
+    unlink("../../../upload/news/" . $NEWS->image_name);
+    $result = $NEWS->delete();
+    //-- ** End Assign Post Params
+    if ($result) {
+        $data = array("status" => TRUE);
+        header('Content-type: application/json');
+        echo json_encode($data);
     }
 }
 //Arange slider

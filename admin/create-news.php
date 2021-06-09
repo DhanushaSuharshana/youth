@@ -22,25 +22,16 @@ include_once(dirname(__FILE__) . '/auth.php');
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
-
+        <link href="assets/css/preloader.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     </head>
-
-
     <body>
-
-        <!-- <body data-layout="horizontal" data-topbar="colored"> -->
-
         <!-- Begin page -->
         <div id="layout-wrapper">
-
-
             <?php include './top-header.php'; ?>
             <!-- ========== Left Sidebar Start ========== -->
             <?php include './navigation.php'; ?>
             <!-- Left Sidebar End -->
-
-
 
             <!-- ============================================================== -->
             <!-- Start right Content here -->
@@ -49,30 +40,25 @@ include_once(dirname(__FILE__) . '/auth.php');
 
                 <div class="page-content">
                     <div class="container-fluid">
-
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
                                     <h4 class="mb-0">Dashboard</h4>
-
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                             <li class="breadcrumb-item active">Create News</li>
                                         </ol>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                         <!-- end page title -->
-
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-
                                         <h4 class="card-title">Create your News Post.</h4> 
                                         <form id="form-data">
                                             <div class="mb-3 row">
@@ -81,14 +67,12 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <input class="form-control" type="text"   id="title" name="title" placeholder="Enter News Title">
                                                 </div>
                                             </div>
-
                                             <div class="mb-3 row">
                                                 <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
                                                 <div class="col-md-10">
                                                     <input class="form-control" type="file"  id="image_name" name="image_name">
                                                 </div>
                                             </div>
-
                                             <div class="mb-3 row">
                                                 <label for="example-url-input" class="col-md-2 col-form-label">Date</label>
                                                 <div class="col-md-10">
@@ -109,8 +93,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             </div> 
                                             <div class="row">
                                                 <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
-                                                    <button class="btn btn-primary " type="submit" id="create" >Create</button>
-                                                    <input type="hidden" name="create" >
+                                                    <button class="btn btn-primary " type="submit" id="create" >Create</button> 
                                                 </div>
                                             </div>
                                         </form>
@@ -118,7 +101,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 </div>
                             </div>  
                         </div>  
-                    </div> <!-- container-fluid -->
+                    </div> 
                 </div> 
                 <?php include './footer.php'; ?>
             </div> 
@@ -142,6 +125,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="ajax/js/news.js" type="text/javascript"></script>
 
         <!-- App js -->
+        <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
         <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
         <script src="assets/js/app.js"></script>
         
