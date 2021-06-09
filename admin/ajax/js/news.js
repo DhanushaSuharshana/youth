@@ -1,9 +1,10 @@
 jQuery(document).ready(function () {
 
+//---------- Start Create Data ---------
     $("#create").click(function (event) {
         event.preventDefault();
         tinymce.triggerSave();
-
+        //-- ** Start Error Messages
         if (!$('#title').val() || $('#title').val().length === 0) {
             swal({
                 title: "Error!",
@@ -12,8 +13,6 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-
-
         } else if (!$('#image_name').val() || $('#image_name').val().length === 0) {
             swal({
                 title: "Error!",
@@ -38,14 +37,13 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-
-
+            //-- ** End Error Messages
         } else {
-
             //start preloarder
-            //$('.someBlock').preloader();
+            $('.someBlock').preloader();
             //grab all form data  
-            var formData = new FormData($('#form-data')[0]);
+            var formData = new FormData($('#form-data')[0]);  //grab all form data  
+            formData.append("create", "TRUE");
 
             $.ajax({
                 url: "ajax/php/news.php",
@@ -58,7 +56,7 @@ jQuery(document).ready(function () {
                 dataType: 'json',
                 success: function (result) {
                     //remove preloarder
-//                    $('.someBlock').preloader('remove');
+                    $('.someBlock').preloader('remove');
                     if (result.status === 'success') {
                         swal({
                             title: "success!",
@@ -87,28 +85,18 @@ jQuery(document).ready(function () {
         }
         return false;
     });
-
-
-
-//update 
-    $("#update").click(function (event) {
+//---------- End Create Data ---------
+//----------------------------------------------------
+//---------- Start Edit Data ---------
+    $(".edit-data").click(function (event) {
         event.preventDefault();
         tinymce.triggerSave();
-
+        var id = $(this).attr("dataId");
+        //-- ** Start Error Messages
         if (!$('#title').val() || $('#title').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter title.",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-
-
-        } else if (!$('#image_name').val() || $('#image_name').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Enter Image..!",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
@@ -129,13 +117,14 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-
         } else {
-
+            //-- ** End Error Messages
             //start preloarder
-            //$('.someBlock').preloader();
+            $('.someBlock').preloader();
             //grab all form data  
-            var formData = new FormData($('#form-data')[0]);
+            var formData = new FormData($('#form-data-' + id)[0]);
+            formData.append("update", "TRUE");
+            formData.append("id", id);
 
             $.ajax({
                 url: "ajax/php/news.php",
@@ -147,9 +136,8 @@ jQuery(document).ready(function () {
                 processData: false,
                 dataType: 'json',
                 success: function (result) {
-
+                    //remove preloarder
                     $('.someBlock').preloader('remove');
-                    
                     if (result.status === 'success') {
                         swal({
                             title: "success!",
@@ -174,10 +162,48 @@ jQuery(document).ready(function () {
                     }
                 }
             });
-
         }
         return false;
     });
-});
+//---------- End Update Data ---------
+//----------------------------------------------------
+//-------- Start Delete Data ---------
+    $('.delete-data').click(function () {
+        var id = $(this).attr("data-id");
+        //-- ** Show Confirmation MSG 
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this action file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false
+        }, function () {
+            //grab all form data
+            $.ajax({
+                url: "ajax/php/news.php",
+                type: "POST",
+                data: {id: id, option: 'delete'},
+                dataType: "JSON",
+                success: function (jsonStr) {
+                    if (jsonStr.status) {
 
+                        swal({
+                            title: "Deleted!",
+                            text: "The Data has been deleted.",
+                            type: 'success',
+                            timer: 2000,
+                            showConfirmButton: false
+                        });
+
+                        $('#div' + id).remove();
+                    }
+                }
+            });
+        });
+    });
+});
+//-------- End Delete Data ---------
+//----------------------------------------------------
  
