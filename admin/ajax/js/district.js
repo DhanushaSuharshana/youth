@@ -1,5 +1,4 @@
 jQuery(document).ready(function () {
-
 //---------- Start Create Data ---------
     $("#create").click(function (event)
     {
@@ -8,46 +7,19 @@ jQuery(document).ready(function () {
         if (!$('#name').val() || $('#name').val().length === 0) {
             swal({
                 title: "Error!",
-                text: "Please Enter the Name.",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-
-        } else if (!$('#position').val() || $('#position').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Enter Position..!",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-        } else if (!$('#email').val() || $('#email').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Enter Email..!",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-        } else if (!$('#image_name').val() || $('#image_name').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Add an Image..!",
+                text: "Please Enter the District Name.",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
             });
             //-- ** End Error Messages
         } else {
-
             //start preloarder
             $('.someBlock').preloader();
             var formData = new FormData($('#form-data')[0]);  //grab all form data  
             formData.append("create", "TRUE");
-
             $.ajax({
-                url: "ajax/php/leaders.php",
+                url: "ajax/php/district.php",
                 type: 'POST',
                 data: formData,
                 async: false,
@@ -99,22 +71,6 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        } else if (!$('.position').val() || $('.position').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Enter Position..!",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-        } else if (!$('.email').val() || $('.email').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Enter Email..!",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
             //-- ** End Error Messages
         } else {
             //start preloarder
@@ -124,7 +80,7 @@ jQuery(document).ready(function () {
             formData.append("update", "TRUE");
             formData.append("id", id);
             $.ajax({
-                url: "ajax/php/leaders.php",
+                url: "ajax/php/district.php",
                 type: 'POST',
                 data: formData,
                 async: false,
@@ -176,7 +132,7 @@ jQuery(document).ready(function () {
         }, function () {
             //grab all form data
             $.ajax({
-                url: "ajax/php/leaders.php",
+                url: "ajax/php/district.php",
                 type: "POST",
                 data: {id: id, option: 'delete'},
                 dataType: "JSON",

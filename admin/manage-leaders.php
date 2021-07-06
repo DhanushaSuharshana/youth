@@ -124,7 +124,8 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                             <h4 class="card-title mb-3">  <?php echo $all_leaders['name']; ?>  </h4>
                                                             <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $all_leaders['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
                                                             <div class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></div> |
-                                                            <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-leader" data-id="<?php echo $all_leaders['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
+                                                            <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $all_leaders['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
+                                                       
                                                         </div>
                                                     </div> 
                                                 </div>
@@ -203,7 +204,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <div class="row">
                                         <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
                                             <input class="form-control id" type="hidden" value="<?php echo $all_leaders['id']; ?>">
-                                            <button class="btn btn-primary edit-data" dataId="<?php echo $all_leaders['id']; ?>" id="create" name="create" type="submit">Save Now</button>
+                                            <button class="btn btn-primary edit-data" data-id="<?php echo $all_leaders['id']; ?>" id="update" name="update" type="submit">Save Now</button>
                                         </div>
                                     </div>
                                 </div>

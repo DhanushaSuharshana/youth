@@ -31,15 +31,21 @@
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
-                <li class="menu-title">Users</li>
-
+                <li class="menu-title">Essentials</li>
                 <li>
                     <a href="create-users.php">
                         <i class="bx bx-user"></i>
                         <span>Manage CMS Users</span>
                     </a>
                 </li>
-                <li class="menu-title">Contents</li>
+                <li>
+                    <a href="manage-district.php">
+                        <i class="bx bx-map"></i>
+                        <span>Manage District</span>
+                    </a>
+                </li>
+                
+                <li class="menu-title">Website Content</li>
                 <li>
                     <a href="index.php"  >
                         <i class="bx bx-home "></i>
