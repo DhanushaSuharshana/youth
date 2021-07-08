@@ -1623,8 +1623,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
+                        
                         <?php
                     } else if ($key < 5) {
                         ?>
