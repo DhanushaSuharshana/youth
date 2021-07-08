@@ -38,13 +38,12 @@
                         <span>Manage CMS Users</span>
                     </a>
                 </li>
-                <li>
+<!--                <li>
                     <a href="manage-district.php">
                         <i class="bx bx-map"></i>
                         <span>Manage District</span>
                     </a>
-                </li>
-                
+                </li>-->
                 <li class="menu-title">Website Content</li>
                 <li>
                     <a href="index.php"  >
@@ -69,7 +68,16 @@
                         <li><a href="#">About NYSC</a></li> 
                     </ul>
                 </li>
-
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-chart "></i>
+                        <span>Centeres</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="manage-district.php">Districts</a></li>
+                        <li><a href="manage-center.php">Manage Center</a></li>
+                    </ul>
+                </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-chart "></i>
