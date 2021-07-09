@@ -2,95 +2,63 @@
 
 include_once(dirname(__FILE__) . '/../../../class/include.php');
 header('Content-Type: application/json; charset=UTF8');
- 
+
+//-- ** Start Create Code Block
 if (isset($_POST['create'])) {
-
-    $COMMENT = new Comments(NULL);
- 
-    $COMMENT->name = $_POST['name'];
-    $COMMENT->title = $_POST['title'];
-    $COMMENT->comment = $_POST['comment'];
-    $COMMENT->is_active = $_POST['active'];
-
-    $dir_dest = '../../../upload/comments/';
-
-    $handle = new Upload($_FILES['image_name']);
-
-    $imgName = null;
-
-    if ($handle->uploaded) {
-        $handle->image_resize = true;
-        $handle->file_new_name_ext = 'jpg';
-        $handle->image_ratio_crop = 'C';
-        $handle->file_new_name_body = Helper::randamId();
-        $handle->image_x = 600;
-        $handle->image_y = 440;
-
-        $handle->Process($dir_dest);
-
-        if ($handle->processed) {
-            $info = getimagesize($handle->file_dst_pathname);
-            $imgName = $handle->file_dst_name;
-        }
+    //-- ** Start Assign Post Params
+    $COURSE_SUBJECTS = new CourseSubjects(NULL);
+    $COURSE_SUBJECTS->title = $_POST['title'];
+    $COURSE_SUBJECTS->course_id = $_POST['id'];
+    $COURSE_SUBJECTS->create();
+    //-- ** End Assign Post Params
+    if ($COURSE_SUBJECTS) {
+        $result = ["status" => 'success'];
+        echo json_encode($result);
+        exit();
+    } else {
+        $result = ["status" => 'error'];
+        echo json_encode($result);
+        exit();
     }
-
-    $COMMENT->image_name = $imgName;
-    $COMMENT->create();
-    
-    $result = ["status" => 'success'];
-    echo json_encode($result);
-    exit();
 }
-
-
-
+//-- ** Start Create Code Block
+//--------------------------------------------------------------------------
+//Start Update Code Block
 if (isset($_POST['update'])) {
-    
-    $dir_dest = '../../../upload/comments/';
 
-    $handle = new Upload($_FILES['image_name']);
-
-    $imgName = null;
-
-    if ($handle->uploaded) {
-        $handle->image_resize = true;
-        $handle->file_new_name_body = TRUE;
-        $handle->file_overwrite = TRUE;
-        $handle->file_new_name_ext = FALSE;
-        $handle->image_ratio_crop = 'C';
-        $handle->file_new_name_body = $_POST ["oldImageName"];
-        $handle->image_x = 300;
-        $handle->image_y = 300;
-
-        $handle->Process($dir_dest);
-
-        if ($handle->processed) {
-            $info = getimagesize($handle->file_dst_pathname);
-            $imgName = $handle->file_dst_name;
-        }
+    $COURSE_SUBJECTS = new CourseSubjects($_POST['id']);
+    //-- ** Start Assign Post Params  
+    $COURSE_SUBJECTS->title = $_POST['title'];
+    $COURSE_SUBJECTS->update();
+    //-- ** End Assign Post Params
+    if ($COURSE_SUBJECTS) {
+        $result = ["status" => 'success'];
+        echo json_encode($result);
+        exit();
+    } else {
+        $result = ["status" => 'error'];
+        echo json_encode($result);
+        exit();
     }
-
-    $COMMENT = new Comments($_POST['id']);
-
-    $COMMENT->image_name = $_POST['oldImageName'];
-    $COMMENT->name = $_POST['name'];
-    $COMMENT->title = $_POST['title'];
-    $COMMENT->comment = $_POST['comment'];
-    $COMMENT->is_active = $_POST['active'];
-
-    $COMMENT->update();
-    $result = ["id" => $_POST['id']];
-    echo json_encode($result);
-    exit();
 }
-
-if (isset($_POST['save-data'])) {
-
+//End Update Code Block
+//--------------------------------------------------------------------------
+//-- ** Start delete code  
+if ($_POST['option'] == 'delete') {
+    $COURSE_SUBJECTS = new CourseSubjects($_POST['id']);
+    $result = $COURSE_SUBJECTS->delete();
+    //-- ** End Assign Post Params
+    if ($result) {
+        $data = array("status" => TRUE);
+        header('Content-type: application/json');
+        echo json_encode($data);
+    }
+}
+//Arange slider
+if (isset($_POST['arrange'])) {
     foreach ($_POST['sort'] as $key => $img) {
         $key = $key + 1;
-
-        $COMMENT = Comments::arrange($key, $img);
-
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        $COURSE_SUBJECTS = News::arrange($key, $img);
+        header('Location:../../../arrange-news.php?message=9');
     }
-}
+} 

@@ -1593,7 +1593,6 @@
                             <div class="col-lg-6 col-md-12 col-sm-6">
                                 <div class="events-box">
                                     <div class="row m-0">
-
                                         <div class="col-lg-5 col-md-5 p-0">
                                             <div class="image">
                                                 <a href="#">
@@ -1622,137 +1621,136 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        
-                        <?php
-                    } else if ($key < 5) {
-                        ?>
-                        <div class="col-lg-4 col-md-12 col-sm-6">
-                            <div class="events-box">
-                                <div class="row m-0">
-                                    <div class="col-lg-12 col-md-7 p-0">
-                                        <div class="content">
-                                            <div class="date">
-                                                <span>
-                                                    <?php
-                                                    $date = date_create($event['date']);
-                                                    echo date_format($date, "D") . ', ' . date_format($date, "d") . ' ' . date_format($date, "M" . ', ' . date_format($date, "Y"));
-                                                    ?>
-                                                </span>
+                            </div>  
+                            <?php
+                        } else if ($key < 5) {
+                            ?>
+                            <div class="col-lg-4 col-md-12 col-sm-6">
+                                <div class="events-box">
+                                    <div class="row m-0">
+                                        <div class="col-lg-12 col-md-7 p-0">
+                                            <div class="content">
+                                                <div class="date">
+                                                    <span>
+                                                        <?php
+                                                        $date = date_create($event['date']);
+                                                        echo date_format($date, "D") . ', ' . date_format($date, "d") . ' ' . date_format($date, "M" . ', ' . date_format($date, "Y"));
+                                                        ?>
+                                                    </span>
+                                                </div>
+                                                <h3><a href="#"><?php echo $event['title'] ?></a></h3>
+                                                <p><?php echo $event['short_description'] ?></p>
+                                                <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
                                             </div>
-                                            <h3><a href="#"><?php echo $event['title'] ?></a></h3>
-                                            <p><?php echo $event['short_description'] ?></p>
-                                            <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <?php
+                            <?php
+                        }
                     }
-                }
-                ?>
-            </div>
-        </div>
-
-        <div class="business-shape7"><img src="assets/img/business-coaching/business-shape4.png" alt="image"></div>
-
-    </section>
-
-    <section class="blog-area pt-100 pb-70">
-        <div class="container">
-            <div class="section-title text-left">
-                <span class="sub-title">Explore News</span>
-                <h2>Our Latest News</h2>
-                <a href="blog-style-1.html" class="default-btn"><i class='bx bx-book-reader icon-arrow before'></i><span class="label">Read All</span><i class="bx bx-book-reader icon-arrow after"></i></a>
-            </div>
-            <div class="blog-slides owl-carousel owl-theme">
-                <?php
-                $NEWS = new News(NULL);
-                foreach ($NEWS->all() as $key => $news) {
                     ?>
-                    <div class="single-blog-post mb-30">
-                        <div class="post-image">
-                            <a href="single-blog.html" class="d-block">
-                                <img src="<?php echo URL ?>upload/news/<?php echo $news['image_name'] ?>" alt="<?php echo $news['title'] ?>">
-                            </a>
-                            <div class="tag">
-                                <a href="#">News</a>
+                </div>
+            </div>
+
+            <div class="business-shape7"><img src="assets/img/business-coaching/business-shape4.png" alt="image"></div>
+
+        </section>
+
+        <section class="blog-area pt-100 pb-70">
+            <div class="container">
+                <div class="section-title text-left">
+                    <span class="sub-title">Explore News</span>
+                    <h2>Our Latest News</h2>
+                    <a href="blog-style-1.html" class="default-btn"><i class='bx bx-book-reader icon-arrow before'></i><span class="label">Read All</span><i class="bx bx-book-reader icon-arrow after"></i></a>
+                </div>
+                <div class="blog-slides owl-carousel owl-theme">
+                    <?php
+                    $NEWS = new News(NULL);
+                    foreach ($NEWS->all() as $key => $news) {
+                        ?>
+                        <div class="single-blog-post mb-30">
+                            <div class="post-image">
+                                <a href="single-blog.html" class="d-block">
+                                    <img src="<?php echo URL ?>upload/news/<?php echo $news['image_name'] ?>" alt="<?php echo $news['title'] ?>">
+                                </a>
+                                <div class="tag">
+                                    <a href="#">News</a>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <ul class="post-meta">
+
+                                    <li><a href="#">Published On : 
+                                            <?php
+                                            $date = date_create($news['date']);
+                                            echo date_format($date, "D") . ', ' . date_format($date, "d") . ' ' . date_format($date, "M" . ', ' . date_format($date, "Y"));
+                                            ?>
+                                        </a></li>
+                                </ul>
+                                <h3><a href="single-blog.html" class="d-inline-block"><?php echo ucfirst($news['title']) ?></a></h3>
+                                <a href="single-blog.html" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
                             </div>
                         </div>
-                        <div class="post-content">
-                            <ul class="post-meta">
+                    <?php } ?>
+                </div>
+            </div>
+            <div id="particles-js-circle-bubble-2"></div>
+        </section>
 
-                                <li><a href="#">Published On : 
-                                        <?php
-                                        $date = date_create($news['date']);
-                                        echo date_format($date, "D") . ', ' . date_format($date, "d") . ' ' . date_format($date, "M" . ', ' . date_format($date, "Y"));
-                                        ?>
-                                    </a></li>
-                            </ul>
-                            <h3><a href="single-blog.html" class="d-inline-block"><?php echo ucfirst($news['title']) ?></a></h3>
-                            <a href="single-blog.html" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+
+        <section class="become-instructor-partner-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="become-instructor-partner-content bg-color">
+                            <h2>Become an Instructor</h2>
+                            <p>Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
+                            <a href="#" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Apply Now</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
                         </div>
                     </div>
-                <?php } ?>
-            </div>
-        </div>
-        <div id="particles-js-circle-bubble-2"></div>
-    </section>
-
-
-    <section class="become-instructor-partner-area">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="become-instructor-partner-content bg-color">
-                        <h2>Become an Instructor</h2>
-                        <p>Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
-                        <a href="#" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Apply Now</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="become-instructor-partner-image bg-image1 jarallax" data-jarallax='{"speed": 0.3}'>
+                            <img src="assets/img/become-instructor.jpg" alt="image">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="become-instructor-partner-image bg-image1 jarallax" data-jarallax='{"speed": 0.3}'>
-                        <img src="assets/img/become-instructor.jpg" alt="image">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="become-instructor-partner-image bg-image2 jarallax" data-jarallax='{"speed": 0.3}'>
+                            <img src="assets/img/become-partner.jpg" alt="image">
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="become-instructor-partner-image bg-image2 jarallax" data-jarallax='{"speed": 0.3}'>
-                        <img src="assets/img/become-partner.jpg" alt="image">
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="become-instructor-partner-content">
-                        <h2>Become a Partner</h2>
-                        <p>Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
-                        <a href="#" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Contact Us</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="become-instructor-partner-content">
+                            <h2>Become a Partner</h2>
+                            <p>Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
+                            <a href="#" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Contact Us</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <?php include './views/footer.php'; ?>
+        <?php include './views/footer.php'; ?>
 
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/mixitup.min.js"></script>
-    <script src="assets/js/parallax.min.js"></script>
-    <script src="assets/js/jquery.appear.min.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
-    <script src="assets/js/particles.min.js"></script>
-    <script src="assets/js/meanmenu.min.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/viewer.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/js/form-validator.min.js"></script>
-    <script src="assets/js/contact-form-script.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
+        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/mixitup.min.js"></script>
+        <script src="assets/js/parallax.min.js"></script>
+        <script src="assets/js/jquery.appear.min.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/particles.min.js"></script>
+        <script src="assets/js/meanmenu.min.js"></script>
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/viewer.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="assets/js/form-validator.min.js"></script>
+        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
 
 </html>

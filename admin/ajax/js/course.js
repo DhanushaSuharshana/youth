@@ -5,10 +5,26 @@ jQuery(document).ready(function () {
         event.preventDefault();
         tinymce.triggerSave();
         //-- ** Start Error Messages
-        if (!$('#title').val() || $('#title').val().length === 0) {
+        if (!$('#course_type').val() || $('#course_type').val().length === 0) {
             swal({
                 title: "Error!",
-                text: "Please Enter title.",
+                text: "Please select course type.",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#name').val() || $('#name').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please enter course name.",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#max_student').val() || $('#max_student').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please enter course max student.",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
@@ -17,6 +33,38 @@ jQuery(document).ready(function () {
             swal({
                 title: "Error!",
                 text: "Please Enter Image..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#level').val() || $('#level').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter course level..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#languages').val() || $('#languages').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter course teaching languages..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#duration').val() || $('#duration').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter course duration..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#start_date').val() || $('#start_date').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter course start date..!",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
@@ -46,7 +94,7 @@ jQuery(document).ready(function () {
             formData.append("create", "TRUE");
 
             $.ajax({
-                url: "ajax/php/news.php",
+                url: "ajax/php/course.php",
                 type: 'POST',
                 data: formData,
                 async: false,
@@ -93,10 +141,58 @@ jQuery(document).ready(function () {
         tinymce.triggerSave();
         var id = $(this).attr("dataId");
         //-- ** Start Error Messages
-        if (!$('#title').val() || $('#title').val().length === 0) {
+        if (!$('#course_type').val() || $('#course_type').val().length === 0) {
             swal({
                 title: "Error!",
-                text: "Please Enter title.",
+                text: "Please select course type.",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#name').val() || $('#name').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please enter course name.",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#max_student').val() || $('#max_student').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please enter course max student.",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#level').val() || $('#level').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter course level..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#languages').val() || $('#languages').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter course teaching languages..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#duration').val() || $('#duration').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter course duration..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#start_date').val() || $('#start_date').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter course start date..!",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
@@ -104,7 +200,7 @@ jQuery(document).ready(function () {
         } else if (!$('#short_description').val() || $('#short_description').val().length === 0) {
             swal({
                 title: "Error!",
-                text: "Please Enter Short Description..!",
+                text: "Please Enter short description..!",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
@@ -127,7 +223,7 @@ jQuery(document).ready(function () {
             formData.append("id", id);
 
             $.ajax({
-                url: "ajax/php/news.php",
+                url: "ajax/php/course.php",
                 type: 'POST',
                 data: formData,
                 async: false,
