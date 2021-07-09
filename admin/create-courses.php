@@ -8,7 +8,7 @@ include_once(dirname(__FILE__) . '/auth.php');
     <head>
 
         <meta charset="utf-8" />
-        <title>Datatables | Minible - Admin & Dashboard Template</title>
+        <title>Create Courses | Admin Panel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -18,53 +18,43 @@ include_once(dirname(__FILE__) . '/auth.php');
         <!-- DataTables -->
         <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-
+        <link href="assets/css/preloader.css" rel="stylesheet" type="text/css"/>
         <!-- Responsive datatable examples -->
         <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />     
-
+        <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <!-- Bootstrap Css -->
         <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    </head> 
 
-    </head>
-
-
-    <body>
-
-        <!-- <body data-layout="horizontal" data-topbar="colored"> -->
+    <body class="someBlock"> 
 
         <!-- Begin page -->
         <div id="layout-wrapper">
-
-
             <?php include './top-header.php'; ?>
             <!-- ========== Left Sidebar Start ========== -->
             <?php include './navigation.php'; ?>
             <!-- Left Sidebar End -->
 
-
-
             <!-- ============================================================== -->
             <!-- Start right Content here -->
             <!-- ============================================================== -->
             <div class="main-content">
-
                 <div class="page-content">
                     <div class="container-fluid">
-
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0">Datatables</h4>
-
+                                    <h4 class="mb-0"> Dashboard</h4
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                                            <li class="breadcrumb-item active">Datatables</li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                                            <li class="breadcrumb-item active">Create Courses</li>
                                         </ol>
                                     </div>
 
@@ -72,89 +62,95 @@ include_once(dirname(__FILE__) . '/auth.php');
                             </div>
                         </div>
                         <!-- end page title -->
+
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-
-                                        <h4 class="card-title">Add Leader Details.</h4> 
-
-                                        <div class="mb-3 row">
-                                            <label for="example-text-input" class="col-md-2 col-form-label">Select Course Type</label>
-                                            <div class="col-md-10">
-                                                <select class="form-control">
-                                                    <option> -- Please Select Course Type --</option>
-                                                </select>
+                                        <h4 class="card-title">Create Courses.</h4> 
+                                        <form id="form-data">
+                                            <div class="mb-3 row">
+                                                <label for="example-text-input" class="col-md-2 col-form-label">Select Course Type</label>
+                                                <div class="col-md-10">
+                                                    <select class="form-control" id="course_type" name="course_type">
+                                                        <option value=""> -- Please Select Course Type --</option> 
+                                                        <?php
+                                                        $COURSE_TYPE = new CourseType(NULL);
+                                                        foreach ($COURSE_TYPE->all() as $course_type) {
+                                                            ?>
+                                                            <option value="<?php echo $course_type['id'] ?>" > <?php echo $course_type['title'] ?></option>
+                                                        <?php } ?>
+                                                    </select>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="text" id="example-text-input"  >
+                                            <div class="mb-3 row">
+                                                <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="text" id="name"  name="name" placeholder="Please enter course name">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-search-input" class="col-md-2 col-form-label">Position</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="text" id="example-search-input">
+                                            <div class="mb-3 row">
+                                                <label for="example-search-input" class="col-md-2 col-form-label">Max Students</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="text" id="max_student" name="max_student" placeholder="Please enter max students in one course">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="file" id="example-email-input">
+                                            <div class="mb-3 row">
+                                                <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="file" id="image_name" name="image_name">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Facebook URL</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="url" id="example-url-input">
+                                            <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">Level</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="text"   id="level" name="level" placeholder="Please enter certificate level">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Twitter URL</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="url" id="example-url-input">
+                                            <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">Languages</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="text"   id="languages" name="languages" placeholder="Please enter course teaching languages">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Instergrame URL</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="url" id="example-url-input">
+                                            <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">Duration</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="text"  id="duration" name="duration" placeholder="Please enter course duration">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Linkind URL</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="url" id="example-url-input">
+                                            <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">Start Date</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control start_date" type="text" id="start_date" name="start_date" placeholder="Please enter course start date">
+                                                </div>
+                                            </div> 
+                                            <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">Short Description</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" type="text" id="short_description" name="short_description" placeholder="Please enter short description">
+                                                </div>
+                                            </div> 
+                                            <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">  Description</label>
+                                                <div class="col-md-10">
+                                                    <textarea id="description" name="description"></textarea>
+                                                </div>
+                                            </div> 
+                                            <div class="row">
+                                                <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
+                                                    <button class="btn btn-primary " type="submit" id="create">Create</button> 
+                                                </div>
                                             </div>
-                                        </div> 
-                                        <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">  Description</label>
-                                            <div class="col-md-10">
-                                                <textarea id="description" name="area"></textarea>
-                                            </div>
-                                        </div> 
-                                        <div class="row">
-                                            <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
-                                                <button class="btn btn-primary " type="submit">Submit form</button>
-
-                                            </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
-                            </div> <!-- end col -->
-                        </div>  
-
-                    </div> <!-- container-fluid -->
-                </div>
-                <!-- End Page-content -->
-
-
+                            </div>  
+                        </div>   
+                    </div> 
+                </div> 
                 <?php include './footer.php'; ?>
-            </div>
-            <!-- end main content-->
-
+            </div>  
         </div>
         <!-- END layout-wrapper -->
 
@@ -184,18 +180,24 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
         <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
         <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
-
+        <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
         <!-- Responsive examples -->
         <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
         <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+        <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <!-- send data -->
+        <script src="ajax/js/course.js" type="text/javascript"></script>
 
         <!-- Datatable init js -->
         <script src="assets/js/pages/datatables.init.js"></script>
-
-
         <!-- App js -->
         <script src="assets/js/app.js"></script>
-
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $(".start_date").datepicker({dateFormat: 'yy-mm-dd', minDate: 'today'});
+            });
+        </script> 
         <script src="tinymce/js/tinymce/tinymce.min.js" type="text/javascript"></script>
         <script>
             tinymce.init({

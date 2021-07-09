@@ -12,7 +12,7 @@ $PHOTO_ALBUM = new PhotoAlbum($id);
     <head>
 
         <meta charset="utf-8" />
-        <title>Create Album Photo | <?php echo $PHOTO_ALBUM->title ?> </title>
+        <title>Create Album Photo | <?php echo $PHOTO_ALBUM->title ?> | Youth Service LTD</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />

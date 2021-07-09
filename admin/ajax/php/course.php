@@ -2,22 +2,13 @@
 
 include_once(dirname(__FILE__) . '/../../../class/include.php');
 header('Content-Type: application/json; charset=UTF8');
- 
+
+//-- ** Start Create Code Block
 if (isset($_POST['create'])) {
-
-    $COMMENT = new Comments(NULL);
- 
-    $COMMENT->name = $_POST['name'];
-    $COMMENT->title = $_POST['title'];
-    $COMMENT->comment = $_POST['comment'];
-    $COMMENT->is_active = $_POST['active'];
-
-    $dir_dest = '../../../upload/comments/';
-
+    //-- ** Start Create Image 
+    $dir_dest = '../../../upload/courses/';
     $handle = new Upload($_FILES['image_name']);
-
     $imgName = null;
-
     if ($handle->uploaded) {
         $handle->image_resize = true;
         $handle->file_new_name_ext = 'jpg';
@@ -25,72 +16,104 @@ if (isset($_POST['create'])) {
         $handle->file_new_name_body = Helper::randamId();
         $handle->image_x = 600;
         $handle->image_y = 440;
-
         $handle->Process($dir_dest);
-
         if ($handle->processed) {
             $info = getimagesize($handle->file_dst_pathname);
             $imgName = $handle->file_dst_name;
         }
     }
-
-    $COMMENT->image_name = $imgName;
-    $COMMENT->create();
-    
-    $result = ["status" => 'success'];
-    echo json_encode($result);
-    exit();
+    //-- ** End Create Image
+    //-- ** Start Assign Post Params
+    $COURSE = new course(NULL);
+    $COURSE->course_type = $_POST['course_type'];
+    $COURSE->name = ucwords($_POST['name']);
+    $COURSE->max_student = $_POST['max_student'];
+    $COURSE->level = $_POST['level'];
+    $COURSE->languages = $_POST['languages'];
+    $COURSE->duration = $_POST['duration'];
+    $COURSE->start_date = $_POST['start_date'];
+    $COURSE->short_description = $_POST['short_description'];
+    $COURSE->description = $_POST['description'];
+    $COURSE->image_name = $imgName;
+    $COURSE->create();
+    //-- ** End Assign Post Params
+    if ($COURSE) {
+        $result = ["status" => 'success'];
+        echo json_encode($result);
+        exit();
+    } else {
+        $result = ["status" => 'error'];
+        echo json_encode($result);
+        exit();
+    }
 }
-
-
-
+//-- ** Start Create Code Block
+//--------------------------------------------------------------------------
+//Start Update Code Block
 if (isset($_POST['update'])) {
-    
-    $dir_dest = '../../../upload/comments/';
-
+    //-- ** Start Edit Image in folder location
+    $dir_dest = '../../../upload/courses/';
     $handle = new Upload($_FILES['image_name']);
-
     $imgName = null;
 
+    $COURSE = new Course($_POST['id']);
     if ($handle->uploaded) {
         $handle->image_resize = true;
         $handle->file_new_name_body = TRUE;
         $handle->file_overwrite = TRUE;
         $handle->file_new_name_ext = FALSE;
         $handle->image_ratio_crop = 'C';
-        $handle->file_new_name_body = $_POST ["oldImageName"];
-        $handle->image_x = 300;
-        $handle->image_y = 300;
-
+        $handle->file_new_name_body = $COURSE->image_name;
+        $handle->image_x = 600;
+        $handle->image_y = 440;
         $handle->Process($dir_dest);
-
         if ($handle->processed) {
             $info = getimagesize($handle->file_dst_pathname);
             $imgName = $handle->file_dst_name;
         }
     }
-
-    $COMMENT = new Comments($_POST['id']);
-
-    $COMMENT->image_name = $_POST['oldImageName'];
-    $COMMENT->name = $_POST['name'];
-    $COMMENT->title = $_POST['title'];
-    $COMMENT->comment = $_POST['comment'];
-    $COMMENT->is_active = $_POST['active'];
-
-    $COMMENT->update();
-    $result = ["id" => $_POST['id']];
-    echo json_encode($result);
-    exit();
-}
-
-if (isset($_POST['save-data'])) {
-
-    foreach ($_POST['sort'] as $key => $img) {
-        $key = $key + 1;
-
-        $COMMENT = Comments::arrange($key, $img);
-
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    //-- ** End Edit Image in folder location
+    //-- ** Start Assign Post Params  
+    $COURSE->course_type = $_POST['course_type'];
+    $COURSE->name = ucwords($_POST['name']);
+    $COURSE->max_student = $_POST['max_student'];
+    $COURSE->level = $_POST['level'];
+    $COURSE->languages = $_POST['languages'];
+    $COURSE->duration = $_POST['duration'];
+    $COURSE->start_date = $_POST['start_date'];
+    $COURSE->short_description = $_POST['short_description'];
+    $COURSE->description = $_POST['description'];
+    $COURSE->update();
+    //-- ** End Assign Post Params
+    if ($COURSE) {
+        $result = ["status" => 'success'];
+        echo json_encode($result);
+        exit();
+    } else {
+        $result = ["status" => 'error'];
+        echo json_encode($result);
+        exit();
     }
 }
+//End Update Code Block
+//--------------------------------------------------------------------------
+//-- ** Start delete code  
+if ($_POST['option'] == 'delete') {
+    $COURSE = new News($_POST['id']);
+    unlink("../../../upload/news/" . $COURSE->image_name);
+    $result = $COURSE->delete();
+    //-- ** End Assign Post Params
+    if ($result) {
+        $data = array("status" => TRUE);
+        header('Content-type: application/json');
+        echo json_encode($data);
+    }
+}
+//Arange slider
+if (isset($_POST['arrange'])) {
+    foreach ($_POST['sort'] as $key => $img) {
+        $key = $key + 1;
+        $COURSE = News::arrange($key, $img);
+        header('Location:../../../arrange-news.php?message=9');
+    }
+} 
