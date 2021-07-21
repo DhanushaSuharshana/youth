@@ -86,7 +86,7 @@ jQuery(document).ready(function () {
         return false;
     });
 //---------- End Create Data ---------
-//----------------------------------------------------
+//------------------------------------
 //---------- Start Edit Data ---------
     $(".edit-data").click(function (event) {
         event.preventDefault();
@@ -147,11 +147,9 @@ jQuery(document).ready(function () {
                             showConfirmButton: false,
                         });
                         window.setTimeout(function () {
-                            window.location.reload()
+                            window.location.reload();
                         }, 2000);
-
                     } else if (result.status === 'error') {
-
                         swal({
                             title: "Error!",
                             text: "Something went wrong",

@@ -1,7 +1,6 @@
 jQuery(document).ready(function () {
 //---------- Start Create Data ---------
-    $("#create").click(function (event)
-    {
+    $("#create").click(function (event)    {
         event.preventDefault();
         //-- ** Start Error Messages
         if (!$('#name').val() || $('#name').val().length === 0) {
@@ -238,7 +237,6 @@ jQuery(document).ready(function () {
         }
         return false;
     });
-
     //-------- Start Delete Data ---------
     $('.delete-data').click(function () {
         var id = $(this).attr("data-id");

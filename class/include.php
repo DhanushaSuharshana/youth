@@ -15,6 +15,7 @@ include_once(dirname(__FILE__) . '/News.php');
 include_once(dirname(__FILE__) . '/Event.php');
 include_once(dirname(__FILE__) . '/Districts.php');
 include_once(dirname(__FILE__) . '/Center.php');
+include_once(dirname(__FILE__) . '/CourseByCenters.php');
 
 
 function dd($data) {

@@ -226,9 +226,17 @@
                 </div>
                 <div class="tab courses-list-tab">
                     <ul class="tabs active">
-                        <li class="current"><a href="#">Trending Courses</a></li>
-                        <li class=""><a href="#">Most Popular Courses</a></li>
-                        <li class=""><a href="#">Most Recent Courses</a></li>
+                        <?php
+                        $COURSE_TYPE = new CourseType(NULL);
+                        foreach ($COURSE_TYPE->all() as $key => $course_type) {
+                            if ($key == 0) {
+                                ?>
+                                <li class="current"><a href="#"><?php echo $course_type['title'] ?></a></li>
+                            <?php } else { ?>
+                                <li class=""><a href="#"><?php echo $course_type['title'] ?></a></li> 
+                            <?php }
+                        }
+                        ?>
                     </ul>
                     <div class="tab-content">
                         <div class="tabs-item" style="display: block;">
@@ -242,18 +250,6 @@
                                             <div class="courses-content">
                                                 <div class="d-flex justify-content-between align-items-center">
 
-                                                    <!--                                                <div class="courses-rating">
-                                                                                                        <div class="review-stars-rated">
-                                                                                                            <i class="bx bxs-star"></i>
-                                                                                                            <i class="bx bxs-star"></i>
-                                                                                                            <i class="bx bxs-star"></i>
-                                                                                                            <i class="bx bxs-star"></i>
-                                                                                                            <i class="bx bxs-star-half"></i>
-                                                                                                        </div>
-                                                                                                        <div class="rating-total">
-                                                                                                            4.5 (2)
-                                                                                                        </div>
-                                                                                                    </div>-->
                                                 </div>
                                                 <h3><div class="d-inline-block"> 
 
@@ -285,18 +281,7 @@
                                             <div class="courses-content">
                                                 <div class="d-flex justify-content-between align-items-center">
 
-                                                    <!--                                                <div class="courses-rating">
-                                                                                                        <div class="review-stars-rated">
-                                                                                                            <i class="bx bxs-star"></i>
-                                                                                                            <i class="bx bxs-star"></i>
-                                                                                                            <i class="bx bxs-star"></i>
-                                                                                                            <i class="bx bxs-star"></i>
-                                                                                                            <i class="bx bxs-star-half"></i>
-                                                                                                        </div>
-                                                                                                        <div class="rating-total">
-                                                                                                            4.5 (2)
-                                                                                                        </div>
-                                                                                                    </div>-->
+
                                                 </div>
                                                 <h3><div class="d-inline-block">National Certificate - Automobile Electrician</div></h3>
                                                 <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
@@ -1298,58 +1283,58 @@
                 </section>-->
 
 
-<!--        <section class="courses-categories-area bg-image pt-100 pb-70">
-            <div class="container">
-                <div class="section-title text-left">
-                    <span class="sub-title">Courses Categories</span>
-                    <h2>Browse Trending Categories</h2>
-                    <a href="courses-category-style-1.html" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">View All</span><i class="bx bx-show-alt icon-arrow after"></i></a>
+    <!--        <section class="courses-categories-area bg-image pt-100 pb-70">
+                <div class="container">
+                    <div class="section-title text-left">
+                        <span class="sub-title">Courses Categories</span>
+                        <h2>Browse Trending Categories</h2>
+                        <a href="courses-category-style-1.html" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">View All</span><i class="bx bx-show-alt icon-arrow after"></i></a>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-md-4">
+                            <div class="single-categories-courses-box mb-30">
+                                <div class="icon">
+                                    <i class='bx bx-code-alt'></i>
+                                </div>
+                                <h3>Web Development</h3>
+                                <span>60 Courses</span>
+                                <a href="#" class="link-btn"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-md-4">
+                            <div class="single-categories-courses-box mb-30">
+                                <div class="icon">
+                                    <i class='bx bx-camera'></i>
+                                </div>
+                                <h3>Photography </h3>
+                                <span>21 Courses</span>
+                                <a href="#" class="link-btn"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-md-4">
+                            <div class="single-categories-courses-box mb-30">
+                                <div class="icon">
+                                    <i class='bx bx-layer'></i>
+                                </div>
+                                <h3>Graphics Design</h3>
+                                <span>58 Courses</span>
+                                <a href="#" class="link-btn"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-md-4 offset-lg-0 offset-md-4">
+                            <div class="single-categories-courses-box mb-30">
+                                <div class="icon">
+                                    <i class='bx bxs-flag-checkered'></i>
+                                </div>
+                                <h3>Web Language</h3>
+                                <span>99 Courses</span>
+                                <a href="#" class="link-btn"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="single-categories-courses-box mb-30">
-                            <div class="icon">
-                                <i class='bx bx-code-alt'></i>
-                            </div>
-                            <h3>Web Development</h3>
-                            <span>60 Courses</span>
-                            <a href="#" class="link-btn"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="single-categories-courses-box mb-30">
-                            <div class="icon">
-                                <i class='bx bx-camera'></i>
-                            </div>
-                            <h3>Photography </h3>
-                            <span>21 Courses</span>
-                            <a href="#" class="link-btn"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="single-categories-courses-box mb-30">
-                            <div class="icon">
-                                <i class='bx bx-layer'></i>
-                            </div>
-                            <h3>Graphics Design</h3>
-                            <span>58 Courses</span>
-                            <a href="#" class="link-btn"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-4 offset-lg-0 offset-md-4">
-                        <div class="single-categories-courses-box mb-30">
-                            <div class="icon">
-                                <i class='bx bxs-flag-checkered'></i>
-                            </div>
-                            <h3>Web Language</h3>
-                            <span>99 Courses</span>
-                            <a href="#" class="link-btn"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="particles-js-circle-bubble-2"></div>
-        </section>-->
+                <div id="particles-js-circle-bubble-2"></div>
+            </section>-->
 
 
 
@@ -1692,7 +1677,7 @@
                                 <a href="single-blog.html" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
                             </div>
                         </div>
-                    <?php } ?>
+<?php } ?>
                 </div>
             </div>
             <div id="particles-js-circle-bubble-2"></div>
@@ -1730,7 +1715,7 @@
             </div>
         </section>
 
-        <?php include './views/footer.php'; ?>
+<?php include './views/footer.php'; ?>
 
         <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
         <script src="assets/js/jquery.min.js"></script>

@@ -15,7 +15,7 @@ if (isset($_POST['create'])) {
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = Helper::randamId();
         $handle->image_x = 600;
-        $handle->image_y = 440;
+        $handle->image_y = 485;
         $handle->Process($dir_dest);
         if ($handle->processed) {
             $info = getimagesize($handle->file_dst_pathname);
@@ -48,7 +48,7 @@ if (isset($_POST['create'])) {
     }
 }
 //-- ** Start Create Code Block
-//--------------------------------------------------------------------------
+//-----------------------------------
 //Start Update Code Block
 if (isset($_POST['update'])) {
     //-- ** Start Edit Image in folder location
@@ -96,7 +96,7 @@ if (isset($_POST['update'])) {
     }
 }
 //End Update Code Block
-//--------------------------------------------------------------------------
+//----------------------------------------
 //-- ** Start delete code  
 if ($_POST['option'] == 'delete') {
     $COURSE = new News($_POST['id']);

@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-    //Create 
+//---------- Start Create Data ---------
     $("#create").click(function (event) {
         event.preventDefault();
-        
+        //-- ** Start Error Messages
         if (!$('#title').val() || $('#title').val().length === 0) {
             swal({
                 title: "Error!",
@@ -12,9 +12,13 @@ $(document).ready(function () {
                 timer: 1500,
                 showConfirmButton: false
             });
-
-        }   else {
-            var formData = new FormData($('#form-data')[0]);
+//-- ** End Error Messages
+        } else {
+            //start preloarder
+            $('.someBlock').preloader();
+            //grab all form data  
+            var formData = new FormData($('#form-data')[0]);  //grab all form data  
+            formData.append("create", "TRUE");
             $.ajax({
                 url: "ajax/php/course-type.php",
                 type: "POST",
@@ -25,8 +29,9 @@ $(document).ready(function () {
                 processData: false,
                 dataType: 'json',
                 success: function (result) {
+                    //remove preloarder
+                    $('.someBlock').preloader('remove');
                     if (result.status === 'success') {
-
                         swal({
                             title: "success!",
                             text: "Your data saved successfully !",
@@ -35,9 +40,8 @@ $(document).ready(function () {
                             showConfirmButton: false
                         });
                         window.setTimeout(function () {
-                            window.location.reload()
+                            window.location.reload();
                         }, 2000);
-
                     } else if (result.status === 'error') {
 
                         swal({
@@ -52,21 +56,30 @@ $(document).ready(function () {
             });
         }
     });
-
+//---------- End Create Data ---------
+//------------------------------------
+//---------- Start Edit Data ---------
     //update
-    $("#update").click(function (event) {
+    $(".edit-data").click(function (event) {
         event.preventDefault();
-       
-        if (!$('#title').val() || $('#title').val().length === 0) {
+        var id = $(this).attr("dataId");
+        //-- ** Start Error Messages
+        if (!$('.title').val() || $('.title').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please enter  course type title..!",
                 type: 'error',
                 timer: 1500,
                 showConfirmButton: false
-            }); 
+            });
         } else {
-            var formData = new FormData($('#form-data')[0]);
+            //-- ** End Error Messages
+            //start preloarder
+            $('.someBlock').preloader();
+            //grab all form data  
+            var formData = new FormData($('#form-data-' + id)[0]);
+            formData.append("update", "TRUE");
+            formData.append("id", id);
             $.ajax({
                 url: "ajax/php/course-type.php",
                 type: "POST",
@@ -74,6 +87,8 @@ $(document).ready(function () {
                 async: false,
                 dataType: 'json',
                 success: function (result) {
+                    //remove preloarder
+                    $('.someBlock').preloader('remove');
                     swal({
                         title: "Success!",
                         text: "Your changes saved successfully!...",
@@ -81,10 +96,7 @@ $(document).ready(function () {
                         timer: 2000,
                         showConfirmButton: false
                     }, function () {
-                        setTimeout(function () {
-
-                            window.location.replace("edit-comment.php?id=" + result.id);
-                        }, 1500);
+                        window.location.reload();
                     });
                 },
                 cache: false,
@@ -93,7 +105,6 @@ $(document).ready(function () {
             });
         }
     });
-
-    //update
-    ;
+//---------- End Update Data ---------
+//----------------------------------------------------
 });

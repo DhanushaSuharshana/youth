@@ -2,6 +2,10 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
+$id = '';
+if (isset($_GET["id"])) {
+    $id = $_GET['id'];
+}
 ?>
 <html lang="en">
 
@@ -77,9 +81,18 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         <?php
                                                         $COURSE_TYPE = new CourseType(NULL);
                                                         foreach ($COURSE_TYPE->all() as $course_type) {
-                                                            ?>
-                                                            <option value="<?php echo $course_type['id'] ?>" > <?php echo $course_type['title'] ?></option>
-                                                        <?php } ?>
+                                                            if ($id == $course_type['id']) {
+                                                                ?>
+                                                                <option value="<?php echo $course_type['id'] ?>" selected="" > <?php echo $course_type['title'] ?></option>
+                                                                <?php
+                                                            } else {
+                                                                ?>
+                                                                <option value="<?php echo $course_type['id'] ?>" > <?php echo $course_type['title'] ?></option>
+
+                                                                <?php
+                                                            }
+                                                        }
+                                                        ?>
                                                     </select>
                                                 </div>
                                             </div>
@@ -122,7 +135,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             <div class="mb-3 row">
                                                 <label for="example-url-input" class="col-md-2 col-form-label">Start Date</label>
                                                 <div class="col-md-10">
-                                                    <input class="form-control start_date" type="text" id="start_date" name="start_date" placeholder="Please enter course start date">
+                                                    <input class="form-control start_dates" type="text" id="start_date" name="start_date" placeholder="Please enter course start date">
                                                 </div>
                                             </div> 
                                             <div class="mb-3 row">
@@ -134,7 +147,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             <div class="mb-3 row">
                                                 <label for="example-url-input" class="col-md-2 col-form-label">  Description</label>
                                                 <div class="col-md-10">
-                                                    <textarea id="description" name="description"></textarea>
+                                                    <textarea class="description" name="description"></textarea>
                                                 </div>
                                             </div> 
                                             <div class="row">
@@ -147,6 +160,56 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 </div>
                             </div>  
                         </div>   
+
+                        <div class="page-content">
+                            <div class="container-fluid"> 
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="page-title-box d-flex align-items-center justify-content-between">
+                                            <h4 class="mb-0">Dashboard  </h4> 
+                                            <div class="page-title-right">
+                                                <ol class="breadcrumb m-0">
+                                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                                    <li class="breadcrumb-item active">Manage Courses</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-body"> 
+                                                <h4 class="card-title">Manage Courses</h4>  
+                                                <div class="row mt-3"> 
+                                                    <?php
+                                                    $COURSES = new Course(NULL);
+                                                    foreach ($COURSES->all() as $key => $course) {
+                                                        ?>
+                                                        <div class="col-md-6 col-xl-3" id="div<?php echo $course['id'] ?>">  
+                                                            <!-- Simple card -->
+                                                            <div class="card">
+                                                                <img class="card-img-top img-fluid" src="../upload/courses/<?php echo $course['image_name'] ?>" alt="<?php echo $course['name'] ?>">
+                                                                <div class="card-body">
+                                                                    <h4 class="card-title mb-3"><?php echo $course['name'] ?></h4> 
+                                                                    <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $course['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
+                                                                    <a href="create-course-subjects.php?id=<?php echo $course['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
+                                                                    <a href="create-album-photo" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
+                                                                    <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $course['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
+                                                                </div>
+                                                            </div> 
+                                                        </div> 
+                                                    <?php } ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>   
+                            </div>  
+                        </div> 
+
+
                     </div> 
                 </div> 
                 <?php include './footer.php'; ?>
@@ -154,7 +217,112 @@ include_once(dirname(__FILE__) . '/auth.php');
         </div>
         <!-- END layout-wrapper -->
 
+        <?php
+        foreach ($COURSES->all() as $key => $course) {
+            $key++;
+            ?>
+            <!--  Large modal example -->
+            <div class="modal fade bs-example-modal-lg-<?php echo $course['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Edit Details : <?php echo $course['name']; ?></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">    </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" id="form-data-<?php echo $course['id']; ?>" class="from">
+                                <div class="card-body">                                
+                                    <div class="mb-3 row">
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Course Type</label>
+                                        <div class="col-md-10">
+                                            <select class="form-control course_type"  name="course_type">
+                                                <option value=""> -- Please Select Course Type --</option> 
+                                                <?php
+                                                $COURSE_TYPE = new CourseType(NULL);
+                                                foreach ($COURSE_TYPE->all() as $course_type) {
+                                                    if ($course_type['id'] == $course['course_type']) {
+                                                        ?>
+                                                        <option value="<?php echo $course_type['id'] ?>" selected=""> <?php echo $course_type['title'] ?></option>
+                                                    <?php } else { ?>
+                                                        <option value="<?php echo $course_type['id'] ?>"> <?php echo $course_type['title'] ?></option>
+                                                        <?php
+                                                    }
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
 
+                                    <div class="mb-3 row">
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control name" type="text"   name="name" placeholder="Enter News Title" value="<?php echo $course['name'] ?>">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-search-input" class="col-md-2 col-form-label">Max Students</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control max_student" type="text"   name="max_student" placeholder="Please enter max students in one course" value="<?php echo $course['max_student'] ?>">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control image_name" type="file" name="image_name" value="">
+                                            <img width="200" class="img-responsive" src="../upload/courses/<?php echo $course['image_name']; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-url-input" class="col-md-2 col-form-label">Level</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control level" type="text"     name="level"  value="<?php echo $course['level'] ?>">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-url-input" class="col-md-2 col-form-label">Languages</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control languages" type="text"  name="languages"  value="<?php echo $course['languages'] ?>">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-url-input" class="col-md-2 col-form-label">Duration</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control duration" type="text"  name="duration"  value="<?php echo $course['duration'] ?>">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-url-input" class="col-md-2 col-form-label">Start Date</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control start_dates"   type="text"  name="start_date" value="<?php echo $course['start_date'] ?>">
+                                        </div>
+                                    </div> 
+                                    <div class="mb-3 row">
+                                        <label for="example-url-input" class="col-md-2 col-form-label">Short Description</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control short_description" type="text"   name="short_description" value="<?php echo $course['short_description'] ?>">
+                                        </div>
+                                    </div> 
+                                    <div class="mb-3 row">
+                                        <label for="example-url-input" class="col-md-2 col-form-label">Description</label>
+                                        <div class="col-md-10">
+                                            <textarea class="descriptions" name="description"><?php echo $course['description']; ?></textarea>
+                                        </div>
+                                    </div> 
+
+                                    <div class="row">
+                                        <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;"> 
+                                            <button class="btn btn-primary edit-data" dataId="<?php echo $course['id']; ?>"  type="submit">Update</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>  
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <?php
+        }
+        ?>
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
@@ -195,13 +363,40 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
             $(function () {
-                $(".start_date").datepicker({dateFormat: 'yy-mm-dd', minDate: 'today'});
-            });
+                $('.from').datepicker({
+                    dateFormat: 'yy-mm-dd', minDate: 'today'}
+                }); 
+            }); 
         </script> 
         <script src="tinymce/js/tinymce/tinymce.min.js" type="text/javascript"></script>
         <script>
             tinymce.init({
-                selector: "#description",
+                selector: ".description",
+                // ===========================================
+                // INCLUDE THE PLUGIN
+                // ===========================================
+
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table contextmenu paste"
+                ],
+                // ===========================================
+                // PUT PLUGIN'S BUTTON on the toolbar
+                // ===========================================
+
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
+                // ===========================================
+                // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
+                // ===========================================
+
+                relative_urls: false
+
+            });
+        </script>
+        <script>
+            tinymce.init({
+                selector: ".descriptions",
                 // ===========================================
                 // INCLUDE THE PLUGIN
                 // ===========================================
