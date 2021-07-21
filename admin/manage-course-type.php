@@ -29,12 +29,12 @@ include_once(dirname(__FILE__) . '/auth.php');
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/preloader.css" rel="stylesheet" type="text/css"/>
+
     </head>
 
 
-    <body>
-
-        <!-- <body data-layout="horizontal" data-topbar="colored"> -->
+    <body class="someBlock"> 
 
         <!-- Begin page -->
         <div id="layout-wrapper">
@@ -118,9 +118,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         <td><?php echo $key ?></td>
                                                         <td> <?php echo $course_type['title'] ?></td> 
                                                         <td> 
-                                                            <a href="" ><div class="badge bg-pill bg-soft-success font-size-14"><i class="fas fa-pencil-alt p-1"></i></div> </a>| 
-                                                            <a href="create-courses.php?id=<?php echo $course_type['id'] ?>"><div class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-address-card p-1"></i></div></a> |
-                                                            <div class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></div> 
+                                                            <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $course_type['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
+                                                            <a href="manage-courses.php?id=<?php echo $course_type['id'] ?>"><div class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-address-card p-1"></i></div></a>  
+                                                        
                                                         </td>
                                                     </tr>
                                                 <?php } ?>
@@ -135,6 +135,43 @@ include_once(dirname(__FILE__) . '/auth.php');
                 <?php include './footer.php'; ?>
             </div>  
         </div> 
+
+        <?php
+        foreach ($COURSE_TYPE->all() as $key => $course_type) {
+            $key++;
+            ?>
+            <!--  Large modal example -->
+            <div class="modal fade bs-example-modal-lg-<?php echo $course_type['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Edit Details : <?php echo $course_type['title']; ?></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">    </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" id="form-data-<?php echo $course_type['id']; ?>">
+                                <div class="card-body">   
+                                    <div class="mb-3 row">
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Course Type</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control title" type="text"    name="title" placeholder="Enter News Title" value="<?php echo $course_type['title'] ?>">
+                                        </div>
+                                    </div> 
+                                    <div class="row">
+                                        <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
+                                            <input class="form-control id" type="hidden" value="<?php echo $course_type['id']; ?>">
+                                            <button class="btn btn-primary edit-data" dataId="<?php echo $course_type['id']; ?>"  type="submit">Update</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>  
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <?php
+        }
+        ?>
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
@@ -168,6 +205,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <!-- Datatable init js -->
         <script src="assets/js/pages/datatables.init.js"></script>
         <script src="ajax/js/course-type.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
         <!-- App js -->
         <script src="assets/js/app.js"></script>
 

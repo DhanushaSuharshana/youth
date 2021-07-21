@@ -116,9 +116,7 @@ jQuery(document).ready(function () {
                         window.setTimeout(function () {
                             window.location.reload()
                         }, 2000);
-
                     } else if (result.status === 'error') {
-
                         swal({
                             title: "Error!",
                             text: "Something went wrong",
@@ -129,7 +127,6 @@ jQuery(document).ready(function () {
                     }
                 }
             });
-
         }
         return false;
     });
@@ -141,7 +138,7 @@ jQuery(document).ready(function () {
         tinymce.triggerSave();
         var id = $(this).attr("dataId");
         //-- ** Start Error Messages
-        if (!$('#course_type').val() || $('#course_type').val().length === 0) {
+        if (!$('.course_type').val() || $('.course_type').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please select course type.",
@@ -149,7 +146,7 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        } else if (!$('#name').val() || $('#name').val().length === 0) {
+        } else if (!$('.name').val() || $('.name').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please enter course name.",
@@ -157,7 +154,7 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        } else if (!$('#max_student').val() || $('#max_student').val().length === 0) {
+        } else if (!$('.max_student').val() || $('.max_student').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please enter course max student.",
@@ -165,7 +162,7 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        } else if (!$('#level').val() || $('#level').val().length === 0) {
+        } else if (!$('.level').val() || $('.level').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter course level..!",
@@ -173,7 +170,7 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        } else if (!$('#languages').val() || $('#languages').val().length === 0) {
+        } else if (!$('.languages').val() || $('.languages').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter course teaching languages..!",
@@ -181,7 +178,7 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        } else if (!$('#duration').val() || $('#duration').val().length === 0) {
+        } else if (!$('.duration').val() || $('.duration').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter course duration..!",
@@ -189,15 +186,15 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        } else if (!$('#start_date').val() || $('#start_date').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Enter course start date..!",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-        } else if (!$('#short_description').val() || $('#short_description').val().length === 0) {
+//        } else if (!$('.start_dates').val() || $('.start_dates').val().length === 0) {
+//            swal({
+//                title: "Error!",
+//                text: "Please Enter course start date..!",
+//                type: 'error',
+//                timer: 2000,
+//                showConfirmButton: false
+//            });
+        } else if (!$('.short_description').val() || $('.short_description').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter short description..!",
@@ -205,14 +202,14 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        } else if (!$('#description').val() || $('#description').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Enter  description..!",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
+//        } else if (!$('.descriptions').val() || $('.descriptions').val().length === 0) {
+//            swal({
+//                title: "Error!",
+//                text: "Please Enter  description..!",
+//                type: 'error',
+//                timer: 2000,
+//                showConfirmButton: false
+//            });
         } else {
             //-- ** End Error Messages
             //start preloarder
@@ -243,11 +240,9 @@ jQuery(document).ready(function () {
                             showConfirmButton: false,
                         });
                         window.setTimeout(function () {
-                            window.location.reload()
+                            window.location.reload();
                         }, 2000);
-
                     } else if (result.status === 'error') {
-
                         swal({
                             title: "Error!",
                             text: "Something went wrong",

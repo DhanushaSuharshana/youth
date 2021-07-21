@@ -6,7 +6,7 @@ include_once(dirname(__FILE__) . '/auth.php');
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Manage Leaders</title>
+        <title>Manage Centers - Youth Service</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="NYSC" name="author" />
@@ -153,6 +153,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <thead>
                                             <tr>
+                                                <th>#No</th>
                                                 <th>Name</th>
                                                 <th>District</th>
                                                 <th>Action</th>
@@ -168,13 +169,17 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 $DISTRICT = new Districts($center['district']);
                                                 ?>
                                                 <tr id="div<?php echo $center['id']; ?>">
+                                                    <td><?php echo $key; ?></td>
                                                     <td><?php echo $center['name']; ?></td>
                                                     <td><?php
                                                         echo $DISTRICT->name;
                                                         ;
                                                         ?></td>
-                                                    <td>  <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $center['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
+                                                    <td>  
+                                                        <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $center['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
+                                                        <a href="manage-courses-by-centers.php?id=<?php echo $center['id'] ?>"><div class="badge bg-pill bg-soft-warning font-size-14" title="add centers"><i class=" bx bx-store p-1"></i></div></a> |
                                                         <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $center['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
+
                                                     </td>
                                                 </tr>
                                                 <?php
@@ -223,7 +228,6 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         <label class="col-md-2 col-form-label">District</label>
                                         <div class="col-md-10">
                                             <select class="form-select type district" name="district">
-
                                                 <?php
                                                 $DISTRICT_OBJ = new Districts(NULL);
                                                 $DISTRICT = $DISTRICT_OBJ->all();

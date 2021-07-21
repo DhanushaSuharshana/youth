@@ -38,12 +38,12 @@
                         <span>Manage CMS Users</span>
                     </a>
                 </li>
-<!--                <li>
-                    <a href="manage-district.php">
-                        <i class="bx bx-map"></i>
-                        <span>Manage District</span>
-                    </a>
-                </li>-->
+                <!--                <li>
+                                    <a href="manage-district.php">
+                                        <i class="bx bx-map"></i>
+                                        <span>Manage District</span>
+                                    </a>
+                                </li>-->
                 <li class="menu-title">Website Content</li>
                 <li>
                     <a href="index.php"  >
@@ -77,17 +77,7 @@
                         <li><a href="manage-district.php">Districts</a></li>
                         <li><a href="manage-center.php">Manage Center</a></li>
                     </ul>
-                </li>
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-chart "></i>
-                        <span>Courses Types</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="manage-course-type.php">Manage Courses Type </a></li>
-
-                    </ul>
-                </li>
+                </li>           
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -95,8 +85,8 @@
                         <span>Courses</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="create-courses.php">Create Courses </a></li>
-                        <li><a href="manage-course.php">Manage Courses </a></li>
+                        <li><a href="manage-course-type.php">Manage Courses Type </a></li> 
+                        <li><a href="manage-courses.php">Manage Courses </a></li>
 
                     </ul>
                 </li>
