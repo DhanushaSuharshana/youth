@@ -15,5 +15,10 @@ class courses extends Controller {
 //        $this->view->id = $id;
         $this->view->render('courses/view');
     }
+    function all_page() {
+
+//        $this->view->id = $id;
+        $this->view->render('courses/all_page');
+    }
 
 }
