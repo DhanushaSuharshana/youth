@@ -186,7 +186,7 @@
                                                         <i class='bx bx-book-open'></i> 6 lessons
                                                     </li>
                                                     <li class="courses-price">
-                                                        <a href="nysc-course-list.php"> View Details </a>
+                                                        <a href="<?php echo URL ?>courses/all_page"> View Details </a>
                                                     </li>
                                                 </ul>
                                             </div>
