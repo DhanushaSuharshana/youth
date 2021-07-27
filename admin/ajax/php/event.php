@@ -3,10 +3,9 @@
 include_once(dirname(__FILE__) . '/../../../class/include.php');
 header('Content-Type: application/json; charset=UTF8');
 
-
 //Create
 if (isset($_POST['create'])) {
-    
+
     $EVENT = new Event(NULL);
 
     $EVENT->title = $_POST['title'];
@@ -14,7 +13,6 @@ if (isset($_POST['create'])) {
     $EVENT->location = $_POST['location'];
     $EVENT->short_description = $_POST['short_description'];
     $EVENT->description = $_POST['description'];
-
 
     $dir_dest = '../../../upload/event/';
 
@@ -71,7 +69,7 @@ if (isset($_POST['update'])) {
         $handle->file_overwrite = TRUE;
         $handle->file_new_name_ext = FALSE;
         $handle->image_ratio_crop = 'C';
-        $handle->file_new_name_body =  $EVENT->image_name;
+        $handle->file_new_name_body = $EVENT->image_name;
         $handle->image_x = 500;
         $handle->image_y = 419;
 
@@ -110,7 +108,6 @@ if (isset($_POST['update'])) {
 
 if ($_POST['option'] == 'delete') {
     $EVENT = new Event($_POST['id']);
-    unlink("../../../upload/events/" . $EVENT->image_name);
     $result = $EVENT->delete();
     //-- ** End Assign Post Params
     if ($result) {

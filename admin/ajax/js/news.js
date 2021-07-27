@@ -43,8 +43,7 @@ jQuery(document).ready(function () {
             $('.someBlock').preloader();
             //grab all form data  
             var formData = new FormData($('#form-data')[0]);  //grab all form data  
-            formData.append("create", "TRUE");
-
+            formData.append("create", "TRUE"); 
             $.ajax({
                 url: "ajax/php/news.php",
                 type: 'POST',
@@ -70,7 +69,6 @@ jQuery(document).ready(function () {
                         }, 2000);
 
                     } else if (result.status === 'error') {
-
                         swal({
                             title: "Error!",
                             text: "Something went wrong",
@@ -81,7 +79,6 @@ jQuery(document).ready(function () {
                     }
                 }
             });
-
         }
         return false;
     });
@@ -125,7 +122,6 @@ jQuery(document).ready(function () {
             var formData = new FormData($('#form-data-' + id)[0]);
             formData.append("update", "TRUE");
             formData.append("id", id);
-
             $.ajax({
                 url: "ajax/php/news.php",
                 type: 'POST',
