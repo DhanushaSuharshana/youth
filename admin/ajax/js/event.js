@@ -105,12 +105,12 @@ jQuery(document).ready(function () {
 
 
 //update 
-    $("#update").click(function (event) {
+    $(".edit-data").click(function (event) {
         event.preventDefault();
         tinymce.triggerSave();
+        var id = $(this).attr("dataId");
 
-
-        if (!$('#title').val() || $('#title').val().length === 0) {
+        if (!$('.title').val() || $('.title').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter title.",
@@ -118,46 +118,46 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        } else if (!$('#image_name').val() || $('#image_name').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Enter Image..!",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-        } else if (!$('#location').val() || $('#location').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Enter location..!",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-        } else if (!$('#date').val() || $('#date').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Enter date..!",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-        } else if (!$('#short_description').val() || $('#short_description').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Enter short description..!",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-        } else if (!$('#description').val() || $('#description').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please Enter  description..!",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
+        // } else if (!$('.image_name').val() || $('.image_name').val().length === 0) {
+        //     swal({
+        //         title: "Error!",
+        //         text: "Please Enter Image..!",
+        //         type: 'error',
+        //         timer: 2000,
+        //         showConfirmButton: false
+        //     });
+        // } else if (!$('.location').val() || $('.location').val().length === 0) {
+        //     swal({
+        //         title: "Error!",
+        //         text: "Please Enter location..!",
+        //         type: 'error',
+        //         timer: 2000,
+        //         showConfirmButton: false
+        //     });
+        // } else if (!$('.date').val() || $('.date').val().length === 0) {
+        //     swal({
+        //         title: "Error!",
+        //         text: "Please Enter date..!",
+        //         type: 'error',
+        //         timer: 2000,
+        //         showConfirmButton: false
+        //     });
+        // } else if (!$('.short_description').val() || $('.short_description').val().length === 0) {
+        //     swal({
+        //         title: "Error!",
+        //         text: "Please Enter short description..!",
+        //         type: 'error',
+        //         timer: 2000,
+        //         showConfirmButton: false
+        //     });
+        // } else if (!$('.description').val() || $('.description').val().length === 0) {
+        //     swal({
+        //         title: "Error!",
+        //         text: "Please Enter  description..!",
+        //         type: 'error',
+        //         timer: 2000,
+        //         showConfirmButton: false
+        //     });
 
 
         } else {
@@ -165,7 +165,9 @@ jQuery(document).ready(function () {
             //start preloarder
             //$('.someBlock').preloader();
             //grab all form data  
-            var formData = new FormData($('#form-data')[0]);
+            var formData = new FormData($('#form-data-' + id)[0]);
+            formData.append("update", "TRUE");
+            formData.append("id", id);
 
             $.ajax({
                 url: "ajax/php/event.php",
@@ -178,7 +180,7 @@ jQuery(document).ready(function () {
                 dataType: 'json',
                 success: function (result) {
 
-                    $('.someBlock').preloader('remove');
+                    // $('.someBlock').preloader('remove');
 
                     if (result.status === 'success') {
                         swal({

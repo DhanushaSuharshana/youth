@@ -64,14 +64,14 @@ if (isset($_POST['update'])) {
 
     $handle = new Upload($_FILES['image_name']);
     $imgName = null;
-
+    $EVENT = new Event($_POST['id']);
     if ($handle->uploaded) {
         $handle->image_resize = true;
         $handle->file_new_name_body = TRUE;
         $handle->file_overwrite = TRUE;
         $handle->file_new_name_ext = FALSE;
         $handle->image_ratio_crop = 'C';
-        $handle->file_new_name_body = $_POST ["oldImageName"];
+        $handle->file_new_name_body =  $EVENT->image_name;
         $handle->image_x = 500;
         $handle->image_y = 419;
 
@@ -83,8 +83,8 @@ if (isset($_POST['update'])) {
         }
     }
 
-    $EVENT = new Event($_POST['id']);
-    $EVENT->image_name = $_POST['oldImageName'];
+
+    // $EVENT->image_name = $_POST['oldImageName'];
     $EVENT->title = $_POST['title'];
     $EVENT->date = $_POST['date'];
     $EVENT->location = $_POST['location'];
@@ -107,6 +107,19 @@ if (isset($_POST['update'])) {
         exit();
     }
 }
+
+if ($_POST['option'] == 'delete') {
+    $EVENT = new Event($_POST['id']);
+    unlink("../../../upload/events/" . $EVENT->image_name);
+    $result = $EVENT->delete();
+    //-- ** End Assign Post Params
+    if ($result) {
+        $data = array("status" => TRUE);
+        header('Content-type: application/json');
+        echo json_encode($data);
+    }
+}
+
 //Arange slider
 if (isset($_POST['arrange'])) {
     foreach ($_POST['sort'] as $key => $img) {
