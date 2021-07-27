@@ -4,6 +4,7 @@ $(document).ready(function () {
     $("#create").click(function (event) {
         event.preventDefault();
         tinymce.triggerSave();
+       
         if (!$('#name').val() || $('#name').val().length === 0) {
             swal({
                 title: "Error!",
@@ -27,6 +28,15 @@ $(document).ready(function () {
                 text: "Please enter  image..!",
                 type: 'error',
                 timer: 1500,
+                showConfirmButton: false
+            });
+
+        } else if (!$('#date').val() || $('#date').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter course date..!",
+                type: 'error',
+                timer: 2000,
                 showConfirmButton: false
             });
         } else if (!$('#comment').val() || $('#comment').val().length === 0) {
@@ -78,10 +88,11 @@ $(document).ready(function () {
     });
 
     //update
-    $("#update").click(function (event) {
+    $(".edit-data").click(function (event) {
         event.preventDefault();
         tinymce.triggerSave();
-        if (!$('#name').val() || $('#name').val().length === 0) {
+        var id = $(this).attr("dataId");
+        if (!$('.name').val() || $('.name').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please enter name..!",
@@ -89,7 +100,7 @@ $(document).ready(function () {
                 timer: 1500,
                 showConfirmButton: false
             });
-        } else if (!$('#title').val() || $('#title').val().length === 0) {
+        } else if (!$('.title').val() || $('.title').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please enter title..!",
@@ -97,24 +108,34 @@ $(document).ready(function () {
                 timer: 1500,
                 showConfirmButton: false
             });
-        } else if (!$('#image_name').val() || $('#image_name').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please enter  image..!",
-                type: 'error',
-                timer: 1500,
-                showConfirmButton: false
-            });
-        } else if (!$('#comment').val() || $('#comment').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please enter comment..!",
-                type: 'error',
-                timer: 1500,
-                showConfirmButton: false
-            });
+        // } else if (!$('.image_name').val() || $('.image_name').val().length === 0) {
+        //     swal({
+        //         title: "Error!",
+        //         text: "Please enter  image..!",
+        //         type: 'error',
+        //         timer: 1500,
+        //         showConfirmButton: false
+        //     });
+        // } else if (!$('.date').val() || $('.date').val().length === 0) {
+        //     swal({
+        //         title: "Error!",
+        //         text: "Please Enter course date..!",
+        //         type: 'error',
+        //         timer: 2000,
+        //         showConfirmButton: false
+        //     });
+        // } else if (!$('.comment').val() || $('.comment').val().length === 0) {
+        //     swal({
+        //         title: "Error!",
+        //         text: "Please enter comment..!",
+        //         type: 'error',
+        //         timer: 1500,
+        //         showConfirmButton: false
+        //     });
         } else {
-            var formData = new FormData($('#form-data')[0]);
+            var formData = new FormData($('#form-data-' + id)[0]);
+            formData.append("update", "TRUE");
+            formData.append("id", id);
             $.ajax({
                 url: "ajax/php/comment.php",
                 type: "POST",
@@ -130,8 +151,8 @@ $(document).ready(function () {
                         showConfirmButton: false
                     }, function () {
                         setTimeout(function () {
-
-                            window.location.replace("edit-comment.php?id=" + result.id);
+window.location.reload();
+                            // window.location.replace("edit-comment.php?id=" + result.id);
                         }, 1500);
                     });
                 },
