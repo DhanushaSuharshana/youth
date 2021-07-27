@@ -33,10 +33,11 @@ $PHOTO_ALBUM = new PhotoAlbum($id);
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/preloader.css" rel="stylesheet" type="text/css"/>
     </head>
 
 
-    <body> 
+    <body class="someBlock">
         <!-- Begin page -->
         <div id="layout-wrapper">
 
@@ -65,7 +66,7 @@ $PHOTO_ALBUM = new PhotoAlbum($id);
                                 </div>
                             </div>
                         </div> 
-                        
+
                         <!-- end page title -->
                         <div class="row">
                             <div class="col-12">
@@ -74,21 +75,20 @@ $PHOTO_ALBUM = new PhotoAlbum($id);
                                         <h4 class="card-title">Create Album Photo  - " <?php echo $PHOTO_ALBUM->title ?> "</h4> 
                                         <form id="form-data">
                                             <div class="mb-3 row">
-                                                <label for="example-text-input" class="col-md-2 col-form-label">Caption</label>
+                                                <label for="caption" class="col-md-2 col-form-label">Caption</label>
                                                 <div class="col-md-10">
                                                     <input class="form-control" type="text" id="caption" name="caption" placeholder="Enter caption">
                                                 </div>
                                             </div> 
                                             <div class="mb-3 row">
-                                                <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
+                                                <label for="image_name" class="col-md-2 col-form-label">Image</label>
                                                 <div class="col-md-10">
                                                     <input class="form-control" type="file" id="image_name" name="image_name">
                                                 </div>
                                             </div>     
                                             <div class="row">
                                                 <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
-                                                    <button class="btn btn-primary " type="submit" id="create">Create</button>
-                                                    <input type="hidden" name="create">
+                                                    <button class="btn btn-primary " type="submit" id="create">Create</button> 
                                                     <input type="hidden" name="album" value="<?php echo $id ?>">
                                                 </div>
                                             </div>
@@ -108,15 +108,14 @@ $PHOTO_ALBUM = new PhotoAlbum($id);
                                             $ALBUM_PHOTO = new AlbumPhoto(NULL);
                                             foreach ($ALBUM_PHOTO->getAlbumPhotosById($id) as $album_photo) {
                                                 ?>
-                                                <div class="col-md-6 col-xl-3"> 
-                                                    <!-- Simple card -->
+                                                <div class="col-md-6 col-xl-3" id="div<?php echo $album_photo['id'] ?>">  
                                                     <div class="card">
                                                         <img class="card-img-top img-fluid" src="../upload/photo-album/gallery/thumb/<?php echo $album_photo['image_name'] ?>" alt="<?php echo $album_photo['caption'] ?>">
                                                         <div class="card-body">
                                                             <h4 class="card-title mb-3"><?php echo $album_photo['caption'] ?></h4> 
                                                             <a href=""><div class="badge bg-pill bg-soft-success font-size-14"><i class="fas fa-pencil-alt p-1"></i></div> </a>| 
                                                             <a href="create-album-photo" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
-                                                            <div class="badge bg-pill bg-soft-danger font-size-14"><i class="fas fa-trash-alt p-1"></i></div>
+                                                            <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $album_photo['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
                                                         </div>
                                                     </div> 
                                                 </div> 
@@ -127,18 +126,11 @@ $PHOTO_ALBUM = new PhotoAlbum($id);
                             </div>  
                         </div>    
                     </div>  
-                </div>
-                <!-- End Page-content -->
-
-
+                </div> 
                 <?php include './footer.php'; ?>
-            </div>
-            <!-- end main content-->
-
+            </div> 
         </div>
         <!-- END layout-wrapper -->
-
-
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
@@ -151,11 +143,12 @@ $PHOTO_ALBUM = new PhotoAlbum($id);
         <script src="assets/libs/node-waves/waves.min.js"></script>
         <script src="assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
         <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
-        <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-        <script src="ajax/js/album-photo.js" type="text/javascript"></script>
-
-        <!-- App js -->
+        <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script> 
         <script src="assets/js/app.js"></script>
+        <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
+
+        <!-- js -->
+        <script src="ajax/js/album-photo.js" type="text/javascript"></script>
 
 
 
