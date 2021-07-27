@@ -152,8 +152,8 @@
                                     <div class="box-item">
                                         <div class="courses-image">
                                             <div class="image bg-1">
-                                                <img src="assets/img/courses/1.jpg" alt="image">
-                                                <a href="view-courses.php" class="link-btn"></a>
+                                                <img src="<?php echo URL ?>assets/img/courses/1.jpg" alt="image">
+                                                <a href="<?php echo URL ?>courses/view" class="link-btn"></a>
                                                 <div class="courses-tag">
                                                     <a href="#" class="d-block">Design</a>
                                                 </div>
@@ -162,7 +162,7 @@
                                         <div class="courses-desc">
                                             <div class="courses-content">
 
-                                                <h3><a href="<?php echo  URL ?>courses/view" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
+                                                <h3><a href="<?php echo URL ?>courses/view" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
                                                 <div class="courses-rating">
                                                     <div class="review-stars-rated">
                                                         <i class='bx bxs-star'></i>
@@ -186,7 +186,7 @@
                                                         <i class='bx bx-book-open'></i> 6 lessons
                                                     </li>
                                                     <li class="courses-price">
-                                                        <a href="<?php echo URL ?>courses/all_page"> View Details </a>
+                                                        <a href="<?php echo URL ?>courses/view"> View Details </a>
                                                     </li>
                                                 </ul>
                                             </div>

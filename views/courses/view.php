@@ -66,7 +66,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="courses-price">
-                                <div class="courses-review">
+                                <!-- <div class="courses-review">
                                     <div class="review-stars">
                                         <i class='bx bxs-star'></i>
                                         <i class='bx bxs-star'></i>
@@ -75,7 +75,7 @@
                                         <i class='bx bxs-star'></i>
                                     </div>
                                     <span class="reviews-total d-inline-block">(2 reviews)</span>
-                                </div>
+                                </div> -->
                                 <!--                                <div class="price">$250</div>
                                                                 <a href="#" class="default-btn"><i class='bx bx-paper-plane icon-arrow before'></i><span class="label">Buy Course</span><i class="bx bx-paper-plane icon-arrow after"></i></a>
                                 -->
