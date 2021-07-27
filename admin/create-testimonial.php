@@ -1,6 +1,7 @@
 <!doctype html>
 <?php
-include '../class/include.php';
+include_once(dirname(__FILE__) . '/../class/include.php');
+include_once(dirname(__FILE__) . '/auth.php');
 ?>
 <html lang="en">
 
@@ -139,7 +140,7 @@ include '../class/include.php';
                     <section>
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Manage Leaders.</h4>
+                                <h4 class="card-title">Manage Testimonial.</h4>
                                 <div class="mt-3 row">
                                     <?php
                                     $COMMENT = new Comments(NULL);
