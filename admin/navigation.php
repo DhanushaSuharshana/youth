@@ -108,7 +108,6 @@
                         <span>Event</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="create-event.php">Add Event</a></li>
                         <li><a href="manage-event.php">Manage Event</a></li> 
                     </ul>
                 </li>
