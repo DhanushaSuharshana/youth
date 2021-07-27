@@ -275,10 +275,8 @@ if (isset($_GET["id"])) {
         <script src="assets/libs/node-waves/waves.min.js"></script>
         <script src="assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
         <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
-        <script src="tinymce/js/tinymce/tinymce.min.js" type="text/javascript"></script>
-
-        <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-        <script src="ajax/js/event.js" type="text/javascript"></script> 
+        <script src="tinymce/js/tinymce/tinymce.min.js" type="text/javascript"></script> 
+        <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script> 
         <script src="assets/js/app.js"></script>
         <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
 
@@ -307,6 +305,10 @@ if (isset($_GET["id"])) {
 
             });
         </script>
+        
+        <!-- js -->
+        <script src="ajax/js/event.js" type="text/javascript"></script> 
+
     </body>
 
 </html>

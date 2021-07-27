@@ -82,9 +82,7 @@ jQuery(document).ready(function () {
                         window.setTimeout(function () {
                             window.location.reload()
                         }, 2000);
-
                     } else if (result.status === 'error') {
-
                         swal({
                             title: "Error!",
                             text: "Something went wrong",
@@ -154,9 +152,8 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-
-        } else {
             //-- ** End Error Messages
+        } else {
             //start preloarder
             $('.someBlock').preloader();
             //grab all form data  
@@ -186,9 +183,7 @@ jQuery(document).ready(function () {
                         window.setTimeout(function () {
                             window.location.reload()
                         }, 2000);
-
                     } else if (result.status === 'error') {
-
                         swal({
                             title: "Error!",
                             text: "Something went wrong",
