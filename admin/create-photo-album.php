@@ -113,7 +113,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         <img class="card-img-top img-fluid" src="../upload/photo-album/<?php echo $photo_album['image_name'] ?>" alt="<?php echo $photo_album['title'] ?>">
                                                         <div class="card-body">
                                                             <h4 class="card-title mb-3"><?php echo $photo_album['title'] ?></h4> 
-                                                            <a href="" ><div class="badge bg-pill bg-soft-success font-size-14"><i class="fas fa-pencil-alt p-1"></i></div> </a>| 
+                                                            <div class="badge bg-pill bg-soft-success font-size-14" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $photo_album['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> |
                                                             <a href="create-album-photo" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
                                                             <a href="create-album-photo.php?id=<?php echo $photo_album['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-image   p-1"></i></a> |
 
@@ -137,6 +137,57 @@ include_once(dirname(__FILE__) . '/auth.php');
         </div>
         <!-- END layout-wrapper -->
 
+
+        
+    <?php
+    foreach ($PHOTO_ALBUM->all()  as $photo_album) {
+       
+    ?>
+        <!--  Large modal example -->
+        <div class="modal fade bs-example-modal-lg-<?php echo $photo_album['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myLargeModalLabel">Edit Details : <?php echo $photo_album['title']; ?></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="POST" id="form-data-<?php echo $photo_album['id']; ?>" class="from">
+                            <div class="card-body">
+                               
+                                <div class="mb-3 row">
+                                    <label for="example-text-input" class="col-md-2 col-form-label">Title</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control title" type="text" name="title" placeholder="Enter Album Title" value="<?php echo $photo_album['title'] ?>">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control image_name" type="file" name="image_name" value="<?php echo $photo_album['image_name']; ?>">
+                                        <img width="200" class="img-responsive" src="../upload/photo-album/<?php echo $photo_album['image_name']; ?>">
+                                    </div>
+                                </div>
+
+      
+
+                                <div class="row">
+                                    <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
+                                        <button class="btn btn-primary edit-data" dataId="<?php echo $photo_album['id']; ?>" type="submit">Update</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+  
+    <?php
+    }
+    ?>
 
 
         <!-- Right bar overlay-->

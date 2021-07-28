@@ -241,6 +241,7 @@ if (isset($_GET["id"])) {
             <script>
                 MCDatepicker.create({
                     el: '#date_edit_<?php echo $event['id']; ?>',
+                    selectedDate: new Date('<?php echo $event['date'] ?>'),
                     minDate: new Date(),
                     // autoClose: true,
                     // closeOnBlur: false,
@@ -256,6 +257,7 @@ if (isset($_GET["id"])) {
         <script>
             MCDatepicker.create({
                 el: '#date_edit',
+                selectedDate: new Date(),
                 minDate: new Date(),
                 // autoClose: true,
                 // closeOnBlur: false,

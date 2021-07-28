@@ -7,9 +7,9 @@ header('Content-Type: application/json; charset=UTF8');
 if (isset($_POST['create'])) {
 
     $PHOTO_ALBUM = new PhotoAlbum(NULL);
- 
 
-    $PHOTO_ALBUM->title = $_POST['title']; 
+
+    $PHOTO_ALBUM->title = $_POST['title'];
 
     $dir_dest = '../../../upload/photo-album/';
 
@@ -45,38 +45,52 @@ if (isset($_POST['create'])) {
 //manage photo album
 if (isset($_POST['update'])) {
     $dir_dest = '../../../upload/photo-album/';
-
     $handle = new Upload($_FILES['image_name']);
-
     $imgName = null;
 
+    $PHOTO_ALBUM = new PhotoAlbum($_POST['id']);
     if ($handle->uploaded) {
         $handle->image_resize = true;
         $handle->file_new_name_body = TRUE;
         $handle->file_overwrite = TRUE;
         $handle->file_new_name_ext = FALSE;
         $handle->image_ratio_crop = 'C';
-        $handle->file_new_name_body = $_POST ["oldImageName"];
+        $handle->file_new_name_body = $PHOTO_ALBUM->image_name;
         $handle->image_x = 600;
         $handle->image_y = 638;
-
         $handle->Process($dir_dest);
-
         if ($handle->processed) {
             $info = getimagesize($handle->file_dst_pathname);
             $imgName = $handle->file_dst_name;
         }
     }
 
-    $PHOTO_ALBUM = new PhotoAlbum($_POST['id']);
 
-    $PHOTO_ALBUM->image_name = $_POST['oldImageName'];
-    $PHOTO_ALBUM->title = $_POST['title']; 
 
+    $PHOTO_ALBUM->title = $_POST['title'];
     $PHOTO_ALBUM->update();
-    $result = ["id" => $_POST['id']];
-    echo json_encode($result);
-    exit();
+
+    if ($PHOTO_ALBUM) {
+        $result = ["status" => 'success'];
+        echo json_encode($result);
+        exit();
+    } else {
+        $result = ["status" => 'error'];
+        echo json_encode($result);
+        exit();
+    }
+}
+
+if ($_POST['option'] == 'delete') {
+    $PHOTO_ALBUM = new PhotoAlbum($_POST['id']);
+    unlink("../../../upload/photo-album/" . $PHOTO_ALBUM->image_name);
+    $result = $PHOTO_ALBUM->delete();
+    //-- ** End Assign Post Params
+    if ($result) {
+        $data = array("status" => TRUE);
+        header('Content-type: application/json');
+        echo json_encode($data);
+    }
 }
 
 if (isset($_POST['save-data'])) {
