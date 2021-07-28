@@ -259,10 +259,12 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script>
             MCDatepicker.create({
                     el: '#date_edit_<?php echo $comment['id']; ?>',
+                    selectedDate: new Date('<?php echo $comment['date'] ?>'),
                     minDate: new Date(),
                     // autoClose: true,
                     // closeOnBlur: false,
                     dateFormat: 'yyyy-mm-dd',
+                    
                 }
 
             )
@@ -296,6 +298,7 @@ include_once(dirname(__FILE__) . '/auth.php');
     <script>
           const start_date = MCDatepicker.create({
             el: '#date',
+            selectedDate: new Date(),
             // autoClose: true,
             dateFormat: 'yyyy-mm-dd',
             minDate: new Date(),
