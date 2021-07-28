@@ -260,6 +260,7 @@ include_once(dirname(__FILE__) . '/auth.php');
             MCDatepicker.create({
                     el: '#date_edit_<?php echo $comment['id']; ?>',
                     selectedDate: new Date('<?php echo $comment['date'] ?>'),
+                    customClearBTN: '',
                     minDate: new Date(),
                     // autoClose: true,
                     // closeOnBlur: false,
@@ -299,6 +300,7 @@ include_once(dirname(__FILE__) . '/auth.php');
           const start_date = MCDatepicker.create({
             el: '#date',
             selectedDate: new Date(),
+            customClearBTN: '',
             // autoClose: true,
             dateFormat: 'yyyy-mm-dd',
             minDate: new Date(),
