@@ -56,19 +56,19 @@ $(document).ready(function () {
 //---------- End Create Data ---------
 //------------------------------------
 //---------- Start Edit Data ---------
-    $("#update").click(function (event) {
+    $(".edit-data").click(function (event) {
         event.preventDefault();
         var id = $(this).attr("dataId");
         //-- ** Start Error Messages
-        if (!$('#title').val() || $('#title').val().length === 0) {
+        if (!$('.caption').val() || $('.caption').val().length === 0) {
             swal({
                 title: "Error!",
-                text: "Please enter title..!",
+                text: "Please enter caption..!",
                 type: 'error',
                 timer: 1500,
                 showConfirmButton: false
             });
-        } else if (!$('#image_name').val() || $('#image_name').val().length === 0) {
+        } else if (!$('.image_name').attr('value') || $('.image_name').attr('value').length === 0) {
             swal({
                 title: "Error!",
                 text: "Please enter  image..!",

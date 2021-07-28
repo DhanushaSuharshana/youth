@@ -59,7 +59,11 @@ if (isset($_POST['update'])) {
     $dir_dest = '../../../upload/photo-album/gallery/';
     $dir_dest_thumb = '../../../upload/photo-album/gallery/thumb/';
     $handle = new Upload($_FILES['image_name']);
-    $img = $_POST ["oldImageName"];
+    // $img = $_POST ["oldImageName"];
+
+    $ALBUM_PHOTO = new AlbumPhoto($_POST['id']);
+    $img = $ALBUM_PHOTO->image_name;
+
     if ($handle->uploaded) {
         $handle->image_resize = true;
         $handle->file_new_name_body = TRUE;
@@ -90,13 +94,22 @@ if (isset($_POST['update'])) {
     }
 //-- ** End Edit Image in folder location
 //-- ** Start Assign Post Params  
-    $ALBUM_PHOTO = new AlbumPhoto($_POST['id']);
-    $ALBUM_PHOTO->image_name = $_POST['oldImageName'];
+    
+    // $ALBUM_PHOTO->image_name = $_POST['oldImageName'];
     $ALBUM_PHOTO->caption = $_POST['caption'];
     $ALBUM_PHOTO->update(); 
-    $result = ["status" => 'success'];
-    echo json_encode($result);
-    exit();
+   
+    
+    if ($ALBUM_PHOTO) {
+        $result = ["status" => 'success'];
+        echo json_encode($result);
+        exit();
+    } else {
+        $result = ["status" => 'error'];
+        echo json_encode($result);
+        exit();
+    }
+
 }
 //End Update Code Block
 //--------------------------------------------------------------------------
