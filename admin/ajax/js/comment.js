@@ -108,30 +108,30 @@ $(document).ready(function () {
                 timer: 1500,
                 showConfirmButton: false
             });
-        // } else if (!$('.image_name').val() || $('.image_name').val().length === 0) {
-        //     swal({
-        //         title: "Error!",
-        //         text: "Please enter  image..!",
-        //         type: 'error',
-        //         timer: 1500,
-        //         showConfirmButton: false
-        //     });
-        // } else if (!$('.date').val() || $('.date').val().length === 0) {
-        //     swal({
-        //         title: "Error!",
-        //         text: "Please Enter course date..!",
-        //         type: 'error',
-        //         timer: 2000,
-        //         showConfirmButton: false
-        //     });
-        // } else if (!$('.comment').val() || $('.comment').val().length === 0) {
-        //     swal({
-        //         title: "Error!",
-        //         text: "Please enter comment..!",
-        //         type: 'error',
-        //         timer: 1500,
-        //         showConfirmButton: false
-        //     });
+        } else if (!$('.image_name').attr('value') || $('.image_name').attr('value').length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please enter  image..!",
+                type: 'error',
+                timer: 1500,
+                showConfirmButton: false
+            });
+        } else if (!$('.date').val() || $('.date').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter date..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('.comment_edit_'+id).val() || $('.comment_edit_'+id).val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please enter comment..!",
+                type: 'error',
+                timer: 1500,
+                showConfirmButton: false
+            });
         } else {
             var formData = new FormData($('#form-data-' + id)[0]);
             formData.append("update", "TRUE");

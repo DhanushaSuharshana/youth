@@ -202,7 +202,7 @@ if (isset($_GET["id"])) {
                                     <div class="mb-3 row">
                                         <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
                                         <div class="col-md-10">
-                                            <input class="form-control image_name" type="file" name="image_name" value="">
+                                            <input class="form-control image_name" type="file" name="image_name" value="<?php echo $event['image_name']; ?>">
                                             <img width="200" class="img-responsive" src="../upload/event/<?php echo $event['image_name']; ?>">
                                         </div>
                                     </div>
@@ -210,7 +210,7 @@ if (isset($_GET["id"])) {
                                     <div class="mb-3 row">
                                         <label for="example-url-input" class="col-md-2 col-form-label">Date</label>
                                         <div class="col-md-10">
-                                            <input class="form-control" id="date_edit_<?php echo $event['id']; ?>" type="text" name="date" value="<?php echo $event['date'] ?>">
+                                            <input class="form-control date" id="date_edit_<?php echo $event['id']; ?>" type="text" name="date" value="<?php echo $event['date'] ?>">
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
@@ -222,7 +222,7 @@ if (isset($_GET["id"])) {
                                     <div class="mb-3 row">
                                         <label for="example-url-input" class="col-md-2 col-form-label">Description</label>
                                         <div class="col-md-10">
-                                            <textarea class="description" name="description"><?php echo $event['description']; ?></textarea>
+                                            <textarea class="description description_edit_<?php echo $event['id']; ?>" name="description"><?php echo $event['description']; ?></textarea>
                                         </div>
                                     </div> 
 

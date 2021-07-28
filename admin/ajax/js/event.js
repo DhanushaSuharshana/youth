@@ -112,7 +112,7 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        } else if (!$('.image_name').val() || $('.image_name').val().length === 0) {
+        } else if (!$('.image_name').attr('value') || $('.image_name').attr('value').length == 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter Image..!",
@@ -144,12 +144,13 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        } else if (!$('.description').val() || $('.description').val().length === 0) {
+      
+       } else if (!$('.description_edit_'+id).val() || $('.description_edit_'+id).val().length === 0) {
             swal({
                 title: "Error!",
-                text: "Please Enter  description..!",
+                text: "Please enter comment..!",
                 type: 'error',
-                timer: 2000,
+                timer: 1500,
                 showConfirmButton: false
             });
             //-- ** End Error Messages
