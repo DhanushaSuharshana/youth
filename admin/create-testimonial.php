@@ -216,7 +216,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 <div class="mb-3 row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
                                     <div class="col-md-10">
-                                        <input class="form-control image_name" type="file" name="image_name" value="">
+                                        <input class="form-control image_name" type="file" name="image_name" value="<?php echo $comment['image_name']; ?>">
                                         <img width="200" class="img-responsive" src="../upload/comments/<?php echo $comment['image_name']; ?>">
                                     </div>
                                 </div>
@@ -224,14 +224,14 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 <div class="mb-3 row">
                                     <label for="example-url-input" class="col-md-2 col-form-label">Date</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" id="date_edit_<?php echo $comment['id']; ?>" type="text" name="date" value="<?php echo $comment['date'] ?>">
+                                        <input class="form-control date" id="date_edit_<?php echo $comment['id']; ?>" type="text" name="date" value="<?php echo $comment['date'] ?>">
                                     </div>
                                 </div>
 
                                 <div class="mb-3 row">
                                     <label for="example-url-input" class="col-md-2 col-form-label">Comment</label>
                                     <div class="col-md-10">
-                                        <textarea class="comment" name="comment"><?php echo $comment['comment']; ?></textarea>
+                                        <textarea class="comment comment_edit_<?php echo $comment['id']; ?>" name="comment"><?php echo $comment['comment']; ?></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
