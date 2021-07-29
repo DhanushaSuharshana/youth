@@ -29,6 +29,7 @@ include_once(dirname(__FILE__) . '/auth.php');
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/preloader.css" rel="stylesheet" type="text/css" />
 </head>
 
 
@@ -203,7 +204,7 @@ include_once(dirname(__FILE__) . '/auth.php');
     <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
     <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
     <script src="ajax/js/photo-album.js" type="text/javascript"></script>
-
+    <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
 

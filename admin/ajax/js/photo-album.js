@@ -30,6 +30,7 @@ $(document).ready(function () {
                 async: false,
                 dataType: 'json',
                 success: function (result) {
+                    $('.someBlock').preloader('remove');
                     swal({
                         title: "Success!",
                         text: "Your data was saved successfully!.....!",
@@ -83,6 +84,7 @@ $(document).ready(function () {
                 async: false,
                 dataType: 'json',
                 success: function (result) {
+                    $('.someBlock').preloader('remove');
                     swal({
                         title: "Success!",
                         text: "Your changes saved successfully!...",
