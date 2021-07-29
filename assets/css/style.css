@@ -6769,7 +6769,7 @@
             position: relative;
             top: -2px;
             font-weight: 500;
-            margin-left: 5px;
+            margin-left: 0px;
         }
         
         .team-area {
@@ -11938,7 +11938,7 @@
             border-radius: 5px;
             height: 400px;
             text-align: center;
-            background-image: url(../img/mission-bg.jpg);
+            background-image: url();
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;

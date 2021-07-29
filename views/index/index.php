@@ -908,7 +908,7 @@
                                 <div class="row m-0">
                                     <div class="col-lg-5 col-md-5 p-0">
                                         <div class="image">
-                                            <a href="#">
+                                            <a href="<?php echo URL ?>events/view">
 
                                                 <img src="<?php echo URL ?>upload/event/<?php echo $event['image_name'] ?>" alt="<?php echo $event['title'] ?>">
                                                 <div class="divider-shape"></div>

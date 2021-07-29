@@ -11,4 +11,9 @@ class division extends Controller {
         $this->view->render('division/index');
     }
 
+    function view() {
+
+        $this->view->render('division/view');
+    }
+
 }
