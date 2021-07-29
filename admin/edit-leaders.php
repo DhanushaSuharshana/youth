@@ -21,7 +21,7 @@
     </head>
 
 
-    <body>
+    <body class="someBlock">
 
         <!-- <body data-layout="horizontal" data-topbar="colored"> -->
 

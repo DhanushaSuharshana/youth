@@ -7,7 +7,7 @@
                 <img src="assets/images/logo-sm.png" alt="" width="70%">
             </span>
             <span class="logo-lg">
-                <img src="assets/images/logo-dark.png" alt=""  width="70%">
+                <img src="assets/images/logo-dark.png" alt="" width="70%">
             </span>
         </a>
 
@@ -46,18 +46,18 @@
                                 </li>-->
                 <li class="menu-title">Website Content</li>
                 <li>
-                    <a href="index.php"  >
+                    <a href="index.php">
                         <i class="bx bx-home "></i>
                         <span>Dashboard</span>
-                    </a> 
-                </li> 
+                    </a>
+                </li>
 
                 <li>
                     <a href="manage-leaders.php" class="waves-effect">
                         <i class="bx bx-user"></i>
                         <span>Manage Leaders</span>
                     </a>
-                </li> 
+                </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -65,7 +65,7 @@
                         <span>About Us</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#">About NYSC</a></li> 
+                        <li><a href="#">About NYSC</a></li>
                     </ul>
                 </li>
                 <li>
@@ -74,10 +74,11 @@
                         <span>Centeres</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="manage-center-type.php">Manage Centers Type </a></li>
                         <li><a href="manage-district.php">Districts</a></li>
                         <li><a href="manage-center.php">Manage Center</a></li>
                     </ul>
-                </li>           
+                </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -85,7 +86,7 @@
                         <span>Courses</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="manage-course-type.php">Manage Courses Type </a></li> 
+                        <li><a href="manage-course-type.php">Manage Courses Type </a></li>
                         <li><a href="manage-courses.php">Manage Courses </a></li>
 
                     </ul>
@@ -97,7 +98,7 @@
                         <span>News</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="manage-news-type.php">Manage News Type </a></li> 
+                        <li><a href="manage-news-type.php">Manage News Type </a></li>
                         <li><a href="create-news.php">Add News</a></li>
                         <li><a href="manage-news.php">Manage News</a></li>
                     </ul>
@@ -109,7 +110,7 @@
                         <span>Event</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="manage-event.php">Manage Event</a></li> 
+                        <li><a href="manage-event.php">Manage Event</a></li>
                     </ul>
                 </li>
 
@@ -121,12 +122,12 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="create-devision.php">Add Devision</a></li>
-                        <li><a href="manage-devision.php">Manage Devision</a></li> 
+                        <li><a href="manage-devision.php">Manage Devision</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="create-photo-album.php" >
+                    <a href="create-photo-album.php">
                         <i class="bx bx-images"></i>
                         <span>Photo Album</span>
                     </a>
@@ -140,12 +141,12 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="#">Discover</a></li>
-                        <li><a href="#">Youth Office</a></li> 
+                        <li><a href="#">Youth Office</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="create-testimonial.php" >
+                    <a href="create-testimonial.php">
                         <i class="bx bx-images"></i>
                         <span>Testimonial</span>
                     </a>

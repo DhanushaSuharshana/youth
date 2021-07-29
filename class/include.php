@@ -17,6 +17,7 @@ include_once(dirname(__FILE__) . '/NewsPhoto.php');
 include_once(dirname(__FILE__) . '/Event.php');
 include_once(dirname(__FILE__) . '/EventPhoto.php');
 include_once(dirname(__FILE__) . '/Districts.php');
+include_once(dirname(__FILE__) . '/CenterType.php');
 include_once(dirname(__FILE__) . '/Center.php');
 include_once(dirname(__FILE__) . '/CourseByCenters.php');
 

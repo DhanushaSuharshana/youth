@@ -32,7 +32,7 @@ include_once(dirname(__FILE__) . '/auth.php');
     </head>
 
 
-    <body>
+    <body class="someBlock">
 
         <!-- <body data-layout="horizontal" data-topbar="colored"> -->
 
