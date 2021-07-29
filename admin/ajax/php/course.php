@@ -99,8 +99,8 @@ if (isset($_POST['update'])) {
 //----------------------------------------
 //-- ** Start delete code  
 if ($_POST['option'] == 'delete') {
-    $COURSE = new News($_POST['id']);
-    unlink("../../../upload/news/" . $COURSE->image_name);
+    $COURSE = new Course($_POST['id']);
+    unlink("../../../upload/courses/" . $COURSE->image_name);
     $result = $COURSE->delete();
     //-- ** End Assign Post Params
     if ($result) {
@@ -113,7 +113,7 @@ if ($_POST['option'] == 'delete') {
 if (isset($_POST['arrange'])) {
     foreach ($_POST['sort'] as $key => $img) {
         $key = $key + 1;
-        $COURSE = News::arrange($key, $img);
-        header('Location:../../../arrange-news.php?message=9');
+        // $COURSE = Course::arrange($key, $img);
+        header('Location:../../../arrange-courses.php?message=9');
     }
 } 
