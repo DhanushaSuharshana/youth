@@ -28,6 +28,14 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
+        } else if (!$('#address').val() || $('#address').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter  address..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
         } else if (!$('#date_edit').val() || $('#date_edit').val().length === 0) {
             swal({
                 title: "Error!",
@@ -124,6 +132,14 @@ jQuery(document).ready(function () {
             swal({
                 title: "Error!",
                 text: "Please Enter location..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('.address_edit_'+id).val() || $('.address_edit_'+id).val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter  address..!",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
