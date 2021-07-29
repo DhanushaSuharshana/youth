@@ -2,17 +2,16 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
-$id = '';
-if (isset($_GET["id"])) {
-    $id = $_GET['id'];
-}
+ 
 ?>
 <html lang="en">
 
     <head>
 
         <meta charset="utf-8" />
-        <title>Manage Event | Youth Service LTD</title>
+ 
+        <title>Manage Events | Youth Service LTD</title>
+ 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -59,7 +58,6 @@ if (isset($_GET["id"])) {
             <!-- Start right Content here -->
             <!-- ============================================================== -->
             <div class="main-content">
-
                 <div class="page-content">
                     <div class="container-fluid">
                         <!-- start page title -->
@@ -67,14 +65,12 @@ if (isset($_GET["id"])) {
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
                                     <h4 class="mb-0">Dashboard </h4>
-
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                             <li class="breadcrumb-item active">Manage Event</li>
                                         </ol>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -151,8 +147,9 @@ if (isset($_GET["id"])) {
                                                             <h4 class="card-title mb-3"><?php echo $event['title'] ?></h4>
                                                             <div class="badge bg-pill bg-soft-success font-size-14" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $event['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> |
 
-                                                            <a href="create-album-photo" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
-                                                            <a href="create-event-photo.php?id=<?php echo $event['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-image   p-1"></i></a> |
+                                                           
+                                                            <a href="arrange-event.php" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
+ 
                                                             <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $event['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
                                                         </div>
                                                     </div>

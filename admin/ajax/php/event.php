@@ -98,27 +98,39 @@ if (isset($_POST['update'])) {
 }
 //End Update Code Block
 //--------------------------------------------------------------------------
-//-- ** Start delete code 
-if ($_POST['option'] == 'delete') {
-    $EVENT = new Event($_POST['id']);
-    unlink("../../../upload/event/" . $NEWS->image_name);
-    $result = $EVENT->delete();
-    //-- ** End Assign Post Params
-    if ($result) {
-        $data = array("status" => TRUE);
-        header('Content-type: application/json');
-        echo json_encode($data);
-    }
-}
-
-//Arange slider
+//-- ** Start arrange code  
 if (isset($_POST['arrange'])) {
+ 
     foreach ($_POST['sort'] as $key => $img) {
         $key = $key + 1;
-        $EVENT = News::arrange($key, $img);
-        header('Location:../../../arrange-news.php?message=9');
+       
+        $EVENT = Event::arrange($key, $img);
+        //-- ** End Assign Post Params
+        if ($EVENT) {
+            $result = [
+                "status" => 'success'
+            ];
+            echo json_encode($result);
+            exit();
+        }
     }
 }
+//End arrange Code Block
+//--------------------------------------------------------------------------
+//-- ** Start delete code 
+//if ($_POST['option'] == 'delete') {
+//    $EVENT = new Event($_POST['id']);
+//    unlink("../../../upload/event/" . $NEWS->image_name);
+//    $result = $EVENT->delete();
+//    //-- ** End Assign Post Params
+//    if ($result) {
+//        $data = array("status" => TRUE);
+//        header('Content-type: application/json');
+//        echo json_encode($data);
+//    }
+//}
+//End delete Code Block
+
 
 
 
