@@ -30,6 +30,7 @@ if (isset($_POST['create'])) {
     $EVENT->title = $_POST['title'];
     $EVENT->date = $_POST['date'];
     $EVENT->location = $_POST['location'];
+    $EVENT->address = $_POST['address'];
     $EVENT->short_description = $_POST['short_description'];
     $EVENT->description = $_POST['description'];
     $EVENT->image_name = $imgName;
@@ -78,6 +79,7 @@ if (isset($_POST['update'])) {
     $EVENT->title = $_POST['title'];
     $EVENT->date = $_POST['date'];
     $EVENT->location = $_POST['location'];
+    $EVENT->address = $_POST['address'];
     $EVENT->short_description = $_POST['short_description'];
     $EVENT->description = $_POST['description'];
     $EVENT->update();

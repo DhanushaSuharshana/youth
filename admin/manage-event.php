@@ -101,6 +101,12 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 </div>
                                             </div>
                                             <div class="mb-3 row">
+                                                <label for="example-url-input" class="col-md-2 col-form-label">Address</label>
+                                                <div class="col-md-10">
+                                                    <textarea style="width: 100%" class="form-control" rows="2" id="address" name="address"></textarea>
+                                                </div>
+                                            </div> 
+                                            <div class="mb-3 row">
                                                 <label for="example-url-input" class="col-md-2 col-form-label">Date</label>
                                                 <div class="col-md-10">
                                                     <input class="form-control date_edit" type="text"   id="date_edit" name="date" placeholder="Enter Event Date">
@@ -197,7 +203,12 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             <input class="form-control location" type="text" name="location" placeholder="Enter event Location" value="<?php echo $event['location'] ?>">
                                         </div>
                                     </div>
-
+                                    <div class="mb-3 row">
+                                        <label for="example-url-input" class="col-md-2 col-form-label">Address</label>
+                                        <div class="col-md-10">
+                                            <textarea style="width: 100%" rows="2" class="form-control address address_edit_<?php echo $event['id']; ?>" name="address"><?php echo $event['address']; ?></textarea>
+                                        </div>
+                                    </div> 
                                     <div class="mb-3 row">
                                         <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
                                         <div class="col-md-10">
