@@ -21,9 +21,7 @@
     </head>
 
 
-    <body>
-
-        <!-- <body data-layout="horizontal" data-topbar="colored"> -->
+    <body> 
 
         <!-- Begin page -->
         <div id="layout-wrapper">
