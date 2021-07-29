@@ -146,6 +146,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         <div class="card-body">
                                                             <h4 class="card-title mb-3"><?php echo $event['title'] ?></h4>
                                                             <div class="badge bg-pill bg-soft-success font-size-14" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $event['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> |
+                                                            <a href="create-event-photo.php?id=<?php echo $event['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-image   p-1"></i></a> |
 
                                                            
                                                             <a href="arrange-event.php" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
