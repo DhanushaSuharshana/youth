@@ -26,7 +26,7 @@ include_once(dirname(__FILE__) . '/auth.php');
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
-<body>
+<body class="someBlock">
     <!-- Begin page -->
     <div id="layout-wrapper">
         <?php include './top-header.php'; ?>
@@ -70,17 +70,17 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <?php
                                                     $NEWS_TYPE = new NewsType(NULL);
                                                     foreach ($NEWS_TYPE->all() as $news_type) {
-                                                        if ($id == $news_type['id']) {
+                                                        // if ($id == $news_type['id']) {
                                                     ?>
-                                                            <option value="<?php echo $news_type['id'] ?>" selected=""> <?php echo $news_type['title'] ?></option>
+                                                            <!-- <option value="<?php echo $news_type['id'] ?>" selected=""> <?php echo $news_type['title'] ?></option> -->
                                                         <?php
-                                                        } else {
+                                                        // } else {
                                                         ?>
                                                             <option value="<?php echo $news_type['id'] ?>"> <?php echo $news_type['title'] ?></option>
 
                                                     <?php
                                                         }
-                                                    }
+                                                    // }
                                                     ?>
                                                 </select>
                                             </div>

@@ -7,7 +7,7 @@ $(document).ready(function () {
         if (!$('#title').val() || $('#title').val().length === 0) {
             swal({
                 title: "Error!",
-                text: "Please enter News type title..!",
+                text: "Please enter Center type title..!",
                 type: 'error',
                 timer: 1500,
                 showConfirmButton: false
@@ -20,7 +20,7 @@ $(document).ready(function () {
             var formData = new FormData($('#form-data')[0]);  //grab all form data  
             formData.append("create", "TRUE");
             $.ajax({
-                url: "ajax/php/news-type.php",
+                url: "ajax/php/center-type.php",
                 type: "POST",
                 data: formData,
                 async: false,
@@ -67,7 +67,7 @@ $(document).ready(function () {
         if (!$('.title').val() || $('.title').val().length === 0) {
             swal({
                 title: "Error!",
-                text: "Please enter  News type title..!",
+                text: "Please enter  Center type title..!",
                 type: 'error',
                 timer: 1500,
                 showConfirmButton: false
@@ -81,7 +81,7 @@ $(document).ready(function () {
             formData.append("update", "TRUE");
             formData.append("id", id);
             $.ajax({
-                url: "ajax/php/news-type.php",
+                url: "ajax/php/center-type.php",
                 type: "POST",
                 data: formData,
                 async: false,
@@ -122,7 +122,7 @@ $(document).ready(function () {
         }, function () {
             //grab all form data
             $.ajax({
-                url: "ajax/php/news-type.php",
+                url: "ajax/php/center-type.php",
                 type: "POST",
                 data: {id: id, option: 'delete'},
                 dataType: "JSON",

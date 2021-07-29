@@ -21,7 +21,7 @@
     </head>
 
 
-    <body> 
+    <body class="someBlock"> 
 
         <!-- Begin page -->
         <div id="layout-wrapper">

@@ -48,6 +48,7 @@ $(document).ready(function () {
                 showConfirmButton: false
             });
         } else {
+            $('.someBlock').preloader();
             var formData = new FormData($('#form-data')[0]);
             $.ajax({
                 url: "ajax/php/comment.php",
@@ -133,6 +134,7 @@ $(document).ready(function () {
                 showConfirmButton: false
             });
         } else {
+            $('.someBlock').preloader();
             var formData = new FormData($('#form-data-' + id)[0]);
             formData.append("update", "TRUE");
             formData.append("id", id);
