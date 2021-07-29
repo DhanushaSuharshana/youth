@@ -5,7 +5,15 @@ jQuery(document).ready(function () {
         event.preventDefault();
         tinymce.triggerSave();
         //-- ** Start Error Messages
-        if (!$('#title').val() || $('#title').val().length === 0) {
+        if (!$('#news_type').val() || $('#news_type').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please select News type.",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+         }else if (!$('#title').val() || $('#title').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter title.",
@@ -90,7 +98,15 @@ jQuery(document).ready(function () {
         tinymce.triggerSave();
         var id = $(this).attr("dataId");
         //-- ** Start Error Messages
-        if (!$('#title').val() || $('#title').val().length === 0) {
+        if (!$('#news_type').val() || $('#news_type').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please select News type.",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#title').val() || $('#title').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter title.",

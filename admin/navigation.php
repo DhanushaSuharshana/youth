@@ -97,6 +97,7 @@
                         <span>News</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="manage-news-type.php">Manage News Type </a></li> 
                         <li><a href="create-news.php">Add News</a></li>
                         <li><a href="manage-news.php">Manage News</a></li>
                     </ul>
