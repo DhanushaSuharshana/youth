@@ -36,7 +36,7 @@
                 <div class="single-footer-widget mb-30">
                     <h3>Support</h3>
                     <ul class="support-link">
-                        <li><a href="#">Privacy</a></li>
+                        <li><a href="<?php echo URL ?>youth_org/view">Privacy</a></li>
                         <li><a href="#">FAQ's</a></li>
                         <li><a href="#">Support</a></li>
                         <li><a href="#">Terms</a></li>

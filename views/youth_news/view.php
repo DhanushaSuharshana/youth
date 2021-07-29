@@ -139,84 +139,49 @@
                         <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like) making it look like readable English.</p>
                     </div>
 
-<!-- 
 
-                    <div class="raque-post-navigation">
-                        <div class="prev-link-wrapper">
-                            <div class="info-prev-link-wrapper">
-                                <a href="single-events.html">
-                                    <span class="image-prev">
-                                        <img src="<?php echo URL ?>assets/img/events/2.jpg" alt="image">
-                                        <span class="post-nav-title">Prev</span>
-                                    </span>
-                                    <span class="prev-link-info-wrapper">
-                                        <span class="prev-title">Don't buy a tech gift until you read these rules</span>
-                                        <span class="meta-wrapper">
-                                            <span class="date-post">January 21, 2021</span>
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="next-link-wrapper">
-                            <div class="info-next-link-wrapper">
-                                <a href="single-events.html">
-                                    <span class="next-link-info-wrapper">
-                                        <span class="next-title">The golden rule of buying a phone as a gift</span>
-                                        <span class="meta-wrapper">
-                                            <span class="date-post">January 21, 2021</span>
-                                        </span>
-                                    </span>
-                                    <span class="image-next">
-                                        <img src="<?php echo URL ?>assets/img/events/3.jpg" alt="image">
-                                        <span class="post-nav-title">Next</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
 
                 <div class="col-lg-4 col-md-12">
                     <aside class="widget-area">
-                    <div class="courses-review-comments" style="margin-top: -20px;">
-                         
+                        <div class="courses-review-comments" style="margin-top: -20px;">
+
                             <div class="user-review">
                                 <img src="<?php echo URL ?>assets/img/user4.jpg" alt="image">
                                 <div class="review-rating">
-                                   
+
                                     <span class="d-inline-block">James Anderson</span>
                                 </div>
-                                
+
                                 <p>Very well built theme, couldn't be happier with it. Can't wait for future updates to
                                     see .</p>
                             </div>
                             <div class="user-review">
                                 <img src="<?php echo URL ?>assets/img/user2.jpg" alt="image">
                                 <div class="review-rating">
-                                    
+
                                     <span class="d-inline-block">Sarah Taylor</span>
                                 </div>
-                                
+
                                 <p>Was really easy to implement and they quickly answer my additional questions!</p>
                             </div>
                             <div class="user-review">
                                 <img src="<?php echo URL ?>assets/img/user3.jpg" alt="image">
                                 <div class="review-rating">
-                                    
+
                                     <span class="d-inline-block">David Warner</span>
                                 </div>
-                               
+
                                 <p>Stunning design, very dedicated crew who welcome new ideas suggested by customers,
                                     .</p>
                             </div>
                             <div class="user-review">
                                 <img src="<?php echo URL ?>assets/img/user2.jpg" alt="image">
                                 <div class="review-rating">
-                                    
+
                                     <span class="d-inline-block">David Warner</span>
                                 </div>
-                               
+
                                 <p>Stunning design, very dedicated crew who welcome new ideas suggested by customers,
                                     .</p>
                             </div>
