@@ -41,8 +41,12 @@ if (isset($_GET["id"])) {
         .mc-calendar {
             z-index: 1600 !important;
         }
-        .mc-display__day, .mc-display__date, .mc-display__month, .mc-display__year{
-            color: hsla(0,0%,100%,.8) !important;
+
+        .mc-display__day,
+        .mc-display__date,
+        .mc-display__month,
+        .mc-display__year {
+            color: hsla(0, 0%, 100%, .8) !important;
         }
     </style>
 
@@ -68,167 +72,161 @@ if (isset($_GET["id"])) {
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-flex align-items-center justify-content-between">
-                                <h4 class="mb-0"> Dashboard</h4 <div class="page-title-right">
-                                <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-                                    <li class="breadcrumb-item active">Create Courses</li>
-                                </ol>
+                                <h4 class="mb-0"> Dashboard</h4>
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                                        <li class="breadcrumb-item active">Create Courses</li>
+                                    </ol>
+                                </div>
                             </div>
-
                         </div>
-                    </div>
-                </div>
-                <!-- end page title -->
+                        <!-- end page title -->
 
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Create Courses.</h4>
-                                <form id="form-data">
-                                    <div class="mb-3 row">
-                                        <label for="example-text-input" class="col-md-2 col-form-label">Select Course Type</label>
-                                        <div class="col-md-10">
-                                            <select class="form-control" id="course_type" name="course_type">
-                                                <option value=""> -- Please Select Course Type --</option>
-                                                <?php
-                                                $COURSE_TYPE = new CourseType(NULL);
-                                                foreach ($COURSE_TYPE->all() as $course_type) {
-                                                    if ($id == $course_type['id']) {
-                                                ?>
-                                                        <option value="<?php echo $course_type['id'] ?>" selected=""> <?php echo $course_type['title'] ?></option>
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Create Courses.</h4>
+                                    <form id="form-data">
+                                        <div class="mb-3 row">
+                                            <label for="example-text-input" class="col-md-2 col-form-label">Select Course Type</label>
+                                            <div class="col-md-10">
+                                                <select class="form-control" id="course_type" name="course_type">
+                                                    <option value=""> -- Please Select Course Type --</option>
                                                     <?php
-                                                    } else {
+                                                    $COURSE_TYPE = new CourseType(NULL);
+                                                    foreach ($COURSE_TYPE->all() as $course_type) {
+                                                        if ($id == $course_type['id']) {
                                                     ?>
-                                                        <option value="<?php echo $course_type['id'] ?>"> <?php echo $course_type['title'] ?></option>
+                                                            <option value="<?php echo $course_type['id'] ?>" selected=""> <?php echo $course_type['title'] ?></option>
+                                                        <?php
+                                                        } else {
+                                                        ?>
+                                                            <option value="<?php echo $course_type['id'] ?>"> <?php echo $course_type['title'] ?></option>
 
-                                                <?php
+                                                    <?php
+                                                        }
                                                     }
-                                                }
-                                                ?>
-                                            </select>
+                                                    ?>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" type="text" id="name" name="name" placeholder="Please enter course name">
+                                        <div class="mb-3 row">
+                                            <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
+                                            <div class="col-md-10">
+                                                <input class="form-control" type="text" id="name" name="name" placeholder="Please enter course name">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-search-input" class="col-md-2 col-form-label">Max Students</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" type="text" id="max_student" name="max_student" placeholder="Please enter max students in one course">
+                                        <div class="mb-3 row">
+                                            <label for="example-search-input" class="col-md-2 col-form-label">Max Students</label>
+                                            <div class="col-md-10">
+                                                <input class="form-control" type="text" id="max_student" name="max_student" placeholder="Please enter max students in one course">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" type="file" id="image_name" name="image_name">
+                                        <div class="mb-3 row">
+                                            <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
+                                            <div class="col-md-10">
+                                                <input class="form-control" type="file" id="image_name" name="image_name">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-url-input" class="col-md-2 col-form-label">Level</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" type="text" id="level" name="level" placeholder="Please enter certificate level">
+                                        <div class="mb-3 row">
+                                            <label for="example-url-input" class="col-md-2 col-form-label">Level</label>
+                                            <div class="col-md-10">
+                                                <input class="form-control" type="text" id="level" name="level" placeholder="Please enter certificate level">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-url-input" class="col-md-2 col-form-label">Languages</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" type="text" id="languages" name="languages" placeholder="Please enter course teaching languages">
+                                        <div class="mb-3 row">
+                                            <label for="example-url-input" class="col-md-2 col-form-label">Languages</label>
+                                            <div class="col-md-10">
+                                                <input class="form-control" type="text" id="languages" name="languages" placeholder="Please enter course teaching languages">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-url-input" class="col-md-2 col-form-label">Duration</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" type="text" id="duration" name="duration" placeholder="Please enter course duration">
+                                        <div class="mb-3 row">
+                                            <label for="example-url-input" class="col-md-2 col-form-label">Duration</label>
+                                            <div class="col-md-10">
+                                                <input class="form-control" type="text" id="duration" name="duration" placeholder="Please enter course duration">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-url-input" class="col-md-2 col-form-label">Start Date</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control start_dates " type="text" id="start_date" name="start_date" placeholder="Please enter course start date">
+                                        <div class="mb-3 row">
+                                            <label for="example-url-input" class="col-md-2 col-form-label">Start Date</label>
+                                            <div class="col-md-10">
+                                                <input class="form-control start_dates " type="text" id="start_date" name="start_date" placeholder="Please enter course start date">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-url-input" class="col-md-2 col-form-label">Short Description</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" type="text" id="short_description" name="short_description" placeholder="Please enter short description">
+                                        <div class="mb-3 row">
+                                            <label for="example-url-input" class="col-md-2 col-form-label">Short Description</label>
+                                            <div class="col-md-10">
+                                                <input class="form-control" type="text" id="short_description" name="short_description" placeholder="Please enter short description">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-url-input" class="col-md-2 col-form-label"> Description</label>
-                                        <div class="col-md-10">
-                                            <textarea class="description" name="description"></textarea>
+                                        <div class="mb-3 row">
+                                            <label for="example-url-input" class="col-md-2 col-form-label"> Description</label>
+                                            <div class="col-md-10">
+                                                <textarea class="description" name="description"></textarea>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
-                                            <button class="btn btn-primary " type="submit" id="create">Create</button>
+                                        <div class="row">
+                                            <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
+                                                <button class="btn btn-primary " type="submit" id="create">Create</button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="page-content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0">Dashboard </h4>
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                            <li class="breadcrumb-item active">Manage Courses</li>
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Manage Courses</h4>
-                                        <div class="row mt-3">
-                                            <?php
-                                            $COURSES = new Course(NULL);
-                                            foreach ($COURSES->all() as $key => $course) {
-                                            ?>
-                                                <div class="col-md-6 col-xl-3" id="div<?php echo $course['id'] ?>">
-                                                    <!-- Simple card -->
-                                                    <div class="card">
-                                                        <img class="card-img-top img-fluid" src="../upload/courses/<?php echo $course['image_name'] ?>" alt="<?php echo $course['name'] ?>">
-                                                        <div class="card-body">
-                                                            <h4 class="card-title mb-3"><?php echo $course['name'] ?></h4>
-                                                            <div class="badge bg-pill bg-soft-success font-size-14" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $course['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> |
-                                                            <a href="create-course-subjects.php?id=<?php echo $course['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
-                                                            <a href="create-album-photo" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
-                                                            <a href="#">
-                                                                <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $course['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            <?php } ?>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="card">
+                        <div class="row">
+                            <div class="card-body">
+                                <h4 class="card-title">Manage Courses.</h4>
+
+
+                                <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>#No</th>
+                                            <th>Name</th>
+                                            <th>Languages</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <?php
+                                        $COURSES = new Course(NULL);
+                                        foreach ($COURSES->all() as $key => $course) {
+                                        ?>
+                                            <tr id="div<?php echo $course['id']; ?>">
+                                                <td><?php echo $key; ?></td>
+                                                <td><?php echo $course['name']; ?></td>
+                                                <td><?php echo $course['languages']; ?></td>
+
+                                                <td>
+                                                    <div class="badge bg-pill bg-soft-success font-size-14" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $course['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> |
+                                                    <a href="create-course-subjects.php?id=<?php echo $course['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
+                                                    <a href="create-album-photo" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
+                                                    <a href="#">
+                                                        <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $course['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
                 </div>
-
-
             </div>
+            <?php include './footer.php'; ?>
         </div>
-        <?php include './footer.php'; ?>
-    </div>
     </div>
     <!-- END layout-wrapper -->
 
@@ -337,7 +335,7 @@ if (isset($_GET["id"])) {
         </div><!-- /.modal -->
 
         <script>
-            MCDatepicker.create( {
+            MCDatepicker.create({
                     el: '#start_date_edit_<?php echo $course['id']; ?>',
                     minDate: new Date(),
                     // autoClose: true,
