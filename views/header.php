@@ -82,7 +82,7 @@
                             <li class="nav-item"><a href="#" class="nav-link">Division <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="<?php echo URL ?>division">Administrative Division</a></li>
-                                    <li class="nav-item"><a href="view-division.php">Finance Division</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>division/view">Finance Division</a></li>
                                     <li class="nav-item"><a href="view-division.php">Legal Investigation </a> </li>
                                     <li class="nav-item"><a href="view-division.php">National Youth Awards</a></li>
                                 </ul>
