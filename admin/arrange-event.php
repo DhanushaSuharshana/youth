@@ -19,7 +19,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <script src="plugin/jquery-ui/jquery-ui.js" type="text/javascript"></script>
+
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
@@ -87,9 +87,11 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         <span class="number-class">(<?php echo $key + 1; ?>)</span> 
                                                         <div class="card">
                                                             <img class="card-img-top img-fluid" src="../upload/event/<?php echo $event['image_name'] ?>" alt="<?php echo $event['title'] ?>">
+                                                            <input type="hidden" name="sort[]"  value="<?php echo $event["id"]; ?>" class="sort-input"/> 
                                                         </div>
+
                                                     </li> 
-                                                    <input type="hidden" name="sort[]"  value="<?php echo $event["id"]; ?>" class="sort-input"/> 
+
                                                 <?php } ?>
                                             </ul>
                                             <div class="row">
@@ -123,17 +125,15 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script> 
         <script src="assets/js/app.js"></script>
         <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
-        <script src="plugin/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="plugin/jquery-ui/jquery-ui.js" type="text/javascript"></script>
+        <!-- js -->
+        <script src="ajax/js/event.js" type="text/javascript"></script> 
         <script>
             $(function () {
                 $("#sortable").sortable();
                 $("#sortable").disableSelection();
             });
         </script>
-
-        <!-- js -->
-        <script src="ajax/js/event.js" type="text/javascript"></script> 
-
     </body>
 
 </html>

@@ -102,20 +102,22 @@ if (isset($_POST['update'])) {
 //--------------------------------------------------------------------------
 //-- ** Start arrange code  
 if (isset($_POST['arrange'])) {
- 
+
+    $EVENT_OBJ = new Event(NULL);
+
     foreach ($_POST['sort'] as $key => $img) {
+
         $key = $key + 1;
-       
-        $EVENT = Event::arrange($key, $img);
+
+        $res = $EVENT_OBJ->arrange($key, $img);
         //-- ** End Assign Post Params
-        if ($EVENT) {
-            $result = [
-                "status" => 'success'
-            ];
-            echo json_encode($result);
-            exit();
-        }
     }
+
+    $result = [
+        "status" => 'success'
+    ];
+    echo json_encode($result);
+    exit();
 }
 //End arrange Code Block
 //--------------------------------------------------------------------------

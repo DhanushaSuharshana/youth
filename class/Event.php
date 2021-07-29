@@ -1,5 +1,3 @@
- 
-
 <?php
 
 /**
@@ -119,14 +117,12 @@ class Event {
         return $array_res;
     }
 
-    public function arrange($key, $img) {
-        $query = "UPDATE `event` SET `queue` = '" . $key . "'  WHERE id = '" . $img . "'";
-        dd($query);
+      public function arrange($key, $img) {
+        $query = "UPDATE `event` SET `queue` = '" . $key . "'  WHERE id ='" . $img . "'"; 
         $db = new Database();
         $result = $db->readQuery($query);
         return $result;
     }
-
     public function delete() {  
         
         $query = 'DELETE FROM `event` WHERE id="' . $this->id . '"';
@@ -136,3 +132,5 @@ class Event {
     }
 
 }
+
+
