@@ -25,6 +25,7 @@ if (isset($_POST['create'])) {
     //-- ** End Create Image
     //-- ** Start Assign Post Params
     $NEWS = new News(NULL);
+    $NEWS->news_type = $_POST['news_type'];
     $NEWS->title = ucwords($_POST['title']);
     $NEWS->date = $_POST['date'];
     $NEWS->short_description = $_POST['short_description'];
@@ -69,6 +70,7 @@ if (isset($_POST['update'])) {
     }
     //-- ** End Edit Image in folder location
     //-- ** Start Assign Post Params  
+    $NEWS->news_type = $_POST['news_type'];
     $NEWS->title = ucwords($_POST['title']);
     $NEWS->date = $_POST['date'];
     $NEWS->short_description = $_POST['short_description'];

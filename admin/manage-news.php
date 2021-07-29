@@ -99,6 +99,26 @@ include './auth.php';
                     <div class="modal-body">
                         <form method="POST" id="form-data-<?php echo $news['id']; ?>">
                             <div class="card-body">
+                            <div class="mb-3 row">
+                                    <label for="example-text-input" class="col-md-2 col-form-label">News Type</label>
+                                    <div class="col-md-10">
+                                        <select id="news_type" class="form-control news_type" name="news_type">
+                                            <option value=""> -- Please Select News Type --</option>
+                                            <?php
+                                            $NEWS_TYPE = new NewsType(NULL);
+                                            foreach ($NEWS_TYPE->all() as $news_type) {
+                                                if ($news_type['id'] == $news['news_type']) {
+                                            ?>
+                                                    <option value="<?php echo $news_type['id'] ?>" selected=""> <?php echo $news_type['title'] ?></option>
+                                                <?php } else { ?>
+                                                    <option value="<?php echo $news_type['id'] ?>"> <?php echo $news_type['title'] ?></option>
+                                            <?php
+                                                }
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="mb-3 row">
                                     <label for="example-text-input" class="col-md-2 col-form-label">Title</label>
                                     <div class="col-md-10">
