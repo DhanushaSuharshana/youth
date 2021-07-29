@@ -244,14 +244,14 @@
 
 
                 <div class="tab-content">
-                <?php
-                $COURSE = new Course(NULL);
-                $COURSES = $COURSE->all();
-                foreach ($COURSE_TYPE->all() as $key => $course_type) {
-                ?>
+                    <?php
+                    $COURSE = new Course(NULL);
+                    $COURSES = $COURSE->all();
+                    foreach ($COURSE_TYPE->all() as $key => $course_type) {
+                    ?>
 
 
-                   
+
                         <div class="tabs-item" style="<?= ($key == 0) ? "display: block;" : "display: none;" ?>">
                             <div class="row">
 
@@ -271,7 +271,7 @@
                                                         <h3>
                                                             <div class="d-inline-block">
 
-                                                               <?php echo $course['name'] ?></div>
+                                                                <?php echo $course['name'] ?></div>
                                                         </h3>
                                                         <p>Pass 06 Subjects in G.C.E. (O/L) or above NVQ Level 3 qualification in relevant field..</p>
                                                     </div>
@@ -297,8 +297,8 @@
                                 } ?>
                             </div>
                         </div>
-                   
-                <?php } ?>
+
+                    <?php } ?>
 
 
 
@@ -918,7 +918,7 @@
 
 
                                     <div class="col-lg-7 col-md-7 p-0">
-                                        <a href="#">
+                                        <a href="<?php echo URL ?>events/view">
                                             <div class="content">
                                                 <div class="date">
                                                     <span><?php
@@ -926,7 +926,7 @@
                                                             echo date_format($date, "D") . ', ' . date_format($date, "d") . ' ' . date_format($date, "M" . ', ' . date_format($date, "Y"));
                                                             ?></span>
                                                 </div>
-                                                <h3><?php echo $event['title'] ?></h3>
+                                                <h3 href=""><?php echo $event['title'] ?></h3>
                                                 <p><?php echo $event['short_description'] ?></p>
                                                 <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
                                             </div>
@@ -939,25 +939,27 @@
                     } else if ($key < 5) {
                     ?>
                         <div class="col-lg-4 col-md-12 col-sm-6">
-                            <div class="events-box">
-                                <div class="row m-0">
-                                    <div class="col-lg-12 col-md-7 p-0">
-                                        <div class="content">
-                                            <div class="date">
-                                                <span>
-                                                    <?php
-                                                    $date = date_create($event['date']);
-                                                    echo date_format($date, "D") . ', ' . date_format($date, "d") . ' ' . date_format($date, "M" . ', ' . date_format($date, "Y"));
-                                                    ?>
-                                                </span>
+                            <a href="<?php echo URL ?>events/view">
+                                <div class="events-box">
+                                    <div class="row m-0">
+                                        <div class="col-lg-12 col-md-7 p-0">
+                                            <div class="content">
+                                                <div class="date">
+                                                    <span>
+                                                        <?php
+                                                        $date = date_create($event['date']);
+                                                        echo date_format($date, "D") . ', ' . date_format($date, "d") . ' ' . date_format($date, "M" . ', ' . date_format($date, "Y"));
+                                                        ?>
+                                                    </span>
+                                                </div>
+                                                <h3><a href="<?php echo URL ?>events/view"><?php echo $event['title'] ?></a></h3>
+                                                <p><?php echo $event['short_description'] ?></p>
+                                                <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
                                             </div>
-                                            <h3><a href="#"><?php echo $event['title'] ?></a></h3>
-                                            <p><?php echo $event['short_description'] ?></p>
-                                            <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                 <?php
                     }
@@ -975,7 +977,7 @@
             <div class="section-title text-left">
                 <span class="sub-title">Explore News</span>
                 <h2>Our Latest News</h2>
-                <a href="blog-style-1.html" class="default-btn"><i class='bx bx-book-reader icon-arrow before'></i><span class="label">Read All</span><i class="bx bx-book-reader icon-arrow after"></i></a>
+                <a href="<?php echo URL ?>youth_news/view" class="default-btn"><i class='bx bx-book-reader icon-arrow before'></i><span class="label">Read All</span><i class="bx bx-book-reader icon-arrow after"></i></a>
             </div>
             <div class="blog-slides owl-carousel owl-theme">
                 <?php
@@ -984,7 +986,7 @@
                 ?>
                     <div class="single-blog-post mb-30">
                         <div class="post-image">
-                            <a href="single-blog.html" class="d-block">
+                            <a href="<?php echo URL ?>youth_news/view" class="d-block">
                                 <img src="<?php echo URL ?>upload/news/<?php echo $news['image_name'] ?>" alt="<?php echo $news['title'] ?>">
                             </a>
                             <div class="tag">
@@ -1001,8 +1003,8 @@
                                         ?>
                                     </a></li>
                             </ul>
-                            <h3><a href="single-blog.html" class="d-inline-block"><?php echo ucfirst($news['title']) ?></a></h3>
-                            <a href="single-blog.html" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                            <h3><a href="<?php echo URL ?>youth_news/view" class="d-inline-block"><?php echo ucfirst($news['title']) ?></a></h3>
+                            <a href="<?php echo URL ?>youth_news/view" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
                 <?php } ?>
