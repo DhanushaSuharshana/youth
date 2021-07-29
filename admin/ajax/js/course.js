@@ -273,7 +273,7 @@ jQuery(document).ready(function () {
         }, function () {
             //grab all form data
             $.ajax({
-                url: "ajax/php/news.php",
+                url: "ajax/php/course.php",
                 type: "POST",
                 data: {id: id, option: 'delete'},
                 dataType: "JSON",
