@@ -85,6 +85,27 @@ if (isset($_POST['update'])) {
     }
 }
 //End Update Code Block
+//--------------------------------------------------------------------------
+//-- ** Start arrange code  
+if (isset($_POST['arrange'])) {
+
+    $LEADER = new Leaders(NULL);
+
+    foreach ($_POST['sort'] as $key => $img) {
+
+        $key = $key + 1;
+
+        $res = $LEADER->arrange($key, $img);
+        //-- ** End Assign Post Params
+    }
+
+    $result = [
+        "status" => 'success'
+    ];
+    echo json_encode($result);
+    exit();
+}
+//End arrange Code Block
 //-- ** Start delete code 
 //--------------------------------------------------------------------------
 if ($_POST['option'] == 'delete') {

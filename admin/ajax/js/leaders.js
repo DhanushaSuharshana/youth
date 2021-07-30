@@ -1,8 +1,7 @@
 jQuery(document).ready(function () {
 
 //---------- Start Create Data ---------
-    $("#create").click(function (event)
-    {
+    $("#create").click(function (event) {
         event.preventDefault();
         //-- ** Start Error Messages
         if (!$('#name').val() || $('#name').val().length === 0) {
@@ -160,7 +159,39 @@ jQuery(document).ready(function () {
         }
         return false;
     });
-
+//----------------------------------------------------
+//-------- Start arrange ---------
+    $('#arrange').click(function (event) {
+        event.preventDefault();
+//start preloarder
+        $('.someBlock').preloader();
+        //grab all form data  
+        var formData = new FormData($('#form-data')[0]); //grab all form data  
+        formData.append("arrange", "TRUE");
+        $.ajax({
+            url: "ajax/php/leaders.php",
+            type: 'POST',
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            dataType: 'json',
+            success: function (result) {
+                //remove preloarder 
+                $('.someBlock').preloader('remove');
+                swal({
+                    title: "success!",
+                    text: "Your data arrange successfully !",
+                    type: 'success',
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+            }
+        });
+    });
+//-------- End arrange ---------
+//----------------------------------------------------
     //-------- Start Delete Data ---------
     $('.delete-data').click(function () {
         var id = $(this).attr("data-id");
