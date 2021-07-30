@@ -112,6 +112,29 @@ if (isset($_POST['update'])) {
 
 }
 //End Update Code Block
+
+
+//--------------------------------------------------------------------------
+//-- ** Start arrange code  
+if (isset($_POST['arrange'])) {
+
+    $ALBUM_PHOTO_OBJ = new AlbumPhoto(NULL);
+
+    foreach ($_POST['sort'] as $key => $img) {
+
+        $key = $key + 1;
+
+        $res = $ALBUM_PHOTO_OBJ->arrange($key, $img);
+        //-- ** End Assign Post Params
+    }
+
+    $result = [
+        "status" => 'success'
+    ];
+    echo json_encode($result);
+    exit();
+}
+//End arrange Code BlockF
 //--------------------------------------------------------------------------
 //-- ** Start delete code 
 if ($_POST['option'] == 'delete') {
