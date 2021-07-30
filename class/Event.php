@@ -67,8 +67,7 @@ class Event
         }
     }
 
-    public function getEventByInstitute($institute)
-    {
+    public function getEventByInstitute($institute) {
 
         $query = "SELECT  * FROM `event` WHERE `institute` = '" . $institute . "'";
 
@@ -84,8 +83,7 @@ class Event
         return $array_res;
     }
 
-    public function update()
-    {
+    public function update()  {
 
         $query = "UPDATE  `event` SET "
             . "`title` ='" . $this->title . "',"
@@ -108,8 +106,7 @@ class Event
         }
     }
 
-    public function all()
-    {
+    public function all()  {
 
         $query = "SELECT * FROM `event` ORDER BY `queue` ASC";
         $db = new Database();
@@ -122,18 +119,20 @@ class Event
 
         return $array_res;
     }
-
-    public function arrange($key, $img)
-    {
+    
+ 
+    public function arrange($key, $img) {
         $query = "UPDATE `event` SET `queue` = '" . $key . "'  WHERE id ='" . $img . "'";
+ 
         $db = new Database();
         $result = $db->readQuery($query);
         return $result;
     }
-    public function delete()
-    {
-
-        $query = 'DELETE FROM `event` WHERE id="' . $this->id . '"';
+ 
+    
+    public function delete() {  
+        
+         $query = 'DELETE FROM `event` WHERE id="' . $this->id . '"';
 
         $db = new Database();
         return $db->readQuery($query);

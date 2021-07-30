@@ -6,7 +6,7 @@ include_once(dirname(__FILE__) . '/auth.php');
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Manage Leaders</title>
+        <title>Manage Leaders | Youth Service LTD</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -53,7 +53,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 <div class="card">
                                     <form method="POST" id="form-data">
                                         <div class="card-body">
-                                            <h4 class="card-title">Add Leader Details</h4> 
+                                            <h4 class="card-title">Add Leaders Detail</h4> 
                                             <div class="mb-3 row">
                                                 <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
                                                 <div class="col-md-10">
@@ -111,28 +111,27 @@ include_once(dirname(__FILE__) . '/auth.php');
                             <div class="row">
                                 <div class="card-body">
                                     <h4 class="card-title">Manage Leaders.</h4>                                  
-                                        <div class="mt-3 row">
-                                            <?php
-                                            $LEADERS = new Leaders(NULL);
-                                            $ALL_LEADERS = $LEADERS->all();
-                                            foreach ($ALL_LEADERS as $all_leaders) {
-                                                ?>
-                                                <div class="col-md-4 col-xl-3" id="div<?php echo $all_leaders['id'] ?>">  
-                                                    <div class="card">
-                                                        <img class="card-img-top img-fluid" src="../upload/leader/<?php echo $all_leaders['image_name']; ?>" alt="Leaders">
-                                                        <div class="card-body">
-                                                            <h4 class="card-title mb-3">  <?php echo $all_leaders['name']; ?>  </h4>
-                                                            <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $all_leaders['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
-                                                            <div class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></div> |
-                                                            <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $all_leaders['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
-                                                       
-                                                        </div>
-                                                    </div> 
-                                                </div>
-                                                <?php
-                                            }
+                                    <div class="mt-3 row">
+                                        <?php
+                                        $LEADERS = new Leaders(NULL);
+                                        $ALL_LEADERS = $LEADERS->all();
+                                        foreach ($ALL_LEADERS as $all_leaders) {
                                             ?>
-                                        </div>                                    
+                                            <div class="col-md-4 col-xl-3" id="div<?php echo $all_leaders['id'] ?>">  
+                                                <div class="card">
+                                                    <img class="card-img-top img-fluid" src="../upload/leader/<?php echo $all_leaders['image_name']; ?>" alt="Leaders">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title mb-3">  <?php echo $all_leaders['name']; ?>  </h4>
+                                                        <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $all_leaders['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
+                                                        <a href="arrange-leaders.php" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
+                                                        <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $all_leaders['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                            <?php
+                                        }
+                                        ?>
+                                    </div>                                    
                                 </div>
                             </div>
                         </div>                    
