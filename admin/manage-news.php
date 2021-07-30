@@ -69,7 +69,7 @@ include './auth.php';
                                                         <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $news['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
                                                         <a href="create-news-photo.php?id=<?php echo $news['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-image   p-1"></i></a> |
 
-                                                        <a href="create-album-photo" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
+                                                        <a href="arrange-news.php" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
 
                                                         <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $news['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
                                                     </div>
