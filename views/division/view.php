@@ -105,14 +105,14 @@
                         </div>
                     </div> -->
                 </div>
-                <div class="col-lg-5 col-md-12 pt" style="">
-                    <div class="courses-purchase-info" style="margin-bottom: 30px;">
+                <div class="col-lg-5 col-md-12 pt">
+                    <div class="courses-purchase-info" style="margin-bottom: 30px; margin-top: 0px;">
                         <h4>Interested in this course for your Business or Team?</h4>
                         <p>Train your employees in the most in-demand topics, with edX for Business.</p>
                         <a href="#" class="d-inline-block">Purchase now</a>
                         <a href="#" class="d-inline-block">Request Information</a>
                     </div>
-
+                  
 
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-6">
@@ -126,12 +126,46 @@
                                     </div>
                                     <div class="col-lg-7 col-md-7 p-0">
                                         <div class="content">
-                                            <div class="date">
-                                                <span>Wed, 03 June, 2021</span>
-                                            </div>
+                                           
                                             <h3><a href="#">Music Conference</a></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
-                                            <span class="location"><i class="bx bx-map"></i>Vancover, Canada</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-6">
+                            <div class="events-box">
+                                <div class="row m-0">
+                                    <div class="col-lg-5 col-md-5 p-0">
+                                        <div class="image bg1">
+                                            <img src="<?php echo URL ?>assets/img/business-coaching/events-img1.jpg" alt="image">
+                                            <div class="divider-shape"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 col-md-7 p-0">
+                                        <div class="content">
+                                           
+                                            <h3><a href="#">Music Conference</a></h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="col-lg-12 col-md-12 col-sm-6">
+                            <div class="events-box">
+                                <div class="row m-0">
+                                    <div class="col-lg-5 col-md-5 p-0">
+                                        <div class="image bg1">
+                                            <img src="<?php echo URL ?>assets/img/business-coaching/events-img1.jpg" alt="image">
+                                            <div class="divider-shape"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 col-md-7 p-0">
+                                        <div class="content">
+                                           
+                                            <h3><a href="#">Music Conference</a></h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -148,12 +182,9 @@
                                     </div>
                                     <div class="col-lg-7 col-md-7 p-0">
                                         <div class="content">
-                                            <div class="date">
-                                                <span>Thu, 04 June, 2021</span>
-                                            </div>
+                                           
                                             <h3><a href="#">Paper Plates Art</a></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
-                                            <span class="location"><i class="bx bx-map"></i>Sydney, Australia</span>
                                         </div>
                                     </div>
                                 </div>
@@ -170,12 +201,9 @@
                                     </div>
                                     <div class="col-lg-7 col-md-7 p-0">
                                         <div class="content">
-                                            <div class="date">
-                                                <span>Fri, 05 June, 2021</span>
-                                            </div>
+                                           
                                             <h3><a href="#">Imagination Classes</a></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
-                                            <span class="location"><i class="bx bx-map"></i>Istanbul, Turkey</span>
                                         </div>
                                     </div>
                                 </div>
@@ -192,19 +220,16 @@
                                     </div>
                                     <div class="col-lg-7 col-md-7 p-0">
                                         <div class="content">
-                                            <div class="date">
-                                                <span>Sat, 06 June, 2021</span>
-                                            </div>
+                                           
                                             <h3><a href="#">Number Matching</a></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
-                                            <span class="location"><i class="bx bx-map"></i>New York, USA</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    
 
                 </div>
 
