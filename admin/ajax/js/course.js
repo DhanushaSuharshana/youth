@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
 
-//---------- Start Create Data ---------
+    //---------- Start Create Data ---------
     $("#create").click(function (event) {
         event.preventDefault();
         tinymce.triggerSave();
@@ -90,7 +90,7 @@ jQuery(document).ready(function () {
             //start preloarder
             $('.someBlock').preloader();
             //grab all form data  
-            var formData = new FormData($('#form-data')[0]);  //grab all form data  
+            var formData = new FormData($('#form-data')[0]); //grab all form data  
             formData.append("create", "TRUE");
 
             $.ajax({
@@ -130,9 +130,9 @@ jQuery(document).ready(function () {
         }
         return false;
     });
-//---------- End Create Data ---------
-//----------------------------------------------------
-//---------- Start Edit Data ---------
+    //---------- End Create Data ---------
+    //----------------------------------------------------
+    //---------- Start Edit Data ---------
     $(".edit-data").click(function (event) {
         event.preventDefault();
         tinymce.triggerSave();
@@ -186,14 +186,14 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-//        } else if (!$('.start_dates').val() || $('.start_dates').val().length === 0) {
-//            swal({
-//                title: "Error!",
-//                text: "Please Enter course start date..!",
-//                type: 'error',
-//                timer: 2000,
-//                showConfirmButton: false
-//            });
+            //        } else if (!$('.start_dates').val() || $('.start_dates').val().length === 0) {
+            //            swal({
+            //                title: "Error!",
+            //                text: "Please Enter course start date..!",
+            //                type: 'error',
+            //                timer: 2000,
+            //                showConfirmButton: false
+            //            });
         } else if (!$('.short_description').val() || $('.short_description').val().length === 0) {
             swal({
                 title: "Error!",
@@ -202,14 +202,14 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-//        } else if (!$('.descriptions').val() || $('.descriptions').val().length === 0) {
-//            swal({
-//                title: "Error!",
-//                text: "Please Enter  description..!",
-//                type: 'error',
-//                timer: 2000,
-//                showConfirmButton: false
-//            });
+            //        } else if (!$('.descriptions').val() || $('.descriptions').val().length === 0) {
+            //            swal({
+            //                title: "Error!",
+            //                text: "Please Enter  description..!",
+            //                type: 'error',
+            //                timer: 2000,
+            //                showConfirmButton: false
+            //            });
         } else {
             //-- ** End Error Messages
             //start preloarder
@@ -256,9 +256,9 @@ jQuery(document).ready(function () {
         }
         return false;
     });
-//---------- End Update Data ---------
-//----------------------------------------------------
-//-------- Start Delete Data ---------
+    //---------- End Update Data ---------
+    //----------------------------------------------------
+    //-------- Start Delete Data ---------
     $('.delete-data').click(function () {
         var id = $(this).attr("data-id");
         //-- ** Show Confirmation MSG 
@@ -275,7 +275,10 @@ jQuery(document).ready(function () {
             $.ajax({
                 url: "ajax/php/course.php",
                 type: "POST",
-                data: {id: id, option: 'delete'},
+                data: {
+                    id: id,
+                    option: 'delete'
+                },
                 dataType: "JSON",
                 success: function (jsonStr) {
                     if (jsonStr.status) {
@@ -294,7 +297,39 @@ jQuery(document).ready(function () {
             });
         });
     });
+
+    //-------- Start arrange ---------
+    $('#arrange').click(function (news) {
+        news.preventDefault();
+        //start preloarder
+        $('.someBlock').preloader();
+        //grab all form data  
+        var formData = new FormData($('#form-data')[0]); //grab all form data  
+        formData.append("arrange", "TRUE");
+        $.ajax({
+            url: "ajax/php/course.php",
+            type: 'POST',
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            dataType: 'json',
+            success: function (result) {
+                //remove preloarder 
+                $('.someBlock').preloader('remove');
+                swal({
+                    title: "success!",
+                    text: "Your data arrange successfully !",
+                    type: 'success',
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+            }
+        });
+    });
+    //-------- End arrange ---------
+    //----------------------------------------------------
 });
 //-------- End Delete Data ---------
 //----------------------------------------------------
- 
