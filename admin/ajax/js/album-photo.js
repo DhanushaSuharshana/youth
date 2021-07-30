@@ -112,6 +112,37 @@ $(document).ready(function () {
     });
     //---------- End Update Data ---------
 //----------------------------------------------------
+    //-------- Start arrange ---------
+    $('#arrange').click(function (news) {
+        news.preventDefault();
+        //start preloarder
+        $('.someBlock').preloader();
+        //grab all form data  
+        var formData = new FormData($('#form-data')[0]); //grab all form data  
+        formData.append("arrange", "TRUE");
+        $.ajax({
+            url: "ajax/php/album-photo.php",
+            type: 'POST',
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            dataType: 'json',
+            success: function (result) {
+                //remove preloarder 
+                $('.someBlock').preloader('remove');
+                swal({
+                    title: "success!",
+                    text: "Your data arrange successfully !",
+                    type: 'success',
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+            }
+        });
+    });
+    //-------- End arrange ---------
 //-------- Start Delete Data ---------
     $('.delete-data').click(function () {
         var id = $(this).attr("data-id");

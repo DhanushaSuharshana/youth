@@ -72,7 +72,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                             <div class="card">
                                 <div class="card-body">
 
-                                    <h4 class="card-title">Create Phot Album</h4>
+                                    <h4 class="card-title">Create Photo Album</h4>
                                     <form id="form-data">
                                         <div class="mb-3 row">
                                             <label for="example-text-input" class="col-md-2 col-form-label">Title</label>
