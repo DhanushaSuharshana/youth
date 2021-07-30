@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     //Update  
     $(".edit-data").click(function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
         var id = $(this).attr("dataId");
         if (!$('.title').val() || $('.title').val().length === 0) {
             swal({
@@ -93,7 +93,7 @@ $(document).ready(function () {
                         showConfirmButton: false
                     }, function () {
                         setTimeout(function () {
-                              window.location.reload();
+                            window.location.reload();
                         }, 1500);
                     });
                 },
@@ -104,5 +104,37 @@ $(document).ready(function () {
         }
     });
 
-});
+    //-------- Start arrange ---------
+    $('#arrange').click(function (news) {
+        news.preventDefault();
+        //start preloarder
+        $('.someBlock').preloader();
+        //grab all form data  
+        var formData = new FormData($('#form-data')[0]); //grab all form data  
+        formData.append("arrange", "TRUE");
+        $.ajax({
+            url: "ajax/php/photo-album.php",
+            type: 'POST',
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            dataType: 'json',
+            success: function (result) {
+                //remove preloarder 
+                $('.someBlock').preloader('remove');
+                swal({
+                    title: "success!",
+                    text: "Your data arrange successfully !",
+                    type: 'success',
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+            }
+        });
+    });
+    //-------- End arrange ---------
+    //----------------------------------------------------
 
+});
