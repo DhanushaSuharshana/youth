@@ -337,6 +337,7 @@ if (isset($_GET["id"])) {
         <script>
             MCDatepicker.create({
                     el: '#start_date_edit_<?php echo $course['id']; ?>',
+                    selectedDate: new Date('<?php echo $course['start_date'] ?>'),
                     minDate: new Date(),
                     // autoClose: true,
                     // closeOnBlur: false,
@@ -397,6 +398,7 @@ if (isset($_GET["id"])) {
 
         const start_date = MCDatepicker.create({
             el: '#start_date',
+            selectedDate: new Date(),
             // autoClose: true,
             dateFormat: 'yyyy-mm-dd',
             minDate: new Date(),

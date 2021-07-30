@@ -24,6 +24,20 @@ include_once(dirname(__FILE__) . '/auth.php');
     <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/preloader.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="plugin/MCDatepicker-master/dist/mc-calendar.min.css" rel="stylesheet" type="text/css" />
+    <script src="plugin/MCDatepicker-master/dist/mc-calendar.min.js" type="text/javascript"></script>
+    <style>
+        .mc-calendar {
+            z-index: 1600 !important;
+        }
+
+        .mc-display__day,
+        .mc-display__date,
+        .mc-display__month,
+        .mc-display__year {
+            color: hsla(0, 0%, 100%, .8) !important;
+        }
+    </style>
 </head>
 
 <body class="someBlock">
@@ -72,14 +86,14 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     foreach ($NEWS_TYPE->all() as $news_type) {
                                                         // if ($id == $news_type['id']) {
                                                     ?>
-                                                            <!-- <option value="<?php echo $news_type['id'] ?>" selected=""> <?php echo $news_type['title'] ?></option> -->
+                                                        <!-- <option value="<?php echo $news_type['id'] ?>" selected=""> <?php echo $news_type['title'] ?></option> -->
                                                         <?php
                                                         // } else {
                                                         ?>
-                                                            <option value="<?php echo $news_type['id'] ?>"> <?php echo $news_type['title'] ?></option>
+                                                        <option value="<?php echo $news_type['id'] ?>"> <?php echo $news_type['title'] ?></option>
 
                                                     <?php
-                                                        }
+                                                    }
                                                     // }
                                                     ?>
                                                 </select>
@@ -157,12 +171,23 @@ include_once(dirname(__FILE__) . '/auth.php');
     <script src="tinymce/js/tinymce/tinymce.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-        $(function() {
-            $("#date").datepicker({
-                dateFormat: 'yy-mm-dd',
-                minDate: 'today'
-            });
-        });
+        // $(function() {
+        //     $("#date").datepicker({
+        //         dateFormat: 'yy-mm-dd',
+        //         minDate: 'today'
+        //     });
+        // });
+    </script>
+    <script>
+        MCDatepicker.create({
+            el: '#date',
+            selectedDate: new Date(),
+            customClearBTN: '',
+            minDate: new Date(),
+            // autoClose: true,
+            // closeOnBlur: false,
+            dateFormat: 'yyyy-mm-dd',
+        })
     </script>
     <script>
         tinymce.init({
