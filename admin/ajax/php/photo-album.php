@@ -81,6 +81,30 @@ if (isset($_POST['update'])) {
     }
 }
 
+
+
+//--------------------------------------------------------------------------
+//-- ** Start arrange code  
+if (isset($_POST['arrange'])) {
+
+    $PHOTO_ALBUM_OBJ = new PhotoAlbum(NULL);
+
+    foreach ($_POST['sort'] as $key => $img) {
+
+        $key = $key + 1;
+
+        $res = $PHOTO_ALBUM_OBJ->arrange($key, $img);
+        //-- ** End Assign Post Params
+    }
+
+    $result = [
+        "status" => 'success'
+    ];
+    echo json_encode($result);
+    exit();
+}
+//End arrange Code Block
+//--------------------------------------------------------------------------
 if ($_POST['option'] == 'delete') {
     $PHOTO_ALBUM = new PhotoAlbum($_POST['id']);
     unlink("../../../upload/photo-album/" . $PHOTO_ALBUM->image_name);
@@ -92,6 +116,8 @@ if ($_POST['option'] == 'delete') {
         echo json_encode($data);
     }
 }
+
+
 
 if (isset($_POST['save-data'])) {
 
