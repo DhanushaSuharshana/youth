@@ -6,7 +6,8 @@
  * 
  *  
  */
-class Event {
+class Event
+{
 
     public $id;
     public $title;
@@ -18,7 +19,8 @@ class Event {
     public $description;
     public $queue;
 
-    public function __construct($id) {
+    public function __construct($id)
+    {
         if ($id) {
 
             $query = "SELECT  * FROM `event` WHERE `id`=" . $id;
@@ -39,20 +41,21 @@ class Event {
         }
     }
 
-    public function create() {
+    public function create()
+    {
 
 
 
         $query = "INSERT INTO `event` (`title`,`date`,`location`,`address`, `image_name`,`short_description`,`description`,`queue`) VALUES  ('"
-                . $this->title . "', '"
-                . $this->date . "', '"
-                . $this->location . "', '"
-                . $this->address . "', '"
-                . $this->image_name . "', '"
-                . $this->short_description . "', '"
-                . $this->description . "', '"
-                . $this->queue . "')";
-      
+            . $this->title . "', '"
+            . $this->date . "', '"
+            . $this->location . "', '"
+            . $this->address . "', '"
+            . $this->image_name . "', '"
+            . $this->short_description . "', '"
+            . $this->description . "', '"
+            . $this->queue . "')";
+
         $db = new Database();
 
         $result = $db->readQuery($query);
@@ -64,7 +67,8 @@ class Event {
         }
     }
 
-    public function getEventByInstitute($institute) {
+    public function getEventByInstitute($institute)
+    {
 
         $query = "SELECT  * FROM `event` WHERE `institute` = '" . $institute . "'";
 
@@ -80,17 +84,18 @@ class Event {
         return $array_res;
     }
 
-    public function update() {
+    public function update()
+    {
 
         $query = "UPDATE  `event` SET "
-                . "`title` ='" . $this->title . "',"
-                . "`date` ='" . $this->date . "',"
-                . "`location` ='" . $this->location . "',"
-                . "`address` ='" . $this->address . "',"
-                . "`image_name` ='" . $this->image_name . "',"
-                . "`short_description` ='" . $this->short_description . "',"
-                . "`description` ='" . $this->description . "' "
-                . "WHERE `id` = '" . $this->id . "'";
+            . "`title` ='" . $this->title . "',"
+            . "`date` ='" . $this->date . "',"
+            . "`location` ='" . $this->location . "',"
+            . "`address` ='" . $this->address . "',"
+            . "`image_name` ='" . $this->image_name . "',"
+            . "`short_description` ='" . $this->short_description . "',"
+            . "`description` ='" . $this->description . "' "
+            . "WHERE `id` = '" . $this->id . "'";
 
         $db = new Database();
 
@@ -103,7 +108,8 @@ class Event {
         }
     }
 
-    public function all() {
+    public function all()
+    {
 
         $query = "SELECT * FROM `event` ORDER BY `queue` ASC";
         $db = new Database();
@@ -117,20 +123,19 @@ class Event {
         return $array_res;
     }
 
-      public function arrange($key, $img) {
-        $query = "UPDATE `event` SET `queue` = '" . $key . "'  WHERE id ='" . $img . "'"; 
+    public function arrange($key, $img)
+    {
+        $query = "UPDATE `event` SET `queue` = '" . $key . "'  WHERE id ='" . $img . "'";
         $db = new Database();
         $result = $db->readQuery($query);
         return $result;
     }
-    public function delete() {  
-        
+    public function delete()
+    {
+
         $query = 'DELETE FROM `event` WHERE id="' . $this->id . '"';
-        
+
         $db = new Database();
         return $db->readQuery($query);
     }
-
 }
-
-

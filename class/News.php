@@ -8,18 +8,20 @@
  * 
  *  
  */
-class News {
+class News
+{
 
-    public $id; 
-    public $news_type; 
+    public $id;
+    public $news_type;
     public $title;
     public $date;
-    public $image_name; 
-    public $short_description; 
+    public $image_name;
+    public $short_description;
     public $description;
     public $queue;
 
-    public function __construct($id) {
+    public function __construct($id)
+    {
         if ($id) {
 
             $query = "SELECT  * FROM `news` WHERE `id`=" . $id;
@@ -37,27 +39,29 @@ class News {
         }
     }
 
-    public function create() {
+    public function create()
+    {
 
         $query = "INSERT INTO `news` (`news_type`,`title`,`date`, `image_name`,`short_description`,`description`,`queue`) VALUES  ('"
-                 . $this->news_type . "', '"
-                 . $this->title . "', '"
-                 . $this->date . "', '"
-                . $this->image_name . "', '"
-                . $this->short_description . "', '"
-                . $this->description . "', '"
-                . $this->queue . "')";
-    
+            . $this->news_type . "', '"
+            . $this->title . "', '"
+            . $this->date . "', '"
+            . $this->image_name . "', '"
+            . $this->short_description . "', '"
+            . $this->description . "', '"
+            . $this->queue . "')";
+
         $db = new Database();
         $result = $db->readQuery($query);
         if ($result) {
-             return TRUE;
+            return TRUE;
         } else {
             return FALSE;
         }
     }
 
-    public function getEventByInstitute($institute) {
+    public function getEventByInstitute($institute)
+    {
         $query = "SELECT  * FROM `news` WHERE `institute` = '" . $institute . "'";
         $db = new Database();
         $result = $db->readQuery($query);
@@ -69,16 +73,17 @@ class News {
         return $array_res;
     }
 
-    public function update() {
+    public function update()
+    {
 
         $query = "UPDATE  `news` SET "
-                . "`news_type` ='" . $this->news_type . "',"
-                . "`title` ='" . $this->title . "',"
-                . "`date` ='" . $this->date . "',"
-                . "`image_name` ='" . $this->image_name . "',"
-                . "`short_description` ='" . $this->short_description . "',"
-                . "`description` ='" . $this->description . "' "
-                . "WHERE `id` = '" . $this->id . "'";
+            . "`news_type` ='" . $this->news_type . "',"
+            . "`title` ='" . $this->title . "',"
+            . "`date` ='" . $this->date . "',"
+            . "`image_name` ='" . $this->image_name . "',"
+            . "`short_description` ='" . $this->short_description . "',"
+            . "`description` ='" . $this->description . "' "
+            . "WHERE `id` = '" . $this->id . "'";
 
         $db = new Database();
         $result = $db->readQuery($query);
@@ -89,7 +94,8 @@ class News {
         }
     }
 
-    public function all() {
+    public function all()
+    {
         $query = "SELECT * FROM `news` ORDER BY `queue` ASC";
         $db = new Database();
         $result = $db->readQuery($query);
@@ -100,21 +106,18 @@ class News {
         return $array_res;
     }
 
-    public function arrange($key, $img) {
+    public function arrange($key, $img)
+    {
         $query = "UPDATE `news` SET `queue` = '" . $key . "'  WHERE id = '" . $img . "'";
         $db = new Database();
         $result = $db->readQuery($query);
         return $result;
     }
 
-
-    public function delete() {
+    public function delete()
+    {
         $query = 'DELETE FROM `news` WHERE id="' . $this->id . '"';
         $db = new Database();
         return $db->readQuery($query);
     }
-
-  
-
 }
-

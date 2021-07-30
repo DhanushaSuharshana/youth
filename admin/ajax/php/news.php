@@ -88,6 +88,29 @@ if (isset($_POST['update'])) {
     }
 }
 //End Update Code Block
+
+//--------------------------------------------------------------------------
+//-- ** Start arrange code  
+if (isset($_POST['arrange'])) {
+
+    $NEWS_OBJ = new News(NULL);
+
+    foreach ($_POST['sort'] as $key => $img) {
+
+        $key = $key + 1;
+
+        $res = $NEWS_OBJ->arrange($key, $img);
+        //-- ** End Assign Post Params
+    }
+
+    $result = [
+        "status" => 'success'
+    ];
+    echo json_encode($result);
+    exit();
+}
+//End arrange Code Block
+//--------------------------------------------------------------------------
 //--------------------------------------------------------------------------
 //-- ** Start delete code  
 if ($_POST['option'] == 'delete') {
@@ -102,13 +125,6 @@ if ($_POST['option'] == 'delete') {
     }
 }
 //Arange slider
-if (isset($_POST['arrange'])) {
-    foreach ($_POST['sort'] as $key => $img) {
-        $key = $key + 1;
-        $NEWS = News::arrange($key, $img);
-        header('Location:../../../arrange-news.php?message=9');
-    }
-}
 
 
 
