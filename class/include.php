@@ -20,7 +20,7 @@ include_once(dirname(__FILE__) . '/Districts.php');
 include_once(dirname(__FILE__) . '/CenterType.php');
 include_once(dirname(__FILE__) . '/Center.php');
 include_once(dirname(__FILE__) . '/CourseByCenters.php');
-
+include_once(dirname(__FILE__) . '/Pages.php');
 
 function dd($data) {
     var_dump($data);
