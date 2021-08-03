@@ -19,6 +19,8 @@ class Course
     public $duration;
     public $start_date;
     public $short_description;
+    public $description;
+    public $queue;
 
     public function __construct($id)
     {
@@ -41,14 +43,17 @@ class Course
             $this->duration = $result['duration'];
             $this->start_date = $result['start_date'];
             $this->short_description = $result['short_description'];
+            $this->description = $result['description'];
+            $this->queue = $result['queue'];
 
             return $result;
         }
     }
 
-    public function create()
-    {
-        $query = "INSERT INTO `courses` (`course_type`,`name`,`max_student`,`languages`,`image_name`,`level`,`duration`,`start_date`,`short_description`,`description`) VALUES  ('"
+ 
+    public function create() {
+        
+         $query = "INSERT INTO `courses` (`course_type`,`name`,`max_student`,`languages`,`image_name`,`level`,`duration`,`start_date`,`short_description`,`description`) VALUES  ('"
             . $this->course_type . "','"
             . $this->name . "','"
             . $this->max_student . "', '"
@@ -69,10 +74,12 @@ class Course
         }
     }
 
-    public function all()
-    {
-        $query = "SELECT * FROM `courses` ORDER BY queue ASC";
-        $db = new Database();
+    
+    public function all() {
+        
+        $query = "SELECT * FROM `courses`";
+        
+         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
         while ($row = mysqli_fetch_array($result)) {

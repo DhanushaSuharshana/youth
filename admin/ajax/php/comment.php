@@ -73,7 +73,7 @@ if (isset($_POST['update'])) {
     $COMMENT->title = $_POST['title'];
     $COMMENT->date = $_POST['date'];
     $COMMENT->comment = $_POST['comment'];
-    $COMMENT->is_active = isset($_POST['active']) ? $_POST['active'] : 0 ;
+    $COMMENT->is_active = $_POST['active'];
     $COMMENT->update();
 
     if ($COMMENT) {

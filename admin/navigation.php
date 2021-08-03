@@ -151,7 +151,7 @@
                 </li>
 
                 <li>
-                    <a href="create-testimonial.php">
+                    <a href="manage-testimonial.php">
                         <i class="bx bx-images"></i>
                         <span>Testimonial</span>
                     </a>

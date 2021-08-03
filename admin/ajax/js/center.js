@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
 //---------- Start Create Data ---------
-    $("#create").click(function (event)    {
+    $("#create").click(function (event) {
         event.preventDefault();
         //-- ** Start Error Messages
         if (!$('#name').val() || $('#name').val().length === 0) {
@@ -11,7 +11,6 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-
         } else if (!$('#type').val() || $('#type').val().length === 0) {
             swal({
                 title: "Error!",
@@ -36,7 +35,6 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-            //-- ** End Error Messages
         } else if (!$('#email').val() || $('#email').val().length === 0) {
             swal({
                 title: "Error!",
@@ -82,7 +80,6 @@ jQuery(document).ready(function () {
             $('.someBlock').preloader();
             var formData = new FormData($('#form-data')[0]);  //grab all form data  
             formData.append("create", "TRUE");
-
             $.ajax({
                 url: "ajax/php/center.php",
                 type: 'POST',
@@ -122,7 +119,7 @@ jQuery(document).ready(function () {
         return false;
     });
 //---------- End Create Data ---------
-
+//--------------------------------------
 //---------- Start Edit Data ---------
     $(".edit-data").click(function (event) {
         event.preventDefault();
@@ -136,7 +133,6 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-
         } else if (!$('.type').val() || $('.type').val().length === 0) {
             swal({
                 title: "Error!",
@@ -153,7 +149,7 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        }  else if (!$('.email').val() || $('.email').val().length === 0) {
+        } else if (!$('.email').val() || $('.email').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter Email..!",
@@ -237,6 +233,8 @@ jQuery(document).ready(function () {
         }
         return false;
     });
+    //---------- End Create Data ---------
+    //------------------------------------
     //-------- Start Delete Data ---------
     $('.delete-data').click(function () {
         var id = $(this).attr("data-id");

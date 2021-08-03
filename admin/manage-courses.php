@@ -40,8 +40,7 @@ if (isset($_GET["id"])) {
     <style>
         .mc-calendar {
             z-index: 1600 !important;
-        }
-
+        } 
         .mc-display__day,
         .mc-display__date,
         .mc-display__month,
@@ -204,10 +203,12 @@ if (isset($_GET["id"])) {
                                                 <td><?php echo $course['languages']; ?></td>
 
                                                 <td>
+ 
                                                     <div class="badge bg-pill bg-soft-success font-size-14" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $course['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> |
                                                     <a href="create-course-subjects.php?id=<?php echo $course['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
                                                     <a href="arrange-course.php" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
                                                     <a href="#">
+ 
                                                         <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $course['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
                                                     </a>
                                                 </td>
@@ -218,11 +219,6 @@ if (isset($_GET["id"])) {
                             </div>
                         </div>
                     </div>
-
-
-
-
-
                 </div>
             </div>
             <?php include './footer.php'; ?>
@@ -321,7 +317,6 @@ if (isset($_GET["id"])) {
                                         <textarea class="descriptions" name="description"><?php echo $course['description']; ?></textarea>
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
                                         <button class="btn btn-primary edit-data" dataId="<?php echo $course['id']; ?>" type="submit">Update</button>
@@ -330,9 +325,9 @@ if (isset($_GET["id"])) {
                             </div>
                         </form>
                     </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
+                </div> 
+            </div> 
+        </div> 
 
         <script>
             MCDatepicker.create({

@@ -125,16 +125,16 @@ $CENTER = new Center($id);
                                         <tbody>
                                             <?php
                                             $COURSES_BY_CENTERS = new CourseByCenters(NULL);
-                                            foreach ($COURSES_BY_CENTERS->getCoursesByCenterId($id) as $key => $courses_by_centerss_by_centers) {
+                                            foreach ($COURSES_BY_CENTERS->getCoursesByCenterId($id) as $key => $courses_by_centerss) {
                                                 $key++;
-                                                $COURSE = new Course($courses_by_centerss_by_centers['course_id']);
+                                                $COURSE = new Course($courses_by_centerss['course_id']);
                                                 ?>
-                                                <tr id="div<?php echo $courses_by_centerss_by_centers['id']; ?>">
+                                                <tr id="div<?php echo $courses_by_centerss['id']; ?>">
                                                     <td><?php echo $key; ?></td>
                                                     <td><?php echo $COURSE->name; ?></td>
                                                     <td>  
-                                                        <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $courses_by_centerss_by_centers['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
-                                                        <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $courses_by_centerss_by_centers['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
+                                                        <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $courses_by_centerss['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
+                                                        <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $courses_by_centerss['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
                                                     </td>
                                                 </tr>
                                                 <?php
@@ -151,7 +151,7 @@ $CENTER = new Center($id);
         </div>
         <!-- END layout-wrapper -->
         <?php
-        foreach ($COURSES_BY_CENTERS->all() as $key => $courses_by_centers) {
+        foreach ($COURSES_BY_CENTERS->getCoursesByCenterId($id) as $key => $courses_by_centers) {
             $COURSES = new Course($courses_by_centers['course_id']);
             $key++;
             ?>
@@ -166,76 +166,15 @@ $CENTER = new Center($id);
                         <div class="modal-body">
                             <form method="POST" id="form-data-<?php echo $courses_by_centers['id']; ?>" class="from">
                                 <div class="card-body">                                
-                                    <div class="mb-3 row">
-                                        <label for="example-text-input" class="col-md-2 col-form-label">Select course name:- </label>
-                                        <div class="col-md-10">
-                                            <select class="form-control select2<?php echo $courses_by_centers['id']?>" >
-                                                <option value="">-- Select Your Course Id --</option> 
-                                                <?php
-                                                $COURSE = new Course(NULL);
-                                                foreach ($COURSE->all() as $courses_by_centers) {
-                                                    ?>
-                                                    <option value="<?php echo $courses_by_centers['id'] ?>"><?php echo $courses_by_centers['name'] ?></option>
-                                                <?php } ?>
-                                            </select>
-                                        </div>
-                                    </div>
+
 
                                     <div class="mb-3 row">
                                         <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
                                         <div class="col-md-10">
-                                            <input class="form-control name" type="text"   name="name" placeholder="Enter News Title" value="<?php echo $courses_by_centers['name'] ?>">
+                                            <input class="form-control name" type="text"   name="name" placeholder="Enter News Title" value="<?php echo $COURSES->name ?>">
                                         </div>
                                     </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-search-input" class="col-md-2 col-form-label">Max Students</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control max_student" type="text"   name="max_student" placeholder="Please enter max students in one course" value="<?php echo $courses_by_centers['max_student'] ?>">
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control image_name" type="file" name="image_name" value="">
-                                            <img width="200" class="img-responsive" src="../upload/courses/<?php echo $courses_by_centers['image_name']; ?>">
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-url-input" class="col-md-2 col-form-label">Level</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control level" type="text"     name="level"  value="<?php echo $courses_by_centers['level'] ?>">
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-url-input" class="col-md-2 col-form-label">Languages</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control languages" type="text"  name="languages"  value="<?php echo $courses_by_centers['languages'] ?>">
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-url-input" class="col-md-2 col-form-label">Duration</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control duration" type="text"  name="duration"  value="<?php echo $courses_by_centers['duration'] ?>">
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="example-url-input" class="col-md-2 col-form-label">Start Date</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control start_dates"   type="text"  name="start_date" value="<?php echo $courses_by_centers['start_date'] ?>">
-                                        </div>
-                                    </div> 
-                                    <div class="mb-3 row">
-                                        <label for="example-url-input" class="col-md-2 col-form-label">Short Description</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control short_description" type="text"   name="short_description" value="<?php echo $courses_by_centers['short_description'] ?>">
-                                        </div>
-                                    </div> 
-                                    <div class="mb-3 row">
-                                        <label for="example-url-input" class="col-md-2 col-form-label">Description</label>
-                                        <div class="col-md-10">
-                                            <textarea class="descriptions" name="description"><?php echo $courses_by_centers['description']; ?></textarea>
-                                        </div>
-                                    </div> 
+
 
                                     <div class="row">
                                         <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;"> 
