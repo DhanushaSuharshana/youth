@@ -1,10 +1,9 @@
 $(document).ready(function () {
-
-    //Create 
+//---------- Start Create Data ---------
     $("#create").click(function (event) {
         event.preventDefault();
         tinymce.triggerSave();
-       
+        //-- ** Start Error Messages
         if (!$('#name').val() || $('#name').val().length === 0) {
             swal({
                 title: "Error!",
@@ -21,7 +20,6 @@ $(document).ready(function () {
                 timer: 1500,
                 showConfirmButton: false
             });
-
         } else if (!$('#image_name').val() || $('#image_name').val().length === 0) {
             swal({
                 title: "Error!",
@@ -30,7 +28,6 @@ $(document).ready(function () {
                 timer: 1500,
                 showConfirmButton: false
             });
-
         } else if (!$('#date').val() || $('#date').val().length === 0) {
             swal({
                 title: "Error!",
@@ -48,8 +45,10 @@ $(document).ready(function () {
                 showConfirmButton: false
             });
         } else {
+            //-- ** End Error Messages
             $('.someBlock').preloader();
-            var formData = new FormData($('#form-data')[0]);
+            var formData = new FormData($('#form-data')[0]);  //grab all form data  
+            formData.append("create", "TRUE");
             $.ajax({
                 url: "ajax/php/comment.php",
                 type: "POST",
@@ -60,8 +59,9 @@ $(document).ready(function () {
                 processData: false,
                 dataType: 'json',
                 success: function (result) {
+                    //remove preloarder
+                    $('.someBlock').preloader('remove');
                     if (result.status === 'success') {
-
                         swal({
                             title: "success!",
                             text: "Your data saved successfully !",
@@ -72,9 +72,7 @@ $(document).ready(function () {
                         window.setTimeout(function () {
                             window.location.reload()
                         }, 2000);
-
                     } else if (result.status === 'error') {
-
                         swal({
                             title: "Error!",
                             text: "Something went wrong",
@@ -87,12 +85,15 @@ $(document).ready(function () {
             });
         }
     });
-
-    //update
+//---------- End Create Data ---------
+//------------------------------------
+//---------- Start Edit Data ---------
     $(".edit-data").click(function (event) {
         event.preventDefault();
         tinymce.triggerSave();
+        //-- ** Start Error Messages
         var id = $(this).attr("dataId");
+
         if (!$('.name').val() || $('.name').val().length === 0) {
             swal({
                 title: "Error!",
@@ -117,7 +118,7 @@ $(document).ready(function () {
                 timer: 1500,
                 showConfirmButton: false
             });
-        } else if (!$('.date').val() || $('.date').val().length === 0) {
+        } else if (!$('.date_edit').val() || $('.date_edit').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter date..!",
@@ -125,7 +126,7 @@ $(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-        } else if (!$('.comment_edit_'+id).val() || $('.comment_edit_'+id).val().length === 0) {
+        } else if (!$('.comment_edit_' + id).val() || $('.comment_edit_' + id).val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please enter comment..!",
@@ -134,10 +135,12 @@ $(document).ready(function () {
                 showConfirmButton: false
             });
         } else {
+            //start preloarder
             $('.someBlock').preloader();
             var formData = new FormData($('#form-data-' + id)[0]);
             formData.append("update", "TRUE");
             formData.append("id", id);
+            alert();
             $.ajax({
                 url: "ajax/php/comment.php",
                 type: "POST",
@@ -153,7 +156,7 @@ $(document).ready(function () {
                         showConfirmButton: false
                     }, function () {
                         setTimeout(function () {
-window.location.reload();
+                            window.location.reload();
                             // window.location.replace("edit-comment.php?id=" + result.id);
                         }, 1500);
                     });
@@ -164,7 +167,42 @@ window.location.reload();
             });
         }
     });
+//---------- End update Data ---------
+//------------------------------------
+//---------- Start delete Data ---------
+    $('.delete-comment').click(function () {
 
-    //update
-    ;
+        var id = $(this).attr("data-id");
+
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this imaginary file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false
+        }, function () {
+
+            $.ajax({
+                url: "delete/ajax/comment.php",
+                type: "POST",
+                data: {id: id, option: 'delete'},
+                dataType: "JSON",
+                success: function (jsonStr) {
+                    if (jsonStr.status) {
+
+                        swal({
+                            title: "Deleted!",
+                            text: "Your imaginary file has been deleted.",
+                            type: 'success',
+                            timer: 2000,
+                            showConfirmButton: false
+                        });
+                        $('#div' + id).remove();
+                    }
+                }
+            });
+        });
+    });
 });
