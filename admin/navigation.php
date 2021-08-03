@@ -58,7 +58,12 @@
                         <span>Manage Leaders</span>
                     </a>
                 </li>
-
+                <li>
+                    <a href="manage-pages.php" class="waves-effect">
+                        <i class="bx bx-user"></i>
+                        <span>Manage Pages</span>
+                    </a>
+                </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-book"></i>
