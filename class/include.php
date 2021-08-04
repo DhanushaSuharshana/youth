@@ -10,6 +10,7 @@ include_once(dirname(__FILE__) . '/PhotoAlbum.php');
 include_once(dirname(__FILE__) . '/AlbumPhoto.php');
 include_once(dirname(__FILE__) . '/CourseType.php');
 include_once(dirname(__FILE__) . '/Course.php');
+include_once(dirname(__FILE__) . '/CoursePhoto.php');
 include_once(dirname(__FILE__) . '/CourseSubjects.php');
 include_once(dirname(__FILE__) . '/NewsType.php');
 include_once(dirname(__FILE__) . '/News.php');
