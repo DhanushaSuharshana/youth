@@ -1,12 +1,20 @@
 <?php
 
-class all extends Controller {
+class all extends Controller
+{
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
     }
 
-    function all_page() {
+    function all_page()
+    {
         $this->view->render('all/all_page');
+    }
+
+    function card()
+    {
+        $this->view->render('all/card');
     }
 }
