@@ -61,28 +61,28 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item">
-                        <h3>Youth GYM</h3>
+                        <h3>Sports</h3>
                         <p>Enhance youth fitness with high quality equipments with qulified trainer.</p>
                         <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item bg-image">
-                        <h3>Youth Band</h3>
+                        <h3>Aesthetics</h3>
                         <p>Best place for ivolve youth musical skills and introduce them to field with us.</p>
                         <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item bg-color">
-                        <h3>Youth Auditorium</h3>
+                        <h3>Education</h3>
                         <p>We have over 175+ seats and modern sound controllers with air conditioned.</p>
                         <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item">
-                        <h3>Youth Video Wall</h3>
+                        <h3>Others</h3>
                         <p>Brodcast commercial for goverment and private sectors with affordable prices.</p>
                         <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                     </div>
