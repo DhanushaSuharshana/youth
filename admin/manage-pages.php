@@ -8,7 +8,7 @@ include_once(dirname(__FILE__) . '/auth.php');
     <head>
 
         <meta charset="utf-8" />
-        <title>Pages | Youth Service LTD </title>
+        <title>Manage Pages | Youth Service LTD </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="" name="" />
         <meta content="Themesbrand" name="author" />
@@ -109,7 +109,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body"> 
-                                        <h4 class="card-title">Manage Page</h4> 
+                                        <h4 class="card-title">Manage Pages</h4> 
 
                                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                             <thead>
@@ -119,8 +119,6 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
-
-
                                             <tbody>
                                                 <?php
                                                 $PAGES = new Pages(NULL);
@@ -133,7 +131,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         <td> 
                                                             <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $page['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
                                                             <!-- <a href="manage-courses.php?id=<?php echo $page['id'] ?>"><div class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-address-card p-1"></i></div></a>   -->
-                                                            <a href="#">
+                                                            <a href="create-page-characters.php?id=<?php echo $page['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-user   p-1"></i></a>
+                                                            
+                                                            |<a href="#">
                                                                 <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $page['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
                                                             </a>
                                                         </td>
