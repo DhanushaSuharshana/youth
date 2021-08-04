@@ -154,7 +154,7 @@
                         <div class="icon">
                             <i class='bx bx-book-reader'></i>
                         </div>
-                        <h3>Procruement Notices</h3>
+                        <h3>Youth Club</h3>
                         <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
                         <div class="icon">
                             <i class='bx bx-target-lock'></i>
                         </div>
-                        <h3>Exam and Results</h3>
+                        <h3>School of Computing</h3>
                         <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                         <div class="icon">
                             <i class='bx bxs-thermometer'></i>
                         </div>
-                        <h3>Downloads and Vacancy</h3>
+                        <h3>NYSCO</h3>
                         <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                     </div>
                 </div>
