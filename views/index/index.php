@@ -127,11 +127,11 @@
                                 youth in the proper direction to enable them to empower themselves to the fullest potential while contributing
                             </p>
                             <div class="features-text">
-                                <h5><i class="bx bx-planet"></i>A place where you can achieve</h5>
-                                <!--                                <p>Education encompasses both the teaching and learning of knowledge, proper conduct, and technical competency.</p>
-                                -->
+                                
+                      <p<b>Download Mobile App</b></p>
+                               
                             </div>
-                            <a href="our-centers.php" class="default-btn"><i class="bx bx-move-horizontal icon-arrow before"></i><span class="label">View Our Centers</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                            <a href="our-centers.php" class=""><img src="assets/img/app.png" class="app-img"><span class="label"></span></a>
                         </div>
                     </div>
                 </div>
