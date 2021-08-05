@@ -158,7 +158,7 @@
 
                             <h3>Youth Club</h3>
                             <p>Sri Lanka Youth Club Movement Implemented by Sri Lanka Federation of Youth Clubs.</p>
-                            <div class="boxes-btn">Explore more <i class='bx bx-plus'></i></div>
+                            <div class="boxes-btn-new">Explore more <i class='bx bx-plus'></i></div>
 
                         </div>
                     </a>
@@ -172,7 +172,7 @@
                             <h3>School of Computing</h3>
 
                             <p>Best place to learn modern technologies with number of qualified instructors.</p>
-                            <div class="boxes-btn">Explore more <i class='bx bx-plus'></i></div>
+                            <div class="boxes-btn-new">Explore more <i class='bx bx-plus'></i></div>
 
                         </div>
                     </a>
@@ -186,7 +186,7 @@
                             <h3>NYSCO</h3>
 
                             <p>Sri Lanka National Youth Services Co-operative Society help young crowd in rural areas</p>
-                            <div class="boxes-btn">Explore more <i class='bx bx-plus'></i></div>
+                            <div class="boxes-btn-new">Explore more <i class='bx bx-plus'></i></div>
 
                         </div>
                     </a>
