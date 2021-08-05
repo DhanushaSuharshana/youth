@@ -40,7 +40,7 @@
                                 <p class="dis-none">Youth of Sri lanka are also having an undertaking for economic and social upliftment of the country. </p>
                                 <div class="btn-box">
                                     <a href="#" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
-                                    <a href="#" class="optional-btn">Get Started Free</a>
+<!--                                    <a href="#" class="optional-btn">Get Started Free</a>-->
                                 </div>
                             </div>
                         </div>
@@ -62,28 +62,28 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item">
                         <h3>Sports</h3>
-                        <p>Enhance youth fitness with high quality equipments with qulified trainer.</p>
+                        <p>Sports play a large role in the culture of the Globe. Come and Join with us</p>
                         <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item bg-image">
                         <h3>Aesthetics</h3>
-                        <p>Best place for ivolve youth musical skills and introduce them to field with us.</p>
+                        <p>Best place for involve youth musical skills and introduce them the whole world.</p>
                         <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item bg-color">
                         <h3>Education</h3>
-                        <p>We have over 175+ seats and modern sound controllers with air conditioned.</p>
+                        <p>We have over best training institutes with modern facilities.Grab your chance soon</p>
                         <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item">
-                        <h3>Others</h3>
-                        <p>Brodcast commercial for goverment and private sectors with affordable prices.</p>
+                        <h3>Administration</h3>
+                        <p>We have vast number of other services related to youth services council</p>
                         <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                     </div>
                 </div>
@@ -146,7 +146,7 @@
             <div class="section-title">
                 <span class="sub-title">Make Connections</span>
                 <h2>What We Offer For Your Future.</h2>
-                <p> Down here take path what is most criticaly needed.</p>
+                <p> Down here take path what is most critically needed.</p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
@@ -186,7 +186,7 @@
             <div class="section-title">
                 <span class="sub-title">Get To Know</span>
                 <h2>Our Leaders</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea.</p>
+                <p>We Have Powerful Leaders With Great Vision On Sri Lankan Youth </p>
             </div>
             <div class="row">
                 <?php
@@ -839,7 +839,7 @@
         <div class="container">
             <div class="section-title text-left ">
                 <span class="sub-title">Read Testimonials</span>
-                <h2>What Students Says</h2>
+                <h2>What people say about us</h2>
                 <a href="courses" class="default-btn"><i class="bx bx-show-alt icon-arrow before"></i><span class="label">View All </span><i class="bx bx-show-alt icon-arrow after"></i></a>
             </div>
 
@@ -867,7 +867,7 @@
         <div class="container">
             <div class="section-title text-left">
                 <span class="sub-title">Watch Events</span>
-                <h2>Our Upcoming Events</h2>
+                <h2>Our Events</h2>
                 <a href="courses" class="default-btn"><i class="bx bx-show-alt icon-arrow before"></i><span class="label">View All </span><i class="bx bx-show-alt icon-arrow after"></i></a>
             </div>
             <!-- <div class="section-title">
