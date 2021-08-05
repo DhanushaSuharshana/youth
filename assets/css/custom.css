@@ -15,8 +15,11 @@
   margin-top: 27px;
   }
   
+  .boxes-btn-new{
+    color:black
+  }
 .boxes-btn-new:hover{
-color: black;
+color:white;
 
   }
   .app-img{
