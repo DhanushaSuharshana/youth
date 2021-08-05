@@ -19,8 +19,8 @@
         <link rel="stylesheet" href="<?php echo URL ?>assets/css/magnific-popup.min.css">
         <link rel="stylesheet" href="<?php echo URL ?>assets/css/style.css">
         <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
-        <title>Raque - Education & Online Courses HTML Template</title>
-        <link rel="icon" type="image/png" href="<?php echo URL ?>assets/img/favicon.png">
+        <title>Youth Council || Sri Lanka</title>
+        <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
     </head>
     <body>
 

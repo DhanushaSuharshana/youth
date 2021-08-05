@@ -34,29 +34,27 @@
             </div>
             <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="single-footer-widget mb-30">
-                    <h3>Support</h3>
+                    <h3>Quick Links</h3>
                     <ul class="support-link">
-                        <li><a href="<?php echo URL ?>youth_org/view">Privacy</a></li>
-                        <li><a href="#">FAQ's</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Condition</a></li>
-                        <li><a href="#">Policy</a></li>
-                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Student</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Centers</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="single-footer-widget mb-30">
-                    <h3>Useful Link</h3>
+                    <h3>Popular Services and Projects</h3>
                     <ul class="useful-link">
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development API</a></li>
-                        <li><a href="#">UI/UX Design</a></li>
-                        <li><a href="#">WP Development</a></li>
-                        <li><a href="#">App</a></li>
-                        <li><a href="#">Whitepaper</a></li>
-                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Youth Club</a></li>
+                        <li><a href="#">School of Computing</a></li>
+                        <li><a href="#">NYSCO</a></li>
+                        <li><a href="#">Youth Band</a></li>
+                        <li><a href="#">Youth Dancing Team</a></li>
+                        <li><a href="#">Music Club</a></li>
                     </ul>
                 </div>
             </div>
@@ -86,4 +84,3 @@
 
 <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 
- 

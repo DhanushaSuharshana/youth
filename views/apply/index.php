@@ -19,8 +19,8 @@
         <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
-        <title>Raque - Education & Online Courses HTML Template</title>
-        <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <title>Youth Council || Sri Lanka</title>
+        <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
     </head>
 
     <body>
@@ -187,9 +187,9 @@
             </div>
         </section>
 
- 
+
         <?php include './views/footer.php'; ?>
-        
+
         <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 
         <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
