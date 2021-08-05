@@ -12517,7 +12517,7 @@
         
         .faq-accordion .accordion .accordion-title.active i {
             -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+            transform: rotate(90deg);
         }
         
         .faq-accordion .accordion .accordion-content {

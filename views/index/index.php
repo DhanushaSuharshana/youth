@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="assets/css/bootstrap..min.css">
     <link rel="stylesheet" href="assets/css/boxicons.min.css">
     <link rel="stylesheet" href="assets/css/flaticon.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <title>Youth Council || Sri Lanka</title>
     <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
@@ -150,31 +151,40 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-offer-box">
-                        <div class="icon">
-                            <i class='bx bx-book-reader'></i>
+                    <a href="" class="">
+                        <div class="single-offer-box">
+                            <div class="icon">
+                                <i class='bx bx-group'></i>
+                            </div>
+                            <h3>Youth Organization</h3>
+                            <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                            <a href="#" class="boxes-btn">Explore more <i class='bx bx-plus'></i></a>
                         </div>
-                        <h3>Youth Club</h3>
-                        <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-offer-box">
-                        <div class="icon">
-                            <i class='bx bx-target-lock'></i>
+                    <a href="">
+                        <div class="single-offer-box">
+                            <div class="icon">
+                                <i class='bx bx-laptop'></i>
+                            </div>
+                            <h3>School of Computing</h3>
+                            <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                            <a href="#" class="boxes-btn">Explore more <i class='bx bx-plus'></i></a>
                         </div>
-                        <h3>School of Computing</h3>
-                        <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
-                    <div class="single-offer-box">
-                        <div class="icon">
-                            <i class='bx bxs-thermometer'></i>
+                    <a href="">
+                        <div class="single-offer-box">
+                            <div class="icon">
+                                <i class='bx bxs-school'></i>
+                            </div>
+                            <h3>NYSCO</h3>
+                            <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                            <a href="#" class="boxes-btn">Explore more <i class='bx bx-plus'></i></a>
                         </div>
-                        <h3>NYSCO</h3>
-                        <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -183,10 +193,14 @@
 
     <section class="team-area pb-70  pt-70">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title text-left">
                 <span class="sub-title">Get To Know</span>
                 <h2>Our Leaders</h2>
+
                 <p>We Have Powerful Leaders With Great Vision On Sri Lankan Youth </p>
+
+                <a href="courses" class="default-btn"><i class="bx bx-show-alt icon-arrow before"></i><span class="label">View Leaders</span><i class="bx bx-show-alt icon-arrow after"></i></a>
+
             </div>
             <div class="row">
                 <?php
@@ -790,40 +804,45 @@
                     <div class="faq-accordion faq-accordion-style-two">
                         <ul class="accordion">
                             <li class="accordion-item">
-                                <a class="accordion-title active" href="javascript:void(0)">
-                                    <i class="bx bx-chevron-down"></i>
-                                    What are the different types of undergraduate degrees?
+                                <a class="accordion-title " href="javascript:void(0)">
+                                    <i class="bx bx-play"></i>
+                                    Youth Parliament
                                 </a>
-                                <div class="accordion-content show">
-                                    <p>Associate: a two-year program that either leads to a specific vocation or transitions to a bachelor program. Bachelor: a four or five-year program where students earn credits in a wide variety of courses.</p>
-                                </div>
                             </li>
                             <li class="accordion-item">
                                 <a class="accordion-title" href="javascript:void(0)">
-                                    <i class="bx bx-chevron-down"></i>
-                                    What are the different types of graduate degrees?
+                                    <i class="bx bx-play"></i>
+                                    Yowun Puraya
                                 </a>
-                                <div class="accordion-content">
-                                    <p>Associate: a two-year program that either leads to a specific vocation or transitions to a bachelor program. Bachelor: a four or five-year program where students earn credits in a wide variety of courses.</p>
-                                </div>
+
                             </li>
                             <li class="accordion-item">
                                 <a class="accordion-title" href="javascript:void(0)">
-                                    <i class="bx bx-chevron-down"></i>
-                                    Can you work while studying in the United States?
+                                    <i class="bx bx-play"></i>
+                                    Youth Club
                                 </a>
-                                <div class="accordion-content">
-                                    <p>Associate: a two-year program that either leads to a specific vocation or transitions to a bachelor program. Bachelor: a four or five-year program where students earn credits in a wide variety of courses.</p>
-                                </div>
+
                             </li>
                             <li class="accordion-item">
                                 <a class="accordion-title" href="javascript:void(0)">
-                                    <i class="bx bx-chevron-down"></i>
-                                    What is distance education?
+                                    <i class="bx bx-play"></i>
+                                    Youth Dancing Team
                                 </a>
-                                <div class="accordion-content">
-                                    <p>Associate: a two-year program that either leads to a specific vocation or transitions to a bachelor program. Bachelor: a four or five-year program where students earn credits in a wide variety of courses.</p>
-                                </div>
+
+                            </li>
+                            <li class="accordion-item">
+                                <a class="accordion-title" href="javascript:void(0)">
+                                    <i class="bx bx-play"></i>
+                                    Youth Music Band
+                                </a>
+
+                            </li>
+                            <li class="accordion-item">
+                                <a class="accordion-title" href="javascript:void(0)">
+                                    <i class="bx bx-play"></i>
+                                    Young Padura Programe
+                                </a>
+
                             </li>
                         </ul>
                     </div>
