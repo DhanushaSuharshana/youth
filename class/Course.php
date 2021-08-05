@@ -50,10 +50,11 @@ class Course
         }
     }
 
- 
-    public function create() {
-        
-         $query = "INSERT INTO `courses` (`course_type`,`name`,`max_student`,`languages`,`image_name`,`level`,`duration`,`start_date`,`short_description`,`description`) VALUES  ('"
+
+    public function create()
+    {
+
+        $query = "INSERT INTO `courses` (`course_type`,`name`,`max_student`,`languages`,`image_name`,`level`,`duration`,`start_date`,`short_description`,`description`) VALUES  ('"
             . $this->course_type . "','"
             . $this->name . "','"
             . $this->max_student . "', '"
@@ -74,12 +75,47 @@ class Course
         }
     }
 
-    
-    public function all() {
+
+    public function getOne($course)
+    {
+        $query = "SELECT * FROM `courses` WHERE  id = " . $course;
+
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+        while ($row = mysqli_fetch_array($result)) {
+
+            array_push($array_res, $row);
+        }
+        return $array_res[0];
+    }
+
+    public function getByCenter($center)
+    {
+        $query = "SELECT 
+        -- *
+         cou.id , cou.course_type, cou.name, cou.max_student, cou.level, cou.languages, cou.duration, cou.start_date, cou.short_description, cou.description, cou.image_name, cou.queue
         
+         FROM  course_by_centers cbc JOIN courses cou  on(cbc.course_id=cou.id) WHERE cbc.center_id = " . $center;
+
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+        while ($row = mysqli_fetch_array($result)) {
+
+            array_push($array_res, $row);
+        }
+        // print_r($array_res);
+        // exit;
+        return $array_res;
+    }
+
+    public function all()
+    {
+
         $query = "SELECT * FROM `courses`";
-        
-         $db = new Database();
+
+        $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
         while ($row = mysqli_fetch_array($result)) {

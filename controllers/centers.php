@@ -8,7 +8,7 @@ class centers extends Controller {
 
     function index() {
 
-        $this->view->render('centers/index');
+        $this->view->render('courses/filter');
     }
 
     function villa_details() {

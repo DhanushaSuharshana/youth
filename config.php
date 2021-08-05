@@ -7,3 +7,4 @@ define('HOST', $host);
 define('DEVELOPMENT_MODE', 1);
 
 define('URL', $protocol . $host . '/youth/');
+define('URL_PUBLIC', URL.'public/');

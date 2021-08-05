@@ -1,24 +1,38 @@
 <?php
 
-class courses extends Controller {
+class courses extends Controller
+{
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
     }
 
-    function index() {
-        $this->view->render('courses/index');
+    function list($query = false)
+    {
+        $this->view->query = $query;
+        // var_dump(base64_decode($query));
+        $this->view->render('courses/courses');
     }
 
-    function view() {
-
-//        $this->view->id = $id;
+    function view($query = false)
+    {
+        //        $this->view->id = $id;
+        $this->view->query = $query;
         $this->view->render('courses/view');
     }
-    function all_page() {
 
-//        $this->view->id = $id;
-        $this->view->render('courses/all_page');
+    function apply($query = false)
+    {
+        //        $this->view->id = $id;
+        $this->view->query = $query;
+        $this->view->render('courses/apply');
     }
 
+    function all_page()
+    {
+
+        //        $this->view->id = $id;
+        $this->view->render('courses/all_page');
+    }
 }
