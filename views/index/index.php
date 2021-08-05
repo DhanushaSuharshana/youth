@@ -402,7 +402,7 @@
                                     <div class="single-testimonials-item">
                                         <?php echo $comment['comment'] ?>
                                         <div class="info">
-                                            <img src="<?php echo $comment['image_name'] ?>" class="shadow rounded-circle" alt="image">
+                                            <img src="../../upload/comments/<?php echo $comment['image_name'] ?>" class="shadow rounded-circle" alt="image">
                                             <h3><?php echo $comment['title'] ?></h3>
                                             <span><?php echo $comment['name'] ?></span>
                                         </div>
@@ -425,9 +425,9 @@
                                 <?php
                                 $EVENT = new Event(NULL);
                                 foreach ($EVENT->all() as $key => $event) {
-                                    if ($key <= 3) {
+                                    if ($key <= 2) {
                                         ?>
-                                        <div class="col-lg-3 col-md-12 col-sm-6">
+                                        <div class="col-lg-4 col-md-12 col-sm-6">
                                             <a href="<?php echo URL ?>events/view">
                                                 <div class="events-box">
 
@@ -459,7 +459,7 @@
                                         </div>
 
                                         <?php
-                                    } else if ($key < 6) {
+                                    } else if ($key < 5) {
                                         ?>
                                         <div class="col-lg-6 col-md-12 col-sm-6">
                                             <div class="events-box">

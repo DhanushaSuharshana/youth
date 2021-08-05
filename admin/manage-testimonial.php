@@ -207,7 +207,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <div class="mb-3 row">
                                         <label for="example-text-input" class="col-md-2 col-form-label">Title</label>
                                         <div class="col-md-10">
-                                            <input class="form-control title" type="text" name="title" placeholder="Enter Comment Title" value="<?php echo $comment['name'] ?>">
+                                            <input class="form-control title" type="text" name="title" placeholder="Enter Comment Title" value="<?php echo $comment['title'] ?>">
                                         </div>
                                     </div>
 
