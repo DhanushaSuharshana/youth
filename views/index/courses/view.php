@@ -26,7 +26,16 @@
 </head>
 
 <body>
-    <?php include './views/header.php'; ?>
+    <?php include './views/header.php';
+    $COURSE = new Course(NULL);
+
+    $attr = explode('%', base64_decode($this->query));
+    $center_id = explode('=', $attr[1])[1];
+    $course_id = explode('=', $attr[2])[1];
+    $CENTER = new Center($center_id);
+    $course = $COURSE->getOne($course_id);
+    // var_dump($attr);
+    ?>
 
     <div class="page-title-area item-bg2 jarallax" data-jarallax='{"speed": 0.3}'>
         <div class="container">
@@ -45,25 +54,30 @@
                 <div class="row align-items-center">
                     <div class="col-lg-8">
                         <div class="courses-title">
-                            <h2>Certified Graphic Design with Free Project Course</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                            <h2><?php echo $course['name']; ?> (<?php echo $CENTER->name ?>)</h2>
+                            <p><?php echo $course['short_description'] ?>.</p>
                         </div>
                         <div class="courses-meta">
                             <ul>
                                 <li>
                                     <i class='bx bx-folder-open'></i>
-                                    <span>Category</span>
-                                    <a href="#">Design</a>
+                                    <span>Language</span>
+                                    <a href="#"><?php echo $course['languages'] ?></a>
                                 </li>
                                 <li>
                                     <i class='bx bx-group'></i>
-                                    <span>Students Enrolled</span>
-                                    <a href="#">813,454</a>
+                                    <span>Max Students</span>
+                                    <a href="#"><?php echo $course['max_student'] ?></a>
                                 </li>
                                 <li>
                                     <i class='bx bx-calendar'></i>
-                                    <span>Last Updated</span>
-                                    <a href="#">01/14/2021</a>
+                                    <span>Started Date</span>
+                                    <a href="#"><?php echo $course['start_date'] ?></a>
+                                </li>
+                                <li class="">
+                                    <a href="<?php echo URL; ?>courses/apply/<?php echo base64_encode('q=toapply%center='.$center_id.'%course='.$course['id']); ?>" class="default-btn"><i class="bx bx-move-horizontal icon-arrow before"></i><span class="label text-white">Apply Now</span>
+                                        <!-- <i class="bx bx-move-horizontal icon-arrow after"></i> -->
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -95,16 +109,17 @@
 
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img src="<?php echo URL ?>assets/img/events/1.jpg" alt="Los Angeles" style="width:100%;">
+                                    <img src="<?php echo URL ?>upload/courses/<?php echo $course['image_name']; ?>" alt="Los Angeles" style="width:100%;">
                                 </div>
+                                <?php
+                                $COURSE_PHOTO = new CoursePhoto(NULL);
+                                foreach ($COURSE_PHOTO->all() as $course_photo) {
+                                ?>
+                                    <div class="item">
+                                        <img src="<?php echo URL ?>upload/courses/gallery/<?php echo $course_photo['image_name']; ?>" alt="Chicago" style="width:100%;">
+                                    </div>
+                                <?php } ?>
 
-                                <div class="item">
-                                    <img src="<?php echo URL ?>assets/img/events/1.jpg" alt="Chicago" style="width:100%;">
-                                </div>
-
-                                <div class="item">
-                                    <img src="<?php echo URL ?>assets/img/events/1.jpg" alt="New york" style="width:100%;">
-                                </div>
                             </div>
                             <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                                 <span class="glyphicon glyphicon-chevron-left"></span>
@@ -182,7 +197,8 @@
                                 </li>
                             </ul>
                         </div> -->
-                        <h3>Requirements</h3>
+                        <h3>Description</h3>
+                        <?php echo $course['description'] ?>
                         <!-- <ul class="requirements-list">
                             <li>Contrary to popular belief, Lorem Ipsum is not simply random text.</li>
                             <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</li>
@@ -200,8 +216,8 @@
                             <li>SQL</li>
                             <li>Tableau</li>
                         </ul> -->
-                        <p>These are the precise technical skills recruiters are looking for when hiring BI Analysts. And today, you have the chance of acquiring an invaluable advantage to get ahead of other candidates. This course will be the secret to your success. And your success is our success, so let’s make it happen!</p>
-                        <p>Here are some more details of what you get with The Business Intelligence Analyst Course:</p>
+                        <!-- <p>These are the precise technical skills recruiters are looking for when hiring BI Analysts. And today, you have the chance of acquiring an invaluable advantage to get ahead of other candidates. This course will be the secret to your success. And your success is our success, so let’s make it happen!</p>
+                        <p>Here are some more details of what you get with The Business Intelligence Analyst Course:</p> -->
                         <!-- <ul class="description-features-list">
                             <li><strong>Introduction to Data and Data Science</strong> – Make sense of terms like business intelligence, traditional and big data, traditional statistical methods, machine learning, predictive analytics, supervised learning, unsupervised learning, reinforcement learning, and many more;</li>
                             <li><strong>Statistics and Excel</strong> – Understand statistical testing and build a solid foundation. Modern software packages and programming languages are automating most of these activities, but this part of the course gives you something more valuable – critical thinking abilities;</li>
@@ -220,7 +236,7 @@
                             <li>Prepare exercises, course notes, quizzes, and other materials that will enhance your course taking experience</li>
                             <li>Be there for you and provide support whenever necessary</li>
                         </ul> -->
-                        <p>We love teaching and we are really excited about this journey. It will get your foot in the door of an exciting and rising profession. Don’t hesitate and subscribe today. The only regret you will have is that you didn’t find this course sooner!</p>
+                        <!-- <p>We love teaching and we are really excited about this journey. It will get your foot in the door of an exciting and rising profession. Don’t hesitate and subscribe today. The only regret you will have is that you didn’t find this course sooner!</p> -->
                         <!-- <h3>Who this course is for:</h3>
                         <ul class="audience-list">
                             <li>Beginners to programming and data science</li>
@@ -291,243 +307,120 @@
                         <div class="courses-list">
                             <ul>
                                 <li>
-                                    Introduction
+                                    Subjects
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="#">
                                         <span class="number">1.</span> Secret 1: Sell The Problem, Not The Solution (14:37) <span class="free-lesson">Free</span>
                                     </a>
-                                </li>
-                                <li>
-                                    Quiz - Secret 1: Sell The Problem, Not The Solution
-                                </li>
-                                <li>
-                                    <span class="number">2.</span> Secret 2: Think Like a Magazine, Not a Salesman (4:30)
-                                </li>
-                                <li>
-                                    Quiz - Secret 2: Think Like a Magazine, Not a Salesman
-                                </li>
-                                <li>
-                                    <span class="number">3.</span> Secret 3: Content Is King, but Consistency Is Queen (3:56)
-                                </li>
-                                <li>
-                                    Quiz - Secret 3: Content Is King, but Consistency Is Queen
-                                </li>
-                                <li>
-                                    <span class="number">4.</span> Secret 4: Punch Above Your Weight Class (11:00)
-                                </li>
-                                <li>
-                                    <span class="number">5.</span> Secret 5: Ethically Steal Your Competitors' Customers (8:12)
-                                </li>
-                                <li>
-                                    <span class="number">6.</span> Secret 6: Bulid an Audience By Borrowing (10:25)
-                                </li>
-                                <li>
-                                    Quiz - Secret 6: Bulid an Audience By Borrowing
-                                </li>
-                                <li>
-                                    <span class="number">7.</span> Secret 7: Be a Shadow, Not a Ghost (5:19)
-                                </li>
-                                <li>
-                                    <span class="number">8.</span> Bonus: Tips to Be a 5 Stars Freelancer (16:07)
-                                </li>
-                                <li>
-                                    <span class="number">9.</span> Closing Thoughts (3:15)
-                                </li>
-                                <li>
-                                    <span class="number">9.</span> Closing Thoughts (3:15)
-                                </li>
-                                <li>
-                                    Quiz - Secret 7: Be a Shadow, Not a Ghost
-                                </li>
+                                </li> -->
+                                <?php
+                                $COURSE_SUBJECTS = new CourseSubjects(NULL);
+                                foreach ($COURSE_SUBJECTS->getCourseSubjectByCourseId($course['id']) as $key => $course_subjects) {
+                                ?>
+                                    <li>
+                                        <span class="number"><?php echo $key + 1; ?>.</span> <?php echo $course_subjects['title'] ?>
+                                    </li>
+                                <?php } ?>
+
                             </ul>
                         </div>
 
 
                     </div>
                     <div class="courses-purchase-info">
-                        <h4>Interested in this course for your Business or Team?</h4>
-                        <p>Train your employees in the most in-demand topics, with edX for Business.</p>
-                        <a href="#" class="d-inline-block">Purchase now</a>
-                        <a href="#" class="d-inline-block">Request Information</a>
+                        <h4>How I know some information?</h4>
+                        <span class="text-white">Contact Number : </span><a href="#" class="d-inline-block"><?php echo $CENTER->contact1 ?></a>
+                        <span class="text-white">Email : </span><a href="#" class="d-inline-block"><?php echo $CENTER->email ?></a>
                     </div>
                 </div>
 
             </div>
 
-            <div class="related-courses">
-                <h3>Related Courses</h3>
-                <div class="row">
-                    <div class="col-lg-3 col-md-3">
-                        <div class="single-courses-box mb-30">
-                            <div class="courses-image">
-                                <a href="single-courses.html" class="d-block"><img src="<?php echo URL ?>assets/img/courses/1.jpg" alt="image"></a>
-                                <div class="courses-tag">
-                                    <a href="#" class="d-block">Business</a>
-                                </div>
-                            </div>
-                            <div class="courses-content">
-                                <div class="course-author d-flex align-items-center">
-                                    <img src="<?php echo URL ?>assets/img/user1.jpg" class="rounded-circle mr-2" alt="image">
-                                    <span>Steven Smith</span>
-                                </div>
-                                <h3><a href="single-courses.html" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
-                                <div class="courses-rating">
-                                    <div class="review-stars-rated">
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
+
+
+
+            <?php
+            if ($attr[0] == 'q=fromcenter') {
+            ?>
+                <div class="related-courses">
+                    <h3>Related Courses</h3>
+                    <div class="row">
+                        <?php
+                        foreach ($COURSE->getByCenter($center_id) as $key => $course2) {
+                            if ($course_id != $course2['id']) {
+                        ?>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="single-courses-box mb-30">
+                                        <div class="courses-image">
+                                            <a href="<?php echo URL; ?>courses/view/<?php echo base64_encode('q=fromcenter%center=' . $center_id . '%course=' . $course2['id']); ?>" class="d-block"><img src="<?php echo URL ?>upload/courses/<?php echo $course2['image_name'] ?>" alt="image"></a>
+                                            <div class="courses-tag">
+                                                <a href="#" class="d-block"><?php echo $course2['level'] ?></a>
+                                            </div>
+                                        </div>
+                                        <div class="courses-content">
+
+                                            <h3><a href="<?php echo URL; ?>courses/view/<?php echo base64_encode('q=fromcenter%center=' . $center_id . '%course=' . $course2['id']); ?>" class="d-inline-block"><?php echo $course2['name'] ?> (<?php echo $CENTER->name ?>)</a></h3>
+                                            <!-- <div class="courses-rating">
+                                                <div class="review-stars-rated">
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                </div>
+                                                <div class="rating-total">
+                                                    5.0 (1 rating)
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="courses-box-footer">
+                                            <ul>
+                                                <li class="students-number">
+                                                    <i class='bx bx-user'></i> <?php echo $course2['max_student'] ?> students
+                                                </li>
+                                                <li class="courses-lesson">
+                                                    <i class='bx bx-book-open'></i> 6 Subjects
+                                                </li>
+                                                <li class="courses-price">
+                                                    <?php echo $course2['languages'] ?>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="rating-total">
-                                        5.0 (1 rating)
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="courses-box-footer">
-                                <ul>
-                                    <li class="students-number">
-                                        <i class='bx bx-user'></i> 10 students
-                                    </li>
-                                    <li class="courses-lesson">
-                                        <i class='bx bx-book-open'></i> 6 lessons
-                                    </li>
-                                    <li class="courses-price">
-                                        Free
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <?php
+                            }
+                        }
+                        ?>
                     </div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="single-courses-box mb-30">
-                            <div class="courses-image">
-                                <a href="single-courses.html" class="d-block"><img src="<?php echo URL ?>assets/img/courses/2.jpg" alt="image"></a>
-                                <div class="courses-tag">
-                                    <a href="#" class="d-block">Design</a>
+                </div>
+
+            <?php } elseif ($attr[0] == 'q=fromcourse') { ?>
+
+                <div class="related-courses">
+                    <h3>Related Centers</h3>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-categories-courses-box mb-30">
+                                <div class="icon">
+                                    <i class='bx bx-code-alt'></i>
                                 </div>
-                            </div>
-                            <div class="courses-content">
-                                <div class="course-author d-flex align-items-center">
-                                    <img src="<?php echo URL ?>assets/img/user2.jpg" class="rounded-circle mr-2" alt="image">
-                                    <span>Sarah Taylor</span>
-                                </div>
-                                <h3><a href="single-courses.html" class="d-inline-block">Certified Graphic Design with Free Project Course</a></h3>
-                                <div class="courses-rating">
-                                    <div class="review-stars-rated">
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star-half'></i>
-                                    </div>
-                                    <div class="rating-total">
-                                        4.5 (2 rating)
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="courses-box-footer">
-                                <ul>
-                                    <li class="students-number">
-                                        <i class='bx bx-user'></i> 15 students
-                                    </li>
-                                    <li class="courses-lesson">
-                                        <i class='bx bx-book-open'></i> 10 lessons
-                                    </li>
-                                    <li class="courses-price">
-                                        $250
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="single-courses-box mb-30">
-                            <div class="courses-image">
-                                <a href="single-courses.html" class="d-block"><img src="<?php echo URL ?>assets/img/courses/2.jpg" alt="image"></a>
-                                <div class="courses-tag">
-                                    <a href="#" class="d-block">Design</a>
-                                </div>
-                            </div>
-                            <div class="courses-content">
-                                <div class="course-author d-flex align-items-center">
-                                    <img src="<?php echo URL ?>assets/img/user2.jpg" class="rounded-circle mr-2" alt="image">
-                                    <span>Sarah Taylor</span>
-                                </div>
-                                <h3><a href="single-courses.html" class="d-inline-block">Certified Graphic Design with Free Project Course</a></h3>
-                                <div class="courses-rating">
-                                    <div class="review-stars-rated">
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star-half'></i>
-                                    </div>
-                                    <div class="rating-total">
-                                        4.5 (2 rating)
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="courses-box-footer">
-                                <ul>
-                                    <li class="students-number">
-                                        <i class='bx bx-user'></i> 15 students
-                                    </li>
-                                    <li class="courses-lesson">
-                                        <i class='bx bx-book-open'></i> 10 lessons
-                                    </li>
-                                    <li class="courses-price">
-                                        $250
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="single-courses-box mb-30">
-                            <div class="courses-image">
-                                <a href="single-courses.html" class="d-block"><img src="<?php echo URL ?>assets/img/courses/2.jpg" alt="image"></a>
-                                <div class="courses-tag">
-                                    <a href="#" class="d-block">Design</a>
-                                </div>
-                            </div>
-                            <div class="courses-content">
-                                <div class="course-author d-flex align-items-center">
-                                    <img src="<?php echo URL ?>assets/img/user2.jpg" class="rounded-circle mr-2" alt="image">
-                                    <span>Sarah Taylor</span>
-                                </div>
-                                <h3><a href="single-courses.html" class="d-inline-block">Certified Graphic Design with Free Project Course</a></h3>
-                                <div class="courses-rating">
-                                    <div class="review-stars-rated">
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star-half'></i>
-                                    </div>
-                                    <div class="rating-total">
-                                        4.5 (2 rating)
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="courses-box-footer">
-                                <ul>
-                                    <li class="students-number">
-                                        <i class='bx bx-user'></i> 15 students
-                                    </li>
-                                    <li class="courses-lesson">
-                                        <i class='bx bx-book-open'></i> 10 lessons
-                                    </li>
-                                    <li class="courses-price">
-                                        $250
-                                    </li>
-                                </ul>
+                                <h3><?php //echo $center['name'] 
+                                    ?></h3>
+                                <span><?php
+
+                                        //echo $CENTER->getCntersCourseCount($center['id'])['count'];
+
+                                        ?> Courses</span>
+                                <a href="<?php echo URL; ?>courses/list/<?php //echo base64_encode('q=fromcenter%center=' . $center['id']); 
+                                                                        ?>" class="link-btn"></a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+            <?php } ?>
         </div>
     </section>
 

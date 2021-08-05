@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
         <link rel="stylesheet" href="assets/css/bootstrap..min.css">
         <link rel="stylesheet" href="assets/css/boxicons.min.css">
         <link rel="stylesheet" href="assets/css/flaticon.css">
@@ -21,7 +22,8 @@
         <link rel="stylesheet" href="assets/css/responsive.css">
         <title>Youth Council || Sri Lanka</title>
         <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
-    </head>
+
+   </head>
 
     <body>
 
@@ -193,24 +195,24 @@
         <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 
         <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/mixitup.min.js"></script>
-        <script src="assets/js/parallax.min.js"></script>
-        <script src="assets/js/jquery.appear.min.js"></script>
-        <script src="assets/js/odometer.min.js"></script>
-        <script src="assets/js/particles.min.js"></script>
-        <script src="assets/js/meanmenu.min.js"></script>
-        <script src="assets/js/jquery.nice-select.min.js"></script>
-        <script src="assets/js/viewer.min.js"></script>
-        <script src="assets/js/slick.min.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-        <script src="assets/js/form-validator.min.js"></script>
-        <script src="assets/js/contact-form-script.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="<?php echo URL ?>assets/js/jquery.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/popper.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/owl.carousel.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/mixitup.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/parallax.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/jquery.appear.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/odometer.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/particles.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/meanmenu.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/jquery.nice-select.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/viewer.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/slick.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/form-validator.min.js"></script>
+        <script src="<?php echo URL ?>assets/js/contact-form-script.js"></script>
+        <script src="<?php echo URL ?>assets/js/main.js"></script>
     </body>
 
 </html>
