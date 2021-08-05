@@ -97,7 +97,7 @@
                 <?php } ?>
 
 
-                <div class="col-lg-12 col-md-12 col-sm-12">
+                <!-- <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="pagination-area text-center">
                         <span class="page-numbers current" aria-current="page">1</span>
                         <a href="#" class="page-numbers">2</a>
@@ -106,7 +106,7 @@
                         <a href="#" class="page-numbers">5</a>
                         <a href="#" class="next page-numbers"><i class='bx bx-chevron-right'></i></a>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div id="particles-js-circle-bubble-2"></div>
         </div>
