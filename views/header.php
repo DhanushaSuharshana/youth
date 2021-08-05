@@ -165,7 +165,7 @@
                             </li>-->
                             <li class="nav-item"><a href="#" class="nav-link">Student <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="<?php echo URL ?>courses" class="nav-link">Find Courses</a></li>
+                                <li class="nav-item"><a href="<?php echo URL ?>centers" class="nav-link">Find Courses</a></li>
                                     <li class="nav-item"><a href="<?php echo URL ?>apply" class="nav-link">Apply Now</a></li>
                                 </ul>
                             </li>
