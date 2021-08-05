@@ -10,6 +10,10 @@ class centers extends Controller {
 
         $this->view->render('courses/filter');
     }
+    function location() {
+
+        $this->view->render('centers/index');
+    }
 
     function villa_details() {
 

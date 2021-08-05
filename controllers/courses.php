@@ -8,6 +8,13 @@ class courses extends Controller
         parent::__construct();
     }
 
+    function index($query = false)
+    {
+        $this->view->query = $query;
+        // var_dump(base64_decode($query));
+        $this->view->render('courses/all_courses');
+    }
+    
     function list($query = false)
     {
         $this->view->query = $query;

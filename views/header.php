@@ -124,7 +124,7 @@
                             </li>
 
                             <li class="nav-item"><a href="<?php echo URL ?>contact_us" class="nav-link">Contact Us</a></li>
-                            <li class="nav-item"><a href="<?php echo URL ?>centers" class="nav-link">Our Centers</a></li>
+                            <li class="nav-item"><a href="<?php echo URL ?>centers/location" class="nav-link">Our Centers</a></li>
                         </ul> 
                     </div>
                 </nav>
@@ -190,7 +190,7 @@
                             </li>
 
                             <li class="nav-item"><a href="<?php echo URL ?>contact_us" class="nav-link">Contact Us</a></li>
-                            <li class="nav-item"><a href="<?php echo URL ?>centers" class="nav-link">Our Centers</a></li>
+                            <li class="nav-item"><a href="<?php echo URL ?>centers/location" class="nav-link">Our Centers</a></li>
                         </ul> 
                     </div>
                 </nav>
