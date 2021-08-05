@@ -102,7 +102,7 @@
                     <div class="col-lg-6 col-md-12" style="margin-top: 50px;">
 
                         <div class="about-image  dis-none ">
-                            <img src="assets/img/index-gif.gif" class="shadow" alt="image">
+                            <img src="assets/img/gif/2.gif" class="shadow" alt="image">
 
                             <div class=" text-box">
                                 <div class="inner">
@@ -155,9 +155,9 @@
                             <div class="icon">
                                 <i class='bx bx-group'></i>
                             </div>
-                            <h3>Youth Organization</h3>
-                            <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                            <a href="#" class="boxes-btn">Explore more <i class='bx bx-plus'></i></a>
+                            <h3>Youth Club</h3>
+                            <p>Sri Lanka Youth Club Movement Implemented by Sri Lanka Federation of Youth Clubs.</p>
+                            <div class="boxes-btn">Explore more <i class='bx bx-plus'></i></div>
                         </div>
                     </a>
                 </div>
@@ -168,8 +168,8 @@
                                 <i class='bx bx-laptop'></i>
                             </div>
                             <h3>School of Computing</h3>
-                            <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                            <a href="#" class="boxes-btn">Explore more <i class='bx bx-plus'></i></a>
+                            <p>Best place to learn modern technologies with number of qualified instructors.</p>
+                            <div class="boxes-btn">Explore more <i class='bx bx-plus'></i></div>
                         </div>
                     </a>
                 </div>
@@ -180,8 +180,8 @@
                                 <i class='bx bxs-school'></i>
                             </div>
                             <h3>NYSCO</h3>
-                            <p>Lorem ipsum dolor sit amet cons ecttu adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                            <a href="#" class="boxes-btn">Explore more <i class='bx bx-plus'></i></a>
+                            <p>Sri Lanka National Youth Services Co-operative Society help young crowd in rural areas</p>
+                            <div class="boxes-btn">Explore more <i class='bx bx-plus'></i></div>
                         </div>
                     </a>
 
@@ -191,17 +191,20 @@
 
                     <section class="team-area pb-70  pt-70">
                         <div class="container">
-                            <div class="section-title">
+                            <div class="section-title text-left">
                                 <span class="sub-title">Get To Know</span>
                                 <h2>Our Leaders</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea.</p>
+
+                                <p>We Have Powerful Leaders With Great Vision On Sri Lankan Youth </p>
+
+                                <a href="#" class="default-btn"><i class="bx bx-show-alt icon-arrow before"></i><span class="label">Directors</span><i class="bx bx-show-alt icon-arrow after"></i></a>
+
                             </div>
                             <div class="row">
                                 <?php
                                 $LEADERS = new Leaders(NULL);
                                 foreach ($LEADERS->all() as $leader) {
                                     ?>
-
 
                                     <div class="col-lg-4 col-md-6 col-sm-6">
                                         <div class="single-instructor-member mb-30">
