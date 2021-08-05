@@ -1,5 +1,4 @@
 jQuery(document).ready(function () {
-
     //---------- Start Create Data ---------
     $("#create").click(function (event) {
         event.preventDefault();
@@ -290,7 +289,6 @@ jQuery(document).ready(function () {
                             timer: 2000,
                             showConfirmButton: false
                         });
-
                         $('#div' + id).remove();
                     }
                 }
@@ -328,8 +326,7 @@ jQuery(document).ready(function () {
             }
         });
     });
-    //-------- End arrange ---------
-    //----------------------------------------------------
-});
-//-------- End Delete Data ---------
+//-------- End arrange ---------
 //----------------------------------------------------
+});
+ 

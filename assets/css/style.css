@@ -3241,7 +3241,7 @@
         
         .about-image {
             position: relative;
-            padding-right: 100px;
+/*            padding-right: 100px;*/
             padding-bottom: 50px;
         }
         
@@ -3340,8 +3340,8 @@
         
         .text-box {
             position: absolute;
-            left: 280px;
-            top: 230px;
+            left: 20px;
+            top: 20px;
             z-index: 1;
             width: 150px;
             height: 150px;

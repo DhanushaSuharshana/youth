@@ -95,9 +95,7 @@ if (isset($_POST['update'])) {
         exit();
     }
 }
-//End Update Code Block
-//----------------------------------------
-
+//End Update Code Block 
 //--------------------------------------------------------------------------
 //-- ** Start arrange code  
 if (isset($_POST['arrange'])) {
