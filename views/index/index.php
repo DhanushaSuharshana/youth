@@ -518,7 +518,7 @@
                                 $NEWS = new News(NULL);
                                 foreach ($NEWS->all() as $key => $news) {
                                     ?>
-                                    <div class="single-blog-post mb-30">
+                                    <div class=" single-blog-post mb-30">
                                         <div class="post-image">
                                             <a href="<?php echo URL ?>youth_news/view" class="d-block">
                                                 <img src="<?php echo URL ?>upload/news/<?php echo $news['image_name'] ?>" alt="<?php echo $news['title'] ?>">

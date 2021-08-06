@@ -24,6 +24,8 @@ include_once(dirname(__FILE__) . '/CourseByCenters.php');
 include_once(dirname(__FILE__) . '/Pages.php');
 include_once(dirname(__FILE__) . '/PageCharacter.php');
 include_once(dirname(__FILE__) . '/Colors.php');
+include_once(dirname(__FILE__) . '/ApplyOnline.php');
+
 
 function dd($data) {
     var_dump($data);
