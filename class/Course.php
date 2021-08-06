@@ -105,8 +105,6 @@ class Course
 
             array_push($array_res, $row);
         }
-        // print_r($array_res);
-        // exit;
         return $array_res;
     }
 

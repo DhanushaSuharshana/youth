@@ -54,32 +54,33 @@
 
 
 
-                if ($this->query) {
-                    $attr = explode('%', base64_decode($this->query));
-                    if ($attr[0] == 'q=fromcenter') {
-                        $center = explode('=', $attr[1])[1];
-                        $courses = $COURSE->getByCenter($center);
-                        $CENTER = new Center($center);
-                    }
-                } else {
-                    $courses = $COURSE->all();
-                }
+                // if ($this->query) {
+                //     $attr = explode('%', base64_decode($this->query));
+                //     if ($attr[0] == 'q=fromcenter') {
+                //         $center = explode('=', $attr[1])[1];
+                //         $courses = $COURSE->getByCenter($center);
+                //         $CENTER = new Center($center);
+                //     }
+                // } else {
+                $courses = $COURSE->all();
+                // }
                 // echo base64_decode($this->query);
                 if (!empty($courses)) {
                     foreach ($courses as $course) {
                 ?>
                         <div class="col-lg-4 col-md-6">
-                            <div class="single-courses-box mb-30">
-                                <div class="courses-image">
-                                    <a href="<?php //echo URL; ?>courses/view/<?php //echo base64_encode('q=fromcenter%center='.$center.'%course='.$course['id']); ?>" class="d-block"><img src="<?php echo URL; ?>upload/courses/<?php echo $course['image_name'] ?>" alt="image"></a>
-                                    <div class="courses-tag">
+                            <a href="<?php echo URL; ?>courses/view/<?php echo base64_encode('q=fromcourse%center=false'.'%course=' . $course['id']); ?>" class="d-inline-block">
+                                <div class="single-courses-box mb-30">
+                                    <div class="courses-image">
+                                        <img src="<?php echo URL; ?>upload/courses/<?php echo $course['image_name'] ?>" alt="image">
+                                        <!-- <div class="courses-tag">
                                         <a href="#" class="d-block"><?php echo $course['level'] ?></a>
+                                    </div> -->
                                     </div>
-                                </div>
-                                <div class="courses-content">
-                                   
-                                    <h3><a href="<?php //echo URL; ?>courses/view/<?php //echo base64_encode('q=fromcenter%center='.$center.'%course='.$course['id']); ?>" class="d-inline-block"><?php echo $course['name'] ?> </a></h3>
-                                    <!-- <div class="courses-rating">
+                                    <div class="courses-content">
+
+                                        <h3><?php echo $course['name'] ?></h3>
+                                        <!-- <div class="courses-rating">
                                         <div class="review-stars-rated">
                                             <i class='bx bxs-star'></i>
                                             <i class='bx bxs-star'></i>
@@ -91,21 +92,22 @@
                                             5.0 (1 rating)
                                         </div>
                                     </div> -->
+                                    </div>
+                                    <div class="courses-box-footer">
+                                        <ul>
+                                            <li class="students-number">
+                                                <i class='bx bx-user'></i> <?php echo $course['max_student'] ?> students
+                                            </li>
+                                            <li class="courses-lesson">
+                                                <i class='bx bx-book-open'></i> <?php echo CourseSubjects::getCount($course['id'])['count']; ?> Subjects
+                                            </li>
+                                            <li class="courses-price">
+                                                View
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="courses-box-footer">
-                                    <ul>
-                                        <li class="students-number">
-                                            <i class='bx bx-user'></i> <?php echo $course['max_student'] ?> students
-                                        </li>
-                                        <li class="courses-lesson">
-                                            <i class='bx bx-book-open'></i> 6 Subjects
-                                        </li>
-                                        <li class="courses-price">
-                                        <?php echo $course['languages'] ?>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     <?php
                     }

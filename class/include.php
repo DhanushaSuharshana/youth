@@ -23,6 +23,7 @@ include_once(dirname(__FILE__) . '/Center.php');
 include_once(dirname(__FILE__) . '/CourseByCenters.php');
 include_once(dirname(__FILE__) . '/Pages.php');
 include_once(dirname(__FILE__) . '/PageCharacter.php');
+include_once(dirname(__FILE__) . '/Colors.php');
 
 function dd($data) {
     var_dump($data);

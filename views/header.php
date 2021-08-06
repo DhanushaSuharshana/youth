@@ -1,3 +1,29 @@
+<style>
+    .courses-content {
+        min-height: 156px !important;
+    }
+</style>
+<style>
+    <?php
+    foreach ($this->colors as $key => $color) {
+
+    ?>
+
+    /* <?php echo $key ?> */
+    .<?php echo $key ?> .single-categories-courses-box {
+        background-color: <?php echo $color['color']; ?> !important;
+    }
+
+    .<?php echo $key ?> .single-categories-courses-box:hover .icon, .<?php echo $key ?> 
+    .single-categories-courses-box:focus .icon {
+        background-color: #fff !important;
+        border-color: <?php echo $color['color']; ?> !important;
+        color: <?php echo $color['color']; ?> !important;
+    }
+
+    <?php  } ?>
+</style>
+
 <header class="header-area">
     <div class="top-header top-header-style-four">
         <div class="container">
@@ -9,8 +35,8 @@
                                 +94 0112 850 986</a>
                         </li>
                         <div class="top-header-social">
-                            <li >
-                                <a href="mailto:info@nysc.lk">   Email:
+                            <li>
+                                <a href="mailto:info@nysc.lk"> Email:
                                     info@nysc.lk</a>
                             </li>
                         </div>
@@ -28,7 +54,7 @@
                         <li>
                             <div class="top-header-social">
                                 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent;
-                                        border: none; color: white"> 
+                                        border: none; color: white">
 
                                     <span style="color: white" class="font-18">සිං</span>
                                 </button>
@@ -41,12 +67,12 @@
 
                                         <span>සිං </span>
                                     </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center"> 
+                                    <a href="#" class="dropdown-item d-flex align-items-center">
                                         <span> தம</span>
                                     </a>
 
                                 </div>
-                            </div> 
+                            </div>
 
                         </li>
                     </ul>
@@ -78,9 +104,12 @@
                     <div class="collapse navbar-collapse mean-menu" style="display: block;">
                         <ul class="navbar-nav">
 
+
                             <li class="nav-item"><a href="<?php echo URL ?>index/" class="nav-link active">Home  </a></li>
                             <li class="nav-item"><a href="<?php echo URL ?>youth_news/" class="nav-link">News  </a></li>
                             <li class="nav-item"><a href="<?php echo URL ?>events/" class="nav-link ">Events  </a></li>
+                           
+
                             <li class="nav-item"><a href="#" class="nav-link">Divisions <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="<?php echo URL ?>division">Administrative Division</a></li>
@@ -89,7 +118,7 @@
                                     <li class="nav-item"><a href="view-division.php">National Youth Awards</a></li>
                                 </ul>
                             </li>
-<!--                            <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class="bx bx-chevron-down"></i></a>
+                            <!--                            <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="#">Discover</a></li>
                                     <li class="nav-item"><a href="#">Nearest Youth Office</a></li>
@@ -99,12 +128,12 @@
                             </li>-->
                             <li class="nav-item"><a href="#" class="nav-link">Student <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="<?php echo URL ?>centers" class="nav-link">Find Courses</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>apply" class="nav-link">Apply Now</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>centers" class="nav-link">Find Courses From Center</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>courses" class="nav-link">Find Courses</a></li>
                                 </ul>
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link">Gallery  <i class="bx bx-chevron-down"></i> </a>  
+                            <li class="nav-item"><a href="#" class="nav-link">Gallery <i class="bx bx-chevron-down"></i> </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="<?php echo URL ?>gallery" class="nav-link">Photo Gallery</a></li>
                                     <li class="nav-item"><a href="<?php echo URL ?>gallery" class="nav-link">Video Gallery</a></li>
@@ -125,7 +154,7 @@
 
                             <li class="nav-item"><a href="<?php echo URL ?>contact_us" class="nav-link">Contact Us</a></li>
                             <li class="nav-item"><a href="<?php echo URL ?>centers/location" class="nav-link">Our Centers</a></li>
-                        </ul> 
+                        </ul>
                     </div>
                 </nav>
             </div>
@@ -142,11 +171,11 @@
                     </a>
 
                     <div class="collapse navbar-collapse">
-                              <ul class="navbar-nav">
+                        <ul class="navbar-nav">
 
-                            <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link active">Home  </a></li>
-                            <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link">News  </a></li>
-                            <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link ">Events  </a></li>
+                            <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link active">Home </a></li>
+                            <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link">News </a></li>
+                            <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link ">Events </a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Divisions <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="<?php echo URL ?>division">Administrative Division</a></li>
@@ -155,7 +184,7 @@
                                     <li class="nav-item"><a href="view-division.php">National Youth Awards</a></li>
                                 </ul>
                             </li>
-<!--                            <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class="bx bx-chevron-down"></i></a>
+                            <!--                            <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="#">Discover</a></li>
                                     <li class="nav-item"><a href="#">Nearest Youth Office</a></li>
@@ -165,12 +194,12 @@
                             </li>-->
                             <li class="nav-item"><a href="#" class="nav-link">Student <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="<?php echo URL ?>centers" class="nav-link">Find Courses</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>apply" class="nav-link">Apply Now</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>centers" class="nav-link">Find Courses From Center</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>courses" class="nav-link">Find Courses</a></li>
                                 </ul>
                             </li>
 
-                            <li class="nav-item"><a href="#" class="nav-link">Gallery  <i class="bx bx-chevron-down"></i> </a>  
+                            <li class="nav-item"><a href="#" class="nav-link">Gallery <i class="bx bx-chevron-down"></i> </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="<?php echo URL ?>gallery" class="nav-link">Photo Gallery</a></li>
                                     <li class="nav-item"><a href="<?php echo URL ?>video-gallery" class="nav-link">Video Gallery</a></li>
@@ -191,10 +220,10 @@
 
                             <li class="nav-item"><a href="<?php echo URL ?>contact_us" class="nav-link">Contact Us</a></li>
                             <li class="nav-item"><a href="<?php echo URL ?>centers/location" class="nav-link">Our Centers</a></li>
-                        </ul> 
+                        </ul>
                     </div>
                 </nav>
             </div>
         </div>
-    </div> 
+    </div>
 </header>

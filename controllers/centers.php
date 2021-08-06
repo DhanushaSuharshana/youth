@@ -1,27 +1,28 @@
 <?php
 
-class centers extends Controller {
+class centers extends Controller
+{
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
+        $this->view->colors = Colors::getRandomColors(Center::getCount()['count']);
     }
 
-    function index() {
-
-        $this->view->render('courses/filter');
+    function index()
+    {
+        $this->view->render('centers/filter');
     }
-    function location() {
+
+    function location()
+    {
 
         $this->view->render('centers/index');
     }
 
-    function villa_details() {
-
-
-        $this->view->render('header');
-        $this->view->render('navigation');
-        $this->view->render('centers/index');
-        $this->view->render('footer');
+    function list($query = false)
+    {
+        $this->view->query = $query;
+        $this->view->render('centers/filter_from_course');
     }
-
 }

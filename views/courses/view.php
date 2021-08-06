@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
     <title>Courses National Youth Council Sri Lanka</title>
-    <link rel="icon" type="image/png" href="<?php echo URL ?>assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="<?php echo URL ?>assets/img/pre-logo.png">
 </head>
 
 <body>
@@ -30,9 +30,11 @@
     $COURSE = new Course(NULL);
 
     $attr = explode('%', base64_decode($this->query));
-    $center_id = explode('=', $attr[1])[1];
+    if ($attr[0] == 'q=fromcenter') {
+        $center_id = explode('=', $attr[1])[1];
+        $CENTER = new Center($center_id);
+    }
     $course_id = explode('=', $attr[2])[1];
-    $CENTER = new Center($center_id);
     $course = $COURSE->getOne($course_id);
     // var_dump($attr);
     ?>
@@ -54,7 +56,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-8">
                         <div class="courses-title">
-                            <h2><?php echo $course['name']; ?> (<?php echo $CENTER->name ?>)</h2>
+                            <h2><?php echo $course['name']; ?><?= (isset($CENTER->name)) ? "(" . $CENTER->name . ")" : '' ?></h2>
                             <p><?php echo $course['short_description'] ?>.</p>
                         </div>
                         <div class="courses-meta">
@@ -75,9 +77,12 @@
                                     <a href="#"><?php echo $course['start_date'] ?></a>
                                 </li>
                                 <li class="">
-                                    <a href="<?php echo URL; ?>courses/apply/<?php echo base64_encode('q=toapply%center='.$center_id.'%course='.$course['id']); ?>" class="default-btn"><i class="bx bx-move-horizontal icon-arrow before"></i><span class="label text-white">Apply Now</span>
-                                        <!-- <i class="bx bx-move-horizontal icon-arrow after"></i> -->
-                                    </a>
+                                    <?php if ($attr[0] == 'q=fromcenter') { ?>
+                                        <a href="<?php echo URL; ?>courses/apply/<?php echo base64_encode('q=toapply%center=' . $center_id . '%course=' . $course['id']); ?>" class="default-btn"><i class="bx bx-move-horizontal icon-arrow before"></i><span class="label text-white">Apply Now</span></a>
+                                    <?php } else { ?>
+                                        <a href="<?php echo URL; ?>centers/list/<?php echo base64_encode('q=fromcourse%center=false' . '%course=' . $course['id']); ?>" class="default-btn"><i class="bx bx-move-horizontal icon-arrow before"></i><span class="label text-white">Apply Now</span></a>
+                                    <?php } ?>
+
                                 </li>
                             </ul>
                         </div>
@@ -108,14 +113,14 @@
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
                             <div class="carousel-inner">
-                                <div class="item active">
+                                <!-- <div class="item active">
                                     <img src="<?php echo URL ?>upload/courses/<?php echo $course['image_name']; ?>" alt="Los Angeles" style="width:100%;">
-                                </div>
+                                </div> -->
                                 <?php
                                 $COURSE_PHOTO = new CoursePhoto(NULL);
-                                foreach ($COURSE_PHOTO->all() as $course_photo) {
+                                foreach ($COURSE_PHOTO->all() as $key => $course_photo) {
                                 ?>
-                                    <div class="item">
+                                    <div class="item  <?= ($key == 0) ? "active" : "" ?>">
                                         <img src="<?php echo URL ?>upload/courses/gallery/<?php echo $course_photo['image_name']; ?>" alt="Chicago" style="width:100%;">
                                     </div>
                                 <?php } ?>
@@ -328,11 +333,13 @@
 
 
                     </div>
-                    <div class="courses-purchase-info">
-                        <h4>How I know some information?</h4>
-                        <span class="text-white">Contact Number : </span><a href="#" class="d-inline-block"><?php echo $CENTER->contact1 ?></a>
-                        <span class="text-white">Email : </span><a href="#" class="d-inline-block"><?php echo $CENTER->email ?></a>
-                    </div>
+                    <?php if ($attr[0] == 'q=fromcenter') { ?>
+                        <div class="courses-purchase-info">
+                            <h4>How I know some information?</h4>
+                            <span class="text-white">Contact Number : </span><a href="#" class="d-inline-block"><?php echo $CENTER->contact1 ?></a><br>
+                            <span class="text-white">Email: </span><a href="#" class="d-inline-block"><?php echo $CENTER->email ?></a>
+                        </div>
+                    <?php } ?>
                 </div>
 
             </div>
@@ -344,24 +351,27 @@
             if ($attr[0] == 'q=fromcenter') {
             ?>
                 <div class="related-courses">
-                    <h3>Related Courses</h3>
+                    <h3>This Centers' Related Courses</h3>
                     <div class="row">
                         <?php
                         foreach ($COURSE->getByCenter($center_id) as $key => $course2) {
                             if ($course_id != $course2['id']) {
                         ?>
                                 <div class="col-lg-3 col-md-3">
-                                    <div class="single-courses-box mb-30">
-                                        <div class="courses-image">
-                                            <a href="<?php echo URL; ?>courses/view/<?php echo base64_encode('q=fromcenter%center=' . $center_id . '%course=' . $course2['id']); ?>" class="d-block"><img src="<?php echo URL ?>upload/courses/<?php echo $course2['image_name'] ?>" alt="image"></a>
-                                            <div class="courses-tag">
+                                    <a href="<?php echo URL; ?>courses/view/<?php echo base64_encode('q=fromcenter%center=' . $center_id . '%course=' . $course2['id']); ?>">
+                                        <div class="single-courses-box mb-30">
+                                            <div class="courses-image">
+                                                <img src="<?php echo URL ?>upload/courses/<?php echo $course2['image_name'] ?>" alt="image">
+                                                <!-- <div class="courses-tag">
                                                 <a href="#" class="d-block"><?php echo $course2['level'] ?></a>
+                                            </div> -->
                                             </div>
-                                        </div>
-                                        <div class="courses-content">
+                                            <div class="courses-content">
 
-                                            <h3><a href="<?php echo URL; ?>courses/view/<?php echo base64_encode('q=fromcenter%center=' . $center_id . '%course=' . $course2['id']); ?>" class="d-inline-block"><?php echo $course2['name'] ?> (<?php echo $CENTER->name ?>)</a></h3>
-                                            <!-- <div class="courses-rating">
+                                                <h3>
+                                                    <?php echo $course2['name'] ?> (<?php echo $CENTER->name ?>)
+                                                </h3>
+                                                <!-- <div class="courses-rating">
                                                 <div class="review-stars-rated">
                                                     <i class='bx bxs-star'></i>
                                                     <i class='bx bxs-star'></i>
@@ -373,21 +383,22 @@
                                                     5.0 (1 rating)
                                                 </div>
                                             </div> -->
+                                            </div>
+                                            <div class="courses-box-footer">
+                                                <ul>
+                                                    <li class="students-number">
+                                                        <i class='bx bx-user'></i> <?php echo $course2['max_student'] ?> students
+                                                    </li>
+                                                    <li class="courses-lesson">
+                                                        <i class='bx bx-book-open'></i> <?php echo CourseSubjects::getCount($course2['id'])['count']; ?> Subjects
+                                                    </li>
+                                                    <li class="courses-price">
+                                                        View
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="courses-box-footer">
-                                            <ul>
-                                                <li class="students-number">
-                                                    <i class='bx bx-user'></i> <?php echo $course2['max_student'] ?> students
-                                                </li>
-                                                <li class="courses-lesson">
-                                                    <i class='bx bx-book-open'></i> 6 Subjects
-                                                </li>
-                                                <li class="courses-price">
-                                                    <?php echo $course2['languages'] ?>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                         <?php
                             }
@@ -396,31 +407,34 @@
                     </div>
                 </div>
 
-            <?php } elseif ($attr[0] == 'q=fromcourse') { ?>
-
-                <div class="related-courses">
-                    <h3>Related Centers</h3>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-categories-courses-box mb-30">
-                                <div class="icon">
-                                    <i class='bx bx-code-alt'></i>
+                <?php } elseif ($attr[0] == 'q=fromcourse') {
+                $CENTER = new Center(NULL);
+                foreach ($CENTER->getByCourse($course_id) as $key => $center2) {
+                    // if ($center_id != $center2['id']) {
+                ?>
+                    <div class="related-courses">
+                        <h3>This Course Related Centers</h3>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-sm-6 <?php echo $key = array_rand($this->colors);
+                        unset($this->colors[$key]); ?>">
+                                <div class="single-categories-courses-box mb-30">
+                                    <div class="icon">
+                                        <i class='bx bx-code-alt'></i>
+                                    </div>
+                                    <h3><?php echo $center2['name']
+                                        ?></h3>
+                                    <!-- <span><?php //echo $CENTER->getCntersCourseCount($center['id'])['count']; 
+                                                ?> Courses</span> -->
+                                    <a href="<?php echo URL; ?>courses/apply/<?php echo base64_encode('q=toapply%center=' . $center2['id'] . '%course=' . $course_id); ?>" class="link-btn"></a>
                                 </div>
-                                <h3><?php //echo $center['name'] 
-                                    ?></h3>
-                                <span><?php
-
-                                        //echo $CENTER->getCntersCourseCount($center['id'])['count'];
-
-                                        ?> Courses</span>
-                                <a href="<?php echo URL; ?>courses/list/<?php //echo base64_encode('q=fromcenter%center=' . $center['id']); 
-                                                                        ?>" class="link-btn"></a>
                             </div>
                         </div>
                     </div>
-                </div>
 
-            <?php } ?>
+            <?php
+                    // }
+                }
+            } ?>
         </div>
     </section>
 

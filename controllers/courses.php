@@ -6,6 +6,7 @@ class courses extends Controller
     function __construct()
     {
         parent::__construct();
+        $this->view->colors = Colors::getRandomColors(Center::getCount()['count']);
     }
 
     function index($query = false)
