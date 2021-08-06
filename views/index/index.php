@@ -154,8 +154,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <a href="" class="">
                         <div class="single-offer-box">
-                            <div class="icon">
-                                <i class='bx bx-group'></i>
+                            <div class="">
+                            <img src="<?php echo URL ?>assets/img/cards/club2.png">
                             </div>
 
                             <h3>Youth Club</h3>
@@ -168,8 +168,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <a href="">
                         <div class="single-offer-box">
-                            <div class="icon">
-                                <i class='bx bx-laptop'></i>
+                            <div class="">
+                            <img src="<?php echo URL ?>assets/img/cards/soc.png">
                             </div>
                             <h3>School of Computing</h3>
 
@@ -182,8 +182,9 @@
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
                     <a href="">
                         <div class="single-offer-box">
-                            <div class="icon">
-                                <i class='bx bxs-school'></i>
+                            <div class="">
+                                <img src="<?php echo URL ?>assets/img/cards/nysco.png">
+                            <!-- <i class='bx bxs-school'></i> -->
                             </div>
                             <h3>NYSCO</h3>
 
