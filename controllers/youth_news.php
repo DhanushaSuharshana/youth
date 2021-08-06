@@ -6,7 +6,7 @@ class Youth_news extends Controller {
     }
 
     function index(){
-
+        $this->view->render('youth_news/index');
     }
     
     function view() {
