@@ -55,7 +55,7 @@
                 <div class="page-title-content">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li>My Account</li>
+                        <li>Apply Online</li>
                         <li>Edit</li>
                     </ul>
                     <h2>Apply Online</h2>
@@ -74,6 +74,7 @@
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Select Training Center </label>
                                     <select class="form-control" id="exampleFormControlSelect1">
+                                        
                                         <option>Maharagam</option>
                                         <option>Galle</option>
                                         <option>Gampaha</option>
@@ -84,7 +85,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Select your <?php echo URL ?><?php echo URL ?>assets/<span class="required">*</span></label>
+                                    <label for="exampleFormControlSelect1">Select your <span class="required">*</span></label>
                                     <select class="form-control" id="exampleFormControlSelect1">
                                         <option>National Certificate - Computer Graphic Designing</option>
                                         <option>National Certificate - Automobile A/C Mechanic</option>
