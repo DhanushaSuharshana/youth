@@ -118,7 +118,7 @@
                                 </div> -->
                                 <?php
                                 $COURSE_PHOTO = new CoursePhoto(NULL);
-                                foreach ($COURSE_PHOTO->all() as $key => $course_photo) {
+                                foreach ($COURSE_PHOTO->getByCourse($course_id) as $key => $course_photo) {
                                 ?>
                                     <div class="item  <?= ($key == 0) ? "active" : "" ?>">
                                         <img src="<?php echo URL ?>upload/courses/gallery/<?php echo $course_photo['image_name']; ?>" alt="Chicago" style="width:100%;">

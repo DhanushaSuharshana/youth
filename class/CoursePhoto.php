@@ -57,6 +57,20 @@ class CoursePhoto {
         }
     }
 
+    public function getByCourse($course) {
+
+        $query = "SELECT * FROM `course_photo` WHERE `course` = '$course' ORDER BY queue ASC";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
     public function all() {
 
         $query = "SELECT * FROM `course_photo` ORDER BY queue ASC";
