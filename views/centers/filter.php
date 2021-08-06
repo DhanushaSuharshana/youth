@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <title>Courses National Youth Council Sri Lanka</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <title>Centers National Youth Council Sri Lanka</title>
+    <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
 </head>
 
 <body>
@@ -80,7 +80,9 @@
                 $CENTER = new Center(NULL);
                 foreach ($CENTER->allForApply() as $center) {
                 ?>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-3 col-md-4 col-sm-6 
+                    <?php echo $key = array_rand($this->colors);unset($this->colors[$key]); ?>
+                    ">
                         <div class="single-categories-courses-box mb-30">
                             <div class="icon">
                                 <i class='bx bx-map'></i>

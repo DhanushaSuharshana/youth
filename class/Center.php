@@ -87,6 +87,37 @@ class Center
         return $array_res;
     }
 
+    public function getByCourse($course)
+    {
+        $query = "SELECT 
+        *
+        
+         FROM  course_by_centers cbc JOIN center cen  on(cbc.center_id=cen.id) WHERE cbc.course_id = " . $course;
+
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+        while ($row = mysqli_fetch_array($result)) {
+
+            array_push($array_res, $row);
+        }
+        // var_dump($array_res);exit;
+        return $array_res;
+    }
+
+    public static function getCount()
+    {
+        $query = "SELECT COUNT(id) as count FROM `center`";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+        while ($row = mysqli_fetch_array($result)) {
+
+            array_push($array_res, $row);
+        }
+        return $array_res[0];
+    }
+
     public function allForApply()
     {
         $query = "SELECT * FROM `center` WHERE `type` IN(1,3)";
@@ -102,7 +133,7 @@ class Center
 
     public function getCeterCoursesCount($id)
     {
-        $query = "SELECT COUNT(id) as count FROM `course_by_centers` WHERE `center_id`=".$id;
+        $query = "SELECT COUNT(id) as count FROM `course_by_centers` WHERE `center_id`=" . $id;
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
