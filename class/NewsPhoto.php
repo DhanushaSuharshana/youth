@@ -11,7 +11,8 @@
  *
  * @author Suharshana DsW
  */
-class NewsPhoto {
+class NewsPhoto
+{
 
     public $id;
     public $news;
@@ -19,7 +20,8 @@ class NewsPhoto {
     public $caption;
     public $queue;
 
-    public function __construct($id) {
+    public function __construct($id)
+    {
         if ($id) {
 
             $query = "SELECT * FROM `news_photo` WHERE `id`=" . $id;
@@ -38,26 +40,43 @@ class NewsPhoto {
         }
     }
 
-    public function create() {
+    public function create()
+    {
 
         $query = "INSERT INTO `news_photo` (`news`,`image_name`,`caption`,`queue`) VALUES  ('"
-                . $this->news . "','"
-                . $this->image_name . "', '"
-                . $this->caption . "', '"
-                . $this->queue . "')";
-      
+            . $this->news . "','"
+            . $this->image_name . "', '"
+            . $this->caption . "', '"
+            . $this->queue . "')";
+
         $db = new Database();
 
         $result = $db->readQuery($query);
 
         if ($result) {
-             return TRUE;
+            return TRUE;
         } else {
             return FALSE;
         }
     }
 
-    public function all() {
+    public function getByNews($news)
+    {
+
+        $query = "SELECT * FROM `news_photo` WHERE news = '$news' ORDER BY queue ASC";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
+    public function all()
+    {
 
         $query = "SELECT * FROM `news_photo` ORDER BY queue ASC";
         $db = new Database();
@@ -71,14 +90,15 @@ class NewsPhoto {
         return $array_res;
     }
 
-    public function update() {
+    public function update()
+    {
 
         $query = "UPDATE  `news_photo` SET "
-                . "`news` ='" . $this->news . "', "
-                . "`image_name` ='" . $this->image_name . "', "
-                . "`caption` ='" . $this->caption . "', "
-                . "`queue` ='" . $this->queue . "' "
-                . "WHERE `id` = '" . $this->id . "'";
+            . "`news` ='" . $this->news . "', "
+            . "`image_name` ='" . $this->image_name . "', "
+            . "`caption` ='" . $this->caption . "', "
+            . "`queue` ='" . $this->queue . "' "
+            . "WHERE `id` = '" . $this->id . "'";
 
         $db = new Database();
 
@@ -91,7 +111,8 @@ class NewsPhoto {
         }
     }
 
-    public function delete() {
+    public function delete()
+    {
 
         $query = 'DELETE FROM `news_photo` WHERE id="' . $this->id . '"';
 
@@ -100,7 +121,8 @@ class NewsPhoto {
         return $db->readQuery($query);
     }
 
-    public function getNewsPhotosById($news) {
+    public function getNewsPhotosById($news)
+    {
 
         $query = "SELECT * FROM `news_photo` WHERE `news`= $news ORDER BY queue ASC";
 
@@ -115,11 +137,11 @@ class NewsPhoto {
         return $array_res;
     }
 
-    public function arrange($key, $img) {
+    public function arrange($key, $img)
+    {
         $query = "UPDATE `news_photo` SET `queue` = '" . $key . "'  WHERE id = '" . $img . "'";
         $db = new Database();
         $result = $db->readQuery($query);
         return $result;
     }
-
 }
