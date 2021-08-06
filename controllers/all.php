@@ -17,4 +17,8 @@ class all extends Controller
     {
         $this->view->render('all/card');
     }
+
+    function blank(){
+        $this->view->render('all/blank');
+    }
 }
