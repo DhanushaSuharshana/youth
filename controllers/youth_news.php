@@ -9,7 +9,8 @@ class Youth_news extends Controller {
         $this->view->render('youth_news/index');
     }
     
-    function view() {
+    function view($query = false) {
+        $this->view->query = $query;
         $this->view->render('youth_news/view');
     }
 }
