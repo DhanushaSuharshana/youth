@@ -83,7 +83,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-categories-courses-box mb-30">
                             <div class="icon">
-                                <i class='bx bx-code-alt'></i>
+                                <i class='bx bx-map'></i>
                             </div>
                             <h3><?php echo $center['name'] ?></h3>
                             <span><?php 
