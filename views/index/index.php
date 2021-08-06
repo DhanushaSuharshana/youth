@@ -127,9 +127,11 @@
                                 youth in the proper direction to enable them to empower themselves to the fullest potential while contributing
                             </p>
                             <div class="features-text">
+
                                 
                       <p<b>Download Mobile App</b></p>
                                
+
                             </div>
                             <a href="our-centers.php" class=""><img src="assets/img/app.png" class="app-img"><span class="label"></span></a>
                         </div>
@@ -278,7 +280,7 @@
                                                                 <div class="single-courses-item mb-30">
                                                                     <div class="courses-image">
                                                                         <div class="d-block">
-                                                                            <img src="../../upload/courses/<?php echo $course['image_name'] ?>" alt="<?php echo $course['name'] ?>">
+                                                                            <img src="<?php echo URL ?>upload/courses/<?php echo $course['image_name'] ?>" alt="<?php echo $course['name'] ?>">
                                                                         </div>
                                                                     </div>
                                                                     <div class="courses-content">
@@ -402,7 +404,7 @@
                                     <div class="single-testimonials-item">
                                         <?php echo $comment['comment'] ?>
                                         <div class="info">
-                                            <img src="../../upload/comments/<?php echo $comment['image_name'] ?>" class="shadow rounded-circle" alt="image">
+                                            <img src="<?php echo URL ?>upload/comments/<?php echo $comment['image_name'] ?>" class="shadow rounded-circle" alt="image">
                                             <h3><?php echo $comment['title'] ?></h3>
                                             <span><?php echo $comment['name'] ?></span>
                                         </div>
