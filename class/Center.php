@@ -89,7 +89,7 @@ class Center
 
     public function allForApply()
     {
-        $query = "SELECT * FROM `center` WHERE `type` IN(3,6)";
+        $query = "SELECT * FROM `center` WHERE `type` IN(1,3)";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
