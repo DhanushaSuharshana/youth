@@ -81,19 +81,20 @@
                 foreach ($CENTER->allForApply() as $center) {
                 ?>
                     <div class="col-lg-3 col-md-4 col-sm-6 
-                    <?php echo $key = array_rand($this->colors);unset($this->colors[$key]); ?>
+                    <?php echo $key = array_rand($this->colors);
+                    unset($this->colors[$key]); ?>
                     ">
                         <div class="single-categories-courses-box mb-30">
                             <div class="icon">
                                 <i class='bx bx-map'></i>
                             </div>
-                            <h3><?php echo $center['name'] ?></h3>
-                            <span><?php 
-                            
-                            echo $CENTER->getCeterCoursesCount($center['id'])['count']; 
-                            
-                            ?> Courses</span>
-                            <a href="<?php echo URL; ?>courses/list/<?php echo base64_encode('q=fromcenter%center='.$center['id']); ?>" class="link-btn"></a>
+                            <h3><?php echo $center['name'];
+                                $count = $CENTER->getCeterCoursesCount($center['id'])['count'];
+                                ?></h3>
+                            <span><?=
+                                    $count == 0 ?  "Courses Not Available" : ($count == 1 ? $count . " Course" : ($count >= 2 ? $count . " Courses" : ""));
+                                    ?></span>
+                            <a href="<?php echo URL; ?>courses/list/<?php echo base64_encode('q=fromcenter%center=' . $center['id']); ?>" class="link-btn"></a>
                         </div>
                     </div>
                 <?php } ?>

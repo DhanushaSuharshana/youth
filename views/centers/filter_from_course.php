@@ -101,11 +101,11 @@
                                     <i class='bx bx-map'></i>
                                 </div>
                                 <h3><?php echo $center['name'] ?></h3>
-                                <span><?php
+                                <!-- <span><?php
 
-                                        echo $CENTER->getCeterCoursesCount($center['id'])['count'];
+                                        // echo $CENTER->getCeterCoursesCount($center['id'])['count'];
 
-                                        ?> Courses</span>
+                                        ?> Courses</span> -->
                                 <a href="<?php echo URL; ?>courses/apply/<?php echo base64_encode('q=toapply%center=' . $center['id'] . '%course=' . $course_id); ?>" class="link-btn"></a>
                             </div>
                         </div>

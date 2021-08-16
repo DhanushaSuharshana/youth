@@ -23,13 +23,20 @@
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
     <title>Courses National Youth Council Sri Lanka</title>
     <link rel="icon" type="image/png" href="<?php echo URL ?>assets/img/pre-logo.png">
+    <?php
+    $attr = explode('%', base64_decode($this->query));
+    if ($attr[0] == 'q=fromcourse') {
+    ?>
+        <link rel="stylesheet" href="<?php echo URL ?>public/map/map.css">
+        <!-- <link rel="stylesheet" href="<?php echo URL ?>public/map/card.css"> -->
+    <?php } ?>
 </head>
 
 <body>
     <?php include './views/header.php';
     $COURSE = new Course(NULL);
 
-    $attr = explode('%', base64_decode($this->query));
+
     if ($attr[0] == 'q=fromcenter') {
         $center_id = explode('=', $attr[1])[1];
         $CENTER = new Center($center_id);
@@ -136,129 +143,17 @@
                             </a>
                         </div>
                     </div>
-                    <div class="courses-details-desc">
-                        <!-- <h3>What you'll learn</h3> -->
-                        <!-- <div class="why-you-learn">
-                            <ul>
-                                <li>
-                                    <span>
-                                        <i class='bx bx-check'></i>
-                                        Become an expert in Statistics
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class='bx bx-check'></i>
-                                        Boost your resume with skills
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class='bx bx-check'></i>
-                                        Gather, organize, data
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class='bx bx-check'></i>
-                                        Use data for improved
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class='bx bx-check'></i>
-                                        Present information KPIs
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class='bx bx-check'></i>
-                                        Perform quantitative
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class='bx bx-check'></i>
-                                        Analyze current data
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class='bx bx-check'></i>
-                                        Discover how to find trends
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class='bx bx-check'></i>
-                                        Understand the fundamentals
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <i class='bx bx-check'></i>
-                                        Use SQL to create, design
-                                    </span>
-                                </li>
-                            </ul>
-                        </div> -->
-                        <h3>Description</h3>
-                        <?php echo $course['description'] ?>
-                        <!-- <ul class="requirements-list">
-                            <li>Contrary to popular belief, Lorem Ipsum is not simply random text.</li>
-                            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</li>
-                            <li>The standard Lorem Ipsum passage, used since the 1500s.</li>
-                        </ul>
-                        <h3>Description</h3>
-                        <p><strong>Hi! Welcome to Certified Graphic Design with Free Project Course, the only course you need to become a BI Analyst.</strong></p>
-                        <p>We are proud to present you this one-of-a-kind opportunity. There are several online courses teaching some of the skills related to the BI Analyst profession. The truth of the matter is that none of them completely prepare you.</p>
-                        <p><strong>Our program is different than the rest of the materials available online.</strong></p>
-                        <p>It is truly comprehensive. The Business Intelligence Analyst Course comprises of several modules:</p>
-                        <ul class="description-features-list">
-                            <li>Introduction to Data and Data Science</li>
-                            <li>Statistics and Excel</li>
-                            <li>Database theory</li>
-                            <li>SQL</li>
-                            <li>Tableau</li>
-                        </ul> -->
-                        <!-- <p>These are the precise technical skills recruiters are looking for when hiring BI Analysts. And today, you have the chance of acquiring an invaluable advantage to get ahead of other candidates. This course will be the secret to your success. And your success is our success, so let’s make it happen!</p>
-                        <p>Here are some more details of what you get with The Business Intelligence Analyst Course:</p> -->
-                        <!-- <ul class="description-features-list">
-                            <li><strong>Introduction to Data and Data Science</strong> – Make sense of terms like business intelligence, traditional and big data, traditional statistical methods, machine learning, predictive analytics, supervised learning, unsupervised learning, reinforcement learning, and many more;</li>
-                            <li><strong>Statistics and Excel</strong> – Understand statistical testing and build a solid foundation. Modern software packages and programming languages are automating most of these activities, but this part of the course gives you something more valuable – critical thinking abilities;</li>
-                            <li><strong>Database theory</strong> – Before you start using SQL, it is highly beneficial to learn about the underlying database theory and acquire an understanding of why databases are created and how they can help us manage data;</li>
-                            <li><strong>SQL</strong> – when you can work with SQL, it means you don’t have to rely on others sending you data and executing queries for you. You can do that on your own. This allows you to be independent and dig deeper into the data to obtain the answers to questions that might improve the way your company does its business;</li>
-                            <li><strong>Tableau</strong> – one of the most powerful and intuitive data visualization tools available out there. Almost all large companies use such tools to enhance their BI capabilities. Tableau is the #1 best-in-class solution that helps you create powerful charts and dashboards;</li>
-                            <li>Learning a programming language is meaningless without putting it to use. That’s why we integrate SQL and Tableau, and perform several real-life Business Intelligence tasks;</li>
-                        </ul>
-                        <p><strong>Sounds amazing, right?</strong></p>
-                        <p>Our courses are unique because our team works hard to:</p>
-                        <ul class="description-features-list">
-                            <li>Pre-script the entire content</li>
-                            <li>Work with real-life examples</li>
-                            <li>Provide easy to understand and complete explanation</li>
-                            <li>Create beautiful and engaging animations</li>
-                            <li>Prepare exercises, course notes, quizzes, and other materials that will enhance your course taking experience</li>
-                            <li>Be there for you and provide support whenever necessary</li>
-                        </ul> -->
-                        <!-- <p>We love teaching and we are really excited about this journey. It will get your foot in the door of an exciting and rising profession. Don’t hesitate and subscribe today. The only regret you will have is that you didn’t find this course sooner!</p> -->
-                        <!-- <h3>Who this course is for:</h3>
-                        <ul class="audience-list">
-                            <li>Beginners to programming and data science</li>
-                            <li>Students eager to learn about job opportunities in the field of data science</li>
-                            <li>Candidates willing to boost their resume by learning how to combine the knowledge of Statistics, SQL, and Tableau in a real-world working environment</li>
-                            <li>SQL Programmers who want to develop business reasoning and apply their knowledge to the solution of various business tasks</li>
-                            <li>People interested in a Business Intelligence Analyst career</li>
-                        </ul> -->
-                        <!--<h3>Meet your instructors</h3>-->
-
+                    <div class="related-courses">
+                        <h3>This Course Related Centers</h3>
+                        <div id="map" style="margin-bottom: 15px;"></div>
                     </div>
-                    <!--Google map-->
-                    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 310px">
-                        <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-
-
+                    <?php if (isset($CENTER)) { ?>
+                        <!--Google map-->
+                        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 310px">
+                            <iframe src="https://maps.google.com/maps?q=<?= $CENTER->latitude . ", " . $CENTER->longitude ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    <?php } ?>
+                    
                 </div>
 
                 <div class="col-lg-4">
@@ -366,9 +261,9 @@
                                                 <a href="#" class="d-block"><?php echo $course2['level'] ?></a>
                                             </div> -->
                                             </div>
-                                            <div class="courses-content">
+                                            <div class="courses-content" style="min-height: 120px !important;">
 
-                                                <h3>
+                                                <h3 style="font-size: 16px !important;">
                                                     <?php echo $course2['name'] ?> (<?php echo $CENTER->name ?>)
                                                 </h3>
                                                 <!-- <div class="courses-rating">
@@ -386,13 +281,13 @@
                                             </div>
                                             <div class="courses-box-footer">
                                                 <ul>
-                                                    <li class="students-number">
+                                                    <li class="students-number" style="font-size: 13px !important;">
                                                         <i class='bx bx-user'></i> <?php echo $course2['max_student'] ?> students
                                                     </li>
-                                                    <li class="courses-lesson">
+                                                    <li class="courses-lesson" style="font-size: 13px !important;">
                                                         <i class='bx bx-book-open'></i> <?php echo CourseSubjects::getCount($course2['id'])['count']; ?> Subjects
                                                     </li>
-                                                    <li class="courses-price">
+                                                    <li class="courses-price" style="font-size: 15px !important;">
                                                         View
                                                     </li>
                                                 </ul>
@@ -412,24 +307,22 @@
                 foreach ($CENTER->getByCourse($course_id) as $key => $center2) {
                     // if ($center_id != $center2['id']) {
                 ?>
-                    <div class="related-courses">
-                        <h3>This Course Related Centers</h3>
-                        <div class="row">
+                    
+                        <!-- <div class="row">
                             <div class="col-lg-3 col-md-4 col-sm-6 <?php echo $key = array_rand($this->colors);
-                        unset($this->colors[$key]); ?>">
+                                                                    unset($this->colors[$key]); ?>">
                                 <div class="single-categories-courses-box mb-30">
                                     <div class="icon">
                                         <i class='bx bx-code-alt'></i>
                                     </div>
                                     <h3><?php echo $center2['name']
                                         ?></h3>
-                                    <!-- <span><?php //echo $CENTER->getCntersCourseCount($center['id'])['count']; 
-                                                ?> Courses</span> -->
+                                  
                                     <a href="<?php echo URL; ?>courses/apply/<?php echo base64_encode('q=toapply%center=' . $center2['id'] . '%course=' . $course_id); ?>" class="link-btn"></a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
+                   
 
             <?php
                     // }
@@ -442,7 +335,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <script src="<?php echo URL ?>assets/js/jquery.min.js"></script>
     <script src="<?php echo URL ?>assets/js/popper.min.js"></script>
     <script src="<?php echo URL ?>assets/js/bootstrap.min.js"></script>
@@ -461,6 +354,120 @@
     <script src="<?php echo URL ?>assets/js/form-validator.min.js"></script>
     <script src="<?php echo URL ?>assets/js/contact-form-script.js"></script>
     <script src="<?php echo URL ?>assets/js/main.js"></script>
+
+    <?php
+    if ($attr[0] == 'q=fromcourse') {
+    ?>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuOQ9OE1_4Js_aGYZ-0Lmyi61wExmMHE&callback=initMap&libraries=&v=weekly" defer></script>
+
+        <!-- <script src="<?php echo URL ?>public/map/map2.js"></script> -->
+        <!-- <script src="<?php echo URL ?>public/map/card.js"></script> -->
+
+
+
+        <script>
+            let mapType = "roadmap";
+            let centerOfLanka = {
+                lat: 7.8731,
+                lng: 80.7718
+            };
+            //HYBRID, ROADMAP,SATELLITE, TERRAIN
+            let map;
+            // The markers are stored in an array.
+            let markers = []; // MARKED MARKERS ON MAP
+
+            function initMap() {
+                map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 6,
+                    center: centerOfLanka,
+                    /*
+                    gestureHandling: "none", /cooperative
+                    zoomControl: false,
+                    */
+                    //  gestureHandling: "greedy",
+
+                });
+                if (mapType) {
+                    map.setMapTypeId(mapType);
+                }
+
+                var markers = [
+                    <?php foreach ($CENTER->getByCourse($course_id) as $key => $_center) {
+                    ?> {
+                            coords: {
+                                lat: <?php echo $_center['latitude']; ?>,
+                                lng: <?php echo $_center['longitude']; ?>
+                            },
+                            content: {
+                                name: '<?php echo $_center['name']; ?>',
+                                url: '<?php echo base64_encode('q=toapply%center=' . $_center['id'] . '%course=' . $course_id); ?>'
+                            }
+                        },
+                    <?php } ?>
+                ]
+                console.log(markers);
+                map.setZoom(6);
+                // deleteMarkers();
+                setTimeout(function() {
+                    map.setZoom(7);
+                    map.setCenter(centerOfLanka);
+                    for (var i = 0; i < markers.length; i++) {
+                        addMarker(markers[i]);
+                        // console.log(markers[i])
+                    }
+                }, 1000);
+                //==========================================================================================================
+
+                // MAPS FUNCTIONS
+                // Adds a marker to the map and push to the array.
+                function addMarker(props) {
+                    console.log(props.coords);
+                    const marker = new google.maps.Marker({
+                        title: 'ssss',
+                        position: props.coords,
+                        animation: google.maps.Animation.DROP,
+                        map: map,
+                    });
+                    // SET ICON
+                    if (props.iconImage) {
+                        marker.setIcon(props.iconImage);
+                    }
+                    const contentString =
+                        ` 
+                            <div class="" style="width: 100%; height: 100%;">
+                                <div class="single-categories-courses-box"> 
+                                    <h3>${props.content.name}</h3>
+                                </div>
+                                <a href="<?php echo URL; ?>courses/apply/${props.content.url}" class="default-btn text-center" style="width: 100%">Select Center</a>
+                            </div>       
+                        `;
+                    const infoWindow = new google.maps.InfoWindow({
+                        minWidth: 320,
+                        minHeight: 165,
+                        maxHeight: 165,
+                        content: contentString,
+                    });
+                    google.maps.event.addListener(marker, 'click', function() {
+                        if (!marker.open) {
+                            infoWindow.open(map, marker);
+                            marker.open = true;
+                        } else {
+                            infoWindow.close();
+                            marker.open = false;
+                        }
+                        google.maps.event.addListener(map, 'click', function() {
+                            infoWindow.close();
+                            marker.open = false;
+                        });
+                    });
+                    markers.push(marker);
+                }
+
+            }
+        </script>
+
+
+    <?php } ?>
 </body>
 
 </html>
