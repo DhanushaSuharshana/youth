@@ -153,7 +153,7 @@
                             <iframe src="https://maps.google.com/maps?q=<?= $CENTER->latitude . ", " . $CENTER->longitude ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     <?php } ?>
-                    
+
                 </div>
 
                 <div class="col-lg-4">
@@ -248,25 +248,27 @@
                 <div class="related-courses">
                     <h3>This Centers' Related Courses</h3>
                     <div class="row">
-                        <?php
-                        foreach ($COURSE->getByCenter($center_id) as $key => $course2) {
-                            if ($course_id != $course2['id']) {
-                        ?>
-                                <div class="col-lg-3 col-md-3">
-                                    <a href="<?php echo URL; ?>courses/view/<?php echo base64_encode('q=fromcenter%center=' . $center_id . '%course=' . $course2['id']); ?>">
-                                        <div class="single-courses-box mb-30">
-                                            <div class="courses-image">
-                                                <img src="<?php echo URL ?>upload/courses/<?php echo $course2['image_name'] ?>" alt="image">
-                                                <!-- <div class="courses-tag">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="blog-slides owl-carousel owl-theme">
+                            <?php
+                            foreach ($COURSE->getByCenter($center_id) as $key => $course2) {
+                                if ($course_id != $course2['id']) {
+                            ?>
+                                    
+                                        <a href="<?php echo URL; ?>courses/view/<?php echo base64_encode('q=fromcenter%center=' . $center_id . '%course=' . $course2['id']); ?>">
+                                            <div class="single-courses-box mb-30">
+                                                <div class="courses-image">
+                                                    <img src="<?php echo URL ?>upload/courses/<?php echo $course2['image_name'] ?>" alt="image">
+                                                    <!-- <div class="courses-tag">
                                                 <a href="#" class="d-block"><?php echo $course2['level'] ?></a>
                                             </div> -->
-                                            </div>
-                                            <div class="courses-content" style="min-height: 120px !important;">
+                                                </div>
+                                                <div class="courses-content" style="min-height: 120px !important;">
 
-                                                <h3 style="font-size: 16px !important;">
-                                                    <?php echo $course2['name'] ?> (<?php echo $CENTER->name ?>)
-                                                </h3>
-                                                <!-- <div class="courses-rating">
+                                                    <h3 style="font-size: 16px !important;">
+                                                        <?php echo $course2['name'] ?> (<?php echo $CENTER->name ?>)
+                                                    </h3>
+                                                    <!-- <div class="courses-rating">
                                                 <div class="review-stars-rated">
                                                     <i class='bx bxs-star'></i>
                                                     <i class='bx bxs-star'></i>
@@ -278,27 +280,29 @@
                                                     5.0 (1 rating)
                                                 </div>
                                             </div> -->
+                                                </div>
+                                                <div class="courses-box-footer">
+                                                    <ul>
+                                                        <li class="students-number" style="font-size: 13px !important;">
+                                                            <i class='bx bx-user'></i> <?php echo $course2['max_student'] ?> students
+                                                        </li>
+                                                        <li class="courses-lesson" style="font-size: 13px !important;">
+                                                            <i class='bx bx-book-open'></i> <?php echo CourseSubjects::getCount($course2['id'])['count']; ?> Subjects
+                                                        </li>
+                                                        <li class="courses-price" style="font-size: 15px !important;">
+                                                            View
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <div class="courses-box-footer">
-                                                <ul>
-                                                    <li class="students-number" style="font-size: 13px !important;">
-                                                        <i class='bx bx-user'></i> <?php echo $course2['max_student'] ?> students
-                                                    </li>
-                                                    <li class="courses-lesson" style="font-size: 13px !important;">
-                                                        <i class='bx bx-book-open'></i> <?php echo CourseSubjects::getCount($course2['id'])['count']; ?> Subjects
-                                                    </li>
-                                                    <li class="courses-price" style="font-size: 15px !important;">
-                                                        View
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                        <?php
+                                        </a>
+                                    
+                            <?php
+                                }
                             }
-                        }
-                        ?>
+                            ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -307,8 +311,8 @@
                 foreach ($CENTER->getByCourse($course_id) as $key => $center2) {
                     // if ($center_id != $center2['id']) {
                 ?>
-                    
-                        <!-- <div class="row">
+
+                    <!-- <div class="row">
                             <div class="col-lg-3 col-md-4 col-sm-6 <?php echo $key = array_rand($this->colors);
                                                                     unset($this->colors[$key]); ?>">
                                 <div class="single-categories-courses-box mb-30">
@@ -322,7 +326,7 @@
                                 </div>
                             </div>
                         </div> -->
-                   
+
 
             <?php
                     // }
