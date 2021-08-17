@@ -14,66 +14,49 @@ require 'public/PHPMailer/src/Exception.php';
 
 // Instantiation and passing `true` enables exceptions
 
-class Mail {
+class Mail
+{
 
-    function __construct($host, $username, $password, $title, $port) {
+    function __construct($host, $username, $password, $title, $port)
+    {
         $this->mail = new PHPMailer(true);
         $this->mail->CharSet = 'UTF-8';
         //Server settings
-//        $this->mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+            //    $this->mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
         $this->mail->isSMTP();     // Send using SMTP
-//        $this->mail->isSendmail();
+        //        $this->mail->isSendmail();
         $this->mail->Host = $host;                    // Set the SMTP server to send through
         $this->mail->SMTPAuth = true;                                   // Enable SMTP authentication
         $this->mail->Username = $username;                     // SMTP username
         $this->mail->Password = $password;                               // SMTP password
         $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-//        $this->mail->SMTPSecure = 'tls';
+            //    $this->mail->SMTPSecure = 'tls';
         $this->mail->Port = $port;
         $this->mail->setFrom($username, $title);
         $this->mail->isHTML(true);
         $this->mail->addReplyTo($username, $title);
     }
 
-    function set_content($content, $data = false, $button = false) {
-        $this->mail->Subject = $content["subject"];
-//        $this->mail->Body .= '';
-        $this->mail->Body .= MAIL_HEADER;
-        $this->mail->Body .= $content["title"];
-        $this->mail->Body .= MAIL_SET1;
-        $this->mail->Body .= $content["message"];
-        $this->mail->Body .= MAIL_SET2;
+    function set_content($subject = 'Success', $temp, $content = [])
+    {
 
-        if ($data) {
-            $this->mail->Body .= MAIL_DATA_BEFORE;
-            $this->mail->Body .= $data["data"];
-            $this->mail->Body .= MAIL_DATA_AFTER;
-        }
-
-        if ($button) {
-            $this->mail->Body .= MAIL_BUTTON_BEFORE;
-            $this->mail->Body .= $button["href"];
-            $this->mail->Body .= MAIL_BUTTON_BEFORE2;
-            $this->mail->Body .= $button["text"];
-            $this->mail->Body .= MAIL_BUTTON_AFTER;
-        }
-
-
-        $this->mail->Body .= MAIL_FOOTER;
-        if (isset($content["altbody"])) {
-            $this->mail->AltBody = $content["altbody"];
-        }
+        require('./public/mail_template/' . $temp . '.php');
+        $this->mail->Subject = $subject;
+        //        $this->mail->Body .= '';
+        $this->mail->Body = mail_set_template($content);
     }
 
     //['email','email','email']
     //can't see BCC
-    function set_address($address, $user = 'User') {
+    function set_address($address, $user = 'User')
+    {
         $this->mail->addAddress($address, $user);  // Add a recipient
     }
 
     //['email','email','email']
     //can't see BCC
-    function cc($cc) {
+    function cc($cc)
+    {
         foreach ($cc as $key => $value) {
             $this->mail->addCC($value);
         }
@@ -82,20 +65,23 @@ class Mail {
     //['email','email','email']
     //can't see BCC
     //can see TO, CC
-    function bcc($bcc) {
+    function bcc($bcc)
+    {
         foreach ($bcc as $key => $value) {
             $this->mail->addBCC($value);
         }
     }
 
     //['path']
-    function attach($attachment) {
+    function attach($attachment)
+    {
         foreach ($attachment as $key => $value) {
             $this->mail->addAttachment($value);
         }
     }
 
-    function send() {
+    function send()
+    {
         try {
             $this->mail->send();
             return true;
@@ -103,7 +89,4 @@ class Mail {
             return false;
         }
     }
-
 }
-
-?>

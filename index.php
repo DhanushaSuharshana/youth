@@ -14,11 +14,11 @@ require './libs/View.php';
 require './class/include.php';
 // ===========================
 //require './libs/Database.php';
-//require './libs/Validation.php';
+require './libs/Validation.php';
 //require './libs/Upload.php';
 //require './libs/Helper.php';
 //require './libs/Session.php';
-//require './libs/Mail.php';
+require './libs/Mail.php';
 
 $bootstrap = new Bootstrap();
 $bootstrap->init();
