@@ -1,4 +1,3 @@
-
 <footer class="footer-area">
     <div class="container">
         <div class="row">
@@ -63,11 +62,11 @@
                     <h3>Newsletter</h3>
                     <div class="newsletter-box">
                         <p>To get the latest news and latest updates from us.</p>
-                        <form class="newsletter-form" data-bs-toggle="validator">
+                        <form class="newsletter-form1" id="newsletter-form" data-bs-toggle="validator">
                             <label>Your e-mail address:</label>
-                            <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL" required autocomplete="off">
-                            <button type="submit">Subscribe</button>
-                            <div id="validator-newsletter" class="form-result"></div>
+                            <input type="email" id="email_news_letter" class="input-newsletter validation_field" placeholder="Enter your email" name="email" required autocomplete="off">
+                            <button type="submit" id="news_letter_btn"><span id="news_letter_btn_text">Subscribe</span></button>
+                            <div id="message-newsletter" class="form-result mt-2" style="display: none;color:seagreen;"></div>
                         </form>
                     </div>
                 </div>
@@ -83,4 +82,6 @@
 </footer>
 
 <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
-
+<script>
+    var siteUrl = '<?php echo URL; ?>';
+</script>

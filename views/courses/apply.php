@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
     <link href="<?php echo URL ?>public/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="<?php echo URL ?>assets/css/error.css">
 
     <title>Youth Council || Sri Lanka</title>
     <link rel="icon" type="image/png" href="<?php echo URL ?>assets/img/pre-logo.png">
@@ -231,9 +230,7 @@
     <?php include './views/footer.php'; ?>
 
     <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
-    <script>
-        var siteUrl = '<?php echo URL; ?>';
-    </script>
+    
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="<?php echo URL ?>assets/js/jquery.min.js"></script>
     <script src="<?php echo URL ?>assets/js/popper.min.js"></script>

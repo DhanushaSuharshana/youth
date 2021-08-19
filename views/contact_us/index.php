@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <title>Contact National Youth Council Sri Lanka</title>
     <link rel="icon" type="image/png" href="<?php echo URL ?>assets/img/pre-logo.png">
-    <link rel="stylesheet" href="<?php echo URL ?>assets/css/error.css">
 </head>
 
 <body>
@@ -138,9 +137,7 @@
 
 
     <?php include './views/footer.php'; ?>
-    <script>
-        var siteUrl = '<?php echo URL; ?>';
-    </script>
+   
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
@@ -160,7 +157,7 @@
     <!-- <script src="assets/js/form-validator.min.js"></script> -->
     <script src="assets/js/contact-form-script.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="<?php echo URL ?>assets/js/error_validation.js"></script>
+    <!-- <script src="<?php echo URL ?>assets/js/error_validation.js"></script> -->
     <script src="<?php echo URL ?>assets/js/contact.js"></script>
 </body>
 
