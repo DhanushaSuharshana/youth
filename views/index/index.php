@@ -42,7 +42,7 @@
                                     <h1>NATIONAL YOUTH SERVICE COUNCIL OF SRI LANKA.! </h1>
                                     <p class="dis-none">Youth of Sri lanka are also having an undertaking for economic and social upliftment of the country. </p>
                                     <div class="btn-box">
-                                        <a href="#" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                                        <a href="<?php echo URL ?>courses" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
                                         <!--                                    <a href="#" class="optional-btn">Get Started Free</a>-->
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@
                                
 
                             </div>
-                            <a href="our-centers.php" class=""><img src="assets/img/app.png" class="app-img"><span class="label"></span></a>
+                            <a href="#" class=""><img src="assets/img/app.png" class="app-img"><span class="label"></span></a>
                         </div>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <a href="" class="">
+                    <a href="<?php echo URL ?>page/services/youth-club" class="">
                         <div class="single-offer-box">
                             <div class="">
                             <img src="<?php echo URL ?>assets/img/cards/club2.png">
@@ -166,7 +166,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <a href="">
+                    <a href="<?php echo URL ?>page/services/school-of-computing">
                         <div class="single-offer-box">
                             <div class="">
                             <img src="<?php echo URL ?>assets/img/cards/soc.png">
@@ -180,7 +180,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
-                    <a href="">
+                    <a href="<?php echo URL ?>page/services/nysco">
                         <div class="single-offer-box">
                             <div class="">
                                 <img src="<?php echo URL ?>assets/img/cards/nysco.png">
@@ -573,7 +573,7 @@
                                     <div class="become-instructor-partner-content">
                                         <h2>Become a Partner</h2>
                                         <p>Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
-                                        <a href="#" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Contact Us</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
+                                        <a href="<?php echo URL ?>contact_us" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Contact Us</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
                                     </div>
                                 </div>
                             </div>

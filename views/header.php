@@ -1,4 +1,3 @@
-
 <style>
     .courses-content {
         min-height: 156px !important;
@@ -11,12 +10,12 @@
     ?>
 
     /* <?php echo $key ?> */
-    .<?php echo $key ?> .single-categories-courses-box {
+    .<?php echo $key ?>.single-categories-courses-box {
         background-color: <?php echo $color['color']; ?> !important;
     }
 
-    .<?php echo $key ?> .single-categories-courses-box:hover .icon, .<?php echo $key ?> 
-    .single-categories-courses-box:focus .icon {
+    .<?php echo $key ?>.single-categories-courses-box:hover .icon,
+    .<?php echo $key ?>.single-categories-courses-box:focus .icon {
         background-color: #fff !important;
         border-color: <?php echo $color['color']; ?> !important;
         color: <?php echo $color['color']; ?> !important;
@@ -106,10 +105,10 @@
                         <ul class="navbar-nav">
 
 
-                            <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link active">Home  </a></li>
-                            <li class="nav-item"><a href="<?php echo URL ?>youth_news/" class="nav-link">News  </a></li>
-                            <li class="nav-item"><a href="<?php echo URL ?>events/" class="nav-link ">Events  </a></li>
-                           
+                            <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link active">Home </a></li>
+                            <li class="nav-item"><a href="<?php echo URL ?>youth_news/" class="nav-link">News </a></li>
+                            <li class="nav-item"><a href="<?php echo URL ?>events/" class="nav-link ">Events </a></li>
+
 
                             <li class="nav-item"><a href="#" class="nav-link">Divisions <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
@@ -143,12 +142,12 @@
 
                             <li class="nav-item"><a href="#" class="nav-link">Services <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="<?php echo URL ?>">Youth Club</a> </li>
-                                    <li class="nav-item"><a href="#">Youth Services Limited</a></li>
-                                    <li class="nav-item"><a href="#">NYSCO</a></li>
-                                    <li class="nav-item"><a href="#">Youth Band</a></li>
-                                    <li class="nav-item"><a href="#">Youth Music Club</a></li>
-                                    <li class="nav-item"><a href="#">Photography and Video Unit</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-club">Youth Club</a> </li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-services-limited">Youth Services Limited</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/nysco">NYSCO</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-band">Youth Band</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-music-club">Youth Music Club</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/photography-and-video-unit">Photography and Video Unit</a></li>
                                     <!--                                    <li class="nav-item"><a href="#">Video Wall</a></li>-->
                                 </ul>
                             </li>
@@ -175,8 +174,8 @@
                         <ul class="navbar-nav">
 
                             <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link active">Home </a></li>
-                            <li class="nav-item"><a href="<?php echo URL ?>youth_news/" class="nav-link">News  </a></li>
-                            <li class="nav-item"><a href="<?php echo URL ?>events/" class="nav-link ">Events  </a></li>
+                            <li class="nav-item"><a href="<?php echo URL ?>youth_news/" class="nav-link">News </a></li>
+                            <li class="nav-item"><a href="<?php echo URL ?>events/" class="nav-link ">Events </a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Divisions <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="<?php echo URL ?>division">Administrative Division</a></li>
@@ -209,12 +208,12 @@
 
                             <li class="nav-item"><a href="#" class="nav-link">Services <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="<?php echo URL ?>">Youth Club</a> </li>
-                                    <li class="nav-item"><a href="#">Youth Services Limited</a></li>
-                                    <li class="nav-item"><a href="#">NYSCO</a></li>
-                                    <li class="nav-item"><a href="#">Youth Band</a></li>
-                                    <li class="nav-item"><a href="#">Youth Music Club</a></li>
-                                    <li class="nav-item"><a href="#">Photography and Video Unit</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-club">Youth Club</a> </li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-services-limited">Youth Services Limited</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/nysco">NYSCO</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-band">Youth Band</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-music-club">Youth Music Club</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/photography-and-video-unit">Photography and Video Unit</a></li>
                                     <!--                                    <li class="nav-item"><a href="#">Video Wall</a></li>-->
                                 </ul>
                             </li>
