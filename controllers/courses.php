@@ -91,7 +91,8 @@ class courses extends Controller
             $APPLY_ONLINE->al = $_POST['al'];
 
             if ($APPLY_ONLINE->create($_POST)) {
-                $this->mail->set_address($_POST['email']);
+                $mail = new Mail(MHOST, MUSERNAME, MPASSWORD, MTITLE, MPORT);
+                $mail->set_address($_POST['email']);
                 $COURSE = new Course($_POST['course_id']);
                 $CENTER = new Center($_POST['center_id']);
                 $content = [
@@ -99,8 +100,8 @@ class courses extends Controller
                     'course'=> $COURSE->name,
                     'center'=> $CENTER->name,
                 ];
-                $this->mail->set_content('Registration Success', 'template1',$content);
-                $this->mail->send();
+                $mail->set_content('Registration Success', 'template1',$content);
+                $mail->send();
 
                 echo json_encode(['has_errors' => false, 'status' => true]);
             } else {

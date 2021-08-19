@@ -192,7 +192,7 @@ function mail_set_template($content = [])
 															<td class='text pb20'
 																style='color:#000; font-family:Arial,sans-serif; font-size:14px; line-height:26px; text-align:left; padding-bottom:20px;'>
                                                                 
-																<h4>Dear Applicant,</h4>
+																<h4>Dear Applicant ".$content["first_name"].",</h4>
                                                                 <p style='color:#000; '>Thank you very much for registering with the ".$content["course"]." at ".$content["center"].".</p><br>
                                                                 <p style='color:#000; '>If you are eligible and are short-listed you will receive an email from NYSC, requesting you to attend an online-interview.  In case if you do not see it in your Inbox remember to <strong>check your email ‘SPAM’ folder</strong> as well. </p><br>
                                                                 <p style='color:#000; '>If you have any questions, need clarifications or have concerns please do not hesitate to contact the helpdesk at the NYSC: Email - <strong>info@nysc.lk</strong>  Phone: +9411xxxxxx; WhatsApp: +94xxxxxxxx(Text only).</p><br>
