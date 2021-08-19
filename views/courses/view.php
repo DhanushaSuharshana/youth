@@ -248,13 +248,13 @@
                 <div class="related-courses">
                     <h3>This Centers' Related Courses</h3>
                     <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="blog-slides owl-carousel owl-theme">
-                            <?php
-                            foreach ($COURSE->getByCenter($center_id) as $key => $course2) {
-                                if ($course_id != $course2['id']) {
-                            ?>
-                                    
+                        <div class="col-lg-12 col-md-12">
+                            <div class="blog-slides owl-carousel owl-theme">
+                                <?php
+                                foreach ($COURSE->getByCenter($center_id) as $key => $course2) {
+                                    if ($course_id != $course2['id']) {
+                                ?>
+
                                         <a href="<?php echo URL; ?>courses/view/<?php echo base64_encode('q=fromcenter%center=' . $center_id . '%course=' . $course2['id']); ?>">
                                             <div class="single-courses-box mb-30">
                                                 <div class="courses-image">
@@ -296,11 +296,11 @@
                                                 </div>
                                             </div>
                                         </a>
-                                    
-                            <?php
+
+                                <?php
+                                    }
                                 }
-                            }
-                            ?>
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -404,6 +404,8 @@
                             },
                             content: {
                                 name: '<?php echo $_center['name']; ?>',
+                                email: '<?php echo $_center['email']; ?>',
+                                phone: '<?php echo $_center['contact1']; ?>',
                                 url: '<?php echo base64_encode('q=toapply%center=' . $_center['id'] . '%course=' . $course_id); ?>'
                             }
                         },
@@ -439,10 +441,11 @@
                     const contentString =
                         ` 
                             <div class="" style="width: 100%; height: 100%;">
-                                <div class="single-categories-courses-box"> 
-                                    <h3>${props.content.name}</h3>
+                                <div class="single-categories-courses-box" style="border-radius: 0px; max-height: 135px;padding: 30px 20px !important;"> 
+                                    <h3 style="margin-bottom: 15px !important;">${props.content.name}</h3>
+                                    <span style="font-size:12px; font-weight: 400;text-transform: lowercase;">${props.content.email}<br>${props.content.phone}</span>
                                 </div>
-                                <a href="<?php echo URL; ?>courses/apply/${props.content.url}" class="default-btn text-center" style="width: 100%">Select Center</a>
+                                <a href="<?php echo URL; ?>courses/apply/${props.content.url}" class="btn btn-primary text-center" style="width: 100%; padding-bottom: 13px;font-size:14px;">Select Center</a>
                             </div>       
                         `;
                     const infoWindow = new google.maps.InfoWindow({
@@ -452,6 +455,7 @@
                         content: contentString,
                     });
                     google.maps.event.addListener(marker, 'click', function() {
+         
                         if (!marker.open) {
                             infoWindow.open(map, marker);
                             marker.open = true;
@@ -459,11 +463,13 @@
                             infoWindow.close();
                             marker.open = false;
                         }
-                        google.maps.event.addListener(map, 'click', function() {
-                            infoWindow.close();
-                            marker.open = false;
-                        });
                     });
+                    google.maps.event.addListener(map, 'click', function() {
+                        infoWindow.close();
+                        marker.open = false;
+                    });
+                   
+
                     markers.push(marker);
                 }
 

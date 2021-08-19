@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
-    <link href="<?php echo URL ?>public/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo URL ?>public/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
 
     <title>Youth Council || Sri Lanka</title>
     <link rel="icon" type="image/png" href="<?php echo URL ?>assets/img/pre-logo.png">
@@ -236,7 +236,9 @@
     <?php include './views/footer.php'; ?>
 
     <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
-
+    <script>
+        var siteUrl = '<?php echo URL; ?>';
+    </script>
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="<?php echo URL ?>assets/js/jquery.min.js"></script>
     <script src="<?php echo URL ?>assets/js/popper.min.js"></script>
@@ -257,106 +259,8 @@
     <script src="<?php echo URL ?>assets/js/contact-form-script.js"></script>
     <script src="<?php echo URL ?>assets/js/main.js"></script>
     <script src="<?php echo URL ?>public/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-
-    <script>
-        function clear_form_errors() {
-            var element = $('.validation_field');
-            element.removeClass('form_error_border');
-            var feedback = element.next('.feedback');
-            feedback.remove();
-        }
-
-        function set_form_errors(errors, type = '') {
-            for (var key of Object.keys(errors)) {
-                console.log(key + "  " + errors[key]);
-                var element = $('#' + key + type);
-                element.addClass('form_error_border');
-                element.after('<span class=feedback>' + errors[key] + '</span>');
-            }
-        }
-
-        $('.validation_field').on('keyup blur change', function() //whenever you click off an input element
-            {
-                if (!$(this).val()) { //if it is blank. 
-                    var element = $(this);
-                    element.removeClass('form_error_border');
-                    var feedback = element.next('.feedback');
-                    feedback.remove();
-
-                    element.addClass('form_error_border');
-                    element.after('<span class=feedback>Field could not be empty</span>');
-                } else {
-                    var element = $(this);
-                    element.removeClass('form_error_border');
-                    var feedback = element.next('.feedback');
-                    feedback.remove();
-                }
-            });
-
-        $("#apply_btn").click(function(event) {
-            event.preventDefault();
-            $('#apply_btn').attr('disabled', 'disabled');
-            $('#apply_btn_text').html('Please wait...');
-
-            var formData = new FormData($('#apply_form')[0]);
-            $.ajax({
-                url: "<?php echo URL ?>courses/new_application",
-                type: 'POST',
-                data: formData,
-                async: false,
-                cache: false,
-                contentType: false,
-                processData: false,
-                dataType: 'json',
-                success: function(data) {
-                    //remove preloarder
-                    // $('.someBlock').preloader('remove');
-                    $('#apply_btn').attr('disabled', false);
-                    $('#apply_btn_text').html('Apply Now');
-
-                    clear_form_errors();
-                    if (data.has_errors === true) {
-                        //set errors for fields
-                        set_form_errors(data.errors);
-                    } else {
-                        if (data.status === true) {
-                            clear_form_errors();
-                            swal({
-                                title: "success!",
-                                text: "Check Your Email for more details !",
-                                type: 'success',
-                                timer: 2000,
-                                showConfirmButton: false
-                            });
-                            setTimeout(function() {
-                                // location.reload();
-                                window.open('<?php echo URL; ?>','_self')
-                            }, 2500);
-                        } else {
-                            if (data.msg) {
-                                swal({
-                                    title: "Error!",
-                                    text: data.msg,
-                                    type: 'error',
-                                    timer: 2000,
-                                    showConfirmButton: false
-                                });
-                            } else {
-                                swal({
-                                    title: "Error!",
-                                    text: "Something went wrong",
-                                    type: 'error',
-                                    timer: 2000,
-                                    showConfirmButton: false
-                                });
-                            }
-                        }
-                    }
-                }
-            });
-
-        });
-    </script>
+    <script src="<?php echo URL ?>assets/js/error_validation.js"></script>
+    <script src="<?php echo URL ?>assets/js/apply.js"></script>
 </body>
 
 </html>

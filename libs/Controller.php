@@ -5,7 +5,7 @@ class Controller {
         $this->view = new View();
        $this->validation = new Validation();
 //        $this->uploader = new \Verot\Upload\Upload();
-       $this->mail = new Mail(MHOST, MUSERNAME, MPASSWORD, MTITLE, MPORT);
+       
     //    var_dump($this->mail);exit;
 //        $this->mail2 = new Mail(MHOST, MUSERNAME, MPASSWORD, MTITLE, MPORT);
     }

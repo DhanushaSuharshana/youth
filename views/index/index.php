@@ -277,7 +277,7 @@
                                                     if ($course['course_type'] == $course_type['id']) {
                                                         ?>
                                                         <div class="col-lg-4 col-md-6">
-                                                            <a href="courses/view">
+                                                            <a href="courses/view/<?php echo base64_encode('q=fromcourse%center=false'.'%course=' . $course['id']); ?>">
                                                                 <div class="single-courses-item mb-30">
                                                                     <div class="courses-image">
                                                                         <div class="d-block">
