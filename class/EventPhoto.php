@@ -100,7 +100,7 @@ class EventPhoto {
         return $db->readQuery($query);
     }
 
-    public function     geteventPhotosById($event) {
+    public function geteventPhotosById($event) {
 
         $query = "SELECT * FROM `event_photo` WHERE `event`= $event ORDER BY queue ASC";
 

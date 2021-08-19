@@ -11,9 +11,8 @@ class Events extends Controller
         $this->view->render('events/index');
     }
 
-    function view()
-    {
-
+    function view($query = false) {
+        $this->view->query = $query;
         $this->view->render('events/view');
     }
 }

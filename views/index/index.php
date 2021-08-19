@@ -421,7 +421,7 @@
                             <div class="section-title text-left">
                                 <span class="sub-title">Watch Events</span>
                                 <h2>Our Events</h2>
-                                <a href="courses" class="default-btn"><i class="bx bx-show-alt icon-arrow before"></i><span class="label">View All </span><i class="bx bx-show-alt icon-arrow after"></i></a>
+                                <a href="<?php echo URL ?>events" class="default-btn"><i class="bx bx-show-alt icon-arrow before"></i><span class="label">View All </span><i class="bx bx-show-alt icon-arrow after"></i></a>
                             </div>
 
                             <div class="row">
@@ -431,12 +431,12 @@
                                     if ($key <= 2) {
                                         ?>
                                         <div class="col-lg-4 col-md-12 col-sm-6">
-                                            <a href="<?php echo URL ?>events/view">
+                                            <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>">
                                                 <div class="events-box">
 
 
                                                     <div class="post-image">
-                                                        <a href="<?php echo URL ?>events/view" class="d-block">
+                                                        <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>" class="d-block">
                                                             <img src="<?php echo URL ?>upload/event/<?php echo $event['image_name'] ?>" alt="<?php echo $event['title'] ?>">
                                                         </a>
 
@@ -451,7 +451,7 @@
                                                                     ?>
                                                                 </span>
                                                             </div>
-                                                            <h3><a href="<?php echo URL ?>events/view"><?php echo $event['title'] ?></a></h3>
+                                                            <h3><a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>"><?php echo $event['title'] ?></a></h3>
                                                             <p><?php echo $event['short_description'] ?></p>
                                                             <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
                                                         </div>
@@ -469,7 +469,7 @@
                                                 <div class="row m-0">
                                                     <div class="col-lg-5 col-md-5 p-0">
                                                         <div class="image">
-                                                            <a href="<?php echo URL ?>events/view">
+                                                            <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>">
 
                                                                 <img src="<?php echo URL ?>upload/event/<?php echo $event['image_name'] ?>" alt="<?php echo $event['title'] ?>">
                                                                 <div class="divider-shape"></div>
@@ -478,7 +478,7 @@
                                                     </div>
 
                                                     <div class="col-lg-7 col-md-7 p-0">
-                                                        <a href="<?php echo URL ?>events/view">
+                                                        <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>">
                                                             <div class="content">
                                                                 <div class="date">
                                                                     <span><?php
@@ -511,7 +511,7 @@
                             <div class="section-title text-left ">
                                 <span class="sub-title">Explore News</span>
                                 <h2>Our Latest News</h2>
-                                <a href="<?php echo URL ?>youth_news/view" class="default-btn"><i class='bx bx-book-reader icon-arrow before'></i><span class="label">View All</span><i class="bx bx-book-reader icon-arrow after"></i></a>
+                                <a href="<?php echo URL ?>youth_news" class="default-btn"><i class='bx bx-book-reader icon-arrow before'></i><span class="label">View All</span><i class="bx bx-book-reader icon-arrow after"></i></a>
                             </div>
                             <div class="blog-slides owl-carousel owl-theme">
                                 <?php
@@ -520,7 +520,7 @@
                                     ?>
                                     <div class=" single-blog-post mb-30">
                                         <div class="post-image">
-                                            <a href="<?php echo URL ?>youth_news/view" class="d-block">
+                                            <a href="<?php echo URL ?>youth_news/view/<?php echo base64_encode($news['id']); ?>" class="d-block">
                                                 <img src="<?php echo URL ?>upload/news/<?php echo $news['image_name'] ?>" alt="<?php echo $news['title'] ?>">
                                             </a>
                                             <div class="tag">
@@ -530,7 +530,7 @@
                                         <div class="post-content">
                                             <ul class="post-meta">
 
-                                                <li><a href="<?php echo URL ?>youth_news/view">Published On :
+                                                <li><a href="<?php echo URL ?>youth_news/view/<?php echo base64_encode($news['id']); ?>">Published On :
                                                         <?php
                                                         $date = date_create($news['date']);
                                                         echo date_format($date, "D") . ', ' . date_format($date, "d") . ' ' . date_format($date, "M" . ', ' . date_format($date, "Y"));
@@ -538,8 +538,8 @@
                                                     </a>
                                                 </li>
                                             </ul>
-                                            <h3><a href="<?php echo URL ?>youth_news/view" class="d-inline-block"><?php echo ucfirst($news['title']) ?></a></h3>
-                                            <a href="<?php echo URL ?>youth_news/view" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                                            <h3><a href="<?php echo URL ?>youth_news/view/<?php echo base64_encode($news['id']); ?>" class="d-inline-block"><?php echo ucfirst($news['title']) ?></a></h3>
+                                            <a href="<?php echo URL ?>youth_news/view/<?php echo base64_encode($news['id']); ?>" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
                                         </div>
                                     </div>
                                 <?php } ?>
