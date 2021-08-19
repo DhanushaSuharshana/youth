@@ -1,3 +1,4 @@
+
 <style>
     .courses-content {
         min-height: 156px !important;
