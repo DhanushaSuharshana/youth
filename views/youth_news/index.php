@@ -46,7 +46,7 @@
             <div class="row">
                 <?php
                 $NEWS = new News(NULL);
-                foreach ($NEWS->getOrderDate() as $news) {
+                foreach ($NEWS->all() as $news) {
                 ?>
                     <div class="col-lg-4 col-md-6">
                         <div class="single-blog-post mb-30">

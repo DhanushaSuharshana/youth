@@ -44,127 +44,81 @@
     <section class="blog-area ptb-100">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post mb-30">
-                        <div class="post-image">
-                            <a href="single-blog.html" class="d-block">
-                                <img src="<?php echo URL ?>assets/img/blog/1.jpg" alt="image">
+
+                <?php
+                $EVENT = new Event(NULL);
+                foreach ($EVENT->all() as $key => $event) {
+                    if ($key <= 2) {
+                ?>
+                        <div class="col-lg-4 col-md-12 col-sm-6">
+                            <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>">
+                                <div class="events-box">
+
+
+                                    <div class="post-image">
+                                        <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>" class="d-block">
+                                            <img src="<?php echo URL ?>upload/event/<?php echo $event['image_name'] ?>" alt="<?php echo $event['title'] ?>">
+                                        </a>
+
+                                    </div>
+                                    <div class="col-lg-12 col-md-7 p-0">
+                                        <div class="content">
+                                            <div class="date">
+                                                <span>
+                                                    <?php
+                                                    $date = date_create($event['date']);
+                                                    echo date_format($date, "D") . ', ' . date_format($date, "d") . ' ' . date_format($date, "M" . ', ' . date_format($date, "Y"));
+                                                    ?>
+                                                </span>
+                                            </div>
+                                            <h3><a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>"><?php echo $event['title'] ?></a></h3>
+                                            <p><?php echo $event['short_description'] ?></p>
+                                            <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </a>
-                            <div class="tag">
-                                <a href="#">Learning</a>
+                        </div>
+
+                    <?php
+                    } else if ($key < 5) {
+                    ?>
+                        <div class="col-lg-6 col-md-12 col-sm-6">
+                            <div class="events-box">
+                                <div class="row m-0">
+                                    <div class="col-lg-5 col-md-5 p-0">
+                                        <div class="image">
+                                            <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>">
+
+                                                <img src="<?php echo URL ?>upload/event/<?php echo $event['image_name'] ?>" alt="<?php echo $event['title'] ?>">
+                                                <div class="divider-shape"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-7 col-md-7 p-0">
+                                        <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>">
+                                            <div class="content">
+                                                <div class="date">
+                                                    <span><?php
+                                                            $date = date_create($event['date']);
+                                                            echo date_format($date, "D") . ', ' . date_format($date, "d") . ' ' . date_format($date, "M" . ', ' . date_format($date, "Y"));
+                                                            ?></span>
+                                                </div>
+                                                <h3 href=""><?php echo $event['title'] ?></h3>
+                                                <p><?php echo $event['short_description'] ?></p>
+                                                <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="post-content">
-                            <ul class="post-meta">
-                               
-                                <li><a href="#">August 30, 2021</a></li>
-                            </ul>
-                            <h3><a href="single-blog.html" class="d-inline-block">World largest elephant toothpaste experiment in 2021</a></h3>
-                            <a href="#" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post mb-30">
-                        <div class="post-image">
-                            <a href="single-blog.html" class="d-block">
-                                <img src="<?php echo URL ?>assets/img/blog/2.jpg" alt="image">
-                            </a>
-                            <div class="tag">
-                                <a href="#">Education</a>
-                            </div>
-                        </div>
-                        <div class="post-content">
-                            <ul class="post-meta">
-                                
-                                <li><a href="#">August 29, 2021</a></li>
-                            </ul>
-                            <h3><a href="single-blog.html" class="d-inline-block">Most Popular Education Posts Of The Week 20-26 Aug</a></h3>
-                            <a href="#" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post mb-30">
-                        <div class="post-image">
-                            <a href="single-blog.html" class="d-block">
-                                <img src="<?php echo URL ?>assets/img/blog/3.jpg" alt="image">
-                            </a>
-                            <div class="tag">
-                                <a href="#">Management</a>
-                            </div>
-                        </div>
-                        <div class="post-content">
-                            <ul class="post-meta">
-                                
-                                <li><a href="#">August 28, 2021</a></li>
-                            </ul>
-                            <h3><a href="single-blog.html" class="d-inline-block">How to enhance education quality management system</a></h3>
-                            <a href="#" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post mb-30">
-                        <div class="post-image">
-                            <a href="single-blog.html" class="d-block">
-                                <img src="<?php echo URL ?>assets/img/blog/4.jpg" alt="image">
-                            </a>
-                            <div class="tag">
-                                <a href="#">Ideas</a>
-                            </div>
-                        </div>
-                        <div class="post-content">
-                            <ul class="post-meta">
-                               
-                                <li><a href="#">August 27, 2021</a></li>
-                            </ul>
-                            <h3><a href="single-blog.html" class="d-inline-block">Global education: Ideas for the way move forward</a></h3>
-                            <a href="#" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post mb-30">
-                        <div class="post-image">
-                            <a href="single-blog.html" class="d-block">
-                                <img src="<?php echo URL ?>assets/img/blog/5.jpg" alt="image">
-                            </a>
-                            <div class="tag">
-                                <a href="#">Workforce</a>
-                            </div>
-                        </div>
-                        <div class="post-content">
-                            <ul class="post-meta">
-                                
-                                <li><a href="#">August 26, 2021</a></li>
-                            </ul>
-                            <h3><a href="single-blog.html" class="d-inline-block">New report reimagines the broader education workforce</a></h3>
-                            <a href="#" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post mb-30">
-                        <div class="post-image">
-                            <a href="single-blog.html" class="d-block">
-                                <img src="<?php echo URL ?>assets/img/blog/6.jpg" alt="image">
-                            </a>
-                            <div class="tag">
-                                <a href="#">Education</a>
-                            </div>
-                        </div>
-                        <div class="post-content">
-                            <ul class="post-meta">
-                                
-                                <li><a href="#">August 29, 2021</a></li>
-                            </ul>
-                            <h3><a href="single-blog.html" class="d-inline-block">What’s Going On in This Picture? | Jan. 13, 2021</a></h3>
-                            <a href="#" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
-                        </div>
-                    </div>
-                </div>
-                
+                <?php
+                    }
+                }
+                ?>
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="pagination-area text-center">
                         <span class="page-numbers current" aria-current="page">1</span>

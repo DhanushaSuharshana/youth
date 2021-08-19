@@ -140,9 +140,11 @@
                         <div class="courses-review-comments" style="margin-top: -20px;">
 
                             <?php
-                            foreach ($NEWS->getOrderDate() as $key => $news) {
+                            foreach ($NEWS->all() as $key => $news) {
+                                if($key <10){
                             ?>
                                 <div class="user-review">
+                                <a href="<?php echo URL ?>youth_news/view/<?php echo base64_encode($news['id']); ?>">
                                     <img src="<?php echo URL ?>upload/news/<?php echo $news['image_name'] ?>" alt="image">
                                     <div class="review-rating">
 
@@ -150,8 +152,9 @@
                                     </div>
 
                                     <p><?php echo $news['short_description'] ?>.</p>
+                                </a>
                                 </div>
-                            <?php } ?>
+                            <?php } } ?>
                         </div>
 
                         <!-- <section class="widget widget_contact">
