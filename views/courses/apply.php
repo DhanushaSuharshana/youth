@@ -21,17 +21,12 @@
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
     <link href="<?php echo URL ?>public/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="<?php echo URL ?>assets/css/error.css">
 
     <title>Youth Council || Sri Lanka</title>
     <link rel="icon" type="image/png" href="<?php echo URL ?>assets/img/pre-logo.png">
     <style>
-        .feedback {
-            color: red !important;
-        }
-
-        .form_error_border {
-            border-color: red !important;
-        }
+       
     </style>
 </head>
 

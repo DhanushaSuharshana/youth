@@ -100,7 +100,7 @@ class courses extends Controller
                     'course'=> $COURSE->name,
                     'center'=> $CENTER->name,
                 ];
-                $mail->set_content('Registration Success', 'template1',$content);
+                $mail->set_content('Registration Success', 'template-apply',$content);
                 $mail->send();
 
                 echo json_encode(['has_errors' => false, 'status' => true]);
