@@ -1,0 +1,7 @@
+.feedback {
+    color: red !important;
+}
+
+.form_error_border {
+    border-color: red !important;
+}
