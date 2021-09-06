@@ -22,8 +22,34 @@
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
+    <!-- <script src="<?php echo URL ?>assets/plugin/paginationjs/dist/pagination.css"></script> -->
+
     <title>Youth Council || Sri Lanka</title>
     <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
+    <style>
+        .page-item.active .page-link {
+            background-color: #ff1949;
+            border-color: #ff1949;
+        }
+
+        .page-item.active .page-link:hover {
+            background-color: #ff1949;
+            border-color: #ff1949;
+        }
+
+        .page-item.active .page-link:focus {
+            background-color: #ff1949;
+            border-color: #ff1949;
+        }
+
+        .pagination>li>a {
+            color: #1e1f20;
+        }
+
+        .pagination>li>a:hover {
+            color: #ff1949;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,33 +72,53 @@
             <div class="row">
                 <?php
                 $NEWS = new News(NULL);
-                foreach ($NEWS->all() as $news) {
+                $news_data = $NEWS->all();
+                $page_count = count($news_data) / 3;
+                if (count($news_data) % 3 > 0) {
+                    $page_count++;
+                }
+                $chuncked = array_chunk($news_data, 3);
+                foreach ($chuncked as $key => $page) {
+
+                    foreach ($page as $key2 => $news) {
                 ?>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-blog-post mb-30">
-                            <div class="post-image">
-                                <a href="<?php echo URL; ?>youth_news/view/<?php echo base64_encode($news['id']); ?>" class="d-block">
-                                    <img src="<?php echo URL ?>upload/news/<?php echo $news['image_name']; ?>" alt="image">
-                                </a>
-                                <!-- <div class="tag">
+                        <div class="col-lg-4 col-md-6 pg-<?= $key + 1 ?> pag-item" style="display: none">
+                            <div class="single-blog-post mb-30">
+                                <div class="post-image">
+                                    <a href="<?php echo URL; ?>youth_news/view/<?php echo base64_encode($news['id']); ?>" class="d-block">
+                                        <img src="<?php echo URL ?>upload/news/<?php echo $news['image_name']; ?>" alt="image">
+                                    </a>
+                                    <!-- <div class="tag">
                                     <a href="#"><?php echo $news['title']; ?></a>
                                 </div> -->
-                            </div>
-                            <div class="post-content">
-                                <ul class="post-meta">
+                                </div>
+                                <div class="post-content">
+                                    <ul class="post-meta">
 
-                                    <li><a href="#"><?php echo date("F j, Y", strtotime($news['date'])); ?></a></li>
-                                </ul>
-                                <h3><a href="<?php echo URL; ?>youth_news/view/<?php echo base64_encode($news['id']); ?>" class="d-inline-block"><?php echo $news['title']; ?></a></h3>
-                                <a href="<?php echo URL; ?>youth_news/view/<?php echo base64_encode($news['id']); ?>" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                                        <li><a href="#"><?php echo date("F j, Y", strtotime($news['date'])); ?></a></li>
+                                    </ul>
+                                    <h3><a href="<?php echo URL; ?>youth_news/view/<?php echo base64_encode($news['id']); ?>" class="d-inline-block"><?php echo $news['title']; ?></a></h3>
+                                    <a href="<?php echo URL; ?>youth_news/view/<?php echo base64_encode($news['id']); ?>" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 <?php
+                    }
                 } ?>
 
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="pagination-area text-center">
+
+
+
+
+
+
+
+                <!-- <div id="data-container"></div>
+                <div id="pagination-container"></div> -->
+
+                <!-- <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="pagination-area text-center pagination" id="pagination">
+                        <a href="#" class="next page-numbers"><i class='bx bx-chevron-left'></i></a>
                         <span class="page-numbers current" aria-current="page">1</span>
                         <a href="#" class="page-numbers">2</a>
                         <a href="#" class="page-numbers">3</a>
@@ -80,6 +126,13 @@
                         <a href="#" class="page-numbers">5</a>
                         <a href="#" class="next page-numbers"><i class='bx bx-chevron-right'></i></a>
                     </div>
+                </div> -->
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination" id="pagination"></ul>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -112,7 +165,45 @@
     <script src="<?php echo URL ?>assets/js/form-validator.min.js"></script>
     <script src="<?php echo URL ?>assets/js/contact-form-script.js"></script>
     <script src="<?php echo URL ?>assets/js/main.js"></script>
+    <!-- <script src="<?php echo URL ?>assets/plugin/paginationjs/dist/pagination.min.js"></script> -->
+    <script src="<?php echo URL ?>assets/plugin/twbs-pagination/jquery.twbsPagination.min.js"></script>
+    <!-- <script src="<?php echo URL ?>assets/plugin/twbs-pagination/jquery.twbsPagination.js"></script> -->
+    <script>
+        // function simpleTemplating(data) {
+        //     var html = '<ul>';
+        //     $.each(data, function(index, item) {
+        //         html += '<li>' + item + '</li>';
+        //     });
+        //     html += '</ul>';
+        //     return html;
+        // }
 
+        // $('#pagination-container').pagination({
+        //     dataSource: [1, 2, 3, 4, 5, 6, 7, 195],
+        //     callback: function(data, pagination) {
+        //         var html = simpleTemplating(data);
+        //         $('#data-container').html(html);
+        //     }
+        // })
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            window.pagObj = $('#pagination').twbsPagination({
+                totalPages: <?= $page_count ?>,
+                visiblePages: 10,
+                onPageClick: function(event, page) {
+                    // console.info(page + ' (from options)');
+                    $('.pag-item').hide();
+                    $('.pg-' + 1).show();
+
+                }
+            }).on('page', function(event, page) {
+                console.info(page + ' (from event listening)');
+                $('.pag-item').hide();
+                $('.pg-' + page).show();
+            });
+        });
+    </script>
 </body>
 
 </html>

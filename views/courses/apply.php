@@ -76,7 +76,7 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label for="center_id">Selected Training Center </label>
-                                <select class="form-control validation_field" id="center_id" name="center_id">
+                                <select class="form-control " id="center_id" name="center_id">
 
                                     <option selected="selected" value="<?php
                                                                         if ($this->query) {
@@ -93,7 +93,7 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label for="course_id">Selected Course <span class="required">*</span></label>
-                                <select class="form-control validation_field" id="course_id" name="course_id">
+                                <select class="form-control " id="course_id" name="course_id">
                                     <option selected="selected" value="<?php
                                                                         if ($this->query) {
                                                                             $attr = explode('%', base64_decode($this->query));
@@ -132,7 +132,7 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label for="gender">Gender<span class="required">*</span></label>
-                                <select class="form-control validation_field" id="gender" name="gender">
+                                <select class="form-control " id="gender" name="gender">
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                 </select>
@@ -171,7 +171,7 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label for="district">District<span class="required">*</span></label>
-                                <select class="form-control validation_field" id="district" name="district">
+                                <select class="form-control " id="district" name="district">
                                     <?php $DISTRICT = new Districts(NULL);
                                     foreach ($DISTRICT->all() as $district) { ?>
                                         <option value="<?= $district['id'] ?>"><?= $district['name'] ?></option>
