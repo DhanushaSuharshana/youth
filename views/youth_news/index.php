@@ -22,34 +22,11 @@
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
+    <link rel="stylesheet" href="<?php echo URL ?>assets/pagination.css">
     <!-- <script src="<?php echo URL ?>assets/plugin/paginationjs/dist/pagination.css"></script> -->
 
     <title>Youth Council || Sri Lanka</title>
     <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
-    <style>
-        .page-item.active .page-link {
-            background-color: #ff1949;
-            border-color: #ff1949;
-        }
-
-        .page-item.active .page-link:hover {
-            background-color: #ff1949;
-            border-color: #ff1949;
-        }
-
-        .page-item.active .page-link:focus {
-            background-color: #ff1949;
-            border-color: #ff1949;
-        }
-
-        .pagination>li>a {
-            color: #1e1f20;
-        }
-
-        .pagination>li>a:hover {
-            color: #ff1949;
-        }
-    </style>
 </head>
 
 <body>
@@ -195,7 +172,6 @@
                     // console.info(page + ' (from options)');
                     $('.pag-item').hide();
                     $('.pg-' + 1).show();
-
                 }
             }).on('page', function(event, page) {
                 console.info(page + ' (from event listening)');
