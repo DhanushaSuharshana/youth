@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="<?php echo URL; ?>assets/css/responsive.css">
     <title>Raque - Education & Online Courses HTML Template</title>
     <link rel="icon" type="image/png" href="<?php echo URL; ?>assets/img/favicon.png">
+    <link rel="stylesheet" href="<?php echo URL ?>assets/pagination.css">
+
 </head>
 
 <body>
@@ -63,12 +65,22 @@
                 //     }
                 // } else {
                 $courses = $COURSE->all();
+                $page_count = count($courses) / 3;
+                if (count($courses) % 3 > 0) {
+                    $page_count++;
+                }
+                $chuncked = array_chunk($courses, 3);
+                
+
+
+
                 // }
                 // echo base64_decode($this->query);
                 if (!empty($courses)) {
-                    foreach ($courses as $course) {
+                    foreach ($chuncked as $key => $page) {
+                    foreach ($page as $course) {
                 ?>
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 pg-<?= $key + 1 ?> pag-item" style="display: none">
                             <a href="<?php echo URL; ?>courses/view/<?php echo base64_encode('q=fromcourse%center=false'.'%course=' . $course['id']); ?>" class="d-inline-block">
                                 <div class="single-courses-box mb-30">
                                     <div class="courses-image">
@@ -111,21 +123,20 @@
                         </div>
                     <?php
                     }
+                }
                 } else { ?>
                     <div>No Data Available</div>
                 <?php
                 } ?>
 
 
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="pagination-area text-center">
-                        <span class="page-numbers current" aria-current="page">1</span>
-                        <a href="#" class="page-numbers">2</a>
-                        <a href="#" class="page-numbers">3</a>
-                        <a href="#" class="page-numbers">4</a>
-                        <a href="#" class="page-numbers">5</a>
-                        <a href="#" class="next page-numbers"><i class='bx bx-chevron-right'></i></a>
-                    </div>
+               
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination" id="pagination"></ul>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -155,6 +166,24 @@
     <script src="<?php echo URL; ?>assets/js/form-validator.min.js"></script>
     <script src="<?php echo URL; ?>assets/js/contact-form-script.js"></script>
     <script src="<?php echo URL; ?>assets/js/main.js"></script>
+    <script src="<?php echo URL ?>assets/plugin/twbs-pagination/jquery.twbsPagination.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            window.pagObj = $('#pagination').twbsPagination({
+                totalPages: <?= $page_count ?>,
+                visiblePages: 10,
+                onPageClick: function(event, page) {
+                    // console.info(page + ' (from options)');
+                    $('.pag-item').hide();
+                    $('.pg-' + 1).show();
+                }
+            }).on('page', function(event, page) {
+                console.info(page + ' (from event listening)');
+                $('.pag-item').hide();
+                $('.pg-' + page).show();
+            });
+        });
+    </script>
 </body>
 
 </html>
