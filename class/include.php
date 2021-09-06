@@ -27,6 +27,7 @@ include_once(dirname(__FILE__) . '/Colors.php');
 include_once(dirname(__FILE__) . '/ApplyOnline.php');
 include_once(dirname(__FILE__) . '/Contact.php');
 include_once(dirname(__FILE__) . '/NewsLetter.php');
+include_once(dirname(__FILE__) . '/PageNews.php');
 
 
 function dd($data) {
