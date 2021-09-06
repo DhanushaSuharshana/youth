@@ -5,7 +5,8 @@
 </style>
 <style>
     <?php
-    foreach ($this->colors as $key => $color) {
+    if (isset($this->colors)) {
+        foreach ($this->colors as $key => $color) {
 
     ?>
 
@@ -21,7 +22,8 @@
         color: <?php echo $color['color']; ?> !important;
     }
 
-    <?php  } ?>
+    <?php  }
+    } ?>
 </style>
 
 <header class="header-area">
