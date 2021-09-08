@@ -115,7 +115,7 @@ $NEWS = new News($id);
                                                         <h4 class="card-title mb-3"><?php echo $news_photo['caption'] ?></h4>
                                                         <div class="badge bg-pill bg-soft-success font-size-14" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $news_photo['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> |
 
-                                                        <a href="create-News-photo" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
+                                                        <a href="arrange-news-photo.php?id=<?php echo $id ?>" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
                                                         <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $news_photo['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
                                                     </div>
                                                 </div>
