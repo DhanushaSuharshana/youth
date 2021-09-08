@@ -114,6 +114,27 @@ if (isset($_POST['update'])) {
 //End Update Code Block
 //--------------------------------------------------------------------------
 //-- ** Start delete code 
+
+
+if (isset($_POST['arrange'])) {
+
+    $OBJ = new NewsPhoto(NULL);
+
+    foreach ($_POST['sort'] as $key => $img) {
+
+        $key = $key + 1;
+
+        $res = $OBJ->arrange($key, $img);
+        //-- ** End Assign Post Params
+    }
+
+    $result = [
+        "status" => 'success'
+    ];
+    echo json_encode($result);
+    exit();
+}
+
 if ($_POST['option'] == 'delete') {
     $NEWS_PHOTO = new NewsPhoto($_POST['id']);
     unlink("../../../upload/news/gallery/" . $NEWS_PHOTO->image_name);
@@ -124,13 +145,5 @@ if ($_POST['option'] == 'delete') {
         $data = array("status" => TRUE);
         header('Content-type: application/json');
         echo json_encode($data);
-    }
-}
-
-if (isset($_POST['save-data'])) {
-    foreach ($_POST['sort'] as $key => $img) {
-        $key = $key + 1;
-        $NEWS_PHOTO = newsPhoto::arrange($key, $img);
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 }

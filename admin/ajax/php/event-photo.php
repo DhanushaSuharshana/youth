@@ -114,6 +114,26 @@ if (isset($_POST['update'])) {
 //End Update Code Block
 //--------------------------------------------------------------------------
 //-- ** Start delete code 
+
+if (isset($_POST['arrange'])) {
+
+    $OBJ = new EventPhoto(NULL);
+
+    foreach ($_POST['sort'] as $key => $img) {
+
+        $key = $key + 1;
+
+        $res = $OBJ->arrange($key, $img);
+        //-- ** End Assign Post Params
+    }
+
+    $result = [
+        "status" => 'success'
+    ];
+    echo json_encode($result);
+    exit();
+}
+
 if ($_POST['option'] == 'delete') {
     $EVENT_PHOTO = new EventPhoto($_POST['id']);
     unlink("../../../upload/event/gallery/" . $EVENT_PHOTO->image_name);
@@ -127,10 +147,3 @@ if ($_POST['option'] == 'delete') {
     }
 }
 
-if (isset($_POST['save-data'])) {
-    foreach ($_POST['sort'] as $key => $img) {
-        $key = $key + 1;
-        $EVENT_PHOTO = eventPhoto::arrange($key, $img);
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
-    }
-}
