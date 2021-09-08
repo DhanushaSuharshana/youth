@@ -36,7 +36,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li>Services</li>
                     </ul>
-                    <h2><?= $this->title; ?></h2>
+                    <h2><?= $this->PAGE->title; ?></h2>
                 </div>
             </div>
         </div>

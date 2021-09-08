@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
 
-//---------- Start Create Data ---------
+    //---------- Start Create Data ---------
     $("#create").click(function (event) {
         event.preventDefault();
         tinymce.triggerSave();
@@ -13,7 +13,14 @@ jQuery(document).ready(function () {
                 timer: 2000,
                 showConfirmButton: false
             });
-
+        } else if (!$('#url').val() || $('#url').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter the Url.",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
         } else if (!$('#image_name').val() || $('#image_name').val().length === 0) {
             swal({
                 title: "Error!",
@@ -36,7 +43,7 @@ jQuery(document).ready(function () {
 
             //start preloarder
             $('.someBlock').preloader();
-            var formData = new FormData($('#form-data')[0]);  //grab all form data  
+            var formData = new FormData($('#form-data')[0]); //grab all form data  
             formData.append("create", "TRUE");
 
             $.ajax({
@@ -77,19 +84,27 @@ jQuery(document).ready(function () {
         }
         return false;
     });
-//---------- End Create Data ---------
+    //---------- End Create Data ---------
 
-//---------- Start Edit Data ---------
+    //---------- Start Edit Data ---------
     $(".edit-data").click(function (event) {
-          tinymce.triggerSave();
+        tinymce.triggerSave();
         event.preventDefault();
-      
+
         var id = $(this).attr("dataId");
         //-- ** Start Error Messages
         if (!$('.title').val() || $('.title').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please Enter the Name.",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('.url').val() || $('.url').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please Enter the Url.",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
@@ -163,11 +178,11 @@ jQuery(document).ready(function () {
         }
         return false;
     });
-//----------------------------------------------------
-//-------- Start arrange ---------
- 
-//-------- End arrange ---------
-//----------------------------------------------------
+    //----------------------------------------------------
+    //-------- Start arrange ---------
+
+    //-------- End arrange ---------
+    //----------------------------------------------------
     //-------- Start Delete Data ---------
     $('.delete-data').click(function () {
         var id = $(this).attr("data-id");
@@ -185,7 +200,10 @@ jQuery(document).ready(function () {
             $.ajax({
                 url: "ajax/php/pages.php",
                 type: "POST",
-                data: {id: id, option: 'delete'},
+                data: {
+                    id: id,
+                    option: 'delete'
+                },
                 dataType: "JSON",
                 success: function (jsonStr) {
                     if (jsonStr.status) {
@@ -203,5 +221,3 @@ jQuery(document).ready(function () {
         });
     });
 });
-
- 

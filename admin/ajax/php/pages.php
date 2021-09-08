@@ -25,6 +25,7 @@ if (isset($_POST['create'])) {
     //-- ** End Create Image
     //-- ** Start Assign Post Params
     $PAGES = new Pages(NULL);
+    $PAGES->url = $_POST['url'];
     $PAGES->title = $_POST['title'];
     $PAGES->sub_title = $_POST['sub_title'];
     $PAGES->description = $_POST['description'];
@@ -63,6 +64,7 @@ if (isset($_POST['update'])) {
     }
     //-- ** End Edit Image in folder location
     //-- ** Start Assign Post Params
+    $PAGES->url = $_POST['url'];
     $PAGES->title = $_POST['title'];
     $PAGES->sub_title = $_POST['sub_title'];
     $PAGES->description = $_POST['description'];

@@ -78,6 +78,12 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Page Url</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" type="text" id="url" name="url" placeholder="Enter Url">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
                                         <label for="example-search-input" class="col-md-2 col-form-label">Sub Title</label>
                                         <div class="col-md-10">
                                             <input class="form-control" type="text" id="sub_title" name="sub_title" placeholder="Enter Sub Title">
@@ -116,6 +122,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             <tr>
                                                 <th>#id</th>
                                                 <th>Title</th>
+                                                <th>Url</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -128,6 +135,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 <tr id="div<?php echo $page['id'] ?>">
                                                     <td><?php echo $key ?></td>
                                                     <td> <?php echo $page['title'] ?></td>
+                                                    <td> <?php echo $page['url'] ?></td>
                                                     <td>
                                                         <div class="badge bg-pill bg-soft-success font-size-14" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $page['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> |
                                                         <a href="create-page-characters.php?id=<?php echo $page['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-user   p-1"></i></a> |
@@ -170,6 +178,12 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <label for="example-text-input" class="col-md-2 col-form-label">Page Title</label>
                                     <div class="col-md-10">
                                         <input class="form-control title" type="text" name="title" placeholder="Enter Page Title" value="<?php echo $page['title'] ?>">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="example-text-input" class="col-md-2 col-form-label">Page Url</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control url" type="text" name="url" placeholder="Enter Page Url" value="<?php echo $page['url'] ?>">
                                     </div>
                                 </div>
                                 <div class="mb-3 row">

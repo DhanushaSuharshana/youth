@@ -144,13 +144,12 @@
 
                             <li class="nav-item"><a href="#" class="nav-link">Services <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-club">Youth Club</a> </li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-services-limited">Youth Services Limited</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/nysco">NYSCO</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-band">Youth Band</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-music-club">Youth Music Club</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/photography-and-video-unit">Photography and Video Unit</a></li>
-                                    <!--                                    <li class="nav-item"><a href="#">Video Wall</a></li>-->
+                                    <?php
+                                    foreach (Pages::getAll() as $key => $page) {
+                                    ?>
+                                        <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
+                                    <?php } ?>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page">Show All Services</a> </li>
                                 </ul>
                             </li>
 
@@ -210,13 +209,13 @@
 
                             <li class="nav-item"><a href="#" class="nav-link">Services <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-club">Youth Club</a> </li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-services-limited">Youth Services Limited</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/nysco">NYSCO</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-band">Youth Band</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/youth-music-club">Youth Music Club</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>page/services/photography-and-video-unit">Photography and Video Unit</a></li>
-                                    <!--                                    <li class="nav-item"><a href="#">Video Wall</a></li>-->
+                                    <?php
+                                    foreach (Pages::getAll() as $key => $page) {
+                                        if($key <5){
+                                    ?>
+                                        <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
+                                    <?php }} ?>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page">Show All Services</a> </li>
                                 </ul>
                             </li>
 
