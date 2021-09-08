@@ -28,6 +28,7 @@ include_once(dirname(__FILE__) . '/ApplyOnline.php');
 include_once(dirname(__FILE__) . '/Contact.php');
 include_once(dirname(__FILE__) . '/NewsLetter.php');
 include_once(dirname(__FILE__) . '/PageNews.php');
+include_once(dirname(__FILE__) . '/PageNewsPhoto.php');
 
 
 function dd($data) {
