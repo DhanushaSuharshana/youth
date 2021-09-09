@@ -156,7 +156,7 @@
                                         <span class="d-inline-block"><?php echo $event['title'] ?></span>
                                     </div>
 
-                                    <p><?php echo $event['short_description'] ?>.</p>
+                                    <p><?php echo substr($event['short_description'],0,60) ?>...</p>
                                 </a>
                                 </div>
                             <?php } } ?>

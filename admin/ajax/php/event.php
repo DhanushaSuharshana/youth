@@ -122,17 +122,17 @@ if (isset($_POST['arrange'])) {
 //End arrange Code Block
 //--------------------------------------------------------------------------
 //-- ** Start delete code 
-//if ($_POST['option'] == 'delete') {
-//    $EVENT = new Event($_POST['id']);
-//    unlink("../../../upload/event/" . $NEWS->image_name);
-//    $result = $EVENT->delete();
-//    //-- ** End Assign Post Params
-//    if ($result) {
-//        $data = array("status" => TRUE);
-//        header('Content-type: application/json');
-//        echo json_encode($data);
-//    }
-//}
+if ($_POST['option'] == 'delete') {
+   $EVENT = new Event($_POST['id']);
+   unlink("../../../upload/event/" . $EVENT->image_name);
+   $result = $EVENT->delete();
+   //-- ** End Assign Post Params
+   if ($result) {
+       $data = array("status" => TRUE);
+       header('Content-type: application/json');
+       echo json_encode($data);
+   }
+}
 //End delete Code Block
 
 

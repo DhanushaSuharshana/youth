@@ -80,7 +80,7 @@
                 $CENTER = new Center(NULL);
                 foreach ($CENTER->allForApply() as $center) {
                 ?>
-                    <div class="col-lg-3 col-md-4 col-sm-6 
+                    <div class="col-lg-3 col-md-3 col-sm-6 
                     <?php echo $key = array_rand($this->colors);
                     unset($this->colors[$key]); ?>
                     ">
