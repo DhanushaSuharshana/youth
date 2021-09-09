@@ -309,7 +309,7 @@
             line-height: initial;
             color: #252525;
             background-color: #fff;
-            border: 1px solid #e6e9fc;
+            border: 3px solid #e0d9d9;
             border-radius: 3px;
             -webkit-transition: 0.5s;
             transition: 0.5s;
@@ -13367,7 +13367,7 @@
         .myAccount-content .edit-account {
             background-color: #fff;
             -webkit-box-shadow: 0 8px 16px 0 rgba(146, 184, 255, 0.2);
-            box-shadow: 0 8px 16px 0 rgba(146, 184, 255, 0.2);
+            box-shadow: 0 8px 16px 0 rgba(146, 184, 255, 0.4);
             padding: 40px;
             border-radius: 5px;
         }
@@ -13408,7 +13408,7 @@
             background-color: #fff;
             border-radius: 3px;
             height: 48px;
-            border: solid 1px #e6e9fc;
+            border: solid 3px #e0d9d9;
             line-height: 48px;
             color: #252525;
             padding-left: 15px;
@@ -17195,16 +17195,16 @@
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
-            padding-top: 350px;
+            padding-top: 10px;
             padding-bottom: 247px;
         }
 
         .gym-main-banner.bg-1 {
-            background-image: url(../img/gym-main-banner1.jpg);
+            background-image: url(../img/youth3.jpg);
         }
 
         .gym-main-banner.bg-2 {
-            background-image: url(../img/gym-main-banner2.jpg);
+            background-image: url(../img/youth1.jpg);
         }
 
         .gym-main-banner .container {
