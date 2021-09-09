@@ -48,7 +48,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="events-details-header">
                             <a href="#" class="back-all-events"><i class='bx bx-chevrons-left'></i> Back To All Events</a>
-                            <h3>NZ Education Fair 2021 in USA</h3>
+                            <h3><?= $this->PAGE->title; ?></h3>
                             <ul class="events-info-meta d-none">
                                 <li><i class="flaticon-timetable"></i> 10 November, 2021</li>
                                 <li><i class="far fa-clock"></i> 10.00AM - 10.00PM</li>

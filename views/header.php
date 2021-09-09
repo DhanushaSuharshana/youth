@@ -11,12 +11,12 @@
     ?>
 
     /* <?php echo $key ?> */
-    .<?php echo $key ?>.single-categories-courses-box {
+    .<?php echo $key ?> .single-categories-courses-box {
         background-color: <?php echo $color['color']; ?> !important;
     }
 
-    .<?php echo $key ?>.single-categories-courses-box:hover .icon,
-    .<?php echo $key ?>.single-categories-courses-box:focus .icon {
+    .<?php echo $key ?> .single-categories-courses-box:hover .icon,
+    .<?php echo $key ?> .single-categories-courses-box:focus .icon {
         background-color: #fff !important;
         border-color: <?php echo $color['color']; ?> !important;
         color: <?php echo $color['color']; ?> !important;
