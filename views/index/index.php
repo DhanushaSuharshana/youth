@@ -609,6 +609,25 @@
         </div>
     </section>
 
+    <!-- modelPopup Start -->
+    <div class="modal fade" id="modal-popup" tabindex="-1" aria-labelledby="modelPopupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modelPopupLabel">New message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modelPopup End -->
+
     <?php include './views/footer.php'; ?>
 
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -630,6 +649,7 @@
     <script src="assets/js/form-validator.min.js"></script>
     <script src="assets/js/contact-form-script.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modelPopup.js"></script>
 </body>
 
 </html>
