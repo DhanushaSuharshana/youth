@@ -32,15 +32,20 @@
 <body>
 
     <?php include './views/header.php'; ?>
-
+    <?php
+    $PAGE = new Pages(NULL);
+    $NEWS = new PageNews(NULL);
+    $PAGE->getByUrl($this->url);
+    ?>
     <div class="page-title-area item-bg3 jarallax" data-jarallax='{"speed": 0.3}'>
         <div class="container">
             <div class="page-title-content">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Services</li>
+                    <li><a href="<?php echo URL; ?>">Home</a></li>
+                    <li><a href="<?php echo URL; ?>page">Services</a></li>
+                    <li>News</li>
                 </ul>
-                <h2>Services</h2>
+                <h2><?php echo $PAGE->title; ?></h2>
             </div>
         </div>
     </div>
@@ -48,33 +53,33 @@
         <div class="container">
             <div class="row">
                 <?php
-                $PAGES = new Pages(NULL);
-                $page_data = $PAGES->all();
-                $page_count = count($page_data) / 3;
-                if (count($page_data) % 3 > 0) {
+                $news_data = $NEWS->getPageNewsById($PAGE->id);
+                $page_count = count($news_data) / 3;
+                if (count($news_data) % 3 > 0) {
                     $page_count++;
                 }
-                $chuncked = array_chunk($page_data, 3);
-                foreach ($chuncked as $key => $pagination) {
+                $chuncked = array_chunk($news_data, 3);
+                foreach ($chuncked as $key => $page) {
 
-                    foreach ($pagination as $key2 => $page) {
+                    foreach ($page as $key2 => $news) {
                 ?>
                         <div class="col-lg-4 col-md-6 pg-<?= $key + 1 ?> pag-item" style="display: none">
                             <div class="single-blog-post mb-30">
                                 <div class="post-image">
-                                    <a href="<?php echo URL; ?>page/view/<?php echo $page['url']; ?>" class="d-block">
-                                        <img src="<?php echo URL ?>upload/page/<?php echo $page['image_name']; ?>" alt="image">
+                                    <a href="<?php echo URL; ?>page/news/view/<?php echo base64_encode($news['id']); ?>" class="d-block">
+                                        <img src="<?php echo URL ?>upload/page/news/<?php echo $news['image_name']; ?>" alt="image">
                                     </a>
                                     <!-- <div class="tag">
-                                    <a href="#"><?php echo $page['title']; ?></a>
+                                    <a href="#"><?php echo $news['title']; ?></a>
                                 </div> -->
                                 </div>
                                 <div class="post-content">
                                     <ul class="post-meta">
 
+                                        <!-- <li><a href="#"><?php echo date("F j, Y", strtotime($news['date'])); ?></a></li> -->
                                     </ul>
-                                    <h3><a href="<?php echo URL; ?>page/view/<?php echo $page['url']; ?>" class="d-inline-block"><?php echo $page['title']; ?></a></h3>
-                                    <a href="<?php echo URL; ?>page/view/<?php echo $page['url']; ?>" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                                    <h3><a href="<?php echo URL; ?>page/news/view/<?php echo base64_encode($news['id']); ?>" class="d-inline-block"><?php echo $news['title']; ?></a></h3>
+                                    <a href="<?php echo URL; ?>page/news/view/<?php echo base64_encode($news['id']); ?>" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
                                 </div>
                             </div>
                         </div>

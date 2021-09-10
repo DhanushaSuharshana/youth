@@ -55,7 +55,8 @@
         <div class="container">
             <div class="page-title-content">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="<?php echo URL; ?>">Home</a></li>
+                    <li><a href="<?php echo URL; ?>page">Services</a></li>
                     <li>News</li>
                 </ul>
                 <h2>News Details</h2>
@@ -64,9 +65,8 @@
     </div>
 
     <?php
-    $NEWS_PHOTO = new NewsPhoto(NULL);
-    $NEWS = new News(base64_decode($this->query));
-
+    $PAGE_NEWS_PHOTO = new PageNewsPhoto(NULL);
+    $PAGE_NEWS = new PageNews(base64_decode($this->id));
     ?>
     <section class="events-details-area ptb-100">
         <div class="container">
@@ -74,7 +74,7 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="events-details-header">
                         <a href="<?php echo URL; ?>youth_news" class="back-all-events"><i class='bx bx-chevrons-left'></i> Back To All News</a>
-                        <h3><?php echo $NEWS->title; ?></h3>
+                        <h3><?php echo $PAGE_NEWS->title; ?></h3>
                         <ul class="events-info-meta d-none">
                             <li><i class="flaticon-timetable"></i> <?php echo date("F j, Y", strtotime($NEWS->date)) ?></li>
                             <li><i class="far fa-clock"></i> 10.00AM - 10.00PM</li>
@@ -109,10 +109,10 @@
 
                             <div class="carousel-inner">
                                 <?php
-                                foreach ($NEWS_PHOTO->getByNews($NEWS->id) as $key => $news) {
+                                foreach ($PAGE_NEWS_PHOTO->getNewsPhotosById($PAGE_NEWS->id) as $key => $news) {
                                 ?>
                                     <div class="item <?= ($key == 0) ? 'active' : '' ?>">
-                                        <img src="<?php echo URL ?>upload/news/gallery/<?php echo $news['image_name'] ?>" alt="Los Angeles" style="width:100%;">
+                                        <img src="<?php echo URL ?>upload/page/news/gallery/<?php echo $news['image_name'] ?>" alt="Los Angeles" style="width:100%;">
                                     </div>
                                 <?php } ?>
                             </div>
@@ -129,7 +129,7 @@
                         </div>
 
 
-                        <?php echo $NEWS->description; ?>
+                        <?php echo $PAGE_NEWS->description; ?>
                     </div>
 
 
@@ -140,12 +140,12 @@
                         <div class="courses-review-comments" style="margin-top: -20px;">
 
                             <?php
-                            foreach ($NEWS->all() as $key => $news) {
+                            foreach ($PAGE_NEWS->getPageNewsById($PAGE_NEWS->page_id) as $key => $news) {
                                 if($key <10){
                             ?>
                                 <div class="user-review">
-                                <a href="<?php echo URL ?>youth_news/view/<?php echo base64_encode($news['id']); ?>">
-                                    <img src="<?php echo URL ?>upload/news/<?php echo $news['image_name'] ?>" alt="image">
+                                <a href="<?php echo URL ?>page/news/view/<?php echo base64_encode($news['id']); ?>">
+                                    <img src="<?php echo URL ?>upload/page/news/<?php echo $news['image_name'] ?>" alt="image">
                                     <div class="review-rating">
 
                                         <span class="d-inline-block"><?php echo $news['title'] ?></span>
