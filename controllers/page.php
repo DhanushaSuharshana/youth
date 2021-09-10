@@ -59,4 +59,16 @@ class Page extends Controller
 
         $this->view->render('page/view');
     }
+
+    function news($url = false, $id = false)
+    {
+        if($url == 'view'){
+            $this->view->id = $id;
+            $this->view->render('page/news/view');
+        }else{
+            $url = str_replace("_", "-", $url);
+            $this->view->url = $url;
+            $this->view->render('page/news/news');
+        }  
+    }
 }
