@@ -72,6 +72,29 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 <div class="card-body">
                                     <h4 class="card-title">Add Page</h4>
                                     <div class="mb-3 row">
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Select Page Type</label>
+                                        <div class="col-md-10">
+                                            <select class="form-control" id="page_type" name="page_type">
+                                                <option value=""> -- Please Select Page Type --</option>
+                                                <?php
+                                                $PAGE_TYPE = new PageType(NULL);
+                                                foreach ($PAGE_TYPE->all() as $page_type) {
+                                                    // if ($id == $page_type['id']) {
+                                                ?>
+                                                    <!-- <option value="<?php echo $page_type['id'] ?>" selected=""> <?php echo $page_type['title'] ?></option> -->
+                                                    <?php
+                                                    // } else {
+                                                    ?>
+                                                    <option value="<?php echo $page_type['id'] ?>"> <?php echo $page_type['title'] ?></option>
+
+                                                <?php
+                                                }
+                                                // }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
                                         <label for="example-text-input" class="col-md-2 col-form-label">Page Title</label>
                                         <div class="col-md-10">
                                             <input class="form-control" type="text" id="title" name="title" placeholder="Enter Leader Name">
@@ -139,7 +162,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     <td>
                                                         <div class="badge bg-pill bg-soft-success font-size-14" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $page['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> |
                                                         <a href="create-page-characters.php?id=<?php echo $page['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-user   p-1"></i></a> |
-                                                        <a href="create-page-news.php?id=<?php echo $page['id'] ?>"><div class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-address-card p-1"></i></div></a>  
+                                                        <a href="create-page-news.php?id=<?php echo $page['id'] ?>">
+                                                            <div class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-address-card p-1"></i></div>
+                                                        </a>
 
                                                         |<a href="#">
                                                             <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $page['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
@@ -174,6 +199,26 @@ include_once(dirname(__FILE__) . '/auth.php');
                     <div class="modal-body">
                         <form method="POST" id="form-data-<?php echo $page['id']; ?>">
                             <div class="card-body">
+                                <div class="mb-3 row">
+                                    <label for="example-text-input" class="col-md-2 col-form-label">Select Page Type</label>
+                                    <div class="col-md-10">
+                                        <select class="form-control page_type" name="page_type">
+                                            <option value=""> -- Please Select Page Type --</option>
+                                            <?php
+                                            $PAGE_TYPE = new PageType(NULL);
+                                            foreach ($PAGE_TYPE->all() as $page_type) {
+                                                if ($page_type['id'] == $page['page_type']) {
+                                            ?>
+                                                    <option value="<?php echo $page_type['id'] ?>" selected=""> <?php echo $page_type['title'] ?></option>
+                                                <?php } else { ?>
+                                                    <option value="<?php echo $page_type['id'] ?>"> <?php echo $page_type['title'] ?></option>
+                                            <?php
+                                                }
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="mb-3 row">
                                     <label for="example-text-input" class="col-md-2 col-form-label">Page Title</label>
                                     <div class="col-md-10">

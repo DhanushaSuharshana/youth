@@ -11,6 +11,7 @@ class Pages
 
     public $id;
     public $title;
+    public $page_type;
     public $url;
     public $sub_title;
     public $image_name;
@@ -47,6 +48,7 @@ class Pages
                 $this->id = $result['id'];
                 $this->url = $result['url'];
                 $this->title = $result['title'];
+                $this->page_type = $result['page_type'];
                 $this->sub_title = $result['sub_title'];
                 $this->image_name = $result['image_name'];
                 $this->description = $result['description'];
@@ -59,9 +61,10 @@ class Pages
     public function create()
     {
 
-        $query = "INSERT INTO `pages` (`url`,`title`,`sub_title`,`image_name`,`description`) VALUES  ('"
+        $query = "INSERT INTO `pages` (`url`,`title`,`page_type`,`sub_title`,`image_name`,`description`) VALUES  ('"
             . $this->url . "', '"
             . $this->title . "', '"
+            . $this->page_type . "', '"
             . $this->sub_title . "', '"
             . $this->image_name . "', '"
             . $this->description . "')";
@@ -83,6 +86,7 @@ class Pages
         $query = "UPDATE  `pages` SET "
             . "`url` ='" . $this->url . "',"
             . "`title` ='" . $this->title . "',"
+            . "`page_type` ='" . $this->page_type . "',"
             . "`sub_title` ='" . $this->sub_title . "',"
             . "`image_name` ='" . $this->image_name . "',"
             . "`description` ='" . $this->description . "' "

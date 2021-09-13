@@ -27,6 +27,7 @@ if (isset($_POST['create'])) {
     $PAGES = new Pages(NULL);
     $PAGES->url = $_POST['url'];
     $PAGES->title = $_POST['title'];
+    $PAGES->page_type = $_POST['page_type'];
     $PAGES->sub_title = $_POST['sub_title'];
     $PAGES->description = $_POST['description'];
     $PAGES->image_name = $imgName;
@@ -66,6 +67,7 @@ if (isset($_POST['update'])) {
     //-- ** Start Assign Post Params
     $PAGES->url = $_POST['url'];
     $PAGES->title = $_POST['title'];
+    $PAGES->page_type = $_POST['page_type'];
     $PAGES->sub_title = $_POST['sub_title'];
     $PAGES->description = $_POST['description'];
     $PAGES->update();

@@ -110,28 +110,28 @@
                     <div class="single-boxes-item">
                         <h3>Sports</h3>
                         <p>Sports play a large role in the culture of the Globe. Come and Join with us</p>
-                        <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        <a href="<?php echo URL ?>page/view/sports" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item bg-image">
                         <h3>Aesthetics</h3>
                         <p>Best place for involve youth musical skills and introduce them the whole world.</p>
-                        <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        <a href="<?php echo URL ?>page/view/aesthetics" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item bg-color">
                         <h3>Education</h3>
                         <p>We have over best training institutes with modern facilities.Grab your chance soon</p>
-                        <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        <a href="<?php echo URL ?>page/view/education" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item">
                         <h3>Administration</h3>
                         <p>We have vast number of other services related to youth services council</p>
-                        <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        <a href="<?php echo URL ?>page/view/administration" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
                     </div>
                 </div>
             </div>
@@ -194,7 +194,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <a href="<?php echo URL ?>page/services/youth-club" class="">
+                    <a href="<?php echo URL ?>page/view/youth-club" class="">
                         <div class="single-offer-box">
                             <div class="">
                                 <img src="<?php echo URL ?>assets/img/cards/club2.png">
@@ -208,7 +208,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <a href="<?php echo URL ?>page/services/school-of-computing">
+                    <a href="<?php echo URL ?>page/view/school-of-computing">
                         <div class="single-offer-box">
                             <div class="">
                                 <img src="<?php echo URL ?>assets/img/cards/soc.png">
@@ -222,7 +222,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
-                    <a href="<?php echo URL ?>page/services/nysco">
+                    <a href="<?php echo URL ?>page/view/nysco">
                         <div class="single-offer-box">
                             <div class="">
                                 <img src="<?php echo URL ?>assets/img/cards/nysco.png">
