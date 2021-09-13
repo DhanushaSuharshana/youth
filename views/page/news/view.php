@@ -73,7 +73,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="events-details-header">
-                        <a href="<?php echo URL; ?>youth_news" class="back-all-events"><i class='bx bx-chevrons-left'></i> Back To All News</a>
+                        <a href="#" class="back-all-events" ><i class='bx bx-chevrons-left'></i> Back To All News</a>
                         <h3><?php echo $PAGE_NEWS->title; ?></h3>
                         <ul class="events-info-meta d-none">
                             <li><i class="flaticon-timetable"></i> <?php echo date("F j, Y", strtotime($NEWS->date)) ?></li>

@@ -29,6 +29,7 @@ include_once(dirname(__FILE__) . '/Contact.php');
 include_once(dirname(__FILE__) . '/NewsLetter.php');
 include_once(dirname(__FILE__) . '/PageNews.php');
 include_once(dirname(__FILE__) . '/PageNewsPhoto.php');
+include_once(dirname(__FILE__) . '/PageType.php');
 
 
 function dd($data) {

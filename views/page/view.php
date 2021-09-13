@@ -34,7 +34,7 @@
         <div class="container">
             <div class="page-title-content">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="<?php echo URL ?>">Home</a></li>
                     <li>Services</li>
                 </ul>
                 <h2><?= $this->PAGE->title; ?></h2>
@@ -78,7 +78,7 @@
                 <div class="col-lg-8 col-md-12">
                     <div class="events-details">
                         <div class="events-details-image">
-                            <img src="<?php echo URL ?>assets/img/events/1.jpg" alt="image">
+                            <img src="<?php echo URL ?>upload/page/<?= $this->PAGE->image_name; ?>" alt="image">
                         </div>
                         <div class="events-details-desc">
                             <?= $this->PAGE->description; ?>

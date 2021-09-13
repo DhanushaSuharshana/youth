@@ -59,10 +59,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="manage-pages.php" class="waves-effect">
-                        <i class="bx bx-user"></i>
-                        <span>Manage Pages</span>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-chart "></i>
+                        <span>Pages</span>
                     </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="manage-page-type.php">Manage Page Type </a></li>
+                        <li><a href="manage-pages.php">Manage Pages</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
