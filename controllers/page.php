@@ -57,7 +57,7 @@ class Page extends Controller
         //         break;
         // }
 
-        $this->view->render('page/view');
+        $this->view->render('page/view2');
     }
 
     function news($url = false, $id = false)

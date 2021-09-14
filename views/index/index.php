@@ -375,40 +375,53 @@
 
 
                 <div class="col-lg-6 col-md-12">
-                    <div class="faq-accordion faq-accordion-style-two">
-                        <ul class="accordion">
-                            <li class="accordion-item accordion-title ">
-                                <i class="bx bxs-checkbox"></i>
-                                Youth Parliament
-                            </li>
-                            <li class="accordion-item accordion-title ">
-                                <i class="bx bxs-checkbox"></i>
-                                Yowun Puraya
-                            </li>
+                                    <div class="faq-accordion faq-accordion-style-two">
+                                        <ul class="accordion">
+                                            <li class="accordion-item">
+                                                <a class="accordion-title " href="<?php echo URL ?>page/view/youth-parliament">
+                                                <i class='bx bxs-circle'></i>
+                                                    Youth Parliament
+                                                </a>
+                                            </li>
+                                            <li class="accordion-item">
+                                                <a class="accordion-title" href="<?php echo URL ?>page/view/yowun-puraya">
+                                                    <i class='bx bxs-circle'></i>
+                                                    Yowun Puraya
+                                                </a>
 
-                            <li class="accordion-item accordion-title ">
-                                <i class="bx bxs-checkbox"></i>
-                                Youth Club
-                            </li>
+                                            </li>
+                                            <li class="accordion-item">
+                                                <a class="accordion-title" href="<?php echo URL ?>page/view/youth-club">
+                                                    <i class='bx bxs-circle'></i>
+                                                    Youth Club
+                                                </a>
 
-                            <li class="accordion-item accordion-title ">
-                                <i class="bx bxs-checkbox"></i>
-                                Youth Dancing Team
-                            </li>
+                                            </li>
+                                            <li class="accordion-item">
+                                                <a class="accordion-title" href="<?php echo URL ?>page/view/youth-dancing-team">
+                                                    <i class='bx bxs-circle'></i>
+                                                    Youth Dancing Team
+                                                </a>
 
-                            <li class="accordion-item accordion-title ">
-                                <i class="bx bxs-checkbox"></i>
-                                Youth Music Band
-                            </li>
-                            <li class="accordion-item accordion-title ">
-                                <i class="bx bxs-checkbox"></i>
-                                Young Padura Programe
+                                            </li>
+                                            <li class="accordion-item">
+                                                <a class="accordion-title" href="<?php echo URL ?>page/view/youth-music-band">
+                                                    <i class='bx bxs-circle'></i>
+                                                    Youth Music Band
+                                                </a>
 
-                            </li>
-                        </ul>
+                                            </li>
+                                            <li class="accordion-item">
+                                                <a class="accordion-title" href="<?php echo URL ?>page/view/young-padura-programe">
+                                                    <i class='bx bxs-circle'></i>
+                                                    Young Padura Programe
+                                                </a>
 
-                    </div>
-                </div>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
             </div>
         </div>
         <div class="divider bg-f9f9f9"></div>

@@ -56,7 +56,6 @@ class PageType {
         }
         return $array_res;
     }
-
     
     public function update() {
 

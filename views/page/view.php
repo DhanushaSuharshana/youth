@@ -84,7 +84,7 @@
                             <?= $this->PAGE->description; ?>
                         </div>
                         <div class="character mt-3">
-                            <h3 class="widget-title">Characters</h3>
+                            <h3 class="">Characters</h3>
                             <div class="blog-slides owl-carousel owl-theme mt-2">
                                 <?php
                                 $PAGE_CHARACTERS = new PageCharacter(NULL);
