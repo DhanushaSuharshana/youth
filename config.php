@@ -9,7 +9,6 @@ define('DEVELOPMENT_MODE', 1);
 define('URL', $protocol . $host . '/youth/');
 define('URL_PUBLIC', URL.'public/');
 
-
 define('MHOST', 'dtecsolution.com');
 define('MUSERNAME', 'info@dtecsolution.com');
 define('MPASSWORD', 'UuE6F8#T.VBf');
