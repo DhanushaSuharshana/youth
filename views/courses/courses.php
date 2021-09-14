@@ -61,12 +61,13 @@
                     if ($attr[0] == 'q=fromcenter') {
                         $center = explode('=', $attr[1])[1];
                         $courses = $COURSE->getByCenter($center);
-
-                        $page_count = count($courses) / 3;
-                        if (count($courses) % 3 > 0) {
+                        $items = 6;
+                        $visible_pages = 3;
+                        $page_count = count($courses) / $items;
+                        if (count($courses) % $items > 0) {
                             $page_count++;
                         }
-                        $chuncked = array_chunk($courses, 3);
+                        $chuncked = array_chunk($courses, $items);
 
                         $CENTER = new Center($center);
                     }
@@ -133,7 +134,7 @@
 
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12" style="display: flex; justify-content: center;">
                     <nav aria-label="Page navigation">
                         <ul class="pagination" id="pagination"></ul>
                     </nav>
@@ -171,7 +172,7 @@
         $(function() {
             window.pagObj = $('#pagination').twbsPagination({
                 totalPages: <?= $page_count ?>,
-                visiblePages: 10,
+                visiblePages: <?= $visible_pages ?>,
                 onPageClick: function(event, page) {
                     // console.info(page + ' (from options)');
                     $('.pag-item').hide();

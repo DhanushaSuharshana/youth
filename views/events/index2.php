@@ -22,9 +22,6 @@
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
-    <link rel="stylesheet" href="<?php echo URL ?>assets/pagination.css">
-    <!-- <script src="<?php echo URL ?>assets/plugin/paginationjs/dist/pagination.css"></script> -->
-
     <title>Youth Council || Sri Lanka</title>
     <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
 </head>
@@ -47,57 +44,83 @@
     <section class="blog-area ptb-100">
         <div class="container">
             <div class="row">
+
                 <?php
-                $NEWS = new Event(NULL);
-                $news_data = $NEWS->all();
-                $items = 6;
-                $visible_pages = 3;
-                $page_count = count($news_data) / $items;
-                if (count($news_data) % $items > 0) {
-                    $page_count++;
-                }
-                $chuncked = array_chunk($news_data, $items);
-                foreach ($chuncked as $key => $page) {
-
-                    foreach ($page as $key2 => $news) {
+                $EVENT = new Event(NULL);
+                foreach ($EVENT->all() as $key => $event) {
+                    if ($key <= 2) {
                 ?>
-                        <div class="col-lg-4 col-md-6 pg-<?= $key + 1 ?> pag-item" style="display: none">
-                            <div class="single-blog-post mb-30">
-                                <div class="post-image">
-                                    <a href="<?php echo URL; ?>events/view/<?php echo base64_encode($news['id']); ?>" class="d-block">
-                                        <img src="<?php echo URL ?>upload/event/<?php echo $news['image_name']; ?>" alt="image">
-                                    </a>
-                                    <!-- <div class="tag">
-                                    <a href="#"><?php echo $news['title']; ?></a>
-                                </div> -->
-                                </div>
-                                <div class="post-content">
-                                    <ul class="post-meta">
+                        <div class="col-lg-4 col-md-12 col-sm-6">
+                            <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>">
+                                <div class="events-box">
 
-                                        <li><a href="#"><?php echo date("F j, Y", strtotime($news['date'])); ?></a></li>
-                                    </ul>
-                                    <h3><a href="<?php echo URL; ?>events/view/<?php echo base64_encode($news['id']); ?>" class="d-inline-block"><?php echo $news['title']; ?></a></h3>
-                                    <a href="<?php echo URL; ?>events/view/<?php echo base64_encode($news['id']); ?>" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+
+                                    <div class="post-image">
+                                        <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>" class="d-block">
+                                            <img src="<?php echo URL ?>upload/event/<?php echo $event['image_name'] ?>" alt="<?php echo $event['title'] ?>">
+                                        </a>
+
+                                    </div>
+                                    <div class="col-lg-12 col-md-7 p-0">
+                                        <div class="content">
+                                            <div class="date">
+                                                <span>
+                                                    <?php
+                                                    $date = date_create($event['date']);
+                                                    echo date_format($date, "D") . ', ' . date_format($date, "d") . ' ' . date_format($date, "M" . ', ' . date_format($date, "Y"));
+                                                    ?>
+                                                </span>
+                                            </div>
+                                            <h3><a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>"><?php echo $event['title'] ?></a></h3>
+                                            <p><?php echo $event['short_description'] ?></p>
+                                            <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+
+                    <?php
+                    } else if ($key < 5) {
+                    ?>
+                        <div class="col-lg-6 col-md-12 col-sm-6">
+                            <div class="events-box">
+                                <div class="row m-0">
+                                    <div class="col-lg-5 col-md-5 p-0">
+                                        <div class="image">
+                                            <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>">
+
+                                                <img src="<?php echo URL ?>upload/event/<?php echo $event['image_name'] ?>" alt="<?php echo $event['title'] ?>">
+                                                <div class="divider-shape"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-7 col-md-7 p-0">
+                                        <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>">
+                                            <div class="content">
+                                                <div class="date">
+                                                    <span><?php
+                                                            $date = date_create($event['date']);
+                                                            echo date_format($date, "D") . ', ' . date_format($date, "d") . ' ' . date_format($date, "M" . ', ' . date_format($date, "Y"));
+                                                            ?></span>
+                                                </div>
+                                                <h3 href=""><?php echo $event['title'] ?></h3>
+                                                <p><?php echo $event['short_description'] ?></p>
+                                                <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                 <?php
                     }
-                } ?>
-
-
-
-
-
-
-
-
-                <!-- <div id="data-container"></div>
-                <div id="pagination-container"></div> -->
-
+                }
+                ?>
                 <!-- <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="pagination-area text-center pagination" id="pagination">
-                        <a href="#" class="next page-numbers"><i class='bx bx-chevron-left'></i></a>
+                    <div class="pagination-area text-center">
                         <span class="page-numbers current" aria-current="page">1</span>
                         <a href="#" class="page-numbers">2</a>
                         <a href="#" class="page-numbers">3</a>
@@ -106,13 +129,6 @@
                         <a href="#" class="next page-numbers"><i class='bx bx-chevron-right'></i></a>
                     </div>
                 </div> -->
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="display: flex; justify-content: center;">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination " id="pagination"></ul>
-                    </nav>
-                </div>
             </div>
         </div>
     </section>
@@ -144,44 +160,7 @@
     <script src="<?php echo URL ?>assets/js/form-validator.min.js"></script>
     <script src="<?php echo URL ?>assets/js/contact-form-script.js"></script>
     <script src="<?php echo URL ?>assets/js/main.js"></script>
-    <!-- <script src="<?php echo URL ?>assets/plugin/paginationjs/dist/pagination.min.js"></script> -->
-    <script src="<?php echo URL ?>assets/plugin/twbs-pagination/jquery.twbsPagination.min.js"></script>
-    <!-- <script src="<?php echo URL ?>assets/plugin/twbs-pagination/jquery.twbsPagination.js"></script> -->
-    <script>
-        // function simpleTemplating(data) {
-        //     var html = '<ul>';
-        //     $.each(data, function(index, item) {
-        //         html += '<li>' + item + '</li>';
-        //     });
-        //     html += '</ul>';
-        //     return html;
-        // }
 
-        // $('#pagination-container').pagination({
-        //     dataSource: [1, 2, 3, 4, 5, 6, 7, 195],
-        //     callback: function(data, pagination) {
-        //         var html = simpleTemplating(data);
-        //         $('#data-container').html(html);
-        //     }
-        // })
-    </script>
-    <script type="text/javascript">
-        $(function() {
-            window.pagObj = $('#pagination').twbsPagination({
-                totalPages: <?= $page_count ?>,
-                visiblePages: <?= $visible_pages ?>,
-                onPageClick: function(event, page) {
-                    // console.info(page + ' (from options)');
-                    $('.pag-item').hide();
-                    $('.pg-' + 1).show();
-                }
-            }).on('page', function(event, page) {
-                console.info(page + ' (from event listening)');
-                $('.pag-item').hide();
-                $('.pg-' + page).show();
-            });
-        });
-    </script>
 </body>
 
 </html>

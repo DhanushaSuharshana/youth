@@ -65,12 +65,14 @@
                 //     }
                 // } else {
                 $courses = $COURSE->all();
-                $page_count = count($courses) / 3;
-                if (count($courses) % 3 > 0) {
+                $items = 6;
+                $visible_pages = 3;
+                $page_count = count($courses) / $items;
+                if (count($courses) % $items > 0) {
                     $page_count++;
                 }
-                $chuncked = array_chunk($courses, 3);
-                
+                $chuncked = array_chunk($courses, $items);
+
 
 
 
@@ -78,21 +80,21 @@
                 // echo base64_decode($this->query);
                 if (!empty($courses)) {
                     foreach ($chuncked as $key => $page) {
-                    foreach ($page as $course) {
+                        foreach ($page as $course) {
                 ?>
-                        <div class="col-lg-4 col-md-6 pg-<?= $key + 1 ?> pag-item" style="display: none">
-                            <a href="<?php echo URL; ?>courses/view/<?php echo base64_encode('q=fromcourse%center=false'.'%course=' . $course['id']); ?>" class="d-inline-block">
-                                <div class="single-courses-box mb-30">
-                                    <div class="courses-image">
-                                        <img src="<?php echo URL; ?>upload/courses/<?php echo $course['image_name'] ?>" alt="image">
-                                        <!-- <div class="courses-tag">
+                            <div class="col-lg-4 col-md-6 pg-<?= $key + 1 ?> pag-item" style="display: none">
+                                <a href="<?php echo URL; ?>courses/view/<?php echo base64_encode('q=fromcourse%center=false' . '%course=' . $course['id']); ?>" class="d-inline-block">
+                                    <div class="single-courses-box mb-30">
+                                        <div class="courses-image">
+                                            <img src="<?php echo URL; ?>upload/courses/<?php echo $course['image_name'] ?>" alt="image">
+                                            <!-- <div class="courses-tag">
                                         <a href="#" class="d-block"><?php echo $course['level'] ?></a>
                                     </div> -->
-                                    </div>
-                                    <div class="courses-content">
+                                        </div>
+                                        <div class="courses-content">
 
-                                        <h3><?php echo $course['name'] ?></h3>
-                                        <!-- <div class="courses-rating">
+                                            <h3><?php echo $course['name'] ?></h3>
+                                            <!-- <div class="courses-rating">
                                         <div class="review-stars-rated">
                                             <i class='bx bxs-star'></i>
                                             <i class='bx bxs-star'></i>
@@ -104,36 +106,36 @@
                                             5.0 (1 rating)
                                         </div>
                                     </div> -->
+                                        </div>
+                                        <div class="courses-box-footer">
+                                            <ul>
+                                                <li class="students-number">
+                                                    <i class='bx bx-user'></i> <?php echo $course['max_student'] ?> students
+                                                </li>
+                                                <li class="courses-lesson">
+                                                    <i class='bx bx-book-open'></i> <?php echo CourseSubjects::getCount($course['id'])['count']; ?> Subjects
+                                                </li>
+                                                <li class="courses-price">
+                                                    View
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="courses-box-footer">
-                                        <ul>
-                                            <li class="students-number">
-                                                <i class='bx bx-user'></i> <?php echo $course['max_student'] ?> students
-                                            </li>
-                                            <li class="courses-lesson">
-                                                <i class='bx bx-book-open'></i> <?php echo CourseSubjects::getCount($course['id'])['count']; ?> Subjects
-                                            </li>
-                                            <li class="courses-price">
-                                                View
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
                     <?php
+                        }
                     }
-                }
                 } else { ?>
                     <div>No Data Available</div>
                 <?php
                 } ?>
 
 
-               
+
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12" style="display: flex; justify-content: center;">
                     <nav aria-label="Page navigation">
                         <ul class="pagination" id="pagination"></ul>
                     </nav>
@@ -171,7 +173,7 @@
         $(function() {
             window.pagObj = $('#pagination').twbsPagination({
                 totalPages: <?= $page_count ?>,
-                visiblePages: 10,
+                visiblePages: <?= $visible_pages ?>,
                 onPageClick: function(event, page) {
                     // console.info(page + ' (from options)');
                     $('.pag-item').hide();

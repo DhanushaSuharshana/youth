@@ -54,11 +54,13 @@
             <div class="row">
                 <?php
                 $news_data = $NEWS->getPageNewsById($PAGE->id);
-                $page_count = count($news_data) / 3;
-                if (count($news_data) % 3 > 0) {
+                $items = 6;
+                $visible_pages = 3;
+                $page_count = count($news_data) / $items;
+                if (count($news_data) % $items > 0) {
                     $page_count++;
                 }
-                $chuncked = array_chunk($news_data, 3);
+                $chuncked = array_chunk($news_data, $items);
                 foreach ($chuncked as $key => $page) {
 
                     foreach ($page as $key2 => $news) {
@@ -110,7 +112,7 @@
                 </div> -->
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12" style="display: flex; justify-content: center;">
                     <nav aria-label="Page navigation">
                         <ul class="pagination" id="pagination"></ul>
                     </nav>
@@ -171,7 +173,7 @@
         $(function() {
             window.pagObj = $('#pagination').twbsPagination({
                 totalPages: <?= $page_count ?>,
-                visiblePages: 10,
+                visiblePages: <?= $visible_pages ?>,
                 onPageClick: function(event, page) {
                     // console.info(page + ' (from options)');
                     $('.pag-item').hide();
