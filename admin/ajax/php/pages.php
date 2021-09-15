@@ -7,8 +7,9 @@ header('Content-Type: application/json; charset=UTF8');
 if (isset($_POST['create'])) {
     //-- ** Start Create Image
     $dir_dest = '../../../upload/page/';
-    $handle = new Upload($_FILES['image']);
+    $handle = new Upload($_FILES['image_name']);
     $imgName = null;
+
     if ($handle->uploaded) {
         $handle->image_resize = true;
         $handle->file_new_name_ext = 'jpg';
@@ -22,6 +23,26 @@ if (isset($_POST['create'])) {
             $imgName = $handle->file_dst_name;
         }
     }
+
+    $bannerImgName = '';
+    if (!empty($_FILES['banner_image_name'])) {
+        $banner_handle = new Upload($_FILES['banner_image_name']);
+        $dir_dest_banner = '../../../upload/page/banner/';
+        if ($banner_handle->uploaded) {
+            $banner_handle->image_resize = true;
+            $banner_handle->file_new_name_ext = 'jpg';
+            $banner_handle->image_ratio_crop = 'C';
+            $banner_handle->file_new_name_body = Helper::randamId();
+            $banner_handle->image_x = 1920;
+            $banner_handle->image_y = 600;
+            $banner_handle->Process($dir_dest_banner);
+            if ($banner_handle->processed) {
+                $info = getimagesize($banner_handle->file_dst_pathname);
+                $bannerImgName = $banner_handle->file_dst_name;
+            }
+        }
+    }
+
     //-- ** End Create Image
     //-- ** Start Assign Post Params
     $PAGES = new Pages(NULL);
@@ -31,6 +52,7 @@ if (isset($_POST['create'])) {
     $PAGES->sub_title = $_POST['sub_title'];
     $PAGES->description = $_POST['description'];
     $PAGES->image_name = $imgName;
+    $PAGES->banner_image_name = $bannerImgName;
     $PAGES->create();
     //-- ** End Assign Post Params
     $result = ["status" => 'success'];
@@ -47,7 +69,6 @@ if (isset($_POST['update'])) {
     $imgName = null;
 
     $PAGES = new Pages($_POST['id']);
-
     if ($handle->uploaded) {
         $handle->image_resize = true;
         $handle->file_new_name_body = TRUE;
@@ -63,12 +84,34 @@ if (isset($_POST['update'])) {
             $imgName = $handle->file_dst_name;
         }
     }
+
+    $bannerImgName = $PAGES->banner_image_name;
+    if (!empty($_FILES['banner_image_name'])) {
+        $banner_handle = new Upload($_FILES['banner_image_name']);
+        $dir_dest_banner = '../../../upload/page/banner/';
+        if ($banner_handle->uploaded) {
+            $banner_handle->image_resize = true;
+            (empty($bannerImgName)) ? $banner_handle->file_new_name_ext = 'jpg' : $banner_handle->file_new_name_ext = FALSE;;
+            $banner_handle->file_new_name_body = TRUE;
+            $banner_handle->file_overwrite = TRUE;
+            $banner_handle->image_ratio_crop = 'C';
+            $banner_handle->file_new_name_body = (!empty($bannerImgName)) ? $bannerImgName : Helper::randamId();
+            $banner_handle->image_x = 1920;
+            $banner_handle->image_y = 600;
+            $banner_handle->Process($dir_dest_banner);
+            if ($banner_handle->processed) {
+                $info = getimagesize($banner_handle->file_dst_pathname);
+                $bannerImgName = $banner_handle->file_dst_name;
+            }
+        }
+    }
     //-- ** End Edit Image in folder location
     //-- ** Start Assign Post Params
     $PAGES->url = $_POST['url'];
     $PAGES->title = $_POST['title'];
     $PAGES->page_type = $_POST['page_type'];
     $PAGES->sub_title = $_POST['sub_title'];
+    $PAGES->banner_image_name = $bannerImgName;
     $PAGES->description = $_POST['description'];
     $PAGES->update();
 
@@ -91,6 +134,9 @@ if (isset($_POST['option'])) {
     if ($_POST['option'] == 'delete') {
         $PAGES = new Pages($_POST['id']);
         unlink("../../../upload/page/" . $PAGES->image_name);
+        if (!empty($PAGES->banner_image_name)) {
+            unlink("../../../upload/page/banner/" . $PAGES->banner_image_name);
+        }
         $result = $PAGES->delete();
         //-- ** End Assign Post Params
         if ($result) {

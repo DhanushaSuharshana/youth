@@ -115,7 +115,13 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <div class="mb-3 row">
                                         <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
                                         <div class="col-md-10">
-                                            <input class="form-control" type="file" id="image_name" name="image">
+                                            <input class="form-control" type="file" id="image_name" name="image_name">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-email-input" class="col-md-2 col-form-label">Banner Image</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" type="file" id="banner_image_name" name="banner_image_name">
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
@@ -243,6 +249,15 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <div class="col-md-10">
                                         <input class="form-control image_name" type="file" name="image_name" value="<?php echo $page['image_name']; ?>">
                                         <img width="200" class="img-responsive" src="../upload/page/<?php echo $page['image_name']; ?>">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="example-email-input" class="col-md-2 col-form-label">Banner Image</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control banner_image_name" type="file" name="banner_image_name" value="<?php echo $page['banner_image_name']; ?>">
+                                        <?php if ($page['banner_image_name']){?>
+                                        <img width="200" class="img-responsive" src="../upload/page/banner/<?php echo $page['banner_image_name']; ?>">
+                                        <?php } ?>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">

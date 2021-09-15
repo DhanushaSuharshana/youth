@@ -38,9 +38,9 @@
             <div class="page-title-content">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li>Services</li>
+                    <li>Page</li>
                 </ul>
-                <h2>Services</h2>
+                <h2><?php echo ucwords($this->query) ?></h2>
             </div>
         </div>
     </div>
@@ -49,7 +49,11 @@
             <div class="row">
                 <?php
                 $PAGES = new Pages(NULL);
-                $page_data = $PAGES->all();
+                if($this->query == "all"){
+                    $page_data = $PAGES->all();
+                }else{
+                    $page_data = $PAGES->getByType(PageType::getByTitle($this->query)["id"]);
+                }
                 $items = 6;
                 $visible_pages = 3;
                 $page_count = count($page_data) / $items;
