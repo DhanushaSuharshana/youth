@@ -18,6 +18,7 @@ class PageNews
     public $page_id;
     public $title;
     public $image_name;
+    public $date;
     public $short_description;
     public $description;
     public $queue;
@@ -36,6 +37,7 @@ class PageNews
             $this->page_id = $result['page_id'];
             $this->title = $result['title'];
             $this->image_name = $result['image_name'];
+            $this->date = $result['date'];
             $this->short_description = $result['short_description'];
             $this->description = $result['description'];
             $this->queue = $result['queue'];
@@ -47,10 +49,11 @@ class PageNews
     public function create()
     {
 
-        $query = "INSERT INTO `page_news` (`page_id`,`title`,`image_name`,`short_description`,`description`,`queue`) VALUES  ('"
+        $query = "INSERT INTO `page_news` (`page_id`,`title`,`image_name`,`date`,`short_description`,`description`,`queue`) VALUES  ('"
             . $this->page_id . "','"
             . $this->title . "','"
             . $this->image_name . "', '"
+            . $this->date . "', '"
             . $this->short_description . "', '"
             . $this->description . "', '"
             . $this->queue . "')";
@@ -66,18 +69,19 @@ class PageNews
         }
     }
 
-    public function getPageNewsById($page_id)
+    public function getPageNewsById($page_id,$order=false)
     {
 
-        $query = "SELECT * FROM `page_news` WHERE `page_id` = '$page_id' ORDER BY queue ASC";
+        $query = "SELECT * FROM `page_news` WHERE `page_id` = '$page_id'";
+        ($order)? $query.=" ORDER BY date DESC" : "";
         $db = new Database();
+        
         $result = $db->readQuery($query);
         $array_res = array();
 
         while ($row = mysqli_fetch_array($result)) {
             array_push($array_res, $row);
         }
-
         return $array_res;
     }
 
@@ -102,6 +106,7 @@ class PageNews
         $query = "UPDATE  `page_news` SET "
             . "`title` ='" . $this->title . "', "
             . "`image_name` ='" . $this->image_name . "', "
+            . "`date` ='" . $this->date . "', "
             . "`short_description` ='" . $this->short_description . "', "
             . "`description` ='" . $this->description . "', "
             . "`queue` ='" . $this->queue . "' "

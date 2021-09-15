@@ -18,8 +18,8 @@ if (isset($_POST['create'])) {
         $handle->file_new_name_ext = 'jpg';
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = $img;
-        $handle->image_x = 300;
-        $handle->image_y = 300;
+        $handle->image_x = 600;
+        $handle->image_y = 440;
         $handle->Process($dir_dest);
         if ($handle->processed) {
             $info = getimagesize($handle->file_dst_pathname);
@@ -44,6 +44,7 @@ if (isset($_POST['create'])) {
     $PAGE_NEWS = new PageNews(NULL);
     $PAGE_NEWS->page_id = $_POST['page_id'];
     $PAGE_NEWS->title = $_POST['title'];
+    $PAGE_NEWS->date = $_POST['date'];
     $PAGE_NEWS->description = $_POST['description'];
     $PAGE_NEWS->short_description = $_POST['short_description'];
   
@@ -74,8 +75,8 @@ if (isset($_POST['update'])) {
         $handle->file_new_name_ext = FALSE;
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = $img;
-        $handle->image_x = 300;
-        $handle->image_y = 300;
+        $handle->image_x = 600;
+        $handle->image_y = 440;
         $handle->Process($dir_dest);
         if ($handle->processed) {
             $info = getimagesize($handle->file_dst_pathname);
@@ -100,6 +101,7 @@ if (isset($_POST['update'])) {
     // $PAGE_NEWS->image_name = $_POST['oldImageName'];
     // $PAGE_NEWS->page_id = $_POST['page_id'];
     $PAGE_NEWS->title = $_POST['title'];
+    $PAGE_NEWS->date = $_POST['date'];
     $PAGE_NEWS->description = $_POST['description'];
     $PAGE_NEWS->short_description = $_POST['short_description'];
     $PAGE_NEWS->update();

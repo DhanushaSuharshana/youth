@@ -30,12 +30,12 @@
 
 
 
-    <div class="page-title-area item-bg1 jarallax" data-jarallax='{"speed": 0.3}'>
+    <div class="page-title-area item-bg1 jarallax" data-jarallax='{"speed": 0.3}'  style="background-image: url(<?= (empty($this->PAGE->banner_image_name)) ? URL.'assets/img/page-title/1.jpg' : URL.'upload/page/banner/'.$this->PAGE->banner_image_name ?>) !important;">
         <div class="container">
             <div class="page-title-content">
                 <ul>
                     <li><a href="<?php echo URL ?>">Home</a></li>
-                    <li>Services</li>
+                    <li><?php $PAGE_TYPE = new PageType($this->PAGE->page_type); echo ucwords($PAGE_TYPE->title); ?></li>
                 </ul>
                 <h2><?= $this->PAGE->title; ?></h2>
             </div>
@@ -86,27 +86,26 @@
 
                                         foreach ($page_characters as $key => $character) {
                                         ?>
-                                            <div class=" single-blog-post mb-30">
+                                            <div class=" single-blog-post mb-3">
                                                 <div class="post-image">
-                                                    <a href="<?php echo URL ?>page/character/<?php echo base64_encode($character['id']); ?>" class="d-block">
+                                                    <a href="#" class="d-block">
                                                         <img src="<?php echo URL ?>upload/page/character/<?php echo $character['image_name'] ?>" alt="<?php echo $character['name'] ?>">
                                                     </a>
                                                     <!-- <div class="tag">
                                                 <a href="#">News</a>
                                             </div> -->
                                                 </div>
-                                                <div class="post-content">
+                                                <div class="post-content text-center">
                                                     <ul class="post-meta">
 
-                                                        <li><a href="<?php echo URL ?>page/character/view/<?php echo base64_encode($character['id']); ?>">
+                                                        <li><a href="#">
                                                                 <?php
                                                                 echo $character['designation'];
                                                                 ?>
                                                             </a>
                                                         </li>
                                                     </ul>
-                                                    <h5><a href="<?php echo URL ?>page/character/view/<?php echo base64_encode($character['id']); ?>" class="d-inline-block"><?php echo ucfirst($character['name']) ?></a></h5>
-                                                    <a href="<?php echo URL ?>page/character/view/<?php echo base64_encode($character['id']); ?>" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                                                    <h5><a href="#" class="d-inline-block"><?php echo ucfirst($character['name']) ?></a></h5>
                                                 </div>
                                             </div>
                                         <?php } ?>
@@ -126,8 +125,8 @@
                         <div class="article-footer">
                             <div class="article-tags">
                                 <span><i class='bx bx-purchase-tag'></i></span>
-                                <a href="#"><?php
-                                $PAGE_TYPE = new PageType($this->PAGE->page_type);
+                                <a href="<?php $PAGE_TYPE = new PageType($this->PAGE->page_type); echo URL; ?>page/list/<?php echo $PAGE_TYPE->title ?>"><?php
+                                
                                 echo $PAGE_TYPE->title;
                                 ?></a>
                             </div>
@@ -368,7 +367,7 @@
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <aside class="widget-area">
-                        <section class="widget widget_search">
+                        <!-- <section class="widget widget_search">
                             <form class="search-form">
                                 <label>
                                     <span class="screen-reader-text">Search for:</span>
@@ -376,10 +375,10 @@
                                 </label>
                                 <button type="submit"><i class="bx bx-search-alt"></i></button>
                             </form>
-                        </section>
+                        </section> -->
                         <?php
                         $PAGE_NEWS = new PageNews(NULL);
-                        $page_news = $PAGE_NEWS->getPageNewsById($this->PAGE->id);
+                        $page_news = $PAGE_NEWS->getPageNewsById($this->PAGE->id,true);
                         if ($page_news) {
                         ?>
                             <section class="widget widget_raque_posts_thumb">
@@ -388,6 +387,7 @@
                                     <a href="<?php echo URL; ?>page/news/<?php echo $this->PAGE->url; ?>" class="btn btn-sm btn-primary float-end" style="display: inline-block; background-color: #ff1949; border: 1px solid #ff1949;">View All</a>
                                 </div>
                                 <?php
+                                
                                 foreach ($page_news as $key => $news) {
                                     if ($key < 5) {
                                 ?>
@@ -395,10 +395,10 @@
                                             <a href="<?php echo URL ?>page/news/view/<?php echo base64_encode($news['id']); ?>" class="thumb">
                                                 <!-- <span class="fullimage cover bg1" role="img"> -->
                                                 <img src="<?php echo URL ?>upload/page/news/<?php echo $news['image_name'] ?>" alt="">
-                                                </span>
+                                                
                                             </a>
                                             <div class="info">
-                                                <time datetime="2021-06-30">June 10, 2021</time>
+                                                <time datetime="2021-06-30"><?php echo date("F j, Y", strtotime($news['date'])); ?></time>
                                                 <h4 class="title usmall"><a href="<?php echo URL ?>page/news/view/<?php echo base64_encode($news['id']); ?>"><?php echo substr($news['title'], 0, 60) ?>...</a></h4>
                                             </div>
                                             <div class="clear"></div>
@@ -407,7 +407,7 @@
                                 } ?>
                             </section>
                         <?php } ?>
-                        <section class="widget widget_categories">
+                        <!-- <section class="widget widget_categories">
                             <h3 class="widget-title">Categories</h3>
                             <ul>
                                 <li><a href="#">Design <span class="post-count">(03)</span></a></li>
@@ -473,7 +473,7 @@
                                 <span>Emergency</span>
                                 <a href="#">+0987-9876-8753</a>
                             </div>
-                        </section>
+                        </section> -->
                     </aside>
                 </div>
             </div>

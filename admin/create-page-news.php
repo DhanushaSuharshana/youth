@@ -33,7 +33,21 @@ $PAGES = new Pages($id);
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+    <link href="plugin/MCDatepicker-master/dist/mc-calendar.min.css" rel="stylesheet" type="text/css" />
+    <script src="plugin/MCDatepicker-master/dist/mc-calendar.min.js" type="text/javascript"></script>
     <link href="assets/css/preloader.css" rel="stylesheet" type="text/css" />
+    <style>
+        .mc-calendar {
+            z-index: 1600 !important;
+        }
+
+        .mc-display__day,
+        .mc-display__date,
+        .mc-display__month,
+        .mc-display__year {
+            color: hsla(0, 0%, 100%, .8) !important;
+        }
+    </style>
 </head>
 
 
@@ -86,7 +100,12 @@ $PAGES = new Pages($id);
                                                 <input class="form-control" type="file" id="image_name" name="image_name">
                                             </div>
                                         </div>
-
+                                        <div class="mb-3 row">
+                                            <label for="example-url-input" class="col-md-2 col-form-label">Date</label>
+                                            <div class="col-md-10">
+                                                <input class="form-control" type="text" id="date" name="date" placeholder="Enter News Date">
+                                            </div>
+                                        </div>
                                         <div class="mb-3 row">
                                             <label for="example-url-input" class="col-md-2 col-form-label">Short Description</label>
                                             <div class="col-md-10">
@@ -192,7 +211,12 @@ $PAGES = new Pages($id);
                                     </div>
                                 </div>
 
-
+                                <div class="mb-3 row">
+                                    <label for="example-url-input" class="col-md-2 col-form-label">Date</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control date" id="date_edit_<?php echo $page_news['id']; ?>" type="text" name="date" value="<?php echo $page_news['date'] ?>">
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
                                         <button class="btn btn-primary edit-data" dataId="<?php echo $page_news['id']; ?>" type="submit">Update</button>
@@ -204,7 +228,29 @@ $PAGES = new Pages($id);
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
+        <script>
+            MCDatepicker.create({
+                    el: '#date_edit_<?php echo $page_news['id']; ?>',
+                    selectedDate: new Date('<?php echo $page_news['date'] ?>'),
+                    customClearBTN: '',
+                    // autoClose: true,
+                    // closeOnBlur: false,
+                    dateFormat: 'yyyy-mm-dd',
+                }
+
+            )
+        </script>
     <?php } ?>
+    <script>
+        MCDatepicker.create({
+            el: '#date',
+            selectedDate: new Date(),
+            customClearBTN: '',
+            // autoClose: true,
+            // closeOnBlur: false,
+            dateFormat: 'yyyy-mm-dd',
+        })
+    </script>
     <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>
 

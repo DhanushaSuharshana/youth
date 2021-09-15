@@ -11,12 +11,12 @@
     ?>
 
     /* <?php echo $key ?> */
-    .<?php echo $key ?> .single-categories-courses-box {
+    .<?php echo $key ?>.single-categories-courses-box {
         background-color: <?php echo $color['color']; ?> !important;
     }
 
-    .<?php echo $key ?> .single-categories-courses-box:hover .icon,
-    .<?php echo $key ?> .single-categories-courses-box:focus .icon {
+    .<?php echo $key ?>.single-categories-courses-box:hover .icon,
+    .<?php echo $key ?>.single-categories-courses-box:focus .icon {
         background-color: #fff !important;
         border-color: <?php echo $color['color']; ?> !important;
         color: <?php echo $color['color']; ?> !important;
@@ -114,10 +114,12 @@
 
                             <li class="nav-item"><a href="#" class="nav-link">Divisions <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="<?php echo URL ?>division">Administrative Division</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>division/view">Finance Division</a></li>
-                                    <li class="nav-item"><a href="view-division.php">Legal Investigation </a> </li>
-                                    <li class="nav-item"><a href="view-division.php">National Youth Awards</a></li>
+                                    <?php
+                                    foreach (Pages::getAll(PageType::getByTitle("divisions")["id"]) as $key => $page) {
+                                    ?>
+                                        <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
+                                    <?php } ?>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/list/divisions">Show All Divisions</a> </li>
                                 </ul>
                             </li>
                             <!--                            <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class="bx bx-chevron-down"></i></a>
@@ -145,11 +147,12 @@
                             <li class="nav-item"><a href="#" class="nav-link">Services <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <?php
-                                    foreach (Pages::getAll() as $key => $page) {
+
+                                    foreach (Pages::getAll(PageType::getByTitle("services")["id"]) as $key => $page) {
                                     ?>
                                         <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
                                     <?php } ?>
-                                    <li class="nav-item"><a href="<?php echo URL ?>page">Show All Services</a> </li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/list/services">Show All Services</a> </li>
                                 </ul>
                             </li>
 
@@ -179,10 +182,12 @@
                             <li class="nav-item"><a href="<?php echo URL ?>events/" class="nav-link ">Events </a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Divisions <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="<?php echo URL ?>division">Administrative Division</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>division/view">Finance Division</a></li>
-                                    <li class="nav-item"><a href="view-division.php">Legal Investigation </a> </li>
-                                    <li class="nav-item"><a href="view-division.php">National Youth Awards</a></li>
+                                    <?php
+                                    foreach (Pages::getAll(PageType::getByTitle("divisions")["id"]) as $key => $page) {
+                                    ?>
+                                        <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
+                                    <?php } ?>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/list/divisions">Show All Divisions</a> </li>
                                 </ul>
                             </li>
                             <!--                            <li class="nav-item"><a href="#" class="nav-link">Youth Club <i class="bx bx-chevron-down"></i></a>
@@ -210,12 +215,11 @@
                             <li class="nav-item"><a href="#" class="nav-link">Services <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <?php
-                                    foreach (Pages::getAll() as $key => $page) {
-                                        if($key <5){
+                                    foreach (Pages::getAll(PageType::getByTitle("services")["id"]) as $key => $page) {
                                     ?>
                                         <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php }} ?>
-                                    <li class="nav-item"><a href="<?php echo URL ?>page">Show All Services</a> </li>
+                                    <?php } ?>
+                                    <li class="nav-item"><a href="<?php echo URL ?>page/list/services">Show All Services</a> </li>
                                 </ul>
                             </li>
 

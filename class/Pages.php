@@ -15,6 +15,7 @@ class Pages
     public $url;
     public $sub_title;
     public $image_name;
+    public $banner_image_name;
     public $description;
 
     public function __construct($id)
@@ -32,6 +33,7 @@ class Pages
             $this->title = $result['title'];
             $this->sub_title = $result['sub_title'];
             $this->image_name = $result['image_name'];
+            $this->banner_image_name = $result['banner_image_name'];
             $this->description = $result['description'];
         }
     }
@@ -51,6 +53,7 @@ class Pages
                 $this->page_type = $result['page_type'];
                 $this->sub_title = $result['sub_title'];
                 $this->image_name = $result['image_name'];
+                $this->banner_image_name = $result['banner_image_name'];
                 $this->description = $result['description'];
             } else {
                 return false;
@@ -61,12 +64,13 @@ class Pages
     public function create()
     {
 
-        $query = "INSERT INTO `pages` (`url`,`title`,`page_type`,`sub_title`,`image_name`,`description`) VALUES  ('"
+        $query = "INSERT INTO `pages` (`url`,`title`,`page_type`,`sub_title`,`image_name`,`banner_image_name`,`description`) VALUES  ('"
             . $this->url . "', '"
             . $this->title . "', '"
             . $this->page_type . "', '"
             . $this->sub_title . "', '"
             . $this->image_name . "', '"
+            . $this->banner_image_name . "', '"
             . $this->description . "')";
 
         $db = new Database();
@@ -89,6 +93,7 @@ class Pages
             . "`page_type` ='" . $this->page_type . "',"
             . "`sub_title` ='" . $this->sub_title . "',"
             . "`image_name` ='" . $this->image_name . "',"
+            . "`banner_image_name` ='" . $this->banner_image_name . "',"
             . "`description` ='" . $this->description . "' "
             . "WHERE `id` = '" . $this->id . "'";
 
@@ -118,10 +123,25 @@ class Pages
         return $array_res;
     }
 
-    public static function getAll()
+    public function getByType($type)
     {
 
-        $query = "SELECT * FROM `pages`";
+        $query = "SELECT * FROM `pages` WHERE `page_type`='" . $type . "'";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
+    public static function getAll($type = false)
+    {
+        $query = "SELECT * FROM `pages` ";
+        ($type) ? $query.="WHERE `page_type`='" . $type . "'" : "" ;
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();

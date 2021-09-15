@@ -10,6 +10,12 @@ class Page extends Controller
 
     function index()
     {
+        // $this->view->render('page/pages');
+    }
+
+    function list($query = "all")
+    {
+        $this->view->query = $query;
         $this->view->render('page/pages');
     }
 

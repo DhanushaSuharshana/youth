@@ -30,7 +30,7 @@
 
 
 
-    <div class="page-title-area item-bg1 jarallax" data-jarallax='{"speed": 0.3}'>
+    <div class="page-title-area item-bg1 jarallax" data-jarallax='{"speed": 0.3}'  style="background-image: url(<?= (empty($this->PAGE->banner_image_name)) ? URL.'assets/img/page-title/1.jpg' : URL.'upload/page/banner/'.$this->PAGE->banner_image_name ?>) !important;">
         <div class="container">
             <div class="page-title-content">
                 <ul>
