@@ -30,6 +30,8 @@ include_once(dirname(__FILE__) . '/NewsLetter.php');
 include_once(dirname(__FILE__) . '/PageNews.php');
 include_once(dirname(__FILE__) . '/PageNewsPhoto.php');
 include_once(dirname(__FILE__) . '/PageType.php');
+include_once(dirname(__FILE__) . '/VideoAlbum.php');
+include_once(dirname(__FILE__) . '/AlbumVideo.php');
 
 
 function dd($data) {
