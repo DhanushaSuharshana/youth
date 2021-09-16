@@ -140,7 +140,7 @@
                             <li class="nav-item"><a href="#" class="nav-link">Gallery <i class="bx bx-chevron-down"></i> </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a href="<?php echo URL ?>gallery" class="nav-link">Photo Gallery</a></li>
-                                    <li class="nav-item"><a href="<?php echo URL ?>gallery" class="nav-link">Video Gallery</a></li>
+                                    <li class="nav-item"><a href="<?php echo URL ?>video-gallery" class="nav-link">Video Gallery</a></li>
                                 </ul>
                             </li>
 

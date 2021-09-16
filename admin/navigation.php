@@ -142,6 +142,13 @@
                     </a>
 
                 </li>
+                <li>
+                    <a href="create-video-album.php">
+                        <i class="bx bx-images"></i>
+                        <span>Video Album</span>
+                    </a>
+
+                </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

@@ -7,13 +7,13 @@ class Gallery extends Controller {
     }
 
     function index() {
-        $this->view->render('gallery/index');
+        $this->view->render('gallery/photo/index');
     }
 
     function album($id) {
         
         $this->view->id = $id;
-        $this->view->render('gallery/album');
+        $this->view->render('gallery/photo/album');
     }
 
 }
