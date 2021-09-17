@@ -26,7 +26,7 @@
     <!-- <script src="<?php echo URL ?>assets/plugin/paginationjs/dist/pagination.css"></script> -->
 
     <title>Youth Council || Sri Lanka</title>
-    <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
+    <link rel="icon" type="image/png" href="<?php echo URL; ?>assets/img/pre-logo.png">
 </head>
 
 <body>

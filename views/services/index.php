@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="<?php echo URL ?>assets/css/style.css">
         <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
         <title>Youth Council || Sri Lanka</title>
-        <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
+        <link rel="icon" type="image/png" href="<?php echo URL; ?>assets/img/pre-logo.png">
     </head>
     <body>
 
