@@ -50,7 +50,8 @@ if (isset($_POST['create'])) {
     $PAGES->title = $_POST['title'];
     $PAGES->page_type = $_POST['page_type'];
     $PAGES->sub_title = $_POST['sub_title'];
-    $PAGES->description = $_POST['description'];
+    $DB = new Database();
+    $PAGES->description = mysqli_real_escape_string($DB->DB_CON,$_POST['description']);
     $PAGES->image_name = $imgName;
     $PAGES->banner_image_name = $bannerImgName;
     $PAGES->create();
@@ -112,7 +113,8 @@ if (isset($_POST['update'])) {
     $PAGES->page_type = $_POST['page_type'];
     $PAGES->sub_title = $_POST['sub_title'];
     $PAGES->banner_image_name = $bannerImgName;
-    $PAGES->description = $_POST['description'];
+    $DB = new Database();
+    $PAGES->description = mysqli_real_escape_string($DB->DB_CON,$_POST['description']);
     $PAGES->update();
 
     //-- ** End Assign Post Params

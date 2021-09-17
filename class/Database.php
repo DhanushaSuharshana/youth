@@ -31,7 +31,7 @@ class Database {
     }
 
     public function readQuery($query) {
-        $result = mysqli_query($this->DB_CON, $query) or die(mysqli_error());
+        $result = mysqli_query($this->DB_CON, $query) or die(mysqli_error($this->DB_CON));
 
         return $result;
     }

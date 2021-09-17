@@ -126,7 +126,7 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>National ID Number<span class="required">*</span></label>
-                                <input type="text" class="form-control validation_field" placeholder="Enter National ID Number" name="nic" id="nic">
+                                <input minlength ="10" maxlength="12" type="text" class="form-control validation_field" placeholder="Enter National ID Number" name="nic" id="nic">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
