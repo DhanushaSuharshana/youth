@@ -28,6 +28,8 @@ if (isset($_POST['create'])) {
     $COURSE->course_type = $_POST['course_type'];
     $COURSE->name = ucwords($_POST['name']);
     $COURSE->max_student = $_POST['max_student'];
+    $COURSE->nvq = (!isset($_POST['nvq']) ? false : (($_POST['nvq'] == 'on') ? true : false));
+    $COURSE->duration_type = (!isset($_POST['duration_type']) ? false : (($_POST['duration_type'] == 'on') ? true : false));
     $COURSE->level = $_POST['level'];
     $COURSE->languages = $_POST['languages'];
     $COURSE->duration = $_POST['duration'];
@@ -77,6 +79,8 @@ if (isset($_POST['update'])) {
     $COURSE->course_type = $_POST['course_type'];
     $COURSE->name = ucwords($_POST['name']);
     $COURSE->max_student = $_POST['max_student'];
+    $COURSE->nvq = (!isset($_POST['nvq']) ? false : (($_POST['nvq'] == 'on') ? true : false));
+    $COURSE->duration_type = (!isset($_POST['duration_type']) ? false : (($_POST['duration_type'] == 'on') ? true : false));
     $COURSE->level = $_POST['level'];
     $COURSE->languages = $_POST['languages'];
     $COURSE->duration = $_POST['duration'];

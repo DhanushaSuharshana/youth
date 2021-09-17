@@ -40,7 +40,8 @@ if (isset($_GET["id"])) {
     <style>
         .mc-calendar {
             z-index: 1600 !important;
-        } 
+        }
+
         .mc-display__day,
         .mc-display__date,
         .mc-display__month,
@@ -120,6 +121,24 @@ if (isset($_GET["id"])) {
                                             <label for="example-search-input" class="col-md-2 col-form-label">Max Students</label>
                                             <div class="col-md-10">
                                                 <input class="form-control" type="text" id="max_student" name="max_student" placeholder="Please enter max students in one course">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="example-search-input" class="col-md-2 col-form-label">NVQ</label>
+                                            <div class="col-md-10">
+                                                <div class="form-check form-switch mt-2" dir="ltr">
+                                                    <input type="checkbox" class="form-check-input" id="nvq" name="nvq">
+                                                    <label class="form-check-label" for="nvq"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label for="example-search-input" class="col-md-2 col-form-label">Duration Type</label>
+                                            <div class="col-md-10">
+                                                <div class="form-check form-switch mt-2" dir="ltr">
+                                                    <input type="checkbox" class="form-check-input" id="duration_type" name="duration_type">
+                                                    <label class="form-check-label" for="duration_type">Full Time</label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
@@ -203,13 +222,13 @@ if (isset($_GET["id"])) {
                                                 <td><?php echo $course['languages']; ?></td>
 
                                                 <td>
- 
+
                                                     <div class="badge bg-pill bg-soft-success font-size-14" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $course['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> |
                                                     <a href="create-course-photo.php?id=<?php echo $course['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-image   p-1"></i></a> |
                                                     <a href="create-course-subjects.php?id=<?php echo $course['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
                                                     <a href="arrange-course.php" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
                                                     <a href="#">
- 
+
                                                         <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $course['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
                                                     </a>
                                                 </td>
@@ -275,6 +294,26 @@ if (isset($_GET["id"])) {
                                         <input class="form-control max_student" type="text" name="max_student" placeholder="Please enter max students in one course" value="<?php echo $course['max_student'] ?>">
                                     </div>
                                 </div>
+
+                                <div class="mb-3 row">
+                                    <label for="example-search-input" class="col-md-2 col-form-label">NVQ</label>
+                                    <div class="col-md-10">
+                                        <div class="form-check form-switch mt-2" dir="ltr">
+                                            <input type="checkbox" class="form-check-input" name="nvq" <?= ($course['nvq']) ? "checked='checked'" : ""; ?>>
+                                            <label class="form-check-label" for="nvq"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="example-search-input" class="col-md-2 col-form-label">Duration Type</label>
+                                    <div class="col-md-10">
+                                        <div class="form-check form-switch mt-2" dir="ltr">
+                                            <input type="checkbox" class="form-check-input" name="duration_type" <?= ($course['duration_type']) ? "checked='checked'" : ""; ?>>
+                                            <label class="form-check-label" for="duration_type">Full Time</label>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="mb-3 row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
                                     <div class="col-md-10">
@@ -326,9 +365,9 @@ if (isset($_GET["id"])) {
                             </div>
                         </form>
                     </div>
-                </div> 
-            </div> 
-        </div> 
+                </div>
+            </div>
+        </div>
 
         <script>
             MCDatepicker.create({
