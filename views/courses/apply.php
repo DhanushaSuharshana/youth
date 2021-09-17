@@ -218,6 +218,7 @@
                         </div>
 
                         <div class="col-lg-12 col-md-12">
+                            <input type="hidden" name="token" value="9he02kbf9093hkvsle9045kb">
                             <button id="apply_btn" type="submit" class="default-btn"><i class='bx bx-send icon-arrow before'></i><span class="label" id="apply_btn_text">Apply Now</span><i class="bx bx-send icon-arrow after"></i></button>
                         </div>
                     </div>

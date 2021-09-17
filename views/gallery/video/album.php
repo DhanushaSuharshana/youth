@@ -56,7 +56,7 @@ $VIDEO_ALBUM = new VideoAlbum($id);
     </div>
 
 
-    <section class="gallery-area pt-100 pb-70">
+    <section class="gallery-area pt-70 pb-70">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
