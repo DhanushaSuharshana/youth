@@ -596,9 +596,9 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="become-instructor-partner-content bg-color">
-                        <h2>Become an Instructor</h2>
+                        <h2>Requirement Application</h2>
                         <p>Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
-                        <a href="#" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Apply Now</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
+                        <a href="#" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">View More</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -613,9 +613,9 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="become-instructor-partner-content">
-                        <h2>Become a Partner</h2>
+                        <h2>Youth Club Federation</h2>
                         <p>Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
-                        <a href="<?php echo URL ?>contact_us" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Contact Us</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
+                        <a href="<?php echo URL ?>contact_us" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Apply Now</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
                     </div>
                 </div>
             </div>
