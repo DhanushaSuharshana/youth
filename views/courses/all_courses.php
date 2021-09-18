@@ -29,7 +29,11 @@
 
     <?php include './views/header.php'; ?>
 
-
+    <style>
+        .nvq-label {
+            top: 280px !important;
+        }
+    </style>
     <div class="page-title-area item-bg2 jarallax" data-jarallax='{"speed": 0.3}'>
         <div class="container">
             <div class="page-title-content">
@@ -90,10 +94,22 @@
                                             <!-- <div class="courses-tag">
                                         <a href="#" class="d-block"><?php echo $course['level'] ?></a>
                                     </div> -->
+                                            <div class="duration-label <?= ($course["duration_type"]) ? "full" : "part"; ?>">
+                                                <?= ($course["duration_type"]) ? "Full Time" : "Part Time"; ?>
+                                            </div>
+                                            <?php if ($course["nvq"]) { ?>
+                                                <div class="nvq-label">
+                                                    <span>NVQ</span>
+                                                </div>
+                                            <?php } ?>
                                         </div>
                                         <div class="courses-content">
 
-                                            <h3><?php echo $course['name'] ?></h3>
+                                            <div class="d-flex justify-content-between align-items-center"></div>
+
+                                            <h3>
+                                                <div class="d-inline-block"><?php echo $course['name'] ?></div>
+                                            </h3>
                                             <!-- <div class="courses-rating">
                                         <div class="review-stars-rated">
                                             <i class='bx bxs-star'></i>

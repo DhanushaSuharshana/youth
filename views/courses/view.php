@@ -34,6 +34,7 @@
 
 <body>
     <?php include './views/header.php';
+
     $COURSE = new Course(NULL);
 
 
@@ -45,7 +46,11 @@
     $course = $COURSE->getOne($course_id);
     // var_dump($attr);
     ?>
-
+    <style>
+        .nvq-label {
+            top: 280px !important;
+        }
+    </style>
     <div class="page-title-area item-bg2 jarallax" data-jarallax='{"speed": 0.3}'>
         <div class="container">
             <div class="page-title-content">
@@ -262,9 +267,16 @@
                                                     <!-- <div class="courses-tag">
                                                 <a href="#" class="d-block"><?php echo $course2['level'] ?></a>
                                             </div> -->
+                                                    <div class="duration-label <?= ($course2["duration_type"]) ? "full" : "part"; ?>">
+                                                        <?= ($course2["duration_type"]) ? "Full Time" : "Part Time"; ?>
+                                                    </div>
                                                 </div>
                                                 <div class="courses-content" style="min-height: 120px !important;">
-
+                                                    <?php if ($course2["nvq"]) { ?>
+                                                        <div class="nvq-label">
+                                                            <span>NVQ</span>
+                                                        </div>
+                                                    <?php } ?>
                                                     <h3 style="font-size: 16px !important;">
                                                         <?php echo $course2['name'] ?> (<?php echo $CENTER->name ?>)
                                                     </h3>
@@ -455,7 +467,7 @@
                         content: contentString,
                     });
                     google.maps.event.addListener(marker, 'click', function() {
-         
+
                         if (!marker.open) {
                             infoWindow.open(map, marker);
                             marker.open = true;
@@ -468,7 +480,7 @@
                         infoWindow.close();
                         marker.open = false;
                     });
-                   
+
 
                     markers.push(marker);
                 }

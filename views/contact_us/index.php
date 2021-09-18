@@ -48,7 +48,7 @@
                             <i class='bx bx-envelope'></i>
                         </div>
                         <h3>Email Here</h3>
-                        <p><a href=""><span class="__cf_email__" data-cfemail="5d35383131321d2f3c2c2838733e3230">info@nysc.lk</span></a></p>
+                        <p><a href="mailto:info@nysc.lk"><span class="__cf_email__" data-cfemail="">info@nysc.lk</span></a></p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
@@ -57,7 +57,7 @@
                             <i class='bx bx-map'></i>
                         </div>
                         <h3>Location Here</h3>
-                        <p><a href="https://goo.gl/maps/Mii9keyeqXeNH4347" target="_blank">No 65, High Level Road,
+                        <p><a href="https://goo.gl/maps/YgcaUg6BEeaPUgr77" target="_blank">No 65, High Level Road,
                                 Maharagama</a></p>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                             <i class='bx bx-phone-call'></i>
                         </div>
                         <h3>Call Here</h3>
-                        <p><a href="tel:1234567890">+123 456 7890</a></p>
+                        <p><a href="tel:+940112850986">+94 0112 850 986</a></p>
 
                     </div>
                 </div>

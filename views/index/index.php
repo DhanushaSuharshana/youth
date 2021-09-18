@@ -325,8 +325,17 @@
                                                         <div class="d-block">
                                                             <img src="<?php echo URL ?>upload/courses/<?php echo $course['image_name'] ?>" alt="<?php echo $course['name'] ?>">
                                                         </div>
+                                                        <div class="duration-label <?= ($course["duration_type"]) ? "full" : "part"; ?>">
+                                                            <?= ($course["duration_type"]) ? "Full Time" : "Part Time"; ?>
+                                                        </div>
+
                                                     </div>
                                                     <div class="courses-content">
+                                                        <?php if ($course["nvq"]) { ?>
+                                                            <div class="nvq-label">
+                                                                <span>NVQ</span>
+                                                            </div>
+                                                        <?php } ?>
                                                         <div class="d-flex justify-content-between align-items-center"></div>
                                                         <h3>
                                                             <div class="d-inline-block">
@@ -378,9 +387,9 @@
                     <div class="faq-accordion faq-accordion-style-two">
                         <ul class="accordion">
                             <li class="accordion-item">
-                                <a class="accordion-title " href="<?php echo URL ?>page/view/youth-parliament">
+                                <a class="accordion-title " href="<?php echo URL ?>page/view/youth-parliment">
                                     <i class='bx bxs-circle'></i>
-                                    Youth Parliament
+                                    Youth Parliment
                                 </a>
                             </li>
                             <li class="accordion-item">
@@ -435,7 +444,7 @@
             <div class="section-title text-left ">
                 <span class="sub-title">Read Testimonials</span>
                 <h2>What Peoples Say About Us</h2>
-                <a href="courses" class="default-btn"><i class="bx bx-show-alt icon-arrow before"></i><span class="label">View All </span><i class="bx bx-show-alt icon-arrow after"></i></a>
+                <!-- <a href="courses" class="default-btn"><i class="bx bx-show-alt icon-arrow before"></i><span class="label">View All </span><i class="bx bx-show-alt icon-arrow after"></i></a> -->
             </div>
 
 
@@ -553,7 +562,7 @@
             <div class="section-title text-left ">
                 <span class="sub-title">Explore News</span>
                 <h2>Our Latest News</h2>
-                <a href="<?php echo URL ?>youth_news" class="default-btn"><i class='bx bx-book-reader icon-arrow before'></i><span class="label">View All</span><i class="bx bx-book-reader icon-arrow after"></i></a>
+                <a href="<?php echo URL ?>youth-news" class="default-btn"><i class='bx bx-book-reader icon-arrow before'></i><span class="label">View All</span><i class="bx bx-book-reader icon-arrow after"></i></a>
             </div>
             <div class="blog-slides owl-carousel owl-theme">
                 <?php
