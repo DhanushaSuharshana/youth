@@ -1,4 +1,61 @@
 <style>
+    .nvq-label {
+        position: absolute  !important;
+        top: -24px  !important;
+        right: 10px  !important;
+        z-index: 9999 !important;
+        height: 50px !important;
+        width: 50px !important;
+        border-radius: 50% !important;
+        color: white !important;
+        padding: 3px 7px !important;
+        background-color: #d89516 !important;
+    }
+
+    .nvq-label span {
+        margin: 10px 2px !important;
+        position: absolute !important;
+    }
+    /* ------------------------------------------- */
+
+    /*  */
+    .duration-label {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 9999;
+        border-radius: 5px;
+        color: white;
+        padding: 3px 7px;
+        background-color: #ff1949;
+    }
+
+
+    .full {
+        background-color: #168b69;
+    }
+
+    /* LIGHT FOOTER */
+    .courses-box-footer {
+        /* background: #ff194917; */
+        background-color: #ff1949;
+    }
+
+    /*  */
+
+    /* SOLID FOOTER */
+    .courses-box-footer ul li {
+        color: white !important
+    }
+
+    .courses-box-footer ul li i {
+        color: white !important
+    }
+
+    /*  */
+</style>
+
+<style>
     .ads {
         background-color: red;
         width: 35px;
@@ -22,9 +79,6 @@
         /* color: red; */
         background-color: #ff1949;
     }
-
-
- 
 </style>
 
 <style>
@@ -40,12 +94,12 @@
     ?>
 
     /* <?php echo $key ?> */
-    .<?php echo $key ?>.single-categories-courses-box {
+    .<?php echo $key ?> .single-categories-courses-box {
         background-color: <?php echo $color['color']; ?> !important;
     }
 
-    .<?php echo $key ?>.single-categories-courses-box:hover .icon,
-    .<?php echo $key ?>.single-categories-courses-box:focus .icon {
+    .<?php echo $key ?> .single-categories-courses-box:hover .icon,
+    .<?php echo $key ?> .single-categories-courses-box:focus .icon {
         background-color: #fff !important;
         border-color: <?php echo $color['color']; ?> !important;
         color: <?php echo $color['color']; ?> !important;
@@ -144,6 +198,7 @@
                             <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link active">Home </a></li>
                             <li class="nav-item"><a href="<?php echo URL ?>youth-news/" class="nav-link">News </a></li>
                             <li class="nav-item"><a href="<?php echo URL ?>events/" class="nav-link ">Events </a></li>
+                            <li class="nav-item"><a href="<?php echo URL ?>page/view/youth-club" class="nav-link ">Youth Club </a></li>
 
 
                             <li class="nav-item"><a href="#" class="nav-link">Divisions <i class="bx bx-chevron-down"></i></a>
@@ -214,6 +269,8 @@
                             <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link active">Home </a></li>
                             <li class="nav-item"><a href="<?php echo URL ?>youth-news/" class="nav-link">News </a></li>
                             <li class="nav-item"><a href="<?php echo URL ?>events/" class="nav-link ">Events </a></li>
+                            <li class="nav-item"><a href="<?php echo URL ?>page/view/youth-club" class="nav-link ">Youth Club </a></li>
+
                             <li class="nav-item"><a href="#" class="nav-link">Divisions <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <?php
