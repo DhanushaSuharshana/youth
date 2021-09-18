@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 17, 2021 at 06:26 AM
+-- Generation Time: Sep 18, 2021 at 07:16 AM
 -- Server version: 10.4.20-MariaDB-log
 -- PHP Version: 7.4.21
 
@@ -20,6 +20,54 @@ SET time_zone = "+00:00";
 --
 -- Database: `nysc`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `advertisement`
+--
+
+CREATE TABLE `advertisement` (
+  `id` int(11) NOT NULL,
+  `url` text NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `date` varchar(255) NOT NULL,
+  `image_name` varchar(255) NOT NULL,
+  `short_description` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  `queue` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `advertisement`
+--
+
+INSERT INTO `advertisement` (`id`, `url`, `title`, `date`, `image_name`, `short_description`, `description`, `queue`) VALUES
+(2, 'https://google.com', 'Ad2', '2021-09-24', '-128264188743_62938952163_1631939581_n.jpg', 'ss', '<p>ss</p>', 1),
+(3, 'https://google.com', 'AD67', '2021-09-21', '-83825620304_107377520602_1631940533_n.jpg', 'jguy', '<p>ygg</p>', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `advertisement_photo`
+--
+
+CREATE TABLE `advertisement_photo` (
+  `id` int(11) NOT NULL,
+  `advertisement` int(11) NOT NULL,
+  `image_name` varchar(255) NOT NULL,
+  `caption` varchar(255) NOT NULL,
+  `queue` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `advertisement_photo`
+--
+
+INSERT INTO `advertisement_photo` (`id`, `advertisement`, `image_name`, `caption`, `queue`) VALUES
+(1, 2, '-132230317853_58972823053_1631940469_n.jpg', 'AD11', 2),
+(2, 2, '-118967037631_72236103275_1631940488_n.jpg', 'tt', 1),
+(3, 3, '-54645879800_136557261106_1631940553_n.jpg', 'hh', 0);
 
 -- --------------------------------------------------------
 
@@ -251,6 +299,8 @@ CREATE TABLE `courses` (
   `course_type` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `max_student` varchar(255) NOT NULL,
+  `nvq` tinyint(1) NOT NULL,
+  `duration_type` tinyint(1) NOT NULL,
   `level` varchar(255) NOT NULL,
   `languages` varchar(255) NOT NULL,
   `duration` varchar(255) NOT NULL,
@@ -265,12 +315,12 @@ CREATE TABLE `courses` (
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`id`, `course_type`, `name`, `max_student`, `level`, `languages`, `duration`, `start_date`, `short_description`, `description`, `image_name`, `queue`) VALUES
-(7, 1, 'Information & Communication Multimedia Technology - Level 5', '40', '5', 'English', '01 Year', '2021-08-11', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>', '-135374056245_55829084661_1628136341_n.jpg', 0),
-(8, 6, 'Quantity Surveyor', '40', '5', 'English', '01 Year', '2021-08-23', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>', '-14677649344_176525491562_1628137642_n.jpg', 0),
-(9, 1, 'Information & Communication Multimedia Technology - Level 4', '20', 'Level 4', 'English', '6 Month', '2021-08-24', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>', '-52287106032_138916034874_1628142125_n.jpg', 0),
-(10, 1, 'Graphic Designing - Level 4', '20', 'NVQ Level - 4', 'English', 'One Year ', '2021-08-19', 'Associate: a two-year program that either leads to a specific vocation Associate: a two-year program that either leads to a specific or transitions to a bachelor program', '<p>Associate: a two-year program that either leads to a specific vocation or transitions to a bachelor program</p>', '-125736036655_65467104251_1628142564_n.jpg', 0),
-(12, 2, 'Cookery', '40', '4', 'Sinhala', '06 months', '2021-08-22', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>', '-161030866680_30172274226_1628154878_n.jpg', 0);
+INSERT INTO `courses` (`id`, `course_type`, `name`, `max_student`, `nvq`, `duration_type`, `level`, `languages`, `duration`, `start_date`, `short_description`, `description`, `image_name`, `queue`) VALUES
+(7, 1, 'Information & Communication Multimedia Technology - Level 5', '40', 1, 0, '5', 'English', '01 Year', '2021-08-11', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>', '-135374056245_55829084661_1628136341_n.jpg', 0),
+(8, 6, 'Quantity Surveyor', '40', 0, 0, '5', 'English', '01 Year', '2021-08-23', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>', '-14677649344_176525491562_1628137642_n.jpg', 0),
+(9, 1, 'Information & Communication Multimedia Technology - Level 4', '20', 1, 0, 'Level 4', 'English', '6 Month', '2021-08-24', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>', '-52287106032_138916034874_1628142125_n.jpg', 0),
+(10, 1, 'Graphic Designing - Level 4', '20', 0, 0, 'NVQ Level - 4', 'English', 'One Year ', '2021-08-19', 'Associate: a two-year program that either leads to a specific vocation Associate: a two-year program that either leads to a specific or transitions to a bachelor program', '<p>Associate: a two-year program that either leads to a specific vocation or transitions to a bachelor program</p>', '-125736036655_65467104251_1628142564_n.jpg', 0),
+(12, 2, 'Cookery', '40', 0, 0, '4', 'Sinhala', '06 months', '2021-08-22', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>', '-161030866680_30172274226_1628154878_n.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -790,7 +840,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `name`, `email`, `createdAt`, `isActive`, `authToken`, `lastLogin`, `username`, `password`, `image_name`, `resetcode`) VALUES
 (1, 'Suharshana', 'dinudhanusha@gmail.com', '2017-07-05 11:03:45', 1, 'b67e532a14b8d6556f53b8308237e588', '2021-09-06 15:50:33', 'Suharshana', 'e10adc3949ba59abbe56e057f20f883e', '-157892244_191045248662_1554483643_n.jpg', '97805'),
 (2, 'Chalana', 'chalanadulaj99@gmail.com', '2021-05-19 00:00:00', 1, '34515594e13081146e3c5b1c305e45a1', '2021-09-15 10:06:24', 'Chalana', 'e10adc3949ba59abbe56e057f20f883e', '-157892244_191045248662_1554483643_n.jpg', ''),
-(3, 'Pasindu', '@gmail.com', '2021-05-19 00:00:00', 1, '9beb02f5717acb8cecfdb4e61da53e04', '2021-09-17 07:22:17', 'pasindu', 'e10adc3949ba59abbe56e057f20f883e', '-157892244_191045248662_1554483643_n.jpg', '');
+(3, 'Pasindu', '@gmail.com', '2021-05-19 00:00:00', 1, '9c504a260911878a5af4659db59c0369', '2021-09-18 09:52:50', 'pasindu', 'e10adc3949ba59abbe56e057f20f883e', '-157892244_191045248662_1554483643_n.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -816,6 +866,18 @@ INSERT INTO `video_album` (`id`, `title`, `image_name`, `queue`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `advertisement`
+--
+ALTER TABLE `advertisement`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `advertisement_photo`
+--
+ALTER TABLE `advertisement_photo`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `album_photo`
@@ -989,6 +1051,18 @@ ALTER TABLE `video_album`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `advertisement`
+--
+ALTER TABLE `advertisement`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `advertisement_photo`
+--
+ALTER TABLE `advertisement_photo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `album_photo`

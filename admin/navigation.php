@@ -60,6 +60,16 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-news"></i>
+                        <span>Advertisement</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="create-advertisement.php">Add Advertisement</a></li>
+                        <li><a href="manage-advertisement.php">Manage Advertisement</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-chart "></i>
                         <span>Pages</span>
                     </a>

@@ -32,6 +32,8 @@ include_once(dirname(__FILE__) . '/PageNewsPhoto.php');
 include_once(dirname(__FILE__) . '/PageType.php');
 include_once(dirname(__FILE__) . '/VideoAlbum.php');
 include_once(dirname(__FILE__) . '/AlbumVideo.php');
+include_once(dirname(__FILE__) . '/Advertisement.php');
+include_once(dirname(__FILE__) . '/AdvertisementPhoto.php');
 
 
 function dd($data) {

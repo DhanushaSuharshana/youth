@@ -1,4 +1,33 @@
 <style>
+    .ads {
+        background-color: red;
+        width: 35px;
+        height: 140px;
+        position: fixed;
+        top: 170px;
+        right: 0px;
+        z-index: 9999;
+        border-radius: 5px 0px 0px 5px;
+        cursor: pointer;
+    }
+
+    .ads div {
+        margin-top: 20px;
+        color: white;
+        transform: rotate(90deg);
+    }
+
+
+    .ads:hover {
+        /* color: red; */
+        background-color: #ff1949;
+    }
+
+
+ 
+</style>
+
+<style>
     .courses-content {
         min-height: 156px !important;
     }
@@ -11,12 +40,12 @@
     ?>
 
     /* <?php echo $key ?> */
-    .<?php echo $key ?> .single-categories-courses-box {
+    .<?php echo $key ?>.single-categories-courses-box {
         background-color: <?php echo $color['color']; ?> !important;
     }
 
-    .<?php echo $key ?> .single-categories-courses-box:hover .icon,
-    .<?php echo $key ?> .single-categories-courses-box:focus .icon {
+    .<?php echo $key ?>.single-categories-courses-box:hover .icon,
+    .<?php echo $key ?>.single-categories-courses-box:focus .icon {
         background-color: #fff !important;
         border-color: <?php echo $color['color']; ?> !important;
         color: <?php echo $color['color']; ?> !important;
@@ -25,6 +54,11 @@
     <?php  }
     } ?>
 </style>
+
+<div class="ads" onclick="window.open('<?php echo URL; ?>advertisements','_self')">
+    <div><span>Advertiesment</span></div>
+</div>
+
 
 <header class="header-area">
     <div class="top-header top-header-style-four">

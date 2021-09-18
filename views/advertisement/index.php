@@ -37,10 +37,10 @@
         <div class="container">
             <div class="page-title-content">
                 <ul>
-                    <li><a href="<?php echo URL ?>">Home</a></li>
-                    <li>Page</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Advertisement</li>
                 </ul>
-                <h2><?php echo ucwords($this->query) ?></h2>
+                <h2>Advertisement</h2>
             </div>
         </div>
     </div>
@@ -48,39 +48,36 @@
         <div class="container">
             <div class="row">
                 <?php
-                $PAGES = new Pages(NULL);
-                if($this->query == "all"){
-                    $page_data = $PAGES->all();
-                }else{
-                    $page_data = $PAGES->getByType(PageType::getByTitle($this->query)["id"]);
-                }
+                $ADVERTISEMENT = new Advertisement(NULL);
+                $advertisement_data = $ADVERTISEMENT->all();
                 $items = 6;
                 $visible_pages = 3;
-                $page_count = count($page_data) / $items;
-                if (count($page_data) % $items > 0) {
+                $page_count = count($advertisement_data) / $items;
+                if (count($advertisement_data) % $items > 0) {
                     $page_count++;
                 }
-                $chuncked = array_chunk($page_data, $items);
-                foreach ($chuncked as $key => $pagination) {
+                $chuncked = array_chunk($advertisement_data, $items);
+                foreach ($chuncked as $key => $page) {
 
-                    foreach ($pagination as $key2 => $page) {
+                    foreach ($page as $key2 => $advertisement) {
                 ?>
                         <div class="col-lg-4 col-md-6 pg-<?= $key + 1 ?> pag-item" style="display: none">
                             <div class="single-blog-post mb-30">
                                 <div class="post-image">
-                                    <a href="<?php echo URL; ?>page/view/<?php echo $page['url']; ?>" class="d-block">
-                                        <img src="<?php echo URL ?>upload/page/<?php echo $page['image_name']; ?>" alt="image">
+                                    <a href="<?php echo URL; ?>advertisements/view/<?php echo base64_encode($advertisement['id']); ?>" class="d-block">
+                                        <img src="<?php echo URL ?>upload/advertisement/<?php echo $advertisement['image_name']; ?>" alt="image">
                                     </a>
                                     <!-- <div class="tag">
-                                    <a href="#"><?php echo $page['title']; ?></a>
+                                    <a href="#"><?php echo $advertisement['title']; ?></a>
                                 </div> -->
                                 </div>
                                 <div class="post-content">
                                     <ul class="post-meta">
 
+                                        <li><a href="#"><?php echo date("F j, Y", strtotime($advertisement['date'])); ?></a></li>
                                     </ul>
-                                    <h3><a href="<?php echo URL; ?>page/view/<?php echo $page['url']; ?>" class="d-inline-block"><?php echo $page['title']; ?></a></h3>
-                                    <a href="<?php echo URL; ?>page/view/<?php echo $page['url']; ?>" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                                    <h3><a href="<?php echo URL; ?>advertisements/view/<?php echo base64_encode($advertisement['id']); ?>" class="d-inline-block"><?php echo $advertisement['title']; ?></a></h3>
+                                    <a href="<?php echo URL; ?>advertisements/view/<?php echo base64_encode($advertisement['id']); ?>" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
                                 </div>
                             </div>
                         </div>

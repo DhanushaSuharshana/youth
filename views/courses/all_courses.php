@@ -34,7 +34,7 @@
         <div class="container">
             <div class="page-title-content">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="<?php echo URL ?>">Home</a></li>
                     <li><a href="#">Courses</a></li>
                     <!-- <li>Photography Crash Course for Photographer</li> -->
                 </ul>

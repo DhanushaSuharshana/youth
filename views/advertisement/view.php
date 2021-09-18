@@ -56,16 +56,16 @@
             <div class="page-title-content">
                 <ul>
                     <li><a href="<?php echo URL ?>">Home</a></li>
-                    <li>Event</li>
+                    <li>Advertisement</li>
                 </ul>
-                <h2>Event Details</h2>
+                <h2>Advertisement Details</h2>
             </div>
         </div>
     </div>
 
     <?php
-    $EVENT_PHOTO = new EventPhoto(NULL);
-    $EVENT = new Event(base64_decode($this->query));
+    $ADVERTISEMENT_PHOTO = new AdvertisementPhoto(NULL);
+    $ADVERTISEMENT = new Advertisement(base64_decode($this->query));
 
     ?>
     <section class="events-details-area ptb-100">
@@ -73,10 +73,10 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="events-details-header">
-                        <a href="<?php echo URL; ?>youth_event" class="back-all-events"><i class='bx bx-chevrons-left'></i> Back To All Event</a>
-                        <h3><?php echo $EVENT->title; ?></h3>
+                        <a href="<?php echo URL; ?>advertisements" class="back-all-events"><i class='bx bx-chevrons-left'></i> Back To All Advertisement</a>
+                        <h3><?php echo $ADVERTISEMENT->title; ?></h3>
                         <ul class="events-info-meta d-none">
-                            <li><i class="flaticon-timetable"></i> <?php echo date("F j, Y", strtotime($EVENT->date)) ?></li>
+                            <li><i class="flaticon-timetable"></i> <?php echo date("F j, Y", strtotime($ADVERTISEMENT->date)) ?></li>
                             <li><i class="far fa-clock"></i> 10.00AM - 10.00PM</li>
                         </ul>
                         <div class="events-meta">
@@ -105,14 +105,14 @@
 
 
 
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <div id="myCarousel" class="carousel slide mb-5" data-ride="carousel">
 
                             <div class="carousel-inner">
                                 <?php
-                                foreach ($EVENT_PHOTO->geteventPhotosById($EVENT->id) as $key => $event) {
+                                foreach ($ADVERTISEMENT_PHOTO->getByAdvertisement($ADVERTISEMENT->id) as $key => $advertisement) {
                                 ?>
                                     <div class="item <?= ($key == 0) ? 'active' : '' ?>">
-                                        <img src="<?php echo URL ?>upload/event/gallery/<?php echo $event['image_name'] ?>" alt="Los Angeles" style="width:100%;">
+                                        <img src="<?php echo URL ?>upload/advertisement/gallery/<?php echo $advertisement['image_name'] ?>" alt="Los Angeles" style="width:100%;">
                                     </div>
                                 <?php } ?>
                             </div>
@@ -129,12 +129,7 @@
                         </div>
 
 
-                        <?php echo $EVENT->description; ?>
-                        <div class=" mt-5">
-                        <iframe src="https://maps.google.com/maps?q=<?php echo $EVENT->location; ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen  width="100%" height="400"></iframe>
-
-                            <!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1EYihIduCXuOWDaX9jKqhSSSjx9Mp5TcT" width="100%" height="400"></iframe> -->
-                        </div>
+                        <?php echo $ADVERTISEMENT->description; ?>
                     </div>
 
 
@@ -145,24 +140,27 @@
                         <div class="courses-review-comments" style="margin-top: -20px;">
 
                             <?php
-                            foreach ($EVENT->all() as $key => $event) {
+                            foreach ($ADVERTISEMENT->all() as $key => $advertisement) {
                                 if($key <10){
                             ?>
                                 <div class="user-review">
-                                <a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>">
-                                    <img src="<?php echo URL ?>upload/event/<?php echo $event['image_name'] ?>" alt="image">
+                                <a href="<?php echo URL ?>advertisements/view/<?php echo base64_encode($advertisement['id']); ?>">
+                                    <img src="<?php echo URL ?>upload/advertisement/<?php echo $advertisement['image_name'] ?>" alt="image">
                                     <div class="review-rating">
 
-                                        <span class="d-inline-block"><?php echo $event['title'] ?></span>
+                                        <span class="d-inline-block"><?php echo $advertisement['title'] ?></span>
                                     </div>
 
-                                    <p><?php echo substr($event['short_description'],0,60) ?>...</p>
+                                    <p><?php echo substr($advertisement['short_description'],0,60) ?>...</p>
                                 </a>
                                 </div>
                             <?php } } ?>
                         </div>
 
-                        
+                        <!-- <section class="widget widget_contact">
+                            
+                            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fBeWamR_Kco4w8IQe1t06EKLz4jwmRFj" width="440" height="400"></iframe>
+                        </section> -->
                     </aside>
                 </div>
             </div>
