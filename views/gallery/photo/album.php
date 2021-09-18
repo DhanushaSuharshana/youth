@@ -37,7 +37,7 @@ $PHOTO_ALBUM = new PhotoAlbum($id);
             <div class="container">
                 <div class="page-title-content">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="<?php echo URL ?>">Home</a></li>
                         <li>Album Photo</li>
                     </ul>
                     <h2><?php echo $PHOTO_ALBUM->title ?></h2>

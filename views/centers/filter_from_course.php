@@ -30,7 +30,7 @@
         <div class="container">
             <div class="page-title-content">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="<?php echo URL ?>">Home</a></li>
                     <li>Center</li>
                 </ul>
                 <h2>All Centers</h2>

@@ -64,7 +64,7 @@
                     <div class="container">
                         <div class="raque-responsive-menu">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="<?php echo URL ?>">
                                     <img src="<?php echo URL ?>assets/img/black-logo.png" alt="logo">
                                 </a>
                             </div>
@@ -74,14 +74,14 @@
                 <div class="raque-nav">
                     <div class="container">
                         <nav class="navbar navbar-expand-md navbar-light">
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="<?php echo URL ?>">
                                 <img src="<?php echo URL ?>assets/img/black-logo.png" alt="logo">
                             </a>
                             <div class="collapse navbar-collapse mean-menu">
                                 <ul class="navbar-nav">
                                     <li class="nav-item"><a href="#" class="nav-link">Home <i class='bx bx-chevron-down'></i></a>
                                         <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="index.html" class="nav-link">Online Education Portal</a></li>
+                                            <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link">Online Education Portal</a></li>
                                             <li class="nav-item"><a href="index-2.html" class="nav-link">Course Portal Online</a></li>
                                             <li class="nav-item"><a href="index-3.html" class="nav-link">Distant Learning</a></li>
                                             <li class="nav-item"><a href="index-4.html" class="nav-link">Modern Teaching</a></li>
@@ -235,14 +235,14 @@
                 <div class="raque-nav">
                     <div class="container">
                         <nav class="navbar navbar-expand-md navbar-light">
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="<?php echo URL ?>">
                                 <img src="<?php echo URL ?>assets/img/black-logo.png" alt="logo">
                             </a>
                             <div class="collapse navbar-collapse">
                                 <ul class="navbar-nav">
                                     <li class="nav-item"><a href="#" class="nav-link">Home <i class='bx bx-chevron-down'></i></a>
                                         <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="index.html" class="nav-link">Online Education Portal</a></li>
+                                            <li class="nav-item"><a href="<?php echo URL ?>" class="nav-link">Online Education Portal</a></li>
                                             <li class="nav-item"><a href="index-2.html" class="nav-link">Course Portal Online</a></li>
                                             <li class="nav-item"><a href="index-3.html" class="nav-link">Distant Learning</a></li>
                                             <li class="nav-item"><a href="index-4.html" class="nav-link">Modern Teaching</a></li>
@@ -417,7 +417,7 @@
             <div class="container">
                 <div class="page-title-content">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="<?php echo URL ?>">Home</a></li>
                         <li>Events</li>
                     </ul>
                     <h2>Events Details</h2>
