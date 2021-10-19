@@ -13,7 +13,7 @@ class Gallery extends Controller {
     function album($id) {
         
         $this->view->id = $id;
-        $this->view->render('gallery/photo/album');
+        $this->view->render('gallery/photo/album2');
     }
 
 }
