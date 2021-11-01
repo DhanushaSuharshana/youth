@@ -290,7 +290,65 @@
                 <h2>Our Popular Online Courses</h2>
                 <a href="courses" class="default-btn"><i class="bx bx-show-alt icon-arrow before"></i><span class="label">All Courses</span><i class="bx bx-show-alt icon-arrow after"></i></a>
             </div>
-            <div class="tab courses-list-tab">
+
+
+            <div class="blog-slides owl-carousel owl-theme">
+                <?php
+                 $COURSE = new Course(NULL);
+                foreach ($COURSE->all() as $key2 => $course) {
+                ?>
+                        <div class="">
+                            <a href="courses/view/<?php echo base64_encode('q=fromcourse%center=false' . '%course=' . $course['id']); ?>">
+                                <div class="single-courses-item mb-30">
+                                    <div class="courses-image">
+                                        <div class="d-block">
+                                            <img src="<?php echo URL ?>upload/courses/<?php echo $course['image_name'] ?>" alt="<?php echo $course['name'] ?>">
+                                        </div>
+                                        <div class="duration-label <?= ($course["duration_type"]) ? "full" : "part"; ?>">
+                                            <?= ($course["duration_type"]) ? "Full Time" : "Part Time"; ?>
+                                        </div>
+
+                                    </div>
+                                    <div class="courses-content">
+                                        <?php if ($course["nvq"]) { ?>
+                                            <div class="nvq-label">
+                                                <span>NVQ</span>
+                                            </div>
+                                        <?php } ?>
+                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                        <h3 style="min-height: 66px;">
+                                            <div class="d-inline-block">
+                                                <?php echo $course['name'] ?>
+                                            </div>
+                                        </h3>
+                                        <p> <?php echo substr($course['short_description'], 0, 90) ?> </p>
+                                    </div>
+                                    <div class="courses-box-footer">
+                                        <ul>
+                                            <li class="students-number">
+                                                <i class="bx bx-user"></i> 10 students
+                                            </li>
+                                            <li class="courses-lesson">
+                                                <i class="bx bx-book-open"></i> 6 lessons
+                                            </li>
+                                            <li class="courses-price">
+                                                View
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                <?php
+                    
+                }
+                ?>
+            </div>
+
+
+
+
+            <!-- <div class="tab courses-list-tab">
                 <ul class="tabs active">
                     <?php
                     $COURSE_TYPE = new CourseType(NULL);
@@ -342,7 +400,7 @@
                                                                 <?php echo $course['name'] ?>
                                                             </div>
                                                         </h3>
-                                                        <p> <?php echo substr($course['short_description'],0,90) ?> </p>
+                                                        <p> <?php echo substr($course['short_description'], 0, 90) ?> </p>
                                                     </div>
                                                     <div class="courses-box-footer">
                                                         <ul>
@@ -368,7 +426,7 @@
                         </div>
                     <?php } ?>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 

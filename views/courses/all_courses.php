@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="<?php echo URL; ?>assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="<?php echo URL; ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo URL; ?>assets/css/responsive.css">
-    <title>Raque - Education & Online Courses HTML Template</title>
+    <title>Courses National Youth Council Sri Lanka</title>
     <link rel="icon" type="image/png" href="<?php echo URL; ?>assets/img/pre-logo.png">
     <link rel="stylesheet" href="<?php echo URL ?>assets/pagination.css">
 
@@ -107,9 +107,11 @@
 
                                             <div class="d-flex justify-content-between align-items-center"></div>
 
-                                            <h3>
+                                            <h3 style=" min-height: 66px;">
                                                 <div class="d-inline-block"><?php echo $course['name'] ?></div>
                                             </h3>
+                                            <p> <?php echo substr($course['short_description'], 0, 90) ?> </p>
+
                                             <!-- <div class="courses-rating">
                                         <div class="review-stars-rated">
                                             <i class='bx bxs-star'></i>
