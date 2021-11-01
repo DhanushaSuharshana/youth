@@ -101,10 +101,13 @@
                                         <?php } ?>
                                     </div>
                                     <div class="courses-content">
-                                        
-                                        <h3>
-                                            <?php echo $course['name'] ?> (<?php echo $CENTER->name ?>)
+
+                                        <h3 style="min-height: 66px;">
+                                            <?php echo $course['name'] ?>
                                         </h3>
+                                        <span style="color: #800000;font-size: 14px;">
+                                            <span><?= (isset($CENTER->name)) ? "<i class='bx bx-map'></i> " . $CENTER->name . "" : '' ?></span>
+                                        </span>
                                         <!-- <div class="courses-rating">
                                         <div class="review-stars-rated">
                                             <i class='bx bxs-star'></i>

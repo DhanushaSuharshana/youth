@@ -27,9 +27,10 @@
     $attr = explode('%', base64_decode($this->query));
     // if ($attr[0] == 'q=fromcourse') {
     ?>
-        <link rel="stylesheet" href="<?php echo URL ?>public/map/map.css">
-        <!-- <link rel="stylesheet" href="<?php echo URL ?>public/map/card.css"> -->
-    <?php //} ?>
+    <link rel="stylesheet" href="<?php echo URL ?>public/map/map.css">
+    <!-- <link rel="stylesheet" href="<?php echo URL ?>public/map/card.css"> -->
+    <?php //} 
+    ?>
 </head>
 
 <body>
@@ -70,7 +71,8 @@
                         <div class="courses-title">
                             <h2><?php echo $course['name']; ?></h2>
                             <span style="color: #800000;font-size: 14px;">
-                                <span><?= (isset($CENTER->name)) ? "<i class='bx bx-map'></i> " . $CENTER->name . "" : '' ?></span></span>
+                                <span><?= (isset($CENTER->name)) ? "<i class='bx bx-map'></i> " . $CENTER->name . "" : '' ?></span>
+                            </span>
                         </div>
                         <div class="courses-meta">
                             <ul>
@@ -281,9 +283,12 @@
                                                             <span>NVQ</span>
                                                         </div>
                                                     <?php } ?>
-                                                    <h3 style="font-size: 16px !important;">
-                                                        <?php echo $course2['name'] ?> (<?php echo $CENTER->name ?>)
+                                                    <h3 style="font-size: 16px !important; min-height: 24px;">
+                                                        <?php echo $course2['name'] ?>
                                                     </h3>
+                                                    <span style="color: #800000;font-size: 14px;">
+                                                        <span><?= (isset($CENTER->name)) ? "<i class='bx bx-map'></i> " . $CENTER->name . "" : '' ?></span>
+                                                    </span>
                                                     <!-- <div class="courses-rating">
                                                 <div class="review-stars-rated">
                                                     <i class='bx bxs-star'></i>
