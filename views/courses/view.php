@@ -25,11 +25,11 @@
     <link rel="icon" type="image/png" href="<?php echo URL ?>assets/img/pre-logo.png">
     <?php
     $attr = explode('%', base64_decode($this->query));
-    if ($attr[0] == 'q=fromcourse') {
+    // if ($attr[0] == 'q=fromcourse') {
     ?>
         <link rel="stylesheet" href="<?php echo URL ?>public/map/map.css">
         <!-- <link rel="stylesheet" href="<?php echo URL ?>public/map/card.css"> -->
-    <?php } ?>
+    <?php //} ?>
 </head>
 
 <body>
@@ -68,8 +68,9 @@
                 <div class="row align-items-center">
                     <div class="col-lg-8">
                         <div class="courses-title">
-                            <h2><?php echo $course['name']; ?><?= (isset($CENTER->name)) ? "(" . $CENTER->name . ")" : '' ?></h2>
-                            <p><?php echo $course['short_description'] ?>.</p>
+                            <h2><?php echo $course['name']; ?></h2>
+                            <span style="color: #800000;font-size: 14px;">
+                                <span><?= (isset($CENTER->name)) ? "<i class='bx bx-map'></i> " . $CENTER->name . "" : '' ?></span></span>
                         </div>
                         <div class="courses-meta">
                             <ul>
@@ -83,11 +84,11 @@
                                     <span>Max Students</span>
                                     <a href="#"><?php echo $course['max_student'] ?></a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <i class='bx bx-calendar'></i>
                                     <span>Started Date</span>
                                     <a href="#"><?php echo $course['start_date'] ?></a>
-                                </li>
+                                </li> -->
                                 <li class="">
                                     <?php if ($attr[0] == 'q=fromcenter') { ?>
                                         <a href="<?php echo URL; ?>courses/apply/<?php echo base64_encode('q=toapply%center=' . $center_id . '%course=' . $course['id']); ?>" class="default-btn"><i class="bx bx-move-horizontal icon-arrow before"></i><span class="label text-white">Apply Now</span></a>
@@ -148,15 +149,18 @@
                             </a>
                         </div>
                     </div>
+                    <p class="mt-5"><?php echo $course['description'] ?>.</p>
                     <div class="related-courses">
-                        <h3>This Course Related Centers</h3>
+                        <!-- <h3>This Course Related Centers</h3> -->
                         <div id="map" style="margin-bottom: 15px;"></div>
                     </div>
-                    <?php if (isset($CENTER)) { ?>
+                    <?php if (isset($CENTER)) {
+                        // $CENTER = $_center;
+                    ?>
                         <!--Google map-->
-                        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 310px">
+                        <!-- <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 310px">
                             <iframe src="https://maps.google.com/maps?q=<?= $CENTER->latitude . ", " . $CENTER->longitude ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        </div>
+                        </div> -->
                     <?php } ?>
 
                 </div>
@@ -212,7 +216,7 @@
                         <div class="courses-list">
                             <ul>
                                 <li>
-                                    Subjects
+
                                 </li>
                                 <!-- <li>
                                     <a href="#">
@@ -372,86 +376,96 @@
     <script src="<?php echo URL ?>assets/js/main.js"></script>
 
     <?php
-    if ($attr[0] == 'q=fromcourse') {
+    // if ($attr[0] == 'q=fromcourse') {
     ?>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuOQ9OE1_4Js_aGYZ-0Lmyi61wExmMHE&callback=initMap&libraries=&v=weekly" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFzGKfzDOLBpIU1ElAxVrBr-Ed2QRwzgQ&callback=initMap&libraries=&v=weekly" defer></script>
 
-        <!-- <script src="<?php echo URL ?>public/map/map2.js"></script> -->
-        <!-- <script src="<?php echo URL ?>public/map/card.js"></script> -->
+    <!-- <script src="<?php echo URL ?>public/map/map2.js"></script> -->
+    <!-- <script src="<?php echo URL ?>public/map/card.js"></script> -->
 
 
 
-        <script>
-            let mapType = "roadmap";
-            let centerOfLanka = {
-                lat: 7.8731,
-                lng: 80.7718
-            };
-            //HYBRID, ROADMAP,SATELLITE, TERRAIN
-            let map;
-            // The markers are stored in an array.
-            let markers = []; // MARKED MARKERS ON MAP
+    <script>
+        let mapType = "roadmap";
+        let centerOfLanka = {
+            lat: 7.8731,
+            lng: 80.7718
+        };
+        //HYBRID, ROADMAP,SATELLITE, TERRAIN
+        let map;
+        // The markers are stored in an array.
+        let markers = []; // MARKED MARKERS ON MAP
 
-            function initMap() {
-                map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 6,
-                    center: centerOfLanka,
-                    /*
-                    gestureHandling: "none", /cooperative
-                    zoomControl: false,
-                    */
-                    //  gestureHandling: "greedy",
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 6,
+                center: centerOfLanka,
+                /*
+                gestureHandling: "none", /cooperative
+                zoomControl: false,
+                */
+                //  gestureHandling: "greedy",
 
-                });
-                if (mapType) {
-                    map.setMapTypeId(mapType);
+            });
+            if (mapType) {
+                map.setMapTypeId(mapType);
+            }
+
+            var markers = [
+                <?php
+                $c = array();
+                if ($attr[0] == 'q=fromcourse') {
+                    $c = $CENTER->getByCourse($course_id);
+                } else {
+                    $c[0] = (array) $CENTER;
                 }
-
-                var markers = [
-                    <?php foreach ($CENTER->getByCourse($course_id) as $key => $_center) {
-                    ?> {
-                            coords: {
-                                lat: <?php echo $_center['latitude']; ?>,
-                                lng: <?php echo $_center['longitude']; ?>
-                            },
-                            content: {
-                                name: '<?php echo $_center['name']; ?>',
-                                email: '<?php echo $_center['email']; ?>',
-                                phone: '<?php echo $_center['contact1']; ?>',
-                                url: '<?php echo base64_encode('q=toapply%center=' . $_center['id'] . '%course=' . $course_id); ?>'
-                            }
+                foreach ($c as $key => $_center) {
+                ?> {
+                        coords: {
+                            lat: <?php echo $_center['latitude']; ?>,
+                            lng: <?php echo $_center['longitude']; ?>
                         },
-                    <?php } ?>
-                ]
-                console.log(markers);
-                map.setZoom(6);
-                // deleteMarkers();
-                setTimeout(function() {
-                    map.setZoom(7);
-                    map.setCenter(centerOfLanka);
-                    for (var i = 0; i < markers.length; i++) {
-                        addMarker(markers[i]);
-                        // console.log(markers[i])
-                    }
-                }, 1000);
-                //==========================================================================================================
+                        content: {
+                            name: '<?php echo $_center['name']; ?>',
+                            email: '<?php echo $_center['email']; ?>',
+                            phone: '<?php echo $_center['contact1']; ?>',
+                            url: '<?php echo base64_encode('q=toapply%center=' . $_center['id'] . '%course=' . $course_id); ?>'
+                        }
+                    },
+                <?php
 
-                // MAPS FUNCTIONS
-                // Adds a marker to the map and push to the array.
-                function addMarker(props) {
-                    console.log(props.coords);
-                    const marker = new google.maps.Marker({
-                        title: 'ssss',
-                        position: props.coords,
-                        animation: google.maps.Animation.DROP,
-                        map: map,
-                    });
-                    // SET ICON
-                    if (props.iconImage) {
-                        marker.setIcon(props.iconImage);
-                    }
-                    const contentString =
-                        ` 
+                }
+                ?>
+            ];
+            console.log(markers);
+            map.setZoom(6);
+            // deleteMarkers();
+            setTimeout(function() {
+                map.setZoom(7);
+                map.setCenter(centerOfLanka);
+                for (var i = 0; i < markers.length; i++) {
+                    addMarker(markers[i]);
+                    // console.log(markers[i])
+                }
+            }, 1000);
+            //==========================================================================================================
+
+            // MAPS FUNCTIONS
+            // Adds a marker to the map and push to the array.
+            function addMarker(props) {
+                console.log(props);
+                const marker = new google.maps.Marker({
+                    title: 'ssss',
+                    position: props.coords,
+                    animation: google.maps.Animation.DROP,
+                    map: map,
+                });
+                // SET ICON
+                if (props.iconImage) {
+                    marker.setIcon(props.iconImage);
+                }
+                const contentString =
+                    ` 
                             <div class="" style="width: 100%; height: 100%;">
                                 <div class="single-categories-courses-box" style="border-radius: 0px; max-height: 135px;padding: 30px 20px !important;"> 
                                     <h3 style="margin-bottom: 15px !important;">${props.content.name}</h3>
@@ -460,36 +474,37 @@
                                 <a href="<?php echo URL; ?>courses/apply/${props.content.url}" class="btn btn-primary text-center" style="width: 100%; padding-bottom: 13px;font-size:14px;">Select Center</a>
                             </div>       
                         `;
-                    const infoWindow = new google.maps.InfoWindow({
-                        minWidth: 320,
-                        minHeight: 165,
-                        maxHeight: 165,
-                        content: contentString,
-                    });
-                    google.maps.event.addListener(marker, 'click', function() {
+                const infoWindow = new google.maps.InfoWindow({
+                    minWidth: 320,
+                    minHeight: 165,
+                    maxHeight: 165,
+                    content: contentString,
+                });
+                google.maps.event.addListener(marker, 'click', function() {
 
-                        if (!marker.open) {
-                            infoWindow.open(map, marker);
-                            marker.open = true;
-                        } else {
-                            infoWindow.close();
-                            marker.open = false;
-                        }
-                    });
-                    google.maps.event.addListener(map, 'click', function() {
+                    if (!marker.open) {
+                        infoWindow.open(map, marker);
+                        marker.open = true;
+                    } else {
                         infoWindow.close();
                         marker.open = false;
-                    });
+                    }
+                });
+                google.maps.event.addListener(map, 'click', function() {
+                    infoWindow.close();
+                    marker.open = false;
+                });
 
 
-                    markers.push(marker);
-                }
-
+                markers.push(marker);
             }
-        </script>
+
+        }
+    </script>
 
 
-    <?php } ?>
+    <?php //} 
+    ?>
 </body>
 
 </html>

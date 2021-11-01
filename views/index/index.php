@@ -342,7 +342,7 @@
                                                                 <?php echo $course['name'] ?>
                                                             </div>
                                                         </h3>
-                                                        <p> <?php echo $course['short_description'] ?> </p>
+                                                        <p> <?php echo substr($course['short_description'],0,90) ?> </p>
                                                     </div>
                                                     <div class="courses-box-footer">
                                                         <ul>
