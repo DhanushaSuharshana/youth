@@ -205,9 +205,11 @@
                                 <ul class="dropdown-menu">
                                     <?php
                                     foreach (Pages::getAll(PageType::getByTitle("divisions")["id"]) as $key => $page) {
+                                        // var_dump($key);
+                                        if($key <6){
                                     ?>
                                         <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php } ?>
+                                    <?php }} ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/divisions">Show All Divisions</a> </li>
                                 </ul>
                             </li>
@@ -238,9 +240,10 @@
                                     <?php
 
                                     foreach (Pages::getAll(PageType::getByTitle("services")["id"]) as $key => $page) {
+                                        if($key <6){
                                     ?>
                                         <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php } ?>
+                                    <?php }} ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/services">Show All Services</a> </li>
                                 </ul>
                             </li>
@@ -275,9 +278,10 @@
                                 <ul class="dropdown-menu">
                                     <?php
                                     foreach (Pages::getAll(PageType::getByTitle("divisions")["id"]) as $key => $page) {
+                                          if($key <6){
                                     ?>
                                         <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php } ?>
+                                    <?php }} ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/divisions">Show All Divisions</a> </li>
                                 </ul>
                             </li>
@@ -307,9 +311,10 @@
                                 <ul class="dropdown-menu">
                                     <?php
                                     foreach (Pages::getAll(PageType::getByTitle("services")["id"]) as $key => $page) {
+                                          if($key <6){
                                     ?>
                                         <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php } ?>
+                                    <?php } } ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/services">Show All Services</a> </li>
                                 </ul>
                             </li>
