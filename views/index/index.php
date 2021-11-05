@@ -307,14 +307,18 @@
                                         <div class="duration-label <?= ($course["duration_type"]) ? "full" : "part"; ?>">
                                             <?= ($course["duration_type"]) ? "Full Time" : "Part Time"; ?>
                                         </div>
-
+                                        <?php if ($course["nvq"]) { ?>
+                                                        <div class="type-label <?= ($course["nvq"]) ? "nvq" : "non-nvq"; ?>">
+                                                            <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?>
+                                                        </div>
+                                                    <?php } ?>
                                     </div>
                                     <div class="courses-content">
-                                        <?php if ($course["nvq"]) { ?>
-                                            <div class="nvq-label">
-                                                <span>NVQ</span>
-                                            </div>
-                                        <?php } ?>
+                                    <?php if ($course["duration"]) { ?>
+                                                        <div class="nvq-label">
+                                                            <?= strpos($course["duration"], 'Month') ?  substr($course["duration"], 0, 2) . ' Month' : $course["duration"] ?>
+                                                        </div>
+                                                    <?php } ?>
                                         <div class="d-flex justify-content-between align-items-center"></div>
                                         <h3 style="min-height: 66px;">
                                             <div class="d-inline-block">
@@ -324,12 +328,14 @@
                                         <p> <?php echo substr($course['short_description'], 0, 90) ?> </p>
                                     </div>
                                     <div class="courses-box-footer">
-                                        <ul>
+                                    <ul>
                                             <li class="students-number">
-                                                <i class="bx bx-user"></i> 10 students
+                                                <i class='bx bx-user'></i> <?php echo $course['max_student'] ?> students
                                             </li>
-                                            <li class="courses-lesson">
-                                                <i class="bx bx-book-open"></i> 6 lessons
+                                            <li class="courses-lesson" style="font-size: 13px !important;">
+                                                <i class='bx bx-book-open'></i> <?php //echo CourseSubjects::getCount($course2['id'])['count'];
+                                                                                echo $course['languages']
+                                                                                ?>
                                             </li>
                                             <li class="courses-price">
                                                 View

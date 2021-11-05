@@ -101,7 +101,7 @@
                                         <?php } ?>
                                         <?php if ($course["duration"]) { ?>
                                             <div class="nvq-label">
-                                                <?= strpos($course["duration"],'Month')?  substr($course["duration"],0,2).' Mon' : $course["duration"] ?>
+                                                <?= strpos($course["duration"], 'Month') ?  substr($course["duration"], 0, 2) . ' Month' : $course["duration"] ?>
                                             </div>
                                         <?php } ?>
                                     </div>
@@ -133,8 +133,10 @@
                                             <li class="students-number">
                                                 <i class='bx bx-user'></i> <?php echo $course['max_student'] ?> students
                                             </li>
-                                            <li class="courses-lesson">
-                                                <i class='bx bx-book-open'></i> <?php echo CourseSubjects::getCount($course['id'])['count']; ?> Subjects
+                                            <li class="courses-lesson" style="font-size: 13px !important;">
+                                                <i class='bx bx-book-open'></i> <?php //echo CourseSubjects::getCount($course2['id'])['count'];
+                                                                                echo $course['languages']
+                                                                                ?>
                                             </li>
                                             <li class="courses-price">
                                                 View
