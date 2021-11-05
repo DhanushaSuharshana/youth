@@ -30,12 +30,13 @@
 
 
 
-    <div class="page-title-area item-bg1 jarallax" data-jarallax='{"speed": 0.3}'  style="background-image: url(<?= (empty($this->PAGE->banner_image_name)) ? URL.'assets/img/page-title/1.jpg' : URL.'upload/page/banner/'.$this->PAGE->banner_image_name ?>) !important;">
+    <div class="page-title-area item-bg1 jarallax" data-jarallax='{"speed": 0.3}' style="background-image: url(<?= (empty($this->PAGE->banner_image_name)) ? URL . 'assets/img/page-title/1.jpg' : URL . 'upload/page/banner/' . $this->PAGE->banner_image_name ?>) !important;">
         <div class="container">
             <div class="page-title-content">
                 <ul>
                     <li><a href="<?php echo URL ?>">Home</a></li>
-                    <li><?php $PAGE_TYPE = new PageType($this->PAGE->page_type); echo ucwords($PAGE_TYPE->title); ?></li>
+                    <li><?php $PAGE_TYPE = new PageType($this->PAGE->page_type);
+                        echo ucwords($PAGE_TYPE->title); ?></li>
                 </ul>
                 <h2><?= $this->PAGE->title; ?></h2>
             </div>
@@ -46,6 +47,7 @@
     <section class="blog-details-area ptb-100">
         <div class="container">
             <div class="row">
+
                 <div class="col-lg-8 col-md-12">
                     <div class="blog-details-desc">
                         <div class="article-image">
@@ -125,10 +127,11 @@
                         <div class="article-footer">
                             <div class="article-tags">
                                 <span><i class='bx bx-purchase-tag'></i></span>
-                                <a href="<?php $PAGE_TYPE = new PageType($this->PAGE->page_type); echo URL; ?>page/list/<?php echo $PAGE_TYPE->title ?>"><?php
-                                
-                                echo $PAGE_TYPE->title;
-                                ?></a>
+                                <a href="<?php $PAGE_TYPE = new PageType($this->PAGE->page_type);
+                                            echo URL; ?>page/list/<?php echo $PAGE_TYPE->title ?>"><?php
+
+                                                                                                    echo $PAGE_TYPE->title;
+                                                                                                    ?></a>
                             </div>
                             <div class="article-share">
                                 <ul class="social">
@@ -377,8 +380,41 @@
                             </form>
                         </section> -->
                         <?php
+                            //Object ^^^^ of page
+                        ;
+                        if ($other_pages = $this->PAGE->getByType($this->PAGE->page_type)) {
+                        ?>
+                            <section class="widget widget_raque_posts_thumb">
+                                <div style="display: block">
+                                    <h3 class="widget-title" style="display: inline-block">Other <?= $PAGE_TYPE->title; ?></h3>
+                                    <a href="<?php echo URL; ?>page/list/<?php echo $PAGE_TYPE->title; ?>" class="btn btn-sm btn-primary float-end" style="display: inline-block; background-color: #ff1949; border: 1px solid #ff1949;">View All</a>
+                                </div>
+                                <?php
+
+                                foreach ($other_pages as $key => $page) {
+                                    if ($key < 5) {
+                                ?>
+                                        <article class="item">
+                                            <a href="<?php echo URL ?>page/view/<?php echo $page['url']; ?>" class="thumb">
+                                                <!-- <span class="fullimage cover bg1" role="img"> -->
+                                                <img src="<?php echo URL ?>upload/page/<?php echo $page['image_name'] ?>" alt="">
+
+                                            </a>
+                                            <div class="info">
+                                                <h4 class="title usmall"><a href="<?php echo URL ?>page/view/<?php echo $page['url']; ?>"><?php echo $page['title'] ?></a></h4>
+                                                <span style="color: #727695"><?php echo substr($page['description'], 0, 60) ?>...</span>
+
+                                            </div>
+                                            <div class="clear"></div>
+                                        </article>
+                                <?php }
+                                } ?>
+                            </section>
+                        <?php } ?>
+                        <?php
+                        //Object ^^^^ of page
                         $PAGE_NEWS = new PageNews(NULL);
-                        $page_news = $PAGE_NEWS->getPageNewsById($this->PAGE->id,true);
+                        $page_news = $PAGE_NEWS->getPageNewsById($this->PAGE->id, true);
                         if ($page_news) {
                         ?>
                             <section class="widget widget_raque_posts_thumb">
@@ -387,7 +423,7 @@
                                     <a href="<?php echo URL; ?>page/news/<?php echo $this->PAGE->url; ?>" class="btn btn-sm btn-primary float-end" style="display: inline-block; background-color: #ff1949; border: 1px solid #ff1949;">View All</a>
                                 </div>
                                 <?php
-                                
+
                                 foreach ($page_news as $key => $news) {
                                     if ($key < 5) {
                                 ?>
@@ -395,7 +431,7 @@
                                             <a href="<?php echo URL ?>page/news/view/<?php echo base64_encode($news['id']); ?>" class="thumb">
                                                 <!-- <span class="fullimage cover bg1" role="img"> -->
                                                 <img src="<?php echo URL ?>upload/page/news/<?php echo $news['image_name'] ?>" alt="">
-                                                
+
                                             </a>
                                             <div class="info">
                                                 <time datetime="2021-06-30"><?php echo date("F j, Y", strtotime($news['date'])); ?></time>

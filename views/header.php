@@ -1,8 +1,8 @@
 <style>
     .nvq-label {
-        position: absolute  !important;
-        top: -24px  !important;
-        right: 10px  !important;
+        position: absolute !important;
+        top: -24px !important;
+        right: 10px !important;
         z-index: 9999 !important;
         height: 50px !important;
         width: 50px !important;
@@ -10,12 +10,14 @@
         color: white !important;
         padding: 3px 7px !important;
         background-color: #d89516 !important;
+        text-align: center;
     }
 
     .nvq-label span {
         margin: 10px 2px !important;
         position: absolute !important;
     }
+
     /* ------------------------------------------- */
 
     /*  */
@@ -28,11 +30,29 @@
         color: white;
         padding: 3px 7px;
         background-color: #ff1949;
+        text-align: center;
+    }
+    .type-label {
+        position: absolute;
+        top: 10px;
+        left: 100px;
+        z-index: 9999;
+        border-radius: 5px;
+        color: white;
+        padding: 3px 7px;
+        background-color: #ff1949;
     }
 
 
     .full {
         background-color: #168b69;
+    }
+    .nvq {
+        background-color: #4931f0; 
+        /* 09b91c */
+    }
+    .non-nvq {
+        background-color: #4931f0;;
     }
 
     /* LIGHT FOOTER */
@@ -94,19 +114,32 @@
     ?>
 
     /* <?php echo $key ?> */
-    .<?php echo $key ?> .single-categories-courses-box {
+    .<?php echo $key ?>.single-categories-courses-box {
         background-color: <?php echo $color['color']; ?> !important;
     }
 
-    .<?php echo $key ?> .single-categories-courses-box:hover .icon,
-    .<?php echo $key ?> .single-categories-courses-box:focus .icon {
+    .<?php echo $key ?>.single-categories-courses-box:hover .icon,
+    .<?php echo $key ?>.single-categories-courses-box:focus .icon {
         background-color: #fff !important;
         border-color: <?php echo $color['color']; ?> !important;
         color: <?php echo $color['color']; ?> !important;
     }
 
     <?php  }
-    } ?>
+    } ?>.table-fit {
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    .table-fit th,
+    .table-fit th {
+        word-wrap: break-word !important;
+    }
+
+    .table-fit td,
+    .table-fit td {
+        word-wrap: break-word !important;
+    }
 </style>
 
 <div class="ads" onclick="window.open('<?php echo URL; ?>advertisements','_self')">
@@ -206,10 +239,11 @@
                                     <?php
                                     foreach (Pages::getAll(PageType::getByTitle("divisions")["id"]) as $key => $page) {
                                         // var_dump($key);
-                                        if($key <6){
+                                        if ($key < 6) {
                                     ?>
-                                        <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php }} ?>
+                                            <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
+                                    <?php }
+                                    } ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/divisions">Show All Divisions</a> </li>
                                 </ul>
                             </li>
@@ -240,10 +274,11 @@
                                     <?php
 
                                     foreach (Pages::getAll(PageType::getByTitle("services")["id"]) as $key => $page) {
-                                        if($key <6){
+                                        if ($key < 6) {
                                     ?>
-                                        <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php }} ?>
+                                            <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
+                                    <?php }
+                                    } ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/services">Show All Services</a> </li>
                                 </ul>
                             </li>
@@ -278,10 +313,11 @@
                                 <ul class="dropdown-menu">
                                     <?php
                                     foreach (Pages::getAll(PageType::getByTitle("divisions")["id"]) as $key => $page) {
-                                          if($key <6){
+                                        if ($key < 6) {
                                     ?>
-                                        <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php }} ?>
+                                            <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
+                                    <?php }
+                                    } ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/divisions">Show All Divisions</a> </li>
                                 </ul>
                             </li>
@@ -311,10 +347,11 @@
                                 <ul class="dropdown-menu">
                                     <?php
                                     foreach (Pages::getAll(PageType::getByTitle("services")["id"]) as $key => $page) {
-                                          if($key <6){
+                                        if ($key < 6) {
                                     ?>
-                                        <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php } } ?>
+                                            <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
+                                    <?php }
+                                    } ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/services">Show All Services</a> </li>
                                 </ul>
                             </li>

@@ -95,8 +95,13 @@
                                             <?= ($course["duration_type"]) ? "Full Time" : "Part Time"; ?>
                                         </div>
                                         <?php if ($course["nvq"]) { ?>
+                                            <div class="type-label <?= ($course["nvq"]) ? "nvq" : "non-nvq"; ?>">
+                                                <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?>
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($course["duration"]) { ?>
                                             <div class="nvq-label">
-                                                <span>NVQ</span>
+                                                <?= strpos($course["duration"],'Month')?  substr($course["duration"],0,2).' Mon' : $course["duration"] ?>
                                             </div>
                                         <?php } ?>
                                     </div>
@@ -108,6 +113,8 @@
                                         <span style="color: #800000;font-size: 14px;">
                                             <span><?= (isset($CENTER->name)) ? "<i class='bx bx-map'></i> " . $CENTER->name . "" : '' ?></span>
                                         </span>
+                                        <p> <?php echo substr($course['short_description'], 0, 90) ?> </p>
+
                                         <!-- <div class="courses-rating">
                                         <div class="review-stars-rated">
                                             <i class='bx bxs-star'></i>

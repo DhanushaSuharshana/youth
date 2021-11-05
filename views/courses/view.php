@@ -213,7 +213,7 @@
                         </ul>
                     </div> -->
                     <div class="courses-sidebar-syllabus">
-                        <h3>Course Syllabus</h3>
+                        <h3>Course Overview</h3>
 
                         <div class="courses-list">
                             <ul>
@@ -276,11 +276,16 @@
                                                     <div class="duration-label <?= ($course2["duration_type"]) ? "full" : "part"; ?>">
                                                         <?= ($course2["duration_type"]) ? "Full Time" : "Part Time"; ?>
                                                     </div>
+                                                    <?php if ($course2["nvq"]) { ?>
+                                                        <div class="type-label <?= ($course2["nvq"]) ? "nvq" : "non-nvq"; ?>">
+                                                            <?= ($course2["nvq"]) ? "NVQ" : "NON NVQ"; ?>
+                                                        </div>
+                                                    <?php } ?>
                                                 </div>
                                                 <div class="courses-content" style="min-height: 120px !important;">
-                                                    <?php if ($course2["nvq"]) { ?>
+                                                    <?php if ($course2["duration"]) { ?>
                                                         <div class="nvq-label">
-                                                            <span>NVQ</span>
+                                                        <?= strpos($course2["duration"],'Month')?  substr($course2["duration"],0,2).' Mon' : $course2["duration"] ?>
                                                         </div>
                                                     <?php } ?>
                                                     <h3 style="font-size: 16px !important; min-height: 24px;">
@@ -289,6 +294,8 @@
                                                     <span style="color: #800000;font-size: 14px;">
                                                         <span><?= (isset($CENTER->name)) ? "<i class='bx bx-map'></i> " . $CENTER->name . "" : '' ?></span>
                                                     </span>
+                                                    <p> <?php echo substr($course['short_description'], 0, 90) ?> </p>
+
                                                     <!-- <div class="courses-rating">
                                                 <div class="review-stars-rated">
                                                     <i class='bx bxs-star'></i>
@@ -308,7 +315,9 @@
                                                             <i class='bx bx-user'></i> <?php echo $course2['max_student'] ?> students
                                                         </li>
                                                         <li class="courses-lesson" style="font-size: 13px !important;">
-                                                            <i class='bx bx-book-open'></i> <?php echo CourseSubjects::getCount($course2['id'])['count']; ?> Subjects
+                                                            <i class='bx bx-book-open'></i> <?php //echo CourseSubjects::getCount($course2['id'])['count'];
+                                                                                            echo $course2['languages']
+                                                                                            ?>
                                                         </li>
                                                         <li class="courses-price" style="font-size: 15px !important;">
                                                             View

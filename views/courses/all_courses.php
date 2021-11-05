@@ -98,8 +98,13 @@
                                                 <?= ($course["duration_type"]) ? "Full Time" : "Part Time"; ?>
                                             </div>
                                             <?php if ($course["nvq"]) { ?>
+                                                <div class="type-label <?= ($course["nvq"]) ? "nvq" : "non-nvq"; ?>">
+                                                    <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?>
+                                                </div>
+                                            <?php } ?>
+                                            <?php if ($course["duration"]) { ?>
                                                 <div class="nvq-label">
-                                                    <span>NVQ</span>
+                                                <?= strpos($course["duration"],'Month')?  substr($course["duration"],0,2).' Mon' : $course["duration"] ?>
                                                 </div>
                                             <?php } ?>
                                         </div>
