@@ -285,7 +285,7 @@
                                                 <div class="courses-content" style="min-height: 120px !important;">
                                                     <?php if ($course2["duration"]) { ?>
                                                         <div class="nvq-label">
-                                                        <?= strpos($course2["duration"],'Month')?  substr($course2["duration"],0,2).' Mon' : $course2["duration"] ?>
+                                                            <?= strpos($course2["duration"], 'Month') ?  substr($course2["duration"], 0, 2) . ' Month' : $course2["duration"] ?>
                                                         </div>
                                                     <?php } ?>
                                                     <h3 style="font-size: 16px !important; min-height: 24px;">
