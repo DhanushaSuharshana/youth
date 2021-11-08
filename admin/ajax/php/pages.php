@@ -33,8 +33,8 @@ if (isset($_POST['create'])) {
             $banner_handle->file_new_name_ext = 'jpg';
             $banner_handle->image_ratio_crop = 'C';
             $banner_handle->file_new_name_body = Helper::randamId();
-            $banner_handle->image_x = 1920;
-            $banner_handle->image_y = 600;
+            $banner_handle->image_x = 1600;
+            $banner_handle->image_y = 520;
             $banner_handle->Process($dir_dest_banner);
             if ($banner_handle->processed) {
                 $info = getimagesize($banner_handle->file_dst_pathname);
@@ -97,8 +97,8 @@ if (isset($_POST['update'])) {
             $banner_handle->file_overwrite = TRUE;
             $banner_handle->image_ratio_crop = 'C';
             $banner_handle->file_new_name_body = (!empty($bannerImgName)) ? $bannerImgName : Helper::randamId();
-            $banner_handle->image_x = 1920;
-            $banner_handle->image_y = 600;
+            $banner_handle->image_x = 1600;
+            $banner_handle->image_y = 520;
             $banner_handle->Process($dir_dest_banner);
             if ($banner_handle->processed) {
                 $info = getimagesize($banner_handle->file_dst_pathname);

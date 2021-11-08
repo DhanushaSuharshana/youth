@@ -14,18 +14,20 @@
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/odometer.min.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/meanmenu.min.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/animate.min.css">
-    <link rel="stylesheet" href="<?php echo URL ?>assets/css/nice-select.min.css">
+    <!-- <link rel="stylesheet" href="<?php echo URL ?>assets/css/nice-select.min.css"> -->
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/viewer.min.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/slick.min.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
     <link href="<?php echo URL ?>public/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
     <title>Youth Council || Sri Lanka</title>
     <link rel="icon" type="image/png" href="<?php echo URL ?>assets/img/pre-logo.png">
     <style>
-       
+        .selection {
+            width: 100% !important;
+        }
     </style>
 </head>
 
@@ -126,7 +128,7 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>National ID Number<span class="required">*</span></label>
-                                <input minlength ="10" maxlength="12" type="text" class="form-control validation_field" placeholder="Enter National ID Number" name="nic" id="nic">
+                                <input minlength="10" maxlength="12" type="text" class="form-control validation_field" placeholder="Enter National ID Number" name="nic" id="nic">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
@@ -169,9 +171,9 @@
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
+                            <div class="form-group"  style="width: 100% !important;">
                                 <label for="district">District<span class="required">*</span></label>
-                                <select class="form-control " id="district" name="district">
+                                <select class="form-control" id="district" name="district" style="width: 100% !important;">
                                     <?php $DISTRICT = new Districts(NULL);
                                     foreach ($DISTRICT->all() as $district) { ?>
                                         <option value="<?= $district['id'] ?>"><?= $district['name'] ?></option>
@@ -231,7 +233,7 @@
     <?php include './views/footer.php'; ?>
 
     <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
-    
+
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="<?php echo URL ?>assets/js/jquery.min.js"></script>
     <script src="<?php echo URL ?>assets/js/popper.min.js"></script>
@@ -243,7 +245,7 @@
     <script src="<?php echo URL ?>assets/js/odometer.min.js"></script>
     <script src="<?php echo URL ?>assets/js/particles.min.js"></script>
     <script src="<?php echo URL ?>assets/js/meanmenu.min.js"></script>
-    <script src="<?php echo URL ?>assets/js/jquery.nice-select.min.js"></script>
+    <!-- <script src="<?php echo URL ?>assets/js/jquery.nice-select.min.js"></script> -->
     <script src="<?php echo URL ?>assets/js/viewer.min.js"></script>
     <script src="<?php echo URL ?>assets/js/slick.min.js"></script>
     <script src="<?php echo URL ?>assets/js/jquery.magnific-popup.min.js"></script>
@@ -254,6 +256,18 @@
     <script src="<?php echo URL ?>public/sweetalert/sweetalert.min.js" type="text/javascript"></script>
     <script src="<?php echo URL ?>assets/js/error_validation.js"></script>
     <script src="<?php echo URL ?>assets/js/apply.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#district').select2({
+                width: '100%'
+            });
+
+            $('.selection').css('width', '100%');
+            $('.select2-selection').css('width', '100%');
+            $('.select2-selection').css('height', '46px');
+        });
+    </script>
 </body>
 
 </html>
