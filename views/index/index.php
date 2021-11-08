@@ -110,28 +110,32 @@
                     <div class="single-boxes-item">
                         <h3>Sports</h3>
                         <p>Sports play a large role in the culture of the Globe. Come and Join with us</p>
-                        <a href="<?php echo URL ?>page/view/sports" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        <!-- <?php //echo URL ?>page/view/sports -->
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item bg-image">
                         <h3>Aesthetics</h3>
                         <p>Best place for involve youth musical skills and introduce them the whole world.</p>
-                        <a href="<?php echo URL ?>page/view/aesthetics" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        <!-- <?php echo URL ?>page/view/aesthetic -->
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item bg-color">
                         <h3>Education</h3>
                         <p>We have over best training institutes with modern facilities.Grab your chance soon</p>
-                        <a href="<?php echo URL ?>page/view/education" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        <!-- <?php echo URL ?>page/view/education -->
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-boxes-item">
                         <h3>Administration</h3>
                         <p>We have vast number of other services related to youth services council</p>
-                        <a href="<?php echo URL ?>page/view/administration" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        <!-- <?php echo URL ?>page/view/administration -->
                     </div>
                 </div>
             </div>
