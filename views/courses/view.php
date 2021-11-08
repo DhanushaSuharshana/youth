@@ -276,17 +276,16 @@
                                                     <div class="duration-label <?= ($course2["duration_type"]) ? "full" : "part"; ?>">
                                                         <?= ($course2["duration_type"]) ? "Full Time" : "Part Time"; ?>
                                                     </div>
-                                                    <?php if ($course2["nvq"]) { ?>
+                                                    <!-- <?php if ($course2["nvq"]) { ?>
                                                         <div class="type-label <?= ($course2["nvq"]) ? "nvq" : "non-nvq"; ?>">
                                                             <?= ($course2["nvq"]) ? "NVQ" : "NON NVQ"; ?>
                                                         </div>
-                                                    <?php } ?>
+                                                    <?php } ?> -->
                                                 </div>
                                                 <div class="courses-content" style="min-height: 120px !important;">
                                                     <?php if ($course2["duration"]) { ?>
                                                         <div class="nvq-label">
-                                                            <?= strpos($course2["duration"], 'Month') ?  substr($course2["duration"], 0, 2) . ' Month' : $course2["duration"] ?>
-                                                        </div>
+                                                            <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?> </div>
                                                     <?php } ?>
                                                     <h3 style="font-size: 16px !important; min-height: 24px;">
                                                         <?php echo $course2['name'] ?>
@@ -294,7 +293,7 @@
                                                     <span style="color: #800000;font-size: 14px;">
                                                         <span><?= (isset($CENTER->name)) ? "<i class='bx bx-map'></i> " . $CENTER->name . "" : '' ?></span>
                                                     </span>
-                                                    <p> <?php echo substr($course['short_description'], 0, 90) ?> </p>
+                                                    <p> <?php echo substr($course['short_description'], 0, 90) ?>...</p>
 
                                                     <!-- <div class="courses-rating">
                                                 <div class="review-stars-rated">
@@ -311,13 +310,13 @@
                                                 </div>
                                                 <div class="courses-box-footer">
                                                     <ul>
-                                                        <li class="students-number" style="font-size: 13px !important;">
+                                                        <li class="students-number">
                                                             <i class='bx bx-user'></i> <?php echo $course2['max_student'] ?> students
                                                         </li>
-                                                        <li class="courses-lesson" style="font-size: 13px !important;">
-                                                            <i class='bx bx-book-open'></i> <?php //echo CourseSubjects::getCount($course2['id'])['count'];
-                                                                                            echo $course2['languages']
-                                                                                            ?>
+                                                        <li class="courses-lesson">
+                                                            <i class='bx bx-time'></i> <?php //echo CourseSubjects::getCount($course2['id'])['count'];
+                                                                                        echo $course2["duration"]
+                                                                                        ?>
                                                         </li>
                                                         <li class="courses-price" style="font-size: 15px !important;">
                                                             View

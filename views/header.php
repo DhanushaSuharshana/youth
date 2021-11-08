@@ -4,11 +4,11 @@
         top: -24px !important;
         right: 10px !important;
         z-index: 9999 !important;
-        height: 60px !important;
-        width: 60px !important;
+        height: 50px !important;
+        width: 50px !important;
         border-radius: 50% !important;
         color: white !important;
-        padding: 7px 7px !important;
+        padding: 14px 7px !important;
         background-color: #d89516 !important;
         text-align: center;
         font-size: 14px !important;

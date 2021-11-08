@@ -294,59 +294,59 @@
 
             <div class="blog-slides owl-carousel owl-theme">
                 <?php
-                 $COURSE = new Course(NULL);
+                $COURSE = new Course(NULL);
                 foreach ($COURSE->all() as $key2 => $course) {
                 ?>
-                        <div class="">
-                            <a href="courses/view/<?php echo base64_encode('q=fromcourse%center=false' . '%course=' . $course['id']); ?>">
-                                <div class="single-courses-item mb-30">
-                                    <div class="courses-image">
-                                        <div class="d-block">
-                                            <img src="<?php echo URL ?>upload/courses/<?php echo $course['image_name'] ?>" alt="<?php echo $course['name'] ?>">
+                    <div class="">
+                        <a href="courses/view/<?php echo base64_encode('q=fromcourse%center=false' . '%course=' . $course['id']); ?>">
+                            <div class="single-courses-item mb-30">
+                                <div class="courses-image">
+                                    <div class="d-block">
+                                        <img src="<?php echo URL ?>upload/courses/<?php echo $course['image_name'] ?>" alt="<?php echo $course['name'] ?>">
+                                    </div>
+                                    <div class="duration-label <?= ($course["duration_type"]) ? "full" : "part"; ?>">
+                                        <?= ($course["duration_type"]) ? "Full Time" : "Part Time"; ?>
+                                    </div>
+                                    <!-- <?php if ($course["nvq"]) { ?>
+                                        <div class="type-label <?= ($course["nvq"]) ? "nvq" : "non-nvq"; ?>">
+                                            <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?>
                                         </div>
-                                        <div class="duration-label <?= ($course["duration_type"]) ? "full" : "part"; ?>">
-                                            <?= ($course["duration_type"]) ? "Full Time" : "Part Time"; ?>
-                                        </div>
-                                        <?php if ($course["nvq"]) { ?>
-                                                        <div class="type-label <?= ($course["nvq"]) ? "nvq" : "non-nvq"; ?>">
-                                                            <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?>
-                                                        </div>
-                                                    <?php } ?>
-                                    </div>
-                                    <div class="courses-content">
-                                    <?php if ($course["duration"]) { ?>
-                                                        <div class="nvq-label">
-                                                            <?= strpos($course["duration"], 'Month') ?  substr($course["duration"], 0, 2) . ' Month' : $course["duration"] ?>
-                                                        </div>
-                                                    <?php } ?>
-                                        <div class="d-flex justify-content-between align-items-center"></div>
-                                        <h3 style="min-height: 66px;">
-                                            <div class="d-inline-block">
-                                                <?php echo $course['name'] ?>
-                                            </div>
-                                        </h3>
-                                        <p> <?php echo substr($course['short_description'], 0, 90) ?> </p>
-                                    </div>
-                                    <div class="courses-box-footer">
-                                    <ul>
-                                            <li class="students-number">
-                                                <i class='bx bx-user'></i> <?php echo $course['max_student'] ?> students
-                                            </li>
-                                            <li class="courses-lesson" style="font-size: 13px !important;">
-                                                <i class='bx bx-book-open'></i> <?php //echo CourseSubjects::getCount($course2['id'])['count'];
-                                                                                echo $course['languages']
-                                                                                ?>
-                                            </li>
-                                            <li class="courses-price">
-                                                View
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <?php } ?> -->
                                 </div>
-                            </a>
-                        </div>
+                                <div class="courses-content">
+                                    <?php if ($course["nvq"]) { ?>
+                                        <div class="nvq-label">
+                                            <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?>
+                                        </div>
+                                    <?php } ?>
+                                    <div class="d-flex justify-content-between align-items-center"></div>
+                                    <h3 style="min-height: 66px;">
+                                        <div class="d-inline-block">
+                                            <?php echo $course['name'] ?>
+                                        </div>
+                                    </h3>
+                                    <p> <?php echo substr($course['short_description'], 0, 90) ?>...</p>
+                                </div>
+                                <div class="courses-box-footer">
+                                    <ul>
+                                        <li class="students-number">
+                                            <i class='bx bx-user'></i> <?php echo $course['max_student'] ?> students
+                                        </li>
+                                        <li class="courses-lesson">
+                                            <i class='bx bx-time'></i> <?php //echo CourseSubjects::getCount($course2['id'])['count'];
+                                                                        echo $course["duration"]
+                                                                        ?>
+                                        </li>
+                                        <li class="courses-price">
+                                            View
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 <?php
-                    
+
                 }
                 ?>
             </div>
@@ -451,25 +451,20 @@
                     <div class="faq-accordion faq-accordion-style-two">
                         <ul class="accordion">
                             <li class="accordion-item">
-                                <a class="accordion-title " href="<?php echo URL ?>page/view/youth-parliment">
-                                    <i class='bx bxs-circle'></i>
-                                    Youth Parliment
-                                </a>
-                            </li>
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="<?php echo URL ?>page/view/yowun-puraya">
-                                    <i class='bx bxs-circle'></i>
-                                    Yowun Puraya
-                                </a>
-
-                            </li>
-                            <li class="accordion-item">
                                 <a class="accordion-title" href="<?php echo URL ?>page/view/youth-club">
                                     <i class='bx bxs-circle'></i>
                                     Youth Club
                                 </a>
 
                             </li>
+                            <li class="accordion-item">
+                                <a class="accordion-title " href="<?php echo URL ?>page/view/youth-parliment">
+                                    <i class='bx bxs-circle'></i>
+                                    Youth Parliment
+                                </a>
+                            </li>
+
+
                             <li class="accordion-item">
                                 <a class="accordion-title" href="<?php echo URL ?>page/view/youth-dancing-team">
                                     <i class='bx bxs-circle'></i>

@@ -65,7 +65,7 @@
                     if ($attr[0] == 'q=fromcenter') {
                         $center = explode('=', $attr[1])[1];
                         $courses = $COURSE->getByCenter($center);
-                        $items = 6;
+                        $items = 12;
                         $visible_pages = 3;
                         $page_count = count($courses) / $items;
                         if (count($courses) % $items > 0) {
@@ -94,15 +94,14 @@
                                         <div class="duration-label <?= ($course["duration_type"]) ? "full" : "part"; ?>">
                                             <?= ($course["duration_type"]) ? "Full Time" : "Part Time"; ?>
                                         </div>
-                                        <?php if ($course["nvq"]) { ?>
+                                        <!-- <?php if ($course["nvq"]) { ?>
                                             <div class="type-label <?= ($course["nvq"]) ? "nvq" : "non-nvq"; ?>">
                                                 <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?>
                                             </div>
-                                        <?php } ?>
+                                        <?php } ?> -->
                                         <?php if ($course["duration"]) { ?>
                                             <div class="nvq-label">
-                                                <?= strpos($course["duration"], 'Month') ?  substr($course["duration"], 0, 2) . ' Month' : $course["duration"] ?>
-                                            </div>
+                                                <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?> </div>
                                         <?php } ?>
                                     </div>
                                     <div class="courses-content">
@@ -113,7 +112,7 @@
                                         <span style="color: #800000;font-size: 14px;">
                                             <span><?= (isset($CENTER->name)) ? "<i class='bx bx-map'></i> " . $CENTER->name . "" : '' ?></span>
                                         </span>
-                                        <p> <?php echo substr($course['short_description'], 0, 90) ?> </p>
+                                        <p> <?php echo substr($course['short_description'], 0, 90) ?>...</p>
 
                                         <!-- <div class="courses-rating">
                                         <div class="review-stars-rated">
@@ -133,10 +132,10 @@
                                             <li class="students-number">
                                                 <i class='bx bx-user'></i> <?php echo $course['max_student'] ?> students
                                             </li>
-                                            <li class="courses-lesson" style="font-size: 13px !important;">
-                                                <i class='bx bx-book-open'></i> <?php //echo CourseSubjects::getCount($course2['id'])['count'];
-                                                                                echo $course['languages']
-                                                                                ?>
+                                            <li class="courses-lesson" >
+                                                <i class='bx bx-time'></i> <?php //echo CourseSubjects::getCount($course2['id'])['count'];
+                                                                            echo $course["duration"]
+                                                                            ?>
                                             </li>
                                             <li class="courses-price">
                                                 View
