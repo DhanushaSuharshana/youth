@@ -54,7 +54,7 @@
                 }else{
                     $page_data = $PAGES->getByType(PageType::getByTitle($this->query)["id"]);
                 }
-                $items = 6;
+                $items = 12;
                 $visible_pages = 3;
                 $page_count = count($page_data) / $items;
                 if (count($page_data) % $items > 0) {

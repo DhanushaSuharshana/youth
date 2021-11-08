@@ -50,7 +50,7 @@
                 <?php
                 $NEWS = new News(NULL);
                 $news_data = $NEWS->all();
-                $items = 6;
+                $items = 12;
                 $visible_pages = 3;
                 $page_count = count($news_data) / $items;
                 if (count($news_data) % $items > 0) {
