@@ -10411,11 +10411,12 @@
         .single-product-box .product-image a {
             display: block;
         }
-
-        .single-product-box .product-image a img {
+        
+        /* Remove Gallery Hover Effects #318  */
+        /* .single-product-box .product-image a img {
             -webkit-transition: 0.5s;
             transition: 0.5s;
-        }
+        } */
 
         .single-product-box .product-image a img:nth-child(2) {
             position: absolute;
