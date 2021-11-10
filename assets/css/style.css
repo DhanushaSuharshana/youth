@@ -4536,7 +4536,7 @@
         }
 
         .col-lg-4:nth-child(2) .single-offer-box::before {
-            background: #ff1949;
+            background: #a117bd;
         }
 
         .col-lg-4:nth-child(2) .single-offer-box .icon {
@@ -4551,7 +4551,7 @@
         }
 
         .col-lg-4:nth-child(3) .single-offer-box::before {
-            background: #3d64ff;
+            background: #ff1949;
         }
 
         .col-lg-4:nth-child(3) .single-offer-box .icon {
