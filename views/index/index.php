@@ -23,6 +23,27 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <title>Youth Council || Sri Lanka</title>
     <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
+    <style>
+        .banner-courses-category ul li {
+            flex: 0 0 50% !important;
+            max-width: 50% !important;
+        }
+
+        .banner-courses-category ul li a {
+            min-height: 130px !important;
+        }
+
+        .banner-courses-category ul li a:hover,
+        .banner-courses-category ul li a:focus {
+            -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+            border-radius: 0;
+        }
+
+        .banner-courses-category ul li img {
+            width: 72px;
+        }
+    </style>
 </head>
 
 
@@ -111,7 +132,8 @@
                         <h3>Sports</h3>
                         <p>Sports play a large role in the culture of the Globe. Come and Join with us</p>
                         <a href="#" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
-                        <!-- <?php //echo URL ?>page/view/sports -->
+                        <!-- <?php //echo URL 
+                                ?>page/view/sports -->
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -153,7 +175,7 @@
                         <div class=" text-box">
                             <div class="inner">
                                 Trusted By
-                                <span>75K+</span>
+                                <span>500K+</span>
                             </div>
                         </div>
                     </div>
@@ -215,9 +237,9 @@
                     <a href="<?php echo URL ?>page/view/school-of-computing">
                         <div class="single-offer-box">
                             <div class="">
-                                <img src="<?php echo URL ?>assets/img/cards/soc.png">
+                                <img style="width: 120px" src="<?php echo URL ?>assets/youth logo/youth-service-logo-01.png">
                             </div>
-                            <h3>School of Computing</h3>
+                            <h3>Youth Services Limited</h3>
 
                             <p>Best place to learn modern technologies with number of qualified instructors.</p>
                             <div class="boxes-btn-new">Explore more <i class='bx bx-plus'></i></div>
@@ -239,8 +261,8 @@
 
                         </div>
                     </a>
-
-                    <div id="particles-js-circle-bubble-3"></div>
+                </div>
+                <div id="particles-js-circle-bubble-3"></div>
     </section>
 
 
@@ -450,8 +472,52 @@
                     </div>
                 </div>
 
-
                 <div class="col-lg-6 col-md-12">
+                    <div class="banner-courses-category">
+                        <ul>
+
+
+
+                            <li>
+                                <a href="<?php echo URL ?>page/view/youth-club">
+                                    <img src="http://localhost/youth/assets/img/cards/club2.png"><br>
+                                    Youth Club
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo URL ?>page/view/youth-parliment">
+                                    <img src="http://localhost/youth/assets/img/cards/soc.png"><br>
+                                    Youth Parliment
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo URL ?>page/view/youth-dancing-team">
+                                    <img src="http://localhost/youth/assets/img/cards/soc.png"><br>
+                                    Youth Dancing Team
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo URL ?>page/view/youth-music-band">
+                                    <img src="http://localhost/youth/assets/img/cards/soc.png"><br>
+                                    Youth Music Band
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo URL ?>page/view/young-padura-programe">
+                                    <img src="http://localhost/youth/assets/img/cards/soc.png"><br>
+                                    Young Padura Programe
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="http://localhost/youth/assets/img/cards/soc.png"><br>
+                                    School of Computing
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-6 col-md-12">
                     <div class="faq-accordion faq-accordion-style-two">
                         <ul class="accordion">
                             <li class="accordion-item">
@@ -493,7 +559,7 @@
                         </ul>
 
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="divider bg-f9f9f9"></div>
@@ -715,7 +781,7 @@
 
     <?php include './views/footer.php'; ?>
 
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -734,7 +800,7 @@
     <script src="assets/js/form-validator.min.js"></script>
     <script src="assets/js/contact-form-script.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/modelPopup.js"></script>
+    <!-- <script src="assets/js/modelPopup.js"></script> -->
 </body>
 
 </html>
