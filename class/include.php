@@ -34,6 +34,7 @@ include_once(dirname(__FILE__) . '/VideoAlbum.php');
 include_once(dirname(__FILE__) . '/AlbumVideo.php');
 include_once(dirname(__FILE__) . '/Advertisement.php');
 include_once(dirname(__FILE__) . '/AdvertisementPhoto.php');
+include_once(dirname(__FILE__) . '/Booking_M.php');
 
 
 function dd($data) {

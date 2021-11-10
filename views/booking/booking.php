@@ -66,14 +66,14 @@
                     "image" => "image03.jpg",
                 ],
                 [
-                    "title" => "Hostals",
+                    "title" => "Hostal Facility",
                     "id" => "hostals",
                     "description" => "Education encompasses both the teaching and learning of knowledge. Education encompasses both the teaching and learning of knowledge.Education encompasses both the teaching and learning of knowledge.",
                     "image" => "image02.jpg",
                 ],
                 [
-                    "title" => "TV Production",
-                    "id" => "tv-production",
+                    "title" => "Film Location",
+                    "id" => "film-location",
                     "description" => "Education encompasses both the teaching and learning of knowledge. Education encompasses both the teaching and learning of knowledge.Education encompasses both the teaching and learning of knowledge.",
                     "image" => "image06.jpg",
                 ],
