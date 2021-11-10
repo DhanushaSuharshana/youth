@@ -74,18 +74,18 @@
         <div class="container">
 
             <div class="myAccount-content">
-                <form class="edit-account" id="book_form">
+                <form class="edit-account" id="booking_form">
                     <div class="row">
-                        
-                        
-                        
+
+
+
                         <div class="col-lg-12 col-md-12">
                             <div class="form-group">
                                 <label>Full Name<span class="required">*</span></label>
                                 <input type="text" class="form-control validation_field" placeholder="Enter Full Name" name="full_name" id="full_name">
                             </div>
                         </div>
-                       
+
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>Email address <span class="required">*</span></label>
@@ -101,16 +101,16 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>Date <span class="required">*</span></label>
-                                <input type="date" class="form-control validation_field" placeholder="Enter Date"  name="date" id="date">
+                                <input type="date" class="form-control validation_field" placeholder="Enter Date" name="date" id="date">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>Time <span class="required">*</span></label>
-                                <input type="time" class="form-control validation_field" placeholder="Enter Time"  name="time" id="time">
+                                <input type="time" class="form-control validation_field" placeholder="Enter Time" name="time" id="time">
                             </div>
                         </div>
-                     
+
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
                                 <label>Telephone Number 1<span class="required">*</span></label>
@@ -119,16 +119,16 @@
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="form-group">
-                                <label>Telephone Number 2 <span class="required"></span></label>
-                                <input type="text" class="form-control " placeholder="Enter Telephone Number 2" name="telephone_2" id="telephone_2">
+                                <label>Telephone Number 2 <span class="required"></span>*</label>
+                                <input type="text" class="form-control validation_field" placeholder="Enter Telephone Number 2" name="telephone_2" id="telephone_2">
                             </div>
                         </div>
 
 
 
                         <div class="col-lg-12 col-md-12">
-                            <input type="hidden" name="token" value="9he02kbf9093hkvsle9045kb">
-                            <button id="apply_btn" type="submit" class="default-btn"><i class='bx bx-send icon-arrow before'></i><span class="label" id="apply_btn_text">Book Now</span><i class="bx bx-send icon-arrow after"></i></button>
+                            <input type="hidden" name="property" value="<?= $this->property; ?>">
+                            <button id="booking_btn" type="submit" class="default-btn"><i class='bx bx-send icon-arrow before'></i><span class="label" id="booking_btn_text">Book Now</span><i class="bx bx-send icon-arrow after"></i></button>
                         </div>
                     </div>
                 </form>
@@ -162,7 +162,7 @@
     <script src="<?php echo URL ?>assets/js/main.js"></script>
     <script src="<?php echo URL ?>public/sweetalert/sweetalert.min.js" type="text/javascript"></script>
     <script src="<?php echo URL ?>assets/js/error_validation.js"></script>
-    <script src="<?php echo URL ?>assets/js/apply.js"></script>
+    <script src="<?php echo URL ?>assets/js/booking.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function() {

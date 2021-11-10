@@ -668,9 +668,9 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="become-instructor-partner-content bg-color">
-                        <h2>Requirement Application</h2>
-                        <p>Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
-                        <a href="#" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">View More</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
+                        <h2>NYSC Property Booking</h2>
+                        <p>Main Hall, Exhibition Hall, Athletics Field, Auditorium, Hostal Facility etc.</p>
+                        <a href="<?= URL ?>booking" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Book Now</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
