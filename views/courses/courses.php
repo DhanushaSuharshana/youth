@@ -99,9 +99,9 @@
                                                 <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?>
                                             </div>
                                         <?php } ?> -->
-                                        <?php if ($course["duration"]) { ?>
+                                        <?php if ($course["nvq"]) { ?>
                                             <div class="nvq-label">
-                                                <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?> </div>
+                                                <?= ($course["nvq"]) ? "NVQ" : ""; ?> </div>
                                         <?php } ?>
                                     </div>
                                     <div class="courses-content">
