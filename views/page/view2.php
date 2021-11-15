@@ -386,7 +386,7 @@
                         ?>
                             <section class="widget widget_raque_posts_thumb">
                                 <div style="display: block">
-                                    <h3 class="widget-title" style="display: inline-block">Other <?= $PAGE_TYPE->title; ?></h3>
+                                    <h3 class="widget-title" style="display: inline-block">Other <?= ucwords($PAGE_TYPE->title); ?></h3>
                                     <a href="<?php echo URL; ?>page/list/<?php echo $PAGE_TYPE->title; ?>" class="btn btn-sm btn-primary float-end" style="display: inline-block; background-color: #ff1949; border: 1px solid #ff1949;">View All</a>
                                 </div>
                                 <?php
@@ -395,7 +395,7 @@
                                     if ($key < 5) {
                                 ?>
                                         <article class="item">
-                                            <a href="<?php echo URL ?>page/view/<?php echo $page['url']; ?>" class="thumb">
+                                            <a href="<?php echo URL ?>page/view/<?php echo $page['url']; ?>" class="thumb" style="width: 110px !important">
                                                 <!-- <span class="fullimage cover bg1" role="img"> -->
                                                 <img src="<?php echo URL ?>upload/page/<?php echo $page['image_name'] ?>" alt="">
 
