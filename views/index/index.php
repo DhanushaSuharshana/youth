@@ -121,6 +121,27 @@
                 </div>
             </div>
         </div>
+        <div class="gym-main-banner bg-dark bg-3">
+            <div class="container-fluid">
+                <div class="row align-items-center" style="margin-top: 12%;">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="hero-banner-content">
+                            <span class="sub-title">AN EMPOWERED SRI LANKA YOUTH.</span>
+                            <h1>NATIONAL YOUTH SERVICE COUNCIL OF SRI LANKA</h1>
+                            <p class="dis-none">Youth of Sri lanka are also having an undertaking for economic and social upliftment of the country. </p>
+                            <div class="btn-box">
+                                <a href="<?php echo URL ?>courses" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 dis-none">
+                        <div class="hero-banner-image text-center">
+                            <img src="assets/img/banner-img1.jpg" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
