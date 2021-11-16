@@ -21,7 +21,7 @@ class Database
 
 
     private $host = 'localhost';
-    private $name = 'youth';
+    private $name = 'nysc';
     private $user = 'root';
     private $password = '';
     public $DB_CON = NULL;

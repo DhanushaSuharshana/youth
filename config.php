@@ -14,3 +14,9 @@ define('MUSERNAME', 'info@dtecsolution.com');
 define('MPASSWORD', 'UuE6F8#T.VBf');
 define('MTITLE', 'Sri Lanka Youth');
 define('MPORT', '587');
+
+define('DB_TYPE', 'mysql');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'nysc');
+define('DB_USER', 'root');
+define('DB_PASS', '');
