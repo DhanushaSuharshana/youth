@@ -195,7 +195,7 @@
 
                         <div class=" text-box">
                             <div class="inner">
-                                Trusted By
+                                Members
                                 <span>500K+</span>
                             </div>
                         </div>
