@@ -664,7 +664,7 @@ textarea.form-control {
     display: inline-block;
     color: #fff;
     font-size: 15px;
-    /*            font-weight: 700;*/
+    font-weight: 700;
 }
 
 .top-header-contact-info li a:hover,
@@ -9773,6 +9773,9 @@ blockquote::after,
     position: relative;
     z-index: 1;
     background-color: #ff1949;
+    /*            position: relative;*/
+    z-index: 1;
+    /*            background-color: #ff1949;*/
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -17209,6 +17212,15 @@ blockquote::after,
 }
 .gym-main-banner.bg-3 {
     background-image: url(../img/youth3.jpg);
+    padding-bottom: 247px;
+}
+
+.gym-main-banner.bg-1 {
+    background-image: url(../img/youth3.jpg);
+}
+
+.gym-main-banner.bg-2 {
+    background-image: url(../img/youth1.jpg);
 }
 
 .gym-main-banner .container {
@@ -17338,4 +17350,10 @@ blockquote::after,
 
 .form_error_border {
     border-color: red !important;
+}
+.jason-banner-text
+{
+    position: absolute;
+    z-index: 999;
+    top: 200px;
 }

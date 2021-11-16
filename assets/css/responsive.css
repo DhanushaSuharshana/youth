@@ -11,7 +11,7 @@
 
 @media only screen and (max-width: 1400px) and (min-width: 991px) {
     .navbar-brand {
-/*        display: none;*/
+        /*        display: none;*/
     }
 }
 
@@ -4181,7 +4181,54 @@
 @media only screen and (min-width: 900px) and (max-width: 1200px) {
     .raque-nav .navbar .navbar-nav .nav-item a{
         font-size: 13px !important;
-    
+    }
+
+
+}
+@media only screen and (min-width: 990px) and (max-width: 1200px) {
+    .jason-banner{
+        margin-top: 48px;
+    }
+}
+@media only screen and (min-width: 680px) and (max-width: 989px) {
+    .jason-banner {
+        margin-top: 100px;
+    }
+    .jason-banner-text {
+        top: 175px;
+    }
+    .top-header{
+        display: none
+    }
+}
+@media only screen and (min-width: 460px) and (max-width: 679px) {
+    .jason-banner {
+        margin-top: 80px;
+    }
+    .jason-banner-text {
+        top: 125px;
+    }
+    .top-header{
+        display: none
+    }
+
+}
+@media only screen and (min-width: 200px) and (max-width: 459px) {
+    .jason-banner {
+        margin-top: 70px;
+    }
+    .jason-banner-text {
+        top: 100px;
+    }
+    .top-header{
+        display: none
+    }
+    .page-title-content ul {
+        margin-bottom: 0px;
+    }
+    .jason-banner-text h2{
+        font-size: 25px;
+    }
 }
 @media only screen and (min-width: 1550px) {
     .navbar-area .container-fluid {
