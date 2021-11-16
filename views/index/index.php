@@ -488,8 +488,8 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="faq-video">
-                        <img src="assets/img/business-coaching/faq.jpg" alt="image">
-                        <a href="https://www.youtube.com/watch?v=bk7McNUjWgw" class="video-btn popup-youtube"><i class="bx bx-play"></i></a>
+                        <img src="assets/img/video.jpg" alt="image">
+                        <a href="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fnyscvtc%2Fvideos%2F1850832628307388%2F&show_text=false&width=560&t=0" class="video-btn popup-youtube"><i class="bx bx-play"></i></a>
                     </div>
                 </div>
 
