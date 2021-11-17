@@ -41,40 +41,7 @@
 
         <section class="courses-area ptb-100">
             <div class="container">
-                <div class="courses-topbar">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-4">
-                            <div class="topbar-result-count">
-                                <p>Showing 1 – 6 of 54</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-8">
-                            <div class="topbar-ordering-and-search">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-3 col-md-5 offset-lg-4 offset-md-1">
-                                        <div class="topbar-ordering">
-                                            <select>
-                                                <option>Sort by popularity</option>
-                                                <option>Sort by latest</option>
-                                                <option>Default sorting</option>
-                                                <option>Sort by rating</option>
-                                                <option>Sort by new</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-md-6">
-                                        <div class="topbar-search">
-                                            <form>
-                                                <label><i class="bx bx-search"></i></label>
-                                                <input type="text" class="input-search" placeholder="Search here...">
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
                 <div class="row">
 
                     <?php
