@@ -664,7 +664,7 @@ textarea.form-control {
     display: inline-block;
     color: #fff;
     font-size: 15px;
-    font-weight: 700;
+/*    font-weight: 700;*/
 }
 
 .top-header-contact-info li a:hover,
@@ -17212,15 +17212,18 @@ blockquote::after,
 }
 .gym-main-banner.bg-3 {
     background-image: url(../img/youth3.jpg);
-    padding-bottom: 247px;
+    
 }
 
 .gym-main-banner.bg-1 {
-    background-image: url(../img/youth3.jpg);
+    background-image: url(../img/youth1.jpg);
 }
 
 .gym-main-banner.bg-2 {
-    background-image: url(../img/youth1.jpg);
+    background-image: url(../img/youth2.jpg);
+}
+.gym-main-banner.bg-3 {
+    background-image: url(../img/youth3.jpg);
 }
 
 .gym-main-banner .container {
