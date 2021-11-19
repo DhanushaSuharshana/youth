@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/slick.min.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/style.css">
-    
+
     <link rel="stylesheet" href="<?php echo URL ?>assets/css/responsive.css">
     <title>Courses National Youth Council Sri Lanka</title>
     <link rel="icon" type="image/png" href="<?php echo URL; ?>assets/img/pre-logo.png">
@@ -427,7 +427,7 @@
                         </div>
                         <div class="owl-dots disabled"></div>
                     </div>
-                   
+
 
 
                 </div>
@@ -441,7 +441,7 @@
 
     <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <script src="<?php echo URL ?>assets/js/jquery.min.js"></script>
-        <script src="<?php echo URL ?>assets/js/popper.min.js"></script>
+    <script src="<?php echo URL ?>assets/js/popper.min.js"></script>
     <script src="<?php echo URL ?>assets/js/bootstrap.min.js"></script>
     <script src="<?php echo URL ?>assets/js/owl.carousel.min.js"></script>
     <script src="<?php echo URL ?>assets/js/mixitup.min.js"></script>
