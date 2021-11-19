@@ -1932,6 +1932,8 @@ visibility: hidden;*/
         background-color: #fff;
         padding-top: 15px;
         padding-bottom: 15px;
+        -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+        box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.2);
     }
 
     .navbar-area.header-sticky.is-sticky {
@@ -17357,6 +17359,6 @@ blockquote::after,
 .jason-banner-text
 {
     position: absolute;
-    z-index: 999;
+    z-index: 994;
     top: 200px;
 }

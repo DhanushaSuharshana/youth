@@ -7,6 +7,9 @@
     .top-header-contact-info {
         display: none;
     }
+    .header-area{
+        position: fixed
+    }
 }
 
 @media only screen and (max-width: 1400px) and (min-width: 991px) {
@@ -4203,7 +4206,7 @@
 }
 @media only screen and (min-width: 460px) and (max-width: 679px) {
     .jason-banner {
-        margin-top: 80px;
+        margin-top: 75px;
     }
     .jason-banner-text {
         top: 125px;
@@ -4215,7 +4218,7 @@
 }
 @media only screen and (min-width: 200px) and (max-width: 459px) {
     .jason-banner {
-        margin-top: 70px;
+        margin-top: 65px;
     }
     .jason-banner-text {
         top: 100px;
