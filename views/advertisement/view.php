@@ -58,7 +58,7 @@
                     <li><a href="<?php echo URL ?>">Home</a></li>
                     <li>Advertisement</li>
                 </ul>
-                <h2>Advertisement Details</h2>
+                <h2>Details</h2>
             </div>
         </div>
     </div>
@@ -127,7 +127,18 @@
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
+                        <div class="row mb-5">
+                            <div class="col-md-12">
+                                <?php
+                                if (isset($ADVERTISEMENT->url) && !empty($ADVERTISEMENT->url)) {
+                                ?>
+                                    <a class="default-btn" target="_blank" href="<?php echo $ADVERTISEMENT->url; ?>"><i class='bx bx-send icon-arrow before'></i><span class="label">View</span><i class="bx bx-send icon-arrow after"></i></a>
+                                <?php
+                                }
 
+                                ?>
+                            </div>
+                        </div>
 
                         <?php echo $ADVERTISEMENT->description; ?>
                     </div>
@@ -141,20 +152,21 @@
 
                             <?php
                             foreach ($ADVERTISEMENT->all() as $key => $advertisement) {
-                                if($key <10){
+                                if ($key < 10) {
                             ?>
-                                <div class="user-review">
-                                <a href="<?php echo URL ?>advertisements/view/<?php echo base64_encode($advertisement['id']); ?>">
-                                    <img src="<?php echo URL ?>upload/advertisement/<?php echo $advertisement['image_name'] ?>" alt="image">
-                                    <div class="review-rating">
+                                    <div class="user-review">
+                                        <a href="<?php echo URL ?>advertisements/view/<?php echo base64_encode($advertisement['id']); ?>">
+                                            <img src="<?php echo URL ?>upload/advertisement/<?php echo $advertisement['image_name'] ?>" alt="image">
+                                            <div class="review-rating">
 
-                                        <span class="d-inline-block"><?php echo $advertisement['title'] ?></span>
+                                                <span class="d-inline-block"><?php echo $advertisement['title'] ?></span>
+                                            </div>
+
+                                            <p><?php echo substr($advertisement['short_description'], 0, 60) ?>...</p>
+                                        </a>
                                     </div>
-
-                                    <p><?php echo substr($advertisement['short_description'],0,60) ?>...</p>
-                                </a>
-                                </div>
-                            <?php } } ?>
+                            <?php }
+                            } ?>
                         </div>
 
                         <!-- <section class="widget widget_contact">
