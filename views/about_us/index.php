@@ -268,6 +268,5 @@
         <script src="assets/js/main.js"></script>
     </body>
 
-    <!-- Mirrored from templates.envytheme.com/raque/default/about-style-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Apr 2021 03:12:08 GMT -->
 
 </html>
