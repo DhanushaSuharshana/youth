@@ -68,6 +68,7 @@ $("#news_letter_btn").click(function (event) {
                     $('#message-newsletter').html('Success! Check Your Email for more details').show();
                     setTimeout(function () {
                         $('#message-newsletter').html('').hide();
+                        window.open(siteUrl+"news-letter/success","_self");
                     }, 4000);
                     // swal({
                     //     title: "success!",

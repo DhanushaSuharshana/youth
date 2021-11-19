@@ -9,9 +9,9 @@ define('DEVELOPMENT_MODE', 1);
 define('URL', $protocol . $host . '/youth/');
 define('URL_PUBLIC', URL.'public/');
 
-define('MHOST', 'dtecsolution.com');
-define('MUSERNAME', 'info@dtecsolution.com');
-define('MPASSWORD', 'UuE6F8#T.VBf');
+define('MHOST', 'server66.web-hosting.com');
+define('MUSERNAME', 'mail@slysc.lk');
+define('MPASSWORD', 'Nysc@329');
 define('MTITLE', 'Sri Lanka Youth');
 define('MPORT', '587');
 

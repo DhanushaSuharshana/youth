@@ -48,4 +48,8 @@ class News_Letter extends Controller
             }
         }
     }
+
+    function success(){
+        $this->view->render('news_letter/success'); 
+    }
 }

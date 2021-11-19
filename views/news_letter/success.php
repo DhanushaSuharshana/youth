@@ -41,9 +41,9 @@
             <div class="page-title-content">
                 <ul>
                     <li><a href="<?php echo URL ?>">Home</a></li>
-                    <li>Errors</li>
+                    <li>News Letter</li>
                 </ul>
-                <h2>Error 404</h2>
+                <h2>Subscription</h2>
             </div>
         </div>
     </div>
@@ -57,9 +57,9 @@
                     <div></div>
                     <div></div>
                 </div>
-                <h1>Oops!</h1>
-                <h3>Error 404 : Page Not Found</h3>
-                <p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
+                <h2 class="text-success text-uppercase fw-bold display-4">Success !</h2>
+                <h3>Thank you very much for subscribe us.</h3>
+                <p>You will receive NYSC News and Events to your email.</p>
                 <a href="<?php echo URL ?>" class="default-btn"><i class='bx bx-home-circle icon-arrow before'></i><span class="label">Back Home</span><i class="bx bx-home-circle icon-arrow after"></i></a>
             </div>
         </div>
