@@ -32,9 +32,9 @@
                 <div class="page-title-content jason-banner-text">
                     <ul>
                         <li><a href="<?php echo URL ?>">Home</a></li>
-                        <li>Our Centers </li>
+                        <li>Find Course </li>
                     </ul>
-                    <h2> Our Centers </h2>
+                    <h2> Find Course  </h2>
                 </div>
             </div>
         </div> 
