@@ -402,7 +402,7 @@
                                             </a>
                                             <div class="info">
                                                 <h4 class="title usmall"><a href="<?php echo URL ?>page/view/<?php echo $page['url']; ?>"><?php echo $page['title'] ?></a></h4>
-                                                <span style="color: #727695"><?php echo substr($page['description'], 0, 60) ?>...</span>
+                                                <span style="color: #727695"><?php echo substr($page['sub_title'], 0, 60) ?>...</span>
 
                                             </div>
                                             <div class="clear"></div>
@@ -522,7 +522,7 @@
 
     <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <script src="<?php echo URL ?>assets/js/jquery.min.js"></script>
     <script src="<?php echo URL ?>assets/js/popper.min.js"></script>
     <script src="<?php echo URL ?>assets/js/bootstrap.min.js"></script>

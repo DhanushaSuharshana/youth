@@ -473,7 +473,7 @@
 
         <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 
-        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="<?php echo URL ?>assetsjs/jquery.min.js"></script>
+        <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="<?php echo URL ?>assetsjs/jquery.min.js"></script> -->
         <script src="<?php echo URL ?>assetsjs/popper.min.js"></script>
         <script src="<?php echo URL ?>assetsjs/bootstrap.min.js"></script>
         <script src="<?php echo URL ?>assetsjs/owl.carousel.min.js"></script>

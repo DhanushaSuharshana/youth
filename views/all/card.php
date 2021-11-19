@@ -537,7 +537,7 @@
 
     <?php include './views/footer.php'; ?>
 
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <script src="<?php echo URL ?>assets/js/jquery.min.js"></script>
     <script src="<?php echo URL ?>assets/js/popper.min.js"></script>
     <script src="<?php echo URL ?>assets/js/bootstrap.min.js"></script>
