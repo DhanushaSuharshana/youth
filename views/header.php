@@ -108,26 +108,26 @@
     }
 </style>
 <style>
-    <?php
-    if (isset($this->colors)) {
-        foreach ($this->colors as $key => $color) {
+<?php
+if (isset($this->colors)) {
+    foreach ($this->colors as $key => $color) {
+        ?>
 
-    ?>
+            /* <?php echo $key ?> */
+            .<?php echo $key ?> .single-categories-courses-box {
+                background-color: <?php echo $color['color']; ?> !important;
+            }
 
-    /* <?php echo $key ?> */
-    .<?php echo $key ?> .single-categories-courses-box {
-        background-color: <?php echo $color['color']; ?> !important;
-    }
+            .<?php echo $key ?> .single-categories-courses-box:hover .icon,
+            .<?php echo $key ?> .single-categories-courses-box:focus .icon {
+                background-color: #fff !important;
+                border-color: <?php echo $color['color']; ?> !important;
+                color: <?php echo $color['color']; ?> !important;
+            }
 
-    .<?php echo $key ?> .single-categories-courses-box:hover .icon,
-    .<?php echo $key ?> .single-categories-courses-box:focus .icon {
-        background-color: #fff !important;
-        border-color: <?php echo $color['color']; ?> !important;
-        color: <?php echo $color['color']; ?> !important;
-    }
-
-    <?php  }
-    } ?>.table-fit {
+    <?php }
+}
+?>.table-fit {
         width: 100% !important;
         table-layout: fixed !important;
     }
@@ -143,9 +143,18 @@
     }
 </style>
 
-<div class="ads" onclick="window.open('<?php echo URL; ?>advertisements','_self')">
+<div id="loader" class="loader preloader">
+    <div class="loader-container">
+        <div class="loader-icon">
+            <img src="<?php echo URL ?>assets/img/pre-logo.png" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="ads" onclick="window.open('<?php echo URL; ?>advertisements', '_self')">
     <div><span>Advertiesment</span></div>
 </div>
+
 
 
 <header class="header-area">
@@ -241,10 +250,11 @@
                                     foreach (Pages::getAll(PageType::getByTitle("divisions")["id"]) as $key => $page) {
                                         // var_dump($key);
                                         if ($key < 6) {
-                                    ?>
+                                            ?>
                                             <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php }
-                                    } ?>
+                                        <?php }
+                                    }
+                                    ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/divisions">Show All Divisions</a> </li>
                                 </ul>
                             </li>
@@ -273,13 +283,13 @@
                             <li class="nav-item"><a href="#" class="nav-link">Services <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <?php
-
                                     foreach (Pages::getAll(PageType::getByTitle("services")["id"]) as $key => $page) {
                                         if ($key < 6) {
-                                    ?>
+                                            ?>
                                             <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php }
-                                    } ?>
+                                        <?php }
+                                    }
+                                    ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/services">Show All Services</a> </li>
                                 </ul>
                             </li>
@@ -315,10 +325,11 @@
                                     <?php
                                     foreach (Pages::getAll(PageType::getByTitle("divisions")["id"]) as $key => $page) {
                                         if ($key < 6) {
-                                    ?>
+                                            ?>
                                             <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php }
-                                    } ?>
+                                        <?php }
+                                    }
+                                    ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/divisions">Show All Divisions</a> </li>
                                 </ul>
                             </li>
@@ -349,10 +360,11 @@
                                     <?php
                                     foreach (Pages::getAll(PageType::getByTitle("services")["id"]) as $key => $page) {
                                         if ($key < 6) {
-                                    ?>
+                                            ?>
                                             <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                    <?php }
-                                    } ?>
+    <?php }
+}
+?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/services">Show All Services</a> </li>
                                 </ul>
                             </li>
