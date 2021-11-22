@@ -1002,14 +1002,14 @@ jQuery(function ($) {
         $('.accordion-content').not($(this).next()).slideUp('fast');
         $('.accordion-title').not($(this)).removeClass('active');
     });
-    $(".newsletter-form").validator().on("submit", function (event) {
-        if (event.isDefaultPrevented()) {
-            formErrorSub();
-            submitMSGSub(false, "Please enter your email correctly.");
-        } else {
-            event.preventDefault();
-        }
-    });
+    // $(".newsletter-form").validator().on("submit", function (event) {
+    //     if (event.isDefaultPrevented()) {
+    //         formErrorSub();
+    //         submitMSGSub(false, "Please enter your email correctly.");
+    //     } else {
+    //         event.preventDefault();
+    //     }
+    // });
 
     function callbackFunction(resp) {
         if (resp.result === "success") {
