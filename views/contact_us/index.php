@@ -158,7 +158,7 @@
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
         <script src="assets/js/jquery.ajaxchimp.min.js"></script>
         <!-- <script src="assets/js/form-validator.min.js"></script> -->
-        <script src="assets/js/contact-form-script.js"></script>
+        <!-- <script src="assets/js/contact-form-script.js"></script> -->
         <script src="assets/js/main.js"></script>
         <!-- <script src="<?php echo URL ?>assets/js/error_validation.js"></script> -->
         <script src="<?php echo URL ?>assets/js/contact.js"></script>
