@@ -50,7 +50,7 @@
 
                 </div><!-- comment -->
 
-                <div class="col-md-7">
+                <div class="col-md-12">
                     <div id="GoogleMaps"></div>
                 </div><!-- comment -->
 

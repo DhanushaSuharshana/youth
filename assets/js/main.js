@@ -316,7 +316,7 @@ jQuery(function ($) {
             }
         }
     });
-    $('select').niceSelect();
+    // $('select').niceSelect();
     $('.odometer').appear(function (e) {
         var odo = $(".odometer");
         odo.each(function () {

@@ -25,4 +25,10 @@ class centers extends Controller
         $this->view->query = $query;
         $this->view->render('centers/filter_from_course');
     }
+
+    function map(){
+        $CENTRES = new Center(NULL);
+        echo json_encode($CENTRES->all());
+
+    }
 }
