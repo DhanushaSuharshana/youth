@@ -234,9 +234,9 @@
     <section class="offer-area pt-100 jarallax" data-jarallax='{"speed": 0.3}'>
         <div class="container">
             <div class="section-title">
-                <span class="sub-title">Make Connections</span>
+                <span class="sub-title">Sri Lanka Youth</span>
                 <h2>What We Offer For Your Future.</h2>
-                <p> Down here take path what is most critically needed.</p>
+              
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
@@ -261,7 +261,7 @@
                             </div>
                             <h3>Youth Services Limited</h3>
 
-                            <p>Best place to learn modern technologies with number of qualified instructors.</p>
+                            <p>Encouraging and improving the economic power of youth by providing essential services</p>
                             <div class="boxes-btn-new">Explore more <i class='bx bx-plus'></i></div>
 
                         </div>
@@ -276,7 +276,7 @@
                             </div>
                             <h3>NYSCO</h3>
 
-                            <p>Sri Lanka National Youth Services Co-operative Society help young crowd in rural areas</p>
+                            <p>Young entrepreneurs can improve their ideas and services to increase the productivity and revenue </p>
                             <div class="boxes-btn-new">Explore more <i class='bx bx-plus'></i></div>
 
                         </div>
@@ -396,89 +396,6 @@
                             }
                             ?>
                         </div>
-
-
-
-
-                        <!-- <div class="tab courses-list-tab">
-                            <ul class="tabs active">
-                        <?php
-                        $COURSE_TYPE = new CourseType(NULL);
-                        foreach ($COURSE_TYPE->all() as $key => $course_type) {
-                            if ($key == 0) {
-                                ?>
-                                                <li class="current"><a href="#"><?php echo $course_type['title'] ?></a></li>
-                            <?php } else { ?>
-                                                <li class=""><a href="#"><?php echo $course_type['title'] ?></a></li>
-                                <?php
-                            }
-                        }
-                        ?>
-                            </ul>
-            
-            
-                            <div class="tab-content">
-                        <?php
-                        $COURSE = new Course(NULL);
-                        foreach ($COURSE_TYPE->all() as $key => $course_type) {
-                            ?>
-                                        <div class="tabs-item" style="<?= ($key == 0) ? "display: block;" : "display: none;" ?>">
-                                            <div class="row">
-                            <?php
-                            foreach ($COURSE->all() as $key2 => $course) {
-                                if ($course['course_type'] == $course_type['id']) {
-                                    ?>
-                                                                <div class="col-lg-4 col-md-6">
-                                                                    <a href="courses/view/<?php echo base64_encode('q=fromcourse%center=false' . '%course=' . $course['id']); ?>">
-                                                                        <div class="single-courses-item mb-30">
-                                                                            <div class="courses-image">
-                                                                                <div class="d-block">
-                                                                                    <img src="<?php echo URL ?>upload/courses/<?php echo $course['image_name'] ?>" alt="<?php echo $course['name'] ?>">
-                                                                                </div>
-                                                                                <div class="duration-label <?= ($course["duration_type"]) ? "full" : "part"; ?>">
-                                    <?= ($course["duration_type"]) ? "Full Time" : "Part Time"; ?>
-                                                                                </div>
-                        
-                                                                            </div>
-                                                                            <div class="courses-content">
-                                    <?php if ($course["nvq"]) { ?>
-                                                                                        <div class="nvq-label">
-                                                                                            <span>NVQ</span>
-                                                                                        </div>
-                                    <?php } ?>
-                                                                                <div class="d-flex justify-content-between align-items-center"></div>
-                                                                                <h3>
-                                                                                    <div class="d-inline-block">
-                                    <?php echo $course['name'] ?>
-                                                                                    </div>
-                                                                                </h3>
-                                                                                <p> <?php echo substr($course['short_description'], 0, 90) ?> </p>
-                                                                            </div>
-                                                                            <div class="courses-box-footer">
-                                                                                <ul>
-                                                                                    <li class="students-number">
-                                                                                        <i class="bx bx-user"></i> 10 students
-                                                                                    </li>
-                                                                                    <li class="courses-lesson">
-                                                                                        <i class="bx bx-book-open"></i> 6 lessons
-                                                                                    </li>
-                                                                                    <li class="courses-price">
-                                                                                        View
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                    <?php
-                                }
-                            }
-                            ?>
-                                            </div>
-                                        </div>
-                        <?php } ?>
-                            </div>
-                        </div> -->
                     </div>
                 </section>
 
@@ -537,49 +454,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- <div class="col-lg-6 col-md-12">
-                                <div class="faq-accordion faq-accordion-style-two">
-                                    <ul class="accordion">
-                                        <li class="accordion-item">
-                                            <a class="accordion-title" href="<?php echo URL ?>page/view/youth-club">
-                                                <i class='bx bxs-circle'></i>
-                                                Youth Club
-                                            </a>
-            
-                                        </li>
-                                        <li class="accordion-item">
-                                            <a class="accordion-title " href="<?php echo URL ?>page/view/youth-parliment">
-                                                <i class='bx bxs-circle'></i>
-                                                Youth Parliment
-                                            </a>
-                                        </li>
-            
-            
-                                        <li class="accordion-item">
-                                            <a class="accordion-title" href="<?php echo URL ?>page/view/youth-dancing-team">
-                                                <i class='bx bxs-circle'></i>
-                                                Youth Dancing Team
-                                            </a>
-            
-                                        </li>
-                                        <li class="accordion-item">
-                                            <a class="accordion-title" href="<?php echo URL ?>page/view/youth-music-band">
-                                                <i class='bx bxs-circle'></i>
-                                                Youth Music Band
-                                            </a>
-            
-                                        </li>
-                                        <li class="accordion-item">
-                                            <a class="accordion-title" href="<?php echo URL ?>page/view/young-padura-programe">
-                                                <i class='bx bxs-circle'></i>
-                                                Young Padura Programe
-                                            </a>
-            
-                                        </li>
-                                    </ul>
-            
-                                </div>
-                            </div> -->
+                        
                         </div>
                     </div>
                     <div class="divider bg-f9f9f9"></div>
@@ -652,7 +527,7 @@
                                                             </span>
                                                         </div>
                                                         <h3><a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>"><?php echo $event['title'] ?></a></h3>
-                                                        <p><?php echo $event['short_description'] ?></p>
+                                                      
                                                         <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
                                                     </div>
                                                 </div>
@@ -687,7 +562,7 @@
                                                                     ?></span>
                                                             </div>
                                                             <h3 href=""><?php echo $event['title'] ?></h3>
-                                                            <p><?php echo $event['short_description'] ?></p>
+                                                          
                                                             <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
                                                         </div>
                                                     </a>
