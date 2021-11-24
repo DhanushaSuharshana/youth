@@ -20,7 +20,7 @@ $.ajax({
                     markerTitle: center.name,
                     markerUrl: 'https://youth.slysc.lk/public/img/map-marker.png',
                     markerSize: 40,
-                    markerContent: `<h4 style="text-align:center;margin:0 0 10px;">${center.name}</h4><p style="text-align:center; margin:0 0 10px;">${center.email} <br>${center.contact1}</p><a href="mailto:${center.email}" style="display:table;margin:auto;padding:8px 12px;border-radius:20px;font-weight:700;background:#502974;color:#fff;cursor:pointer;">Send Mail</a><br><a href="${siteUrl}courses/apply/${btoa('q=toapply%center='+center.center_id+'%course='+course_id+'')}" style="display:table;margin:auto;padding:8px 12px;border-radius:20px;font-weight:700;background:#502974;color:#fff;cursor:pointer;">Select Center</a>`,
+                    markerContent: `<h4 style="text-align:center;margin:0 0 10px;">${center.name}</h4><p style="text-align:center; margin:0 0 10px;">${center.email} <br>${center.contact1}</p><a href="mailto:${center.email}" style="display:table;margin:auto;padding:8px 12px;border-radius:20px;font-weight:700;background:#502974;color:#fff;cursor:pointer;">Send Mail</a><br><a href="${siteUrl}courses/apply/${btoa('q=toapply%center='+center.center_id+'%course='+course_id+'')}" style="display:table;margin:auto;padding:8px 12px;border-radius:20px;font-weight:700;background:#1e8508;color:#fff;cursor:pointer;">Apply Now</a>`,
                     // markerContentFromGoogleQuery: 'Ataturk Culture Center',
                     // markerCallback: function () {
                     //     // Notiflix.Notify.Success('This is a marker click callback. (Custom Content)');
@@ -92,6 +92,7 @@ MarkersOnMap.Init({
     //     }
     // ],
 });
+
 MarkersOnMap.Run('div#GoogleMaps', function cllbck() {
     // Notiflix.Notify.Success('The map created successfully.');
 });
