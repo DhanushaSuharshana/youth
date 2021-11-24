@@ -195,7 +195,7 @@ function mail_set_template($content = [])
 																<h4>Dear Applicant ".$content["first_name"].",</h4>
                                                                 <p style='color:#000; '>Thank you very much for registering with the ".$content["course"]." at ".$content["center"].".</p><br>
                                                                 <p style='color:#000; '>If you are eligible and are short-listed you will receive an email from NYSC, requesting you to attend an online-interview.  In case if you do not see it in your Inbox remember to <strong>check your email ‘SPAM’ folder</strong> as well. </p><br>
-                                                                <p style='color:#000; '>If you have any questions, need clarifications or have concerns please do not hesitate to contact the helpdesk at the NYSC: Email - <strong>info@nysc.lk</strong>  Phone: +9411xxxxxx; WhatsApp: +94xxxxxxxx(Text only).</p><br>
+                                                                <p style='color:#000; '>If you have any questions, need clarifications or have concerns please do not hesitate to contact the helpdesk at the NYSC: Email - <strong>info@nysc.lk</strong>  Phone: +94 112 850 986.</p><br>
                                                                 <p style='color:#000; '>Sri Lanka Youth</p>
                                                                 </td>
 														</tr>

@@ -26,9 +26,18 @@ class centers extends Controller
         $this->view->render('centers/filter_from_course');
     }
 
-    function map(){
+    //ALL
+    function map()
+    {
         $CENTRES = new Center(NULL);
         echo json_encode($CENTRES->all());
+    }
 
+    //ALL
+    function map_by_course($course_id)
+    {
+        $CENTER = new Center(NULL);
+        $centers = $CENTER->getByCourse($course_id);
+        echo json_encode($centers);
     }
 }
