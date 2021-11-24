@@ -92,6 +92,7 @@ MarkersOnMap.Init({
     //     }
     // ],
 });
+
 MarkersOnMap.Run('div#GoogleMaps', function cllbck() {
     // Notiflix.Notify.Success('The map created successfully.');
 });

@@ -222,8 +222,8 @@
         <script src="<?php echo URL ?>assets/js/jquery.ajaxchimp.min.js"></script>
         <!-- <script src="<?php echo URL ?>assets/js/form-validator.min.js"></script> -->
         <!-- <script src="<?php echo URL ?>assets/js/contact-form-script.js"></script> -->
-        <!-- <script src="<?php echo URL ?>assets/js/main.js"></script> -->
-        <!-- <script src="<?php echo URL ?>assets/js/error_validation.js"></script> -->
+        <script src="<?php echo URL ?>assets/js/main.js"></script>
+        <script src="<?php echo URL ?>assets/js/error_validation.js"></script>
         <!-- <script src="<?php echo URL ?>assets/js/contact.js"></script> -->
 </body>
 
