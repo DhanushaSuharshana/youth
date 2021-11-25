@@ -417,37 +417,37 @@
 
                                         <li>
                                             <a href="<?php echo URL ?>page/view/youth-club">
-                                                <img src="http://localhost/youth/assets/img/cards/club-01.png"><br>
+                                                <img src="<?php echo URL ?>assets/img/cards/club-01.png"><br>
                                                 Youth Club
                                             </a>
                                         </li>
                                         <li>
                                             <a href="<?php echo URL ?>page/view/youth-parliment">
-                                                <img src="http://localhost/youth/assets/img/cards/vote-01.png"><br>
+                                                <img src="<?php echo URL ?>assets/img/cards/vote-01.png"><br>
                                                 Youth Parliment
                                             </a>
                                         </li>
                                         <li>
                                             <a href="<?php echo URL ?>page/view/youth-dancing-team">
-                                                <img src="http://localhost/youth/assets/img/cards/dancing-01.png"><br>
+                                                <img src="<?php echo URL ?>assets/img/cards/dancing-01.png"><br>
                                                 Youth Dancing Team
                                             </a>
                                         </li>
                                         <li>
                                             <a href="<?php echo URL ?>page/view/youth-music-band">
-                                                <img src="http://localhost/youth/assets/img/cards/music-01.png"><br>
+                                                <img src="<?php echo URL ?>assets/img/cards/music-01.png"><br>
                                                 Youth Music Band
                                             </a>
                                         </li>
                                         <li>
                                             <a href="<?php echo URL ?>page/view/youth-drama-team">
-                                                <img src="http://localhost/youth/assets/img/cards/drama-01.png"><br>
+                                                <img src="<?php echo URL ?>assets/img/cards/drama-01.png"><br>
                                                 Youth Drama Team
                                             </a>
                                         </li>
                                         <li>
                                             <a href="<?php echo URL ?>page/view/sports">
-                                                <img src="http://localhost/youth/assets/img/cards/sports-01.png"><br>
+                                                <img src="<?php echo URL ?>assets/img/cards/sports-01.png"><br>
                                                 Youth Sports
                                             </a>
                                         </li>
