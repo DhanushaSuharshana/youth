@@ -206,7 +206,8 @@ if (isset($_GET["id"])) {
                                         <tr>
                                             <th>#No</th>
                                             <th>Name</th>
-                                            <th>Languages</th>
+                                            <th>NVQ Level</th>
+                                            <th>Duration</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -219,7 +220,25 @@ if (isset($_GET["id"])) {
                                             <tr id="div<?php echo $course['id']; ?>">
                                                 <td><?php echo $key; ?></td>
                                                 <td><?php echo $course['name']; ?></td>
-                                                <td><?php echo $course['languages']; ?></td>
+                                                <td>
+                                                    <?php
+                                                    if ($course['nvq'] == 1) {
+                                                        echo 'NVQ';
+                                                    } else {
+                                                        echo 'NON NVQ';
+                                                    }
+                                                    ?>
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    if ($course['duration_type'] == 1) {
+                                                        echo 'Full Time';
+                                                    } else {
+                                                        echo 'Part Time';
+                                                    }
+
+
+                                                    ?></td>
 
                                                 <td>
 
