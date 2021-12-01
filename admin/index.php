@@ -62,72 +62,6 @@ include_once(dirname(__FILE__) . '/auth.php');
                         </div>
                         <!-- end page title -->
 
-                        <div class="row">
-                            <div class="col-md-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="float-end mt-2">
-                                            <div id="total-revenue-chart"></div>
-                                        </div>
-                                        <div>
-                                            <h4 class="mb-1 mt-1">$<span data-plugin="counterup">34,152</span></h4>
-                                            <p class="text-muted mb-0">Total Revenue</p>
-                                        </div>
-                                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><i class="mdi mdi-arrow-up-bold me-1"></i>2.65%</span> since last week
-                                        </p>
-                                    </div>
-                                </div>
-                            </div> <!-- end col-->
-
-                            <div class="col-md-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="float-end mt-2">
-                                            <div id="orders-chart"> </div>
-                                        </div>
-                                        <div>
-                                            <h4 class="mb-1 mt-1"><span data-plugin="counterup">5,643</span></h4>
-                                            <p class="text-muted mb-0">Orders</p>
-                                        </div>
-                                        <p class="text-muted mt-3 mb-0"><span class="text-danger me-1"><i class="mdi mdi-arrow-down-bold me-1"></i>0.82%</span> since last week
-                                        </p>
-                                    </div>
-                                </div>
-                            </div> <!-- end col-->
-
-                            <div class="col-md-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="float-end mt-2">
-                                            <div id="customers-chart"> </div>
-                                        </div>
-                                        <div>
-                                            <h4 class="mb-1 mt-1"><span data-plugin="counterup">45,254</span></h4>
-                                            <p class="text-muted mb-0">Customers</p>
-                                        </div>
-                                        <p class="text-muted mt-3 mb-0"><span class="text-danger me-1"><i class="mdi mdi-arrow-down-bold me-1"></i>6.24%</span> since last week
-                                        </p>
-                                    </div>
-                                </div>
-                            </div> <!-- end col-->
-
-                            <div class="col-md-6 col-xl-3">
-
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="float-end mt-2">
-                                            <div id="growth-chart"></div>
-                                        </div>
-                                        <div>
-                                            <h4 class="mb-1 mt-1">+ <span data-plugin="counterup">12.58</span>%</h4>
-                                            <p class="text-muted mb-0">Growth</p>
-                                        </div>
-                                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><i class="mdi mdi-arrow-up-bold me-1"></i>10.51%</span> since last week
-                                        </p>
-                                    </div>
-                                </div>
-                            </div> <!-- end col-->
-                        </div> <!-- end row-->
 
                         <div class="row pt-3">
                             <div class="col-xl-4">
@@ -135,9 +69,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <div class="card-body">
                                         <div class="row align-items-center">
                                             <div class="col-sm-8">
-                                                <p class="text-white font-size-18">Enhance your <b>Campaign</b> for better outreach <i class="mdi mdi-arrow-right"></i></p>
+                                                <p class="text-white font-size-18">You can manage the <b>Course</b> section from this CMS  <i class="mdi mdi-arrow-right"></i></p>
                                                 <div class="mt-4">
-                                                    <a href="javascript: void(0);" class="btn btn-success waves-effect waves-light">Upgrade Account!</a>
+                                                    <a href="manage-courses.php" class="btn btn-success waves-effect waves-light">Manage Course</a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
@@ -155,9 +89,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <div class="card-body">
                                         <div class="row align-items-center">
                                             <div class="col-sm-8">
-                                                <p class="text-white font-size-18">Enhance your <b>Campaign</b> for better outreach <i class="mdi mdi-arrow-right"></i></p>
+                                                <p class="text-white font-size-18">You can manage the <b>News</b> section from this CMS  <i class="mdi mdi-arrow-right"></i></p>
                                                 <div class="mt-4">
-                                                    <a href="javascript: void(0);" class="btn btn-success waves-effect waves-light">Upgrade Account!</a>
+                                                    <a href="manage-news.php" class="btn btn-success waves-effect waves-light">Manage News</a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
@@ -175,14 +109,14 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <div class="card-body">
                                         <div class="row align-items-center">
                                             <div class="col-sm-8">
-                                                <p class="text-white font-size-18">Enhance your <b>Campaign</b> for better outreach <i class="mdi mdi-arrow-right"></i></p>
+                                                <p class="text-white font-size-18">You can manage the <b>Events</b> section from this CMS  <i class="mdi mdi-arrow-right"></i></p>
                                                 <div class="mt-4">
-                                                    <a href="javascript: void(0);" class="btn btn-success waves-effect waves-light">Upgrade Account!</a>
+                                                    <a href="manage-event.php" class="btn btn-info  waves-effect waves-light">Manage Event</a>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="mt-4 mt-sm-0">
-                                                    <img src="assets/images/setup-analytics-amico.svg" class="img-fluid" alt="">
+                                                    <img src="manage-event.php" class="img-fluid" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -194,28 +128,25 @@ include_once(dirname(__FILE__) . '/auth.php');
                         <div class="row pt-3">
                             <div class="col-lg-4">
                                 <div class="card card-body">
-                                    <h4 class="card-title ">Special title treatment</h4>
-                                    <p class="card-text">With supporting text below as a natural lead-in to additional
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary waves-effect waves-light">Go somewhere</a>
+                                    <h4 class="card-title ">Manage Advertisements</h4>
+                                    <p class="card-text">You can add edit and delete the advertisement by this section..</p>
+                                    <a href="#" class="btn btn-primary waves-effect waves-light">Advertisement</a>
                                 </div>
                             </div>
 
                             <div class="col-lg-4 ">
                                 <div class="card card-body text-center">
-                                    <h4 class="card-title ">Special title treatment</h4>
-                                    <p class="card-text">With supporting text below as a natural lead-in to additional
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary waves-effect waves-light">Go somewhere</a>
+                                    <h4 class="card-title ">Manage Divisions</h4>
+                                    <p class="card-text">You can add edit and delete the divisions by this section..</p>
+                                    <a href="manage-devision.php" class="btn btn-primary waves-effect waves-light">Divisions</a>
                                 </div>
                             </div>
 
                             <div class="col-lg-4">
                                 <div class="card card-body text-end">
-                                    <h4 class="card-title ">Special title treatment</h4>
-                                    <p class="card-text">With supporting text below as a natural lead-in to additional
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary waves-effect waves-light">Go somewhere</a>
+                                    <h4 class="card-title ">Manage Gallery</h4>
+                                    <p class="card-text">You can add edit and delete the gallary images by this section..</p>
+                                    <a href="create-photo-album.php" class="btn btn-primary waves-effect waves-light">Photo-Albums</a>
                                 </div>
                             </div>
                         </div>

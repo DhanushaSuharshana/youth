@@ -39,7 +39,7 @@
                         <li><a href="<?php echo URL; ?>courses">Courses</a></li>
                         <li><a href="<?php echo URL; ?>gallery">Gallery</a></li>
                         <li><a href="<?php echo URL; ?>page/list/services">Services</a></li>
-                        <li><a href="<?php echo URL; ?>location">Centers</a></li>
+                        <li><a href="<?php echo URL; ?>centers/location">Centers</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,11 +48,11 @@
                     <h3>Popular Services and Projects</h3>
                     <ul class="useful-link">
                         <li><a href="<?php echo URL; ?>page/view/youth-club">Youth Club</a></li>
-                        <li><a href="<?php echo URL; ?>page/view/school-of-computing">School of Computing</a></li>
+                        <li><a href="<?php echo URL; ?>page/view/youth-services-limited">Youth Services Limited</a></li>
                         <li><a href="<?php echo URL; ?>page/view/nysco">NYSCO</a></li>
-                        <li><a href="<?php echo URL; ?>page/view/youth-band">Youth Band</a></li>
+                        <li><a href="<?php echo URL; ?>page/view/youth-drama-team">Youth Drama Team</a></li>
                         <li><a href="<?php echo URL; ?>page/view/youth-dancing-team">Youth Dancing Team</a></li>
-                        <li><a href="<?php echo URL; ?>page/view/music-club">Music Club</a></li>
+                        <li><a href="<?php echo URL; ?>page/view/youth-music-band">Youth Music Band</a></li>
                     </ul>
                 </div>
             </div>

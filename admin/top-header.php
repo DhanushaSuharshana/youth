@@ -93,7 +93,7 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="assets/images/users/<?php echo $_SESSION["id"]; ?>.jpg"
+                    <img class="rounded-circle header-profile-user" src="assets/images/user.jpg"
                          alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15"><?php echo $_SESSION["name"]; ?> <i class="bx bx-chevron-down "></i></span>
                     <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>
