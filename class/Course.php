@@ -117,7 +117,7 @@ class Course
     public function all()
     {
 
-        $query = "SELECT * FROM `courses`";
+        $query = "SELECT * FROM `courses` ORDER BY queue ASC";
 
         $db = new Database();
         $result = $db->readQuery($query);

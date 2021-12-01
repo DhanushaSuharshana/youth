@@ -293,7 +293,7 @@
         </script>
         <script src="<?php echo URL ?>assets/js/index-tooltip.js" type="text/javascript"></script>
         <script src="<?php echo URL ?>assets/js/markers-on-map-1.4.0.js" type="text/javascript"></script>
-        <script src="<?php echo URL ?>assets/js/map-api-course.js?v=1.4.0" type="text/javascript"></script>
+        <script src="<?php echo URL ?>assets/js/map-api-course.js" type="text/javascript"></script>
     <?php
     }
     ?>

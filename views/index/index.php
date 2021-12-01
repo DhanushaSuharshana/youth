@@ -48,7 +48,7 @@
 
     <body>
 
-       
+
         <?php include './views/header.php'; ?>
 
         <!-- <div class="hero-banner">
@@ -236,7 +236,7 @@
             <div class="section-title">
                 <span class="sub-title">Sri Lanka Youth</span>
                 <h2>What We Offer For Your Future.</h2>
-              
+
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
@@ -254,7 +254,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <a href="<?php echo URL ?>page/view/school-of-computing">
+                    <a href="<?php echo URL ?>page/view/youth-services-limited">
                         <div class="single-offer-box">
                             <div class="">
                                 <img style="width: 120px" src="<?php echo URL ?>assets/youth logo/youth-service-logo-01.png">
@@ -333,7 +333,7 @@
                     <div class="container">
                         <div class="section-title text-left">
                             <span class="sub-title">Discover Courses</span>
-                            <h2>Our Popular Online Courses</h2>
+                            <h2>Our Popular Courses</h2>
                             <a href="courses" class="default-btn"><i class="bx bx-show-alt icon-arrow before"></i><span class="label">All Courses</span><i class="bx bx-show-alt icon-arrow after"></i></a>
                         </div>
 
@@ -342,57 +342,59 @@
                             <?php
                             $COURSE = new Course(NULL);
                             foreach ($COURSE->all() as $key2 => $course) {
-                                ?>
-                                <div class="">
-                                    <a href="courses/view/<?php echo base64_encode('q=fromcourse%center=false' . '%course=' . $course['id']); ?>">
-                                        <div class="single-courses-item mb-30">
-                                            <div class="courses-image">
-                                                <div class="d-block">
-                                                    <img src="<?php echo URL ?>upload/courses/<?php echo $course['image_name'] ?>" alt="<?php echo $course['name'] ?>">
-                                                </div>
-                                                <div class="duration-label <?= ($course["duration_type"]) ? "full" : "part"; ?>">
-                                                    <?= ($course["duration_type"]) ? "Full Time" : "Part Time"; ?>
-                                                </div>
-                                                <!-- <?php if ($course["nvq"]) { ?>
-                                                        <div class="type-label <?= ($course["nvq"]) ? "nvq" : "non-nvq"; ?>">
-                                                    <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?>
-                                                        </div>
-                                                <?php } ?> -->
-                                            </div>
-                                            <div class="courses-content">
-                                                <?php if ($course["nvq"]) { ?>
-                                                    <div class="nvq-label">
+                                if ($key2 < 10) {
+                                    ?>
+                                    <div class="">
+                                        <a href="courses/view/<?php echo base64_encode('q=fromcourse%center=false' . '%course=' . $course['id']); ?>">
+                                            <div class="single-courses-item mb-30">
+                                                <div class="courses-image">
+                                                    <div class="d-block">
+                                                        <img src="<?php echo URL ?>upload/courses/<?php echo $course['image_name'] ?>" alt="<?php echo $course['name'] ?>">
+                                                    </div>
+                                                    <div class="duration-label <?= ($course["duration_type"]) ? "full" : "part"; ?>">
+                                                        <?= ($course["duration_type"]) ? "Full Time" : "Part Time"; ?>
+                                                    </div>
+                                                    <!-- <?php if ($course["nvq"]) { ?>
+                                                                <div class="type-label <?= ($course["nvq"]) ? "nvq" : "non-nvq"; ?>">
                                                         <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?>
-                                                    </div>
-                                                <?php } ?>
-                                                <div class="d-flex justify-content-between align-items-center"></div>
-                                                <h3 style="min-height: 66px;">
-                                                    <div class="d-inline-block">
-                                                        <?php echo $course['name'] ?>
-                                                    </div>
-                                                </h3>
-                                                <p> <?php echo substr($course['short_description'], 0, 90) ?>...</p>
+                                                                </div>
+                                                    <?php } ?> -->
+                                                </div>
+                                                <div class="courses-content">
+                                                    <?php if ($course["nvq"]) { ?>
+                                                        <div class="nvq-label">
+                                                            <?= ($course["nvq"]) ? "NVQ" : "NON NVQ"; ?>
+                                                        </div>
+                                                    <?php } ?>
+                                                    <div class="d-flex justify-content-between align-items-center"></div>
+                                                    <h3 style="min-height: 66px;">
+                                                        <div class="d-inline-block">
+                                                            <?php echo $course['name'] ?>
+                                                        </div>
+                                                    </h3>
+                                                    <p> <?php echo substr($course['short_description'], 0, 90) ?>...</p>
+                                                </div>
+                                                <div class="courses-box-footer">
+                                                    <ul>
+                                                        <li class="students-number">
+                                                            <i class='bx bx-user'></i> <?php echo $course['max_student'] ?> students
+                                                        </li>
+                                                        <li class="courses-lesson">
+                                                            <i class='bx bx-time'></i> <?php
+                                                            //echo CourseSubjects::getCount($course2['id'])['count'];
+                                                            echo $course["duration"]
+                                                            ?>
+                                                        </li>
+                                                        <li class="courses-price">
+                                                            View
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <div class="courses-box-footer">
-                                                <ul>
-                                                    <li class="students-number">
-                                                        <i class='bx bx-user'></i> <?php echo $course['max_student'] ?> students
-                                                    </li>
-                                                    <li class="courses-lesson">
-                                                        <i class='bx bx-time'></i> <?php
-                                                        //echo CourseSubjects::getCount($course2['id'])['count'];
-                                                        echo $course["duration"]
-                                                        ?>
-                                                    </li>
-                                                    <li class="courses-price">
-                                                        View
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <?php
+                                        </a>
+                                    </div>
+                                    <?php
+                                }
                             }
                             ?>
                         </div>
@@ -454,7 +456,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        
+
                         </div>
                     </div>
                     <div class="divider bg-f9f9f9"></div>
@@ -527,7 +529,7 @@
                                                             </span>
                                                         </div>
                                                         <h3><a href="<?php echo URL ?>events/view/<?php echo base64_encode($event['id']); ?>"><?php echo $event['title'] ?></a></h3>
-                                                      
+
                                                         <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
                                                     </div>
                                                 </div>
@@ -562,7 +564,7 @@
                                                                     ?></span>
                                                             </div>
                                                             <h3 href=""><?php echo $event['title'] ?></h3>
-                                                          
+
                                                             <span class="location"><i class="bx bx-map"></i><?php echo $event['location'] ?></span>
                                                         </div>
                                                     </a>
@@ -648,7 +650,7 @@
                                 <div class="become-instructor-partner-content">
                                     <h2>Youth Club Federation</h2>
                                     <p>Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
-                                    <a href="<?php echo URL ?>contact_us" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Apply Now</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
+                                    <a href="#" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Apply Now</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
                                 </div>
                             </div>
                         </div>

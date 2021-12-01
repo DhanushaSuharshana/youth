@@ -47,8 +47,8 @@ class courses extends Controller
 
     function new_application()
     {
-        $tokens = ["9he02kbf9093hkvsle9045kb", "83nch712dnfl3n48db4nd1h"];//web / app
-        if (in_array($_POST["token"], $tokens)) {
+        // $tokens = ["9he02kbf9093hkvsle9045kb", "83nch712dnfl3n48db4nd1h"];//web / app
+        // if (in_array($_POST["token"], $tokens)) {
             $data = [
                 'center_id' => [$_POST['center_id'], 'is_empty'],
                 'course_id' => [$_POST['course_id'], 'is_empty'],
@@ -110,10 +110,10 @@ class courses extends Controller
                     echo json_encode(['has_errors' => false, 'status' => false]);
                 }
             }
-        }else{
-            echo json_encode(['msg' =>"invalid token"]);
+        // }else{
+        //     echo json_encode(['msg' =>"invalid token"]);
 
-        }
+        // }
         
     }
 }

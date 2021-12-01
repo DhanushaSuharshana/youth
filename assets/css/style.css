@@ -2,6 +2,20 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;display=swap";
 @import "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap";
 
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* scrollbar-color: transparent transparent; */
+    user-select: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar {
+    display: none;
+    /* background: transparent; make scrollbar transparent */
+}
+
 body {
     background-color: #fff;
     padding: 0;
@@ -664,7 +678,7 @@ textarea.form-control {
     display: inline-block;
     color: #fff;
     font-size: 15px;
-/*    font-weight: 700;*/
+    /*    font-weight: 700;*/
 }
 
 .top-header-contact-info li a:hover,
@@ -913,14 +927,14 @@ padding-bottom: 10px;*/
     color: #252525;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    font-size: 13.5px;
+    font-size: 13px;
     font-weight: 500;
     padding-left: 0;
     padding-right: 0;
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-left: 13px;
-    margin-right: 13px;
+    margin-left: 11px;
+    margin-right: 11px;
 }
 
 .raque-nav .navbar .navbar-nav .nav-item a:hover,
@@ -10433,18 +10447,29 @@ blockquote::after,
 }
 
 .single-product-box .product-image .add-to-cart-btn {
+    /*    position: absolute;
+        bottom: -45px;
+        left: 0;
+        width: 100%;
+        background-color: #252525;
+        color: #fff;
+        padding: 18px 20px 13px;
+        text-transform: uppercase;
+        opacity: 0;
+        visibility: hidden;
+        display: block;
+        font-size: 15px;
+        font-weight: 600;*/
+
     position: absolute;
-    bottom: -45px;
+    bottom: 0px;
     left: 0;
     width: 100%;
     background-color: #252525;
     color: #fff;
     padding: 18px 20px 13px;
     text-transform: uppercase;
-    opacity: 0;
-    visibility: hidden;
     display: block;
-    font-size: 15px;
     font-weight: 600;
 }
 
@@ -17214,7 +17239,7 @@ blockquote::after,
 }
 .gym-main-banner.bg-3 {
     background-image: url(../img/youth3.jpg);
-    
+
 }
 
 .gym-main-banner.bg-1 {

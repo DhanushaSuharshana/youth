@@ -326,7 +326,7 @@ include_once(dirname(__FILE__) . '/auth.php');
             // ===========================================
             // INCLUDE THE PLUGIN
             // ===========================================
-
+paste_data_images: true,
             plugins: [
                 "advlist autolink lists link image charmap print preview anchor",
                 "searchreplace visualblocks code fullscreen",
@@ -336,7 +336,7 @@ include_once(dirname(__FILE__) . '/auth.php');
             // PUT PLUGIN'S BUTTON on the toolbar
             // ===========================================
 
-            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
+            toolbar: "insert file undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
             // ===========================================
             // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
             // ===========================================
@@ -344,6 +344,11 @@ include_once(dirname(__FILE__) . '/auth.php');
             relative_urls: false
 
         });
+        document.addEventListener('focusin', function (e) { 
+  if (e.target.closest('.mce-container') !== null) { 
+    e.stopImmediatePropagation();
+  } 
+});
     </script>
 
     <script src="ajax/js/pages.js" type="text/javascript"></script>
