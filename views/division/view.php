@@ -23,7 +23,11 @@
     <link rel="icon" type="image/png" href="<?php echo URL; ?>assets/img/pre-logo.png">
 </head>
 
-<body>
+
+<body class="background snowflake">
+
+    <span class="hidden" id="snowflake">&#10052;</span>
+
     <?php include './views/header.php'; ?>
 
     <div class="page-title-area item-bg2 jarallax" data-jarallax='{"speed": 0.3}'>
@@ -76,10 +80,10 @@
                             <li><strong>Statistics and Excel</strong> – Understand statistical testing and build a solid foundation. Modern software packages and programming languages are automating most of these activities, but this part of the course gives you something more valuable – critical thinking abilities;</li>
                             <li><strong>Database theory</strong> – Before you start using SQL, it is highly beneficial to learn about the underlying database theory and acquire an understanding of why databases are created and how they can help us manage data;</li>
                             <li><strong>SQL</strong> – when you can work with SQL, it means you don’t have to rely on others sending you data and executing queries for you. You can do that on your own. This allows you to be independent and dig deeper into the data to obtain the answers to questions that might improve the way your company does its business;</li>
-                           <li><strong>Tableau</strong> – one of the most powerful and intuitive data visualization tools available out there. Almost all large companies use such tools to enhance their BI capabilities. Tableau is the #1 best-in-class solution that helps you create powerful charts and dashboards;</li>
+                            <li><strong>Tableau</strong> – one of the most powerful and intuitive data visualization tools available out there. Almost all large companies use such tools to enhance their BI capabilities. Tableau is the #1 best-in-class solution that helps you create powerful charts and dashboards;</li>
                             <li>Learning a programming language is meaningless without putting it to use. That’s why we integrate SQL and Tableau, and perform several real-life Business Intelligence tasks;</li>
                         </ul>
-                       
+
 
 
                     </div>
@@ -112,7 +116,7 @@
                         <a href="#" class="d-inline-block">Purchase now</a>
                         <a href="#" class="d-inline-block">Request Information</a>
                     </div>
-                  
+
 
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-6">
@@ -126,7 +130,7 @@
                                     </div>
                                     <div class="col-lg-7 col-md-7 p-0">
                                         <div class="content">
-                                           
+
                                             <h3><a href="#">Music Conference</a></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
                                         </div>
@@ -145,14 +149,15 @@
                                     </div>
                                     <div class="col-lg-7 col-md-7 p-0">
                                         <div class="content">
-                                           
+
                                             <h3><a href="#">Music Conference</a></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div><div class="col-lg-12 col-md-12 col-sm-6">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-6">
                             <div class="events-box">
                                 <div class="row m-0">
                                     <div class="col-lg-5 col-md-5 p-0">
@@ -163,7 +168,7 @@
                                     </div>
                                     <div class="col-lg-7 col-md-7 p-0">
                                         <div class="content">
-                                           
+
                                             <h3><a href="#">Music Conference</a></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
                                         </div>
@@ -182,7 +187,7 @@
                                     </div>
                                     <div class="col-lg-7 col-md-7 p-0">
                                         <div class="content">
-                                           
+
                                             <h3><a href="#">Paper Plates Art</a></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
                                         </div>
@@ -201,7 +206,7 @@
                                     </div>
                                     <div class="col-lg-7 col-md-7 p-0">
                                         <div class="content">
-                                           
+
                                             <h3><a href="#">Imagination Classes</a></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
                                         </div>
@@ -220,7 +225,7 @@
                                     </div>
                                     <div class="col-lg-7 col-md-7 p-0">
                                         <div class="content">
-                                           
+
                                             <h3><a href="#">Number Matching</a></h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
                                         </div>
@@ -229,7 +234,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
 
                 </div>
 

@@ -22,7 +22,10 @@
         <title>Youth Council || Sri Lanka</title>
         <link rel="icon" type="image/png" href="assets/img/pre-logo.png">
     </head>
-    <body>
+
+    <body class="background snowflake">
+
+<span class="hidden" id="snowflake">&#10052;</span>
 
         <?php include './views/header.php'; ?>
 

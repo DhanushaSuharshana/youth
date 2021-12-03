@@ -23,7 +23,8 @@
         <link rel="icon" type="image/png" href="<?php echo URL ?>assetsimg/favicon.png">
         <script src="<?php echo URL ?>assets/js/lottie.js"></script>
     </head>
-    <body> 
+    <body class="background snowflake">
+    <span class="hidden" id="snowflake">&#10052;</span>
 
         <?php include './views/header.php'; ?>
 
