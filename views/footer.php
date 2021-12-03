@@ -84,3 +84,6 @@
 <script>
     var siteUrl = '<?php echo URL; ?>';
 </script>
+
+
+<script src="<?php echo URL ?>public/snow/js/snow.js"></script>

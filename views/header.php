@@ -33,6 +33,7 @@
         background-color: #ff1949;
         text-align: center;
     }
+
     .type-label {
         position: absolute;
         top: 10px;
@@ -48,12 +49,15 @@
     .full {
         background-color: #168b69;
     }
+
     .nvq {
-        background-color: #4931f0; 
+        background-color: #4931f0;
         /* 09b91c */
     }
+
     .non-nvq {
-        background-color: #4931f0;;
+        background-color: #4931f0;
+        ;
     }
 
     /* LIGHT FOOTER */
@@ -108,26 +112,26 @@
     }
 </style>
 <style>
-<?php
-if (isset($this->colors)) {
-    foreach ($this->colors as $key => $color) {
-        ?>
+    <?php
+    if (isset($this->colors)) {
+        foreach ($this->colors as $key => $color) {
+    ?>
 
-            /* <?php echo $key ?> */
-            .<?php echo $key ?> .single-categories-courses-box {
-                background-color: <?php echo $color['color']; ?> !important;
-            }
+    /* <?php echo $key ?> */
+    .<?php echo $key ?>.single-categories-courses-box {
+        background-color: <?php echo $color['color']; ?> !important;
+    }
 
-            .<?php echo $key ?> .single-categories-courses-box:hover .icon,
-            .<?php echo $key ?> .single-categories-courses-box:focus .icon {
-                background-color: #fff !important;
-                border-color: <?php echo $color['color']; ?> !important;
-                color: <?php echo $color['color']; ?> !important;
-            }
+    .<?php echo $key ?>.single-categories-courses-box:hover .icon,
+    .<?php echo $key ?>.single-categories-courses-box:focus .icon {
+        background-color: #fff !important;
+        border-color: <?php echo $color['color']; ?> !important;
+        color: <?php echo $color['color']; ?> !important;
+    }
 
     <?php }
-}
-?>.table-fit {
+    }
+    ?>.table-fit {
         width: 100% !important;
         table-layout: fixed !important;
     }
@@ -250,9 +254,9 @@ if (isset($this->colors)) {
                                     foreach (Pages::getAll(PageType::getByTitle("divisions")["id"]) as $key => $page) {
                                         // var_dump($key);
                                         if ($key < 6) {
-                                            ?>
+                                    ?>
                                             <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                        <?php }
+                                    <?php }
                                     }
                                     ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/divisions">Show All Divisions</a> </li>
@@ -285,9 +289,9 @@ if (isset($this->colors)) {
                                     <?php
                                     foreach (Pages::getAll(PageType::getByTitle("services")["id"]) as $key => $page) {
                                         if ($key < 6) {
-                                            ?>
+                                    ?>
                                             <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                        <?php }
+                                    <?php }
                                     }
                                     ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/services">Show All Services</a> </li>
@@ -325,9 +329,9 @@ if (isset($this->colors)) {
                                     <?php
                                     foreach (Pages::getAll(PageType::getByTitle("divisions")["id"]) as $key => $page) {
                                         if ($key < 6) {
-                                            ?>
+                                    ?>
                                             <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-                                        <?php }
+                                    <?php }
                                     }
                                     ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/divisions">Show All Divisions</a> </li>
@@ -360,11 +364,11 @@ if (isset($this->colors)) {
                                     <?php
                                     foreach (Pages::getAll(PageType::getByTitle("services")["id"]) as $key => $page) {
                                         if ($key < 6) {
-                                            ?>
+                                    ?>
                                             <li class="nav-item"><a href="<?php echo URL ?>page/view/<?php echo $page['url'] ?>"><?php echo $page['title'] ?></a> </li>
-    <?php }
-}
-?>
+                                    <?php }
+                                    }
+                                    ?>
                                     <li class="nav-item"><a href="<?php echo URL ?>page/list/services">Show All Services</a> </li>
                                 </ul>
                             </li>
@@ -378,3 +382,6 @@ if (isset($this->colors)) {
         </div>
     </div>
 </header>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+<link rel="stylesheet" href="<?php echo URL ?>public/snow/css/snow.css" />

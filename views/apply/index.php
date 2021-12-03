@@ -23,7 +23,10 @@
         <link rel="icon" type="image/png" href="assets/img/favicon.png">
     </head>
 
-    <body>
+
+    <body class="background snowflake">
+
+<span class="hidden" id="snowflake">&#10052;</span>
 
         <?php include './views/header.php'; ?>
 
