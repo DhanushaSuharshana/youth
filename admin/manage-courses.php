@@ -103,7 +103,6 @@ if (isset($_GET["id"])) {
                                                         } else {
                                                         ?>
                                                             <option value="<?php echo $course_type['id'] ?>"> <?php echo $course_type['title'] ?></option>
-
                                                     <?php
                                                         }
                                                     }

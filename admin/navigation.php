@@ -2,7 +2,7 @@
 
     <!-- LOGO -->
     <div class="navbar-brand-box">
-        <a href="index.html" class="logo logo-dark">
+        <a href="index.php" class="logo logo-dark">
             <span class="logo-sm">
                 <img src="assets/images/logo-sm.png" alt="" width="70%">
             </span>
@@ -31,13 +31,14 @@
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
-                <li class="menu-title">Essentials</li>
-                <li>
-                    <a href="create-users.php">
-                        <i class="bx bx-user"></i>
-                        <span>Manage CMS Users</span>
-                    </a>
-                </li>
+                <!--                <li class="menu-title">Essentials</li>
+                                <li>
+                                    <a href="create-users.php">
+                                        <i class="bx bx-user"></i>
+                                        <span>Manage CMS Users</span>
+                                    </a>
+                                </li>-->
+
                 <!--                <li>
                                     <a href="manage-district.php">
                                         <i class="bx bx-map"></i>
@@ -53,11 +54,45 @@
                 </li>
 
                 <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-chart "></i>
+                        <span>Centeres</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="manage-center-type.php">Manage Centers Type </a></li>
+                        <li><a href="manage-district.php">Districts</a></li>
+                        <li><a href="manage-center.php">Manage Center</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-chart "></i>
+                        <span>Courses</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="manage-course-type.php">Manage Courses Type </a></li>
+                        <li><a href="manage-courses.php">Manage Courses </a></li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-chart "></i>
+                        <span>Applications</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="manage-applications.php">Manage Applications</a></li>
+                    </ul>
+                </li>
+                <li>
                     <a href="manage-leaders.php" class="waves-effect">
                         <i class="bx bx-user"></i>
                         <span>Manage Leaders</span>
                     </a>
                 </li>
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-news"></i>

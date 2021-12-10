@@ -1,7 +1,7 @@
-<!doctype html>
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 ?>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />

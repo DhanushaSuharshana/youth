@@ -40,9 +40,8 @@ $(document).ready(function () {
                 processData: false,
                 dataType: "JSON",
                 success: function (result) {
-                  
-                    if (result.status == 'success') {
 
+                    if (result.status == 'success') {
                         swal({
                             title: "success!",
                             text: "Your login has success..!!",
@@ -51,7 +50,7 @@ $(document).ready(function () {
                             showConfirmButton: false
                         });
                         window.setTimeout(function () {
-                            window.location = 'index.php?message=5';
+                            window.location = 'index.php';
                         }, 2000);
 
                     } else if (result.status === 'error') {
