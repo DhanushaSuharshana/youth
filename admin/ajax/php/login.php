@@ -1,17 +1,17 @@
 <?php
 
-include '../../../class/include.php';
-  
+include_once '../../../class/User.php';
+include_once '../../../class/Database.php';
+
 $USER = new User(NULL);
 
 $username = $_POST['username'];
 $password = $_POST['password'];
- 
 
-if ($USER->login($username, $password)) {
-    $result = [
-        "status" => 'success'
-    ];
+$result = $USER->login($username, $password);
+
+if (!empty($result)) {
+    $result = ["status" => 'success'];
     echo json_encode($result);
     exit();
 } else {

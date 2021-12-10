@@ -1,11 +1,9 @@
-<!doctype html>
-<?php 
-// ini_set('display_errors', '1');
-// ini_set('display_startup_errors', '1');
-// error_reporting(E_ALL);
+<?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
+
 ?>
+<!doctype html>
 <html lang="en">
 
     <head>
@@ -15,7 +13,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="NYSC" name="author" />
-   
+
         <!-- Bootstrap Css -->
         <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
@@ -30,7 +28,9 @@ include_once(dirname(__FILE__) . '/auth.php');
         <!-- Begin page -->
         <div  >
 
-            <?php include './top-header.php'; ?>
+            <?php
+            include './top-header.php';
+            ?>
 
             <!-- ========== Left Sidebar Start ========== -->
             <?php include './navigation.php'; ?>

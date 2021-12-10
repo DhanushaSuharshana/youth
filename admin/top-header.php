@@ -3,7 +3,7 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark">
+                <a href="" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="assets/images/logo-sm.png" alt="" height="22">
                     </span>
@@ -101,7 +101,7 @@
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
                     <a class="dropdown-item" href="#"><i class="bx bxs-user-circle  font-size-18 align-middle text-muted me-1"></i> <span class="align-middle">View Profile</span></a>
-                  <a class="dropdown-item" href="#"><i class="bx bx-power-off  font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Sign out</span></a>
+                    <a class="dropdown-item" href="log-out.php"><i class="bx bx-power-off  font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Sign out</span></a>
                 </div>
             </div>
 

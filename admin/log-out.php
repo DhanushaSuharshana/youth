@@ -1,10 +1,11 @@
 <?php
+
 include '../class/include.php';
 
 $USER = new User(NULL);
-
-if ($USER->logOut()) {
-    header('Location:login.php');
+$result = $USER->logOut();
+if ($result) {
+      redirect('login.php'); 
 } else {
     header('Location: ./?message=2');
 }
