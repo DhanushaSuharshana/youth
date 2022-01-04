@@ -63,7 +63,7 @@
                             <span>Manage CMS Users</span>
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
-                            <li><a href="manage-center-type.php">Manage User Type </a></li>
+                            <li><a href="manage-user-type.php">Manage User Type </a></li>
                             <li><a href="create-users.php">Manage Users</a></li>
                         </ul>
 
