@@ -13,18 +13,19 @@ class User {
     public $email;
     public $image_name;
     public $createdAt;
+    public $type;
     public $isActive;
     public $authToken;
     public $lastLogin;
     public $username;
     public $resetCode;
-            private$password;
+    private $password;
 
     public function __construct($id) {
 
         if ($id) {
 
-            $query = "SELECT `id`,`name`,`image_name`,`email`,`createdAt`,`isActive`,`authToken`,`lastLogin`,`username`,`resetcode` FROM `user` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`name`,`image_name`,`email`,`createdAt`,`type`,`isActive`,`authToken`,`lastLogin`,`username`,`resetcode` FROM `user` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -34,6 +35,7 @@ class User {
             $this->name = $result['name'];
             $this->email = $result['email'];
             $this->createdAt = $result['createdAt'];
+            $this->type = $result['type'];
             $this->isActive = $result['isActive'];
             $this->authToken = $result['authToken'];
             $this->lastLogin = $result['lastLogin'];
@@ -66,11 +68,9 @@ class User {
 
     public function login($username, $password) {
 
-
-
         $enPass = md5($password);
 
-        $query = "SELECT `id`,`name`,`email`,`createdAt`,`isActive`,`lastLogin`,`username` FROM `user` WHERE `username`= '" . $username . "' AND `password`= '" . $enPass . "'";
+        $query = "SELECT `id`,`name`,`email`,`createdAt`,`type`,`isActive`,`lastLogin`,`username` FROM `user` WHERE `username`= '" . $username . "' AND `password`= '" . $enPass . "'";
 
         $db = new Database();
 
@@ -158,7 +158,6 @@ class User {
 
 
         $query = "SELECT `id` FROM `user` WHERE `id`= '" . $id . "' AND `authToken`= '" . $authToken . "'";
-        
 
         $db = new Database();
 
@@ -193,6 +192,8 @@ class User {
         unset($_SESSION["email"]);
 
         unset($_SESSION["isActive"]);
+
+        unset($_SESSION["type"]);
 
         unset($_SESSION["authToken"]);
 
@@ -243,13 +244,14 @@ class User {
 
         $_SESSION["isActive"] = $user['isActive'];
 
+        $_SESSION["type"] = $user['type'];
+
         $_SESSION["authToken"] = $user['authToken'];
 
         $_SESSION["lastLogin"] = $user['lastLogin'];
 
         $_SESSION["username"] = $user['username'];
     }
-    
 
     private function setAuthToken($id) {
 
@@ -308,8 +310,6 @@ class User {
     }
 
     public function GenarateCode($email) {
-
-
 
         $rand = rand(10000, 99999);
 

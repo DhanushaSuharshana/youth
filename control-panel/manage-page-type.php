@@ -1,14 +1,15 @@
-<!doctype html>
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 ?>
+<!doctype html>
+
 <html lang="en">
 
     <head>
 
         <meta charset="utf-8" />
-        <title>News Type | Youth Service LTD </title>
+        <title>Page Type | Youth Service LTD </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -60,7 +61,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                                            <li class="breadcrumb-item active">News Type</li>
+                                            <li class="breadcrumb-item active">Page Type</li>
                                         </ol>
                                     </div> 
                                 </div>
@@ -71,12 +72,12 @@ include_once(dirname(__FILE__) . '/auth.php');
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body"> 
-                                        <h4 class="card-title">Create News Type.</h4>  
+                                        <h4 class="card-title">Create Page Type.</h4>  
                                         <form id="form-data">
                                             <div class="mb-3 row">
-                                                <label  class="col-md-2 col-form-label">News Type Title</label>
+                                                <label  class="col-md-2 col-form-label">Page Type Title</label>
                                                 <div class="col-md-10">
-                                                    <input class="form-control" type="text" id="title" name="title" placeholder="Enter News Type Title">
+                                                    <input class="form-control" type="text" id="title" name="title" placeholder="Enter Page Type Title">
                                                 </div>
                                             </div>
 
@@ -96,13 +97,13 @@ include_once(dirname(__FILE__) . '/auth.php');
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body"> 
-                                        <h4 class="card-title">Manage News Type</h4> 
+                                        <h4 class="card-title">Manage Page Type</h4> 
 
                                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                             <thead>
                                                 <tr>
                                                     <th>#id</th> 
-                                                    <th>News Type</th>
+                                                    <th>Page Type</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -110,7 +111,7 @@ include_once(dirname(__FILE__) . '/auth.php');
 
                                             <tbody>
                                                 <?php
-                                                $NEWS_TYPE = new NewsType(NULL);
+                                                $NEWS_TYPE = new PageType(NULL);
                                                 foreach ($NEWS_TYPE->all() as $key => $news_type) {
                                                     $key++;
                                                     ?>
@@ -154,9 +155,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                             <form method="POST" id="form-data-<?php echo $news_type['id']; ?>">
                                 <div class="card-body">   
                                     <div class="mb-3 row">
-                                        <label for="example-text-input" class="col-md-2 col-form-label">News Type</label>
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Page Type</label>
                                         <div class="col-md-10">
-                                            <input class="form-control title" type="text"    name="title" placeholder="Enter News Title" value="<?php echo $news_type['title'] ?>">
+                                            <input class="form-control title" type="text"    name="title" placeholder="Enter Page Title" value="<?php echo $news_type['title'] ?>">
                                         </div>
                                     </div> 
                                     <div class="row">
@@ -206,7 +207,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
         <!-- Datatable init js -->
         <script src="assets/js/pages/datatables.init.js"></script>
-        <script src="ajax/js/news-type.js" type="text/javascript"></script>
+        <script src="ajax/js/page-type.js" type="text/javascript"></script>
         <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
         <!-- App js -->
         <script src="assets/js/app.js"></script>

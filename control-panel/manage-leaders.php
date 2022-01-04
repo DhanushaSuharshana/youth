@@ -1,8 +1,9 @@
-<!doctype html>
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 ?>
+<!doctype html>
+
 <html lang="en">
     <head>
         <meta charset="utf-8" />

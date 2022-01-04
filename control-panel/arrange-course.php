@@ -1,14 +1,15 @@
-<!doctype html>
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 ?>
+<!doctype html>
+
 <html lang="en">
 
     <head>
 
         <meta charset="utf-8" />
-        <title>Arrange Events | Youth Service LTD</title>
+        <title>Arrange Course | Youth Service LTD</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -66,7 +67,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                            <li class="breadcrumb-item active">Manage Event</li>
+                                            <li class="breadcrumb-item active">Manage Course</li>
                                         </ol>
                                     </div>
                                 </div>
@@ -76,18 +77,19 @@ include_once(dirname(__FILE__) . '/auth.php');
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title">Arrange Events</h4>
+                                        <h4 class="card-title">Arrange Course</h4>
                                         <form id="form-data"> 
                                             <ul class="row mt-3 arrange-container" id="sortable" style="list-style-type: none; ">
                                                 <?php
-                                                $EVENT = new Event(NULL);
-                                                foreach ($EVENT->all() as $key => $event) {
+                                                $COURSE = new Course(NULL);
+                                                foreach ($COURSE->all() as $key => $course) {
                                                     ?> 
                                                     <li class="col-md-6 col-xl-3"  >
                                                         <span class="number-class">(<?php echo $key + 1; ?>)</span> 
+                                                        <span class="number-class"><?php echo $course['name'] ?></span> 
                                                         <div class="card">
-                                                            <img class="card-img-top img-fluid" src="../upload/event/<?php echo $event['image_name'] ?>" alt="<?php echo $event['title'] ?>">
-                                                            <input type="hidden" name="sort[]"  value="<?php echo $event["id"]; ?>" class="sort-input"/> 
+                                                            <img class="card-img-top img-fluid" src="../upload/courses/<?php echo $course['image_name'] ?>" alt="<?php echo $course['title'] ?>">
+                                                            <input type="hidden" name="sort[]"  value="<?php echo $course["id"]; ?>" class="sort-input"/> 
                                                         </div>
 
                                                     </li> 
@@ -127,7 +129,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
         <script src="plugin/jquery-ui/jquery-ui.js" type="text/javascript"></script>
         <!-- js -->
-        <script src="ajax/js/event.js" type="text/javascript"></script> 
+        <script src="ajax/js/course.js" type="text/javascript"></script> 
         <script>
             $(function () {
                 $("#sortable").sortable();

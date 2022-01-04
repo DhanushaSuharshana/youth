@@ -1,17 +1,17 @@
-<!doctype html>
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 ?>
+<!doctype html>
 <html lang="en">
 
     <head>
 
         <meta charset="utf-8" />
-        <title>Create District | Sri Lanka Youth Services</title>
+        <title>Center Type | Youth Service LTD </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-        <meta content="NYSC" name="author" />
+        <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
@@ -30,12 +30,11 @@ include_once(dirname(__FILE__) . '/auth.php');
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/preloader.css" rel="stylesheet" type="text/css"/>
+
     </head>
 
 
-    <body class="someBlock">
-
-        <!-- <body data-layout="horizontal" data-topbar="colored"> -->
+    <body class="someBlock"> 
 
         <!-- Begin page -->
         <div id="layout-wrapper">
@@ -52,23 +51,18 @@ include_once(dirname(__FILE__) . '/auth.php');
             <!-- Start right Content here -->
             <!-- ============================================================== -->
             <div class="main-content">
-
                 <div class="page-content">
-                    <div class="container-fluid">
-
-                        <!-- start page title -->
+                    <div class="container-fluid"> 
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0">District</h4>
-
+                                    <h4 class="mb-0">Dashboard</h4> 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">District</a></li>
-                                            <li class="breadcrumb-item active">Manage Districts</li>
+                                            <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
+                                            <li class="breadcrumb-item active">Center Type</li>
                                         </ol>
-                                    </div>
-
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -76,109 +70,110 @@ include_once(dirname(__FILE__) . '/auth.php');
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <div class="card-body">
-
-                                        <h4 class="card-title">Add Districts</h4> 
-                                        <form method="POST" id="form-data">
+                                    <div class="card-body"> 
+                                        <h4 class="card-title">Create Center Type.</h4>  
+                                        <form id="form-data">
                                             <div class="mb-3 row">
-                                                <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
+                                                <label  class="col-md-2 col-form-label">Center Type Title</label>
                                                 <div class="col-md-10">
-                                                    <input class="form-control" type="text" id="name" name="name" placeholder="Enter District Name">
+                                                    <input class="form-control" type="text" id="title" name="title" placeholder="Enter Center Type Title">
                                                 </div>
                                             </div>
+
                                             <div class="row">
                                                 <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
-                                                    <button class="btn btn-primary " id="create" name="create" type="submit" >Add District</button>
+                                                    <button class="btn btn-primary " type="submit" id="create">Create</button> 
+                                                    <input type="hidden" name="create">
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
-                            </div> <!-- end col -->
+                            </div>  
                         </div>
 
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <div class="card-body">
-
-                                        <h4 class="card-title">Manage Districts</h4>
-
+                                    <div class="card-body"> 
+                                        <h4 class="card-title">Manage Center Type</h4> 
 
                                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
+                                                    <th>#id</th> 
+                                                    <th>Center Type</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
+
+
                                             <tbody>
                                                 <?php
-                                                $DISTRICT_OBJ = new Districts(NULL);
-                                                $DISTRICT = $DISTRICT_OBJ->all();
-                                                foreach ($DISTRICT as $district) {
+                                                $CENTER_TYPE = new CenterType(NULL);
+                                                foreach ($CENTER_TYPE->all() as $key => $center_type) {
+                                                    $key++;
                                                     ?>
-                                                <tr id="div<?php echo $district['id'];?>">
-                                                        <td><?php echo $district['name']; ?></td>
-                                                        <td>  <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $district['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
-                                                            <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $district['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
+                                                    <tr id="div<?php echo $center_type['id'] ?>">
+                                                        <td><?php echo $key ?></td>
+                                                        <td> <?php echo $center_type['title'] ?></td> 
+                                                        <td> 
+                                                            <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $center_type['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div>  
+                                                            <!-- <a href="manage-courses.php?id=<?php echo $center_type['id'] ?>"><div class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-address-card p-1"></i></div></a>   -->
+                                                            <?php
+                                                            if ($_SESSION['type'] == 1) {
+                                                                ?>
+                                                            |
+                                                                <a href="#">
+                                                                    <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $center_type['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
+                                                                </a>
+                                                                <?php
+                                                            }
+                                                            ?>
                                                         </td>
                                                     </tr>
-                                                    <?php
-                                                }
-                                                ?>
+                                                <?php } ?>
                                             </tbody>
-                                        </table>
-
+                                        </table> 
                                     </div>
                                 </div>
-                            </div> <!-- end col -->
-                        </div> <!-- end row -->
-
-
-
-                    </div> <!-- container-fluid -->
-                </div>
-                <!-- End Page-content -->
-
-
+                            </div>  
+                        </div> 
+                    </div>  
+                </div>  
                 <?php include './footer.php'; ?>
-            </div>
-            <!-- end main content-->
+            </div>  
+        </div> 
 
-        </div>
-        <!-- END layout-wrapper -->
-  <?php
-        foreach ($DISTRICT as $key => $district) {
+        <?php
+        foreach ($CENTER_TYPE->all() as $key => $center_type) {
             $key++;
             ?>
             <!--  Large modal example -->
-            <div class="modal fade bs-example-modal-lg-<?php echo $district['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade bs-example-modal-lg-<?php echo $center_type['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Edit Details : <?php echo $district['name']; ?></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            </button>
+                            <h5 class="modal-title" id="myLargeModalLabel">Edit Details : <?php echo $center_type['title']; ?></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">    </button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST" id="form-data-<?php echo $district['id']; ?>">
-                                <div class="card-body">
+                            <form method="POST" id="form-data-<?php echo $center_type['id']; ?>">
+                                <div class="card-body">   
                                     <div class="mb-3 row">
-                                        <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Center Type</label>
                                         <div class="col-md-10">
-                                            <input class="form-control name" name="name" type="text" value="<?php echo $district['name']; ?>">
+                                            <input class="form-control title" type="text"    name="title" placeholder="Enter Center Title" value="<?php echo $center_type['title'] ?>">
                                         </div>
-                                    </div>
-                                  
+                                    </div> 
                                     <div class="row">
                                         <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
-                                            <input class="form-control id" type="hidden" value="<?php echo $district['id']; ?>">
-                                            <button class="btn btn-primary edit-data" data-id="<?php echo $district['id']; ?>" id="update" name="update" type="submit">Save Now</button>
+                                            <input class="form-control id" type="hidden" value="<?php echo $center_type['id']; ?>">
+                                            <button class="btn btn-primary edit-data" dataId="<?php echo $center_type['id']; ?>"  type="submit">Update</button>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </form>  
                         </div>
                     </div><!-- /.modal-content -->
                 </div><!-- /.modal-dialog -->
@@ -186,7 +181,6 @@ include_once(dirname(__FILE__) . '/auth.php');
             <?php
         }
         ?>
-
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
@@ -216,15 +210,13 @@ include_once(dirname(__FILE__) . '/auth.php');
         <!-- Responsive examples -->
         <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
         <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-
+        <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
         <!-- Datatable init js -->
         <script src="assets/js/pages/datatables.init.js"></script>
-
-        <!-- App js -->
-        <!-- App js -->
+        <script src="ajax/js/center-type.js" type="text/javascript"></script>
         <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
+        <!-- App js -->
         <script src="assets/js/app.js"></script>
-        <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-        <script src="ajax/js/district.js" type="text/javascript"></script>
+
     </body>
 </html>
