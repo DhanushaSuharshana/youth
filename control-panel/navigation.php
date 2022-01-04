@@ -45,13 +45,34 @@
                                         <span>Manage District</span>
                                     </a>
                                 </li>-->
-                <li class="menu-title">Website Content</li>
                 <li>
                     <a href="index.php">
                         <i class="bx bx-home "></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
+                <?php
+                if ($_SESSION['type'] == 1) {
+                    ?>
+
+                    <li class="menu-title">Essentials</li>
+                    <li>
+
+                        <a href="javascript: void(0);" class="has-arrow waves-effect">
+                            <i class="bx bx-user"></i>
+                            <span>Manage CMS Users</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="manage-center-type.php">Manage User Type </a></li>
+                            <li><a href="create-users.php">Manage Users</a></li>
+                        </ul>
+
+                    </li>
+                    <?php
+                }
+                ?>
+                <li class="menu-title">Website Content</li>
+
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -89,6 +110,7 @@
                 <?php
                 if ($_SESSION['type'] == 1) {
                     ?>
+
                     <li>
                         <a href="manage-leaders.php" class="waves-effect">
                             <i class="bx bx-user"></i>
