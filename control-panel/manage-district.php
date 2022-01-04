@@ -1,17 +1,18 @@
-<!doctype html>
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 ?>
+<!doctype html>
+
 <html lang="en">
 
     <head>
 
         <meta charset="utf-8" />
-        <title>Page Type | Youth Service LTD </title>
+        <title>Create District | Sri Lanka Youth Services</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-        <meta content="Themesbrand" name="author" />
+        <meta content="NYSC" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
@@ -30,11 +31,12 @@ include_once(dirname(__FILE__) . '/auth.php');
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/preloader.css" rel="stylesheet" type="text/css"/>
-
     </head>
 
 
-    <body class="someBlock"> 
+    <body class="someBlock">
+
+        <!-- <body data-layout="horizontal" data-topbar="colored"> -->
 
         <!-- Begin page -->
         <div id="layout-wrapper">
@@ -51,18 +53,23 @@ include_once(dirname(__FILE__) . '/auth.php');
             <!-- Start right Content here -->
             <!-- ============================================================== -->
             <div class="main-content">
+
                 <div class="page-content">
-                    <div class="container-fluid"> 
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0">Dashboard</h4> 
+                                    <h4 class="mb-0">District</h4>
+
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                                            <li class="breadcrumb-item active">Page Type</li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">District</a></li>
+                                            <li class="breadcrumb-item active">Manage Districts</li>
                                         </ol>
-                                    </div> 
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -70,103 +77,115 @@ include_once(dirname(__FILE__) . '/auth.php');
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <div class="card-body"> 
-                                        <h4 class="card-title">Create Page Type.</h4>  
-                                        <form id="form-data">
+                                    <div class="card-body">
+
+                                        <h4 class="card-title">Add Districts</h4> 
+                                        <form method="POST" id="form-data">
                                             <div class="mb-3 row">
-                                                <label  class="col-md-2 col-form-label">Page Type Title</label>
+                                                <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
                                                 <div class="col-md-10">
-                                                    <input class="form-control" type="text" id="title" name="title" placeholder="Enter Page Type Title">
+                                                    <input class="form-control" type="text" id="name" name="name" placeholder="Enter District Name">
                                                 </div>
                                             </div>
-
                                             <div class="row">
                                                 <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
-                                                    <button class="btn btn-primary " type="submit" id="create">Create</button> 
-                                                    <input type="hidden" name="create">
+                                                    <button class="btn btn-primary " id="create" name="create" type="submit" >Add District</button>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
-                            </div>  
+                            </div> <!-- end col -->
                         </div>
 
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <div class="card-body"> 
-                                        <h4 class="card-title">Manage Page Type</h4> 
+                                    <div class="card-body">
+
+                                        <h4 class="card-title">Manage Districts</h4>
+
 
                                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                             <thead>
                                                 <tr>
-                                                    <th>#id</th> 
-                                                    <th>Page Type</th>
+                                                    <th>Name</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
-
-
                                             <tbody>
                                                 <?php
-                                                $NEWS_TYPE = new PageType(NULL);
-                                                foreach ($NEWS_TYPE->all() as $key => $news_type) {
-                                                    $key++;
+                                                $DISTRICT_OBJ = new Districts(NULL);
+                                                $DISTRICT = $DISTRICT_OBJ->all();
+                                                foreach ($DISTRICT as $district) {
                                                     ?>
-                                                    <tr id="div<?php echo $news_type['id'] ?>">
-                                                        <td><?php echo $key ?></td>
-                                                        <td> <?php echo $news_type['title'] ?></td> 
-                                                        <td> 
-                                                            <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $news_type['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
-                                                            <!-- <a href="manage-courses.php?id=<?php echo $news_type['id'] ?>"><div class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-address-card p-1"></i></div></a>   -->
-                                                            <a href="#">
-                                                                <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $news_type['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
-                                                            </a>
+                                                    <tr id="div<?php echo $district['id']; ?>">
+                                                        <td><?php echo $district['name']; ?></td>
+                                                        <td>  <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $district['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div>  
+                                                            <?php
+                                                            if ($_SESSION['type'] == 1) {
+                                                                ?>|
+                                                                <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $district['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
+                                                                <?php
+                                                            }
+                                                            ?>
                                                         </td>
                                                     </tr>
-                                                <?php } ?>
+                                                    <?php
+                                                }
+                                                ?>
                                             </tbody>
-                                        </table> 
+                                        </table>
+
                                     </div>
                                 </div>
-                            </div>  
-                        </div> 
-                    </div>  
-                </div>  
-                <?php include './footer.php'; ?>
-            </div>  
-        </div> 
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
 
+
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+
+                <?php include './footer.php'; ?>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
         <?php
-        foreach ($NEWS_TYPE->all() as $key => $news_type) {
+        foreach ($DISTRICT as $key => $district) {
             $key++;
             ?>
             <!--  Large modal example -->
-            <div class="modal fade bs-example-modal-lg-<?php echo $news_type['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade bs-example-modal-lg-<?php echo $district['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Edit Details : <?php echo $news_type['title']; ?></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">    </button>
+                            <h5 class="modal-title" id="myLargeModalLabel">Edit Details : <?php echo $district['name']; ?></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            </button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST" id="form-data-<?php echo $news_type['id']; ?>">
-                                <div class="card-body">   
+                            <form method="POST" id="form-data-<?php echo $district['id']; ?>">
+                                <div class="card-body">
                                     <div class="mb-3 row">
-                                        <label for="example-text-input" class="col-md-2 col-form-label">Page Type</label>
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
                                         <div class="col-md-10">
-                                            <input class="form-control title" type="text"    name="title" placeholder="Enter Page Title" value="<?php echo $news_type['title'] ?>">
+                                            <input class="form-control name" name="name" type="text" value="<?php echo $district['name']; ?>">
                                         </div>
-                                    </div> 
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
-                                            <input class="form-control id" type="hidden" value="<?php echo $news_type['id']; ?>">
-                                            <button class="btn btn-primary edit-data" dataId="<?php echo $news_type['id']; ?>"  type="submit">Update</button>
+                                            <input class="form-control id" type="hidden" value="<?php echo $district['id']; ?>">
+                                            <button class="btn btn-primary edit-data" data-id="<?php echo $district['id']; ?>" id="update" name="update" type="submit">Save Now</button>
                                         </div>
                                     </div>
                                 </div>
-                            </form>  
+                            </form>
                         </div>
                     </div><!-- /.modal-content -->
                 </div><!-- /.modal-dialog -->
@@ -174,6 +193,7 @@ include_once(dirname(__FILE__) . '/auth.php');
             <?php
         }
         ?>
+
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
@@ -203,13 +223,15 @@ include_once(dirname(__FILE__) . '/auth.php');
         <!-- Responsive examples -->
         <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
         <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-        <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+
         <!-- Datatable init js -->
         <script src="assets/js/pages/datatables.init.js"></script>
-        <script src="ajax/js/page-type.js" type="text/javascript"></script>
-        <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
-        <!-- App js -->
-        <script src="assets/js/app.js"></script>
 
+        <!-- App js -->
+        <!-- App js -->
+        <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <script src="ajax/js/district.js" type="text/javascript"></script>
     </body>
 </html>

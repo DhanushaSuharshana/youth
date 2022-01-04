@@ -1,11 +1,13 @@
 <?php
+
 /**
  * Description of User
  *
  * @author Suharshana DsW
  * @web www.nysc.lk
  */
-class ApplyOnline {
+class ApplyOnline
+{
 
     public $id;
     public $center_id;
@@ -27,7 +29,8 @@ class ApplyOnline {
     public $al;
     public $inserted;
 
-    public function __construct($id) {
+    public function __construct($id)
+    {
 
         if ($id) {
 
@@ -61,25 +64,31 @@ class ApplyOnline {
         }
     }
 
-    public function create() {
-        $query = "INSERT INTO `apply` (`center_id`, `course_id`, `first_name`, `last_name`, `full_name`, `nic`, `gender`, `dob`, `address_line_1`, `address_line_2`, `address_line_3`, `district`, `telephone_1`, `telephone_2`, `email`, `ol`, `al`) VALUES  ('"
-                . $this->center_id . "','"
-                . $this->course_id . "','"
-                . $this->first_name . "', '"
-                . $this->last_name . "', '"
-                . $this->full_name . "', '"
-                . $this->nic . "', '"
-                . $this->gender . "', '"
-                . $this->dob . "', '"
-                . $this->address_line_1 . "', '"
-                . $this->address_line_2 . "', '"
-                . $this->address_line_3 . "', '"
-                . $this->district . "', '"
-                . $this->telephone_1 . "', '"
-                . $this->telephone_2 . "', '"
-                . $this->email . "', '"
-                . $this->ol . "', '"
-                . $this->al . "')";
+    public function create()
+    {
+
+        date_default_timezone_set('Asia/Colombo');
+        $createdAt = date('Y-m-d H:i:s');
+
+        $query = "INSERT INTO `apply` (`center_id`, `course_id`, `first_name`, `last_name`, `full_name`, `nic`, `gender`, `dob`, `address_line_1`, `address_line_2`, `address_line_3`, `district`, `telephone_1`, `telephone_2`, `email`, `ol`, `al`,`inserted`) VALUES  ('"
+            . $this->center_id . "','"
+            . $this->course_id . "','"
+            . $this->first_name . "', '"
+            . $this->last_name . "', '"
+            . $this->full_name . "', '"
+            . $this->nic . "', '"
+            . $this->gender . "', '"
+            . $this->dob . "', '"
+            . $this->address_line_1 . "', '"
+            . $this->address_line_2 . "', '"
+            . $this->address_line_3 . "', '"
+            . $this->district . "', '"
+            . $this->telephone_1 . "', '"
+            . $this->telephone_2 . "', '"
+            . $this->email . "', '"
+            . $this->ol . "', '"
+            . $this->al . "', '"
+            .   $createdAt  . "')";
 
         $db = new Database();
         $result = $db->readQuery($query);
@@ -91,7 +100,8 @@ class ApplyOnline {
         }
     }
 
-    public function all() {
+    public function all()
+    {
         $query = "SELECT * FROM `apply` ORDER BY inserted DESC";
         $db = new Database();
         $result = $db->readQuery($query);
@@ -103,59 +113,59 @@ class ApplyOnline {
         return $array_res;
     }
 
-//    public function allForApply() {
-//        $query = "SELECT * FROM `apply` WHERE `type` IN(1,3)";
-//        $db = new Database();
-//        $result = $db->readQuery($query);
-//        $array_res = array();
-//        while ($row = mysqli_fetch_array($result)) {
-//
-//            array_push($array_res, $row);
-//        }
-//        return $array_res;
-//    }
+    //    public function allForApply() {
+    //        $query = "SELECT * FROM `apply` WHERE `type` IN(1,3)";
+    //        $db = new Database();
+    //        $result = $db->readQuery($query);
+    //        $array_res = array();
+    //        while ($row = mysqli_fetch_array($result)) {
+    //
+    //            array_push($array_res, $row);
+    //        }
+    //        return $array_res;
+    //    }
 
-//    public function getCeterCoursesCount($id)
-//    {
-//        $query = "SELECT COUNT(id) as count FROM `course_by_apply_onlines` WHERE `apply_online_id`=" . $id;
-//        $db = new Database();
-//        $result = $db->readQuery($query);
-//        $array_res = array();
-//        while ($row = mysqli_fetch_array($result)) {
-//
-//            array_push($array_res, $row);
-//        }
-//        return $array_res[0];
-//    }
+    //    public function getCeterCoursesCount($id)
+    //    {
+    //        $query = "SELECT COUNT(id) as count FROM `course_by_apply_onlines` WHERE `apply_online_id`=" . $id;
+    //        $db = new Database();
+    //        $result = $db->readQuery($query);
+    //        $array_res = array();
+    //        while ($row = mysqli_fetch_array($result)) {
+    //
+    //            array_push($array_res, $row);
+    //        }
+    //        return $array_res[0];
+    //    }
 
-//    public function update() {
-//
-//        $query = "UPDATE  `apply` SET "
-//                . "`course_id` ='" . $this->course_id . "', "
-//                . "`type` ='" . $this->type . "', "
-//                . "`date` ='" . $this->date . "', "
-//                . "`first_name` ='" . $this->first_name . "', "
-//                . "`last_name` ='" . $this->last_name . "', "
-//                . "`nic` ='" . $this->nic . "', "
-//                . "`gender` ='" . $this->gender . "', "
-//                . "`address` ='" . $this->address . "', "
-//                . "`email` ='" . $this->email . "', "
-//                . "`mobile_number` ='" . $this->mobile_number . "' "
-//                . "WHERE `id` = '" . $this->id . "'";
-//
-//        $db = new Database();
-//        $result = $db->readQuery($query);
-//        if ($result) {
-//            return $this->__construct($this->id);
-//        } else {
-//            return FALSE;
-//        }
-//    }
+    //    public function update() {
+    //
+    //        $query = "UPDATE  `apply` SET "
+    //                . "`course_id` ='" . $this->course_id . "', "
+    //                . "`type` ='" . $this->type . "', "
+    //                . "`date` ='" . $this->date . "', "
+    //                . "`first_name` ='" . $this->first_name . "', "
+    //                . "`last_name` ='" . $this->last_name . "', "
+    //                . "`nic` ='" . $this->nic . "', "
+    //                . "`gender` ='" . $this->gender . "', "
+    //                . "`address` ='" . $this->address . "', "
+    //                . "`email` ='" . $this->email . "', "
+    //                . "`mobile_number` ='" . $this->mobile_number . "' "
+    //                . "WHERE `id` = '" . $this->id . "'";
+    //
+    //        $db = new Database();
+    //        $result = $db->readQuery($query);
+    //        if ($result) {
+    //            return $this->__construct($this->id);
+    //        } else {
+    //            return FALSE;
+    //        }
+    //    }
 
-    public function delete() {
+    public function delete()
+    {
         $query = 'DELETE FROM `apply` WHERE id="' . $this->id . '"';
         $db = new Database();
         return $db->readQuery($query);
     }
-
 }

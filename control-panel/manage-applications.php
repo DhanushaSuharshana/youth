@@ -1,4 +1,3 @@
-<!doctype html>
 <?php
 // ini_set('display_errors', '1');
 // ini_set('display_startup_errors', '1');
@@ -6,6 +5,7 @@
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 ?>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -79,15 +79,15 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 <tr>
                                                     <th>#</th>
                                                     <th>Date Time</th>
-                                                    <th>Full Name</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
                                                     <th>NIC</th>
                                                     <th>Gender</th>
                                                     <th>Center</th>
                                                     <th>Course</th>
                                                     <th>Duration Type</th>
-                                                    <th>First Name</th>
-                                                    <th>Last Name</th>
                                                     <th>DOB</th>
+                                                    <th>Full Name</th>
                                                     <th>Address</th>
                                                     <th>District</th>
                                                     <th>Contact No 1</th>
@@ -110,11 +110,12 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     $DISTRICT = new Districts($application['district']);
                                                     ?>
                                                     <tr>
-                                                        <td><?php echo $key; ?></td>
-                                                        <td><?php echo $application['inserted']; ?></td>
-                                                        <td><?php echo $application['full_name']; ?></td>
-                                                        <td><?php echo $application['nic']; ?></td>
-                                                        <td><?php echo $application['gender']; ?></td>
+                                                        <td style="width: 9%"><?php echo $key; ?></td>
+                                                        <td style="width: 15%"><?php echo $application['inserted']; ?></td>
+                                                        <td style="width: 15%"><?php echo $application['first_name']; ?></td>
+                                                        <td style="width: 15%"><?php echo $application['last_name']; ?></td>
+                                                        <td style="width: 12%"><?php echo $application['nic']; ?></td>
+                                                        <td style="width: 9%"><?php echo $application['gender']; ?></td>
                                                         <td><?php echo $CENTER->name; ?></td>
                                                         <td><?php echo $COURSE->name; ?></td>
                                                         <td><?php
@@ -124,9 +125,8 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                                 echo 'Part Time';
                                                             }
                                                             ?></td>
-                                                        <td><?php echo $application['first_name']; ?></td>
-                                                        <td><?php echo $application['last_name']; ?></td>
                                                         <td><?php echo $application['dob']; ?></td>
+                                                        <td><?php echo $application['full_name']; ?></td>
                                                         <td><?php echo $application['address_line_1'] . ',' . $application['address_line_2'] . ',' . $application['address_line_3']; ?></td>
                                                         <td><?php echo $DISTRICT->name; ?></td>
                                                         <td><?php echo $application['telephone_1']; ?></td>

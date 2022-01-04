@@ -1,14 +1,15 @@
-<!doctype html>
 <?php
 include '../class/include.php';
 include './auth.php';
 ?>
+<!doctype html>
+
 <html lang="en">
 
 <head>
 
     <meta charset="utf-8" />
-    <title>Manage Advertisement | Youth Service LTD</title>
+    <title>Manage News | Youth Service LTD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -57,7 +58,7 @@ include './auth.php';
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                    <li class="breadcrumb-item active">Manage Advertisement</li>>
+                                    <li class="breadcrumb-item active">Manage News</li>>
                                 </ol>
                             </div>
                         </div>
@@ -68,25 +69,25 @@ include './auth.php';
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Manage Advertisement</h4>
+                                <h4 class="card-title">Manage News</h4>
                                 <div class="row mt-3">
                                     <?php
-                                    $ADVERTISEMENT = new Advertisement(NULL);
-                                    foreach ($ADVERTISEMENT->all() as $key => $advertisement) {
+                                    $NEWS = new News(NULL);
+                                    foreach ($NEWS->all() as $key => $news) {
                                     ?>
-                                        <div class="col-md-6 col-xl-3" id="div<?php echo $advertisement['id'] ?>">
+                                        <div class="col-md-6 col-xl-3" id="div<?php echo $news['id'] ?>">
                                             <!-- Simple card -->
                                             <div class="card">
-                                                <img class="card-img-top img-fluid" src="../upload/advertisement/<?php echo $advertisement['image_name'] ?>" alt="<?php echo $advertisement['title'] ?>">
+                                                <img class="card-img-top img-fluid" src="../upload/news/<?php echo $news['image_name'] ?>" alt="<?php echo $news['title'] ?>">
                                                 <div class="card-body">
-                                                    <h4 class="card-title mb-3"><?php echo $advertisement['title'] ?></h4>
-                                                    <div class="badge bg-pill bg-soft-success font-size-14" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $advertisement['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> |
-                                                    <a href="create-advertisement-photo.php?id=<?php echo $advertisement['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-image   p-1"></i></a> |
+                                                    <h4 class="card-title mb-3"><?php echo $news['title'] ?></h4>
+                                                    <div class="badge bg-pill bg-soft-success font-size-14" type="button" data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $news['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> |
+                                                    <a href="create-news-photo.php?id=<?php echo $news['id'] ?>" class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-image   p-1"></i></a> |
 
-                                                    <a href="arrange-advertisement.php" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
+                                                    <a href="arrange-news.php" class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></a> |
 
                                                     <a href="#">
-                                                        <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $advertisement['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
+                                                        <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $news['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
                                                     </a>
                                                 </div>
                                             </div>
@@ -104,63 +105,75 @@ include './auth.php';
     </div>
     <!-- END layout-wrapper -->
     <?php
-    foreach ($ADVERTISEMENT->all() as $key => $advertisement) {
+    foreach ($NEWS->all() as $key => $news) {
         $key++;
     ?>
         <!--  Large modal example -->
-        <div class="modal fade bs-example-modal-lg-<?php echo $advertisement['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal fade bs-example-modal-lg-<?php echo $news['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="myLargeModalLabel">Edit Details : <?php echo $advertisement['title']; ?></h5>
+                        <h5 class="modal-title" id="myLargeModalLabel">Edit Details : <?php echo $news['title']; ?></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> </button>
                     </div>
                     <div class="modal-body">
-                        <form method="POST" id="form-data-<?php echo $advertisement['id']; ?>">
+                        <form method="POST" id="form-data-<?php echo $news['id']; ?>">
                             <div class="card-body">
-                               
-                                
                                 <div class="mb-3 row">
-                                    <label for="example-text-input" class="col-md-2 col-form-label">URL</label>
+                                    <label for="example-text-input" class="col-md-2 col-form-label">News Type</label>
                                     <div class="col-md-10">
-                                        <input class="form-control url" type="text" name="url" placeholder="Enter Advertisement URL" value="<?php echo $advertisement['url'] ?>">
+                                        <select id="news_type" class="form-control news_type" name="news_type">
+                                            <option value=""> -- Please Select News Type --</option>
+                                            <?php
+                                            $NEWS_TYPE = new NewsType(NULL);
+                                            foreach ($NEWS_TYPE->all() as $news_type) {
+                                                if ($news_type['id'] == $news['news_type']) {
+                                            ?>
+                                                    <option value="<?php echo $news_type['id'] ?>" selected=""> <?php echo $news_type['title'] ?></option>
+                                                <?php } else { ?>
+                                                    <option value="<?php echo $news_type['id'] ?>"> <?php echo $news_type['title'] ?></option>
+                                            <?php
+                                                }
+                                            }
+                                            ?>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="example-text-input" class="col-md-2 col-form-label">Title</label>
                                     <div class="col-md-10">
-                                        <input class="form-control title" type="text" name="title" placeholder="Enter Advertisement Title" value="<?php echo $advertisement['title'] ?>">
+                                        <input class="form-control" type="text" id="title" name="title" placeholder="Enter News Title" value="<?php echo $news['title'] ?>">
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="example-email-input" class="col-md-2 col-form-label">Image</label>
                                     <div class="col-md-10">
-                                        <input class="form-control image_name" type="file" name="image_name" value="">
-                                        <img width="200" class="img-responsive" src="../upload/advertisement/<?php echo $advertisement['image_name']; ?>">
+                                        <input class="form-control" type="file" id="image_name" name="image_name" value="">
+                                        <img width="200" class="img-responsive" src="../upload/news/<?php echo $news['image_name']; ?>">
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="example-url-input" class="col-md-2 col-form-label">Date</label>
                                     <div class="col-md-10">
-                                        <input class="form-control date" id="date_edit_<?php echo $advertisement['id']; ?>" type="text" name="date" placeholder="Enter Advertisement Date" value="<?php echo $advertisement['date']; ?>">
+                                        <input class="form-control date" id="date_edit_<?php echo $news['id']; ?>" type="text" name="date" placeholder="Enter News Date" value="<?php echo $news['date']; ?>">
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="example-url-input" class="col-md-2 col-form-label">Short Description</label>
                                     <div class="col-md-10">
-                                        <input class="form-control short_description" type="text"  name="short_description" placeholder="Short Description" value="<?php echo $advertisement['short_description']; ?>">
+                                        <input class="form-control" type="text" id="short_description" name="short_description" placeholder="Short Description" value="<?php echo $news['short_description']; ?>">
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="example-url-input" class="col-md-2 col-form-label">Description</label>
                                     <div class="col-md-10">
-                                        <textarea class="description" name="description"><?php echo $advertisement['description']; ?></textarea>
+                                        <textarea class="description" name="description"><?php echo $news['description']; ?></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
-                                        <input class="form-control id" type="hidden" value="<?php echo $advertisement['id']; ?>">
-                                        <button class="btn btn-primary edit-data" dataId="<?php echo $advertisement['id']; ?>" type="submit">Update</button>
+                                        <input class="form-control id" type="hidden" value="<?php echo $news['id']; ?>">
+                                        <button class="btn btn-primary edit-data" dataId="<?php echo $news['id']; ?>" type="submit">Update</button>
                                     </div>
                                 </div>
                             </div>
@@ -172,8 +185,8 @@ include './auth.php';
 
         <script>
             MCDatepicker.create({
-                    el: '#date_edit_<?php echo $advertisement['id']; ?>',
-                    selectedDate: new Date('<?php echo $advertisement['date'] ?>'),
+                    el: '#date_edit_<?php echo $news['id']; ?>',
+                    selectedDate: new Date('<?php echo $news['date'] ?>'),
                     customClearBTN: '',
                     minDate: new Date(),
                     // autoClose: true,
@@ -201,7 +214,7 @@ include './auth.php';
     <!-- App js -->
     <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
     <script src="assets/js/app.js"></script>
-    <script src="ajax/js/advertisement.js" type="text/javascript"></script>
+    <script src="ajax/js/news.js" type="text/javascript"></script>
     <script src="tinymce/js/tinymce/tinymce.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>

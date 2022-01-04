@@ -1,4 +1,3 @@
-<!doctype html>
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
@@ -7,6 +6,7 @@ $id = '';
 $id = $_GET['id'];
 $EVENT = new Event($id);
 ?>
+<!doctype html>
 <html lang="en">
 
 <head>

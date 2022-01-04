@@ -1,19 +1,17 @@
-<!doctype html>
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
-
-$id = '';
-$id = $_GET['id'];
-$COURSE = new Course($id);
 ?>
+<!doctype html>
+
 <html lang="en">
 
     <head>
 
         <meta charset="utf-8" />
-        <title>Course Subjects | Youth Service LTD </title>
+        <title>News Type | Youth Service LTD </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -21,10 +19,10 @@ $COURSE = new Course($id);
         <!-- DataTables -->
         <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+
         <!-- Responsive datatable examples -->
         <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />     
-        <link href="assets/css/preloader.css" rel="stylesheet" type="text/css"/>
+
         <!-- Bootstrap Css -->
         <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
@@ -32,16 +30,27 @@ $COURSE = new Course($id);
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <link href="plugin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/preloader.css" rel="stylesheet" type="text/css"/>
+
     </head>
 
 
     <body class="someBlock"> 
+
         <!-- Begin page -->
         <div id="layout-wrapper">
+
+
             <?php include './top-header.php'; ?>
             <!-- ========== Left Sidebar Start ========== -->
             <?php include './navigation.php'; ?>
-            <!-- Left Sidebar End --> 
+            <!-- Left Sidebar End -->
+
+
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
             <div class="main-content">
                 <div class="page-content">
                     <div class="container-fluid"> 
@@ -52,7 +61,7 @@ $COURSE = new Course($id);
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                                            <li class="breadcrumb-item active">Create subjects</li>
+                                            <li class="breadcrumb-item active">News Type</li>
                                         </ol>
                                     </div> 
                                 </div>
@@ -63,19 +72,19 @@ $COURSE = new Course($id);
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body"> 
-                                        <h4 class="card-title">Create "<?php echo $COURSE->name ?>" Subjects.</h4>  
+                                        <h4 class="card-title">Create News Type.</h4>  
                                         <form id="form-data">
                                             <div class="mb-3 row">
-                                                <label  class="col-md-2 col-form-label">Add your course subjects</label>
+                                                <label  class="col-md-2 col-form-label">News Type Title</label>
                                                 <div class="col-md-10">
-                                                    <input class="form-control" type="text" id="title"  name="title" placeholder="Please enter course subjects">
+                                                    <input class="form-control" type="text" id="title" name="title" placeholder="Enter News Type Title">
                                                 </div>
                                             </div>
 
                                             <div class="row">
                                                 <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
                                                     <button class="btn btn-primary " type="submit" id="create">Create</button> 
-                                                    <input type="hidden" name="id" value="<?php echo $id ?>">
+                                                    <input type="hidden" name="create">
                                                 </div>
                                             </div>
                                         </form>
@@ -88,12 +97,13 @@ $COURSE = new Course($id);
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body"> 
-                                        <h4 class="card-title">Manage Courses Subject</h4> 
+                                        <h4 class="card-title">Manage News Type</h4> 
+
                                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                             <thead>
                                                 <tr>
                                                     <th>#id</th> 
-                                                    <th>Subject Name</th>
+                                                    <th>News Type</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -101,17 +111,19 @@ $COURSE = new Course($id);
 
                                             <tbody>
                                                 <?php
-                                                $COURSE_SUBJECTS = new CourseSubjects(NULL);
-                                                foreach ($COURSE_SUBJECTS->getCourseSubjectByCourseId($id) as $key => $course_subject) {
+                                                $NEWS_TYPE = new NewsType(NULL);
+                                                foreach ($NEWS_TYPE->all() as $key => $news_type) {
                                                     $key++;
                                                     ?>
-                                                    <tr id="div<?php echo $course_subject['id'] ?>">
+                                                    <tr id="div<?php echo $news_type['id'] ?>">
                                                         <td><?php echo $key ?></td>
-                                                        <td> <?php echo $course_subject['title'] ?></td> 
+                                                        <td> <?php echo $news_type['title'] ?></td> 
                                                         <td> 
-                                                            <a href="" ><div class="badge bg-pill bg-soft-success font-size-14"><i class="fas fa-pencil-alt p-1"></i></div> </a>| 
-                                                            <div class="badge bg-pill bg-soft-primary font-size-14"><i class="fas fa-exchange-alt  p-1"></i></div> | 
-                                                            <a href="#"><div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $course_subject['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div></a>
+                                                            <div class="badge bg-pill bg-soft-success font-size-14" type="button"  data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg-<?php echo $news_type['id']; ?>"><i class="fas fa-pencil-alt p-1"></i></div> | 
+                                                            <!-- <a href="manage-courses.php?id=<?php echo $news_type['id'] ?>"><div class="badge bg-pill bg-soft-warning font-size-14"><i class="fas fa-address-card p-1"></i></div></a>   -->
+                                                            <a href="#">
+                                                                <div class="badge bg-pill bg-soft-danger font-size-14 delete-data" data-id="<?php echo $news_type['id']; ?>"><i class="fas fa-trash-alt p-1"></i></div>
+                                                            </a>
                                                         </td>
                                                     </tr>
                                                 <?php } ?>
@@ -127,6 +139,43 @@ $COURSE = new Course($id);
             </div>  
         </div> 
 
+        <?php
+        foreach ($NEWS_TYPE->all() as $key => $news_type) {
+            $key++;
+            ?>
+            <!--  Large modal example -->
+            <div class="modal fade bs-example-modal-lg-<?php echo $news_type['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Edit Details : <?php echo $news_type['title']; ?></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">    </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" id="form-data-<?php echo $news_type['id']; ?>">
+                                <div class="card-body">   
+                                    <div class="mb-3 row">
+                                        <label for="example-text-input" class="col-md-2 col-form-label">News Type</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control title" type="text"    name="title" placeholder="Enter News Title" value="<?php echo $news_type['title'] ?>">
+                                        </div>
+                                    </div> 
+                                    <div class="row">
+                                        <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
+                                            <input class="form-control id" type="hidden" value="<?php echo $news_type['id']; ?>">
+                                            <button class="btn btn-primary edit-data" dataId="<?php echo $news_type['id']; ?>"  type="submit">Update</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>  
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <?php
+        }
+        ?>
+
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
 
@@ -138,7 +187,7 @@ $COURSE = new Course($id);
         <script src="assets/libs/node-waves/waves.min.js"></script>
         <script src="assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
         <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
-        <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
+
         <!-- Required datatable js -->
         <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
         <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -153,15 +202,13 @@ $COURSE = new Course($id);
         <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
 
         <!-- Responsive examples -->
-        <script src="assets/libs/select2/js/select2.min.js"></script>
-        <script src="assets/js/pages/form-advanced.init.js"></script>
-
         <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
         <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
         <script src="plugin/sweetalert/sweetalert.min.js" type="text/javascript"></script>
         <!-- Datatable init js -->
         <script src="assets/js/pages/datatables.init.js"></script>
-        <script src="ajax/js/course-subjects.js" type="text/javascript"></script>
+        <script src="ajax/js/news-type.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.preloader.min.js" type="text/javascript"></script>
         <!-- App js -->
         <script src="assets/js/app.js"></script>
 

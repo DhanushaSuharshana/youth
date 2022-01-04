@@ -1,11 +1,12 @@
-<!doctype html>
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
-
 $id = '';
 $id = $_GET['id'];
 $COURSE = new Course($id);
+?>
+<!doctype html>
+
 ?>
 <html lang="en">
 
