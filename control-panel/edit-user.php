@@ -2,6 +2,11 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
+
+$id = '';
+$id = $_GET['id'];
+$USER = new User($id);
+
 ?>
 <html lang="en">
 
@@ -83,7 +88,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         <div class="mb-3 row">
                                             <label for="example-text-input" class="col-md-2 col-form-label">Name</label>
                                             <div class="col-md-10">
-                                                <input class="form-control" type="text" id="name" name="name">
+                                                <input class="form-control" type="text" id="name" name="name" value="<?php echo $USER->name ?>">
                                             </div>
                                         </div>
 
@@ -93,11 +98,20 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 <select class="form-control" name="type" id="type">
                                                     <option value="">-- Select User type -- </option>
                                                     <?php
+                                                    
                                                     $USER_TYPE = new UserType(NULL);
                                                     foreach ($USER_TYPE->all() as $user_type) {
+                                                        if ($user_type['id'] == $USER->type) {
                                                     ?>
-                                                        <option value="<?php echo $user_type['id'] ?>"><?php echo $user_type['name'] ?></option>
+                                                            <option value="<?php echo $user_type['id'] ?>" selected=""><?php echo $user_type['name'] ?></option>
+                                                        <?php
+                                                        } else {
+                                                        ?>
+                                                            <option value="<?php echo $user_type['id'] ?>" s ><?php echo $user_type['name'] ?></option>
+
+
                                                     <?php
+                                                        }
                                                     }
                                                     ?>
                                                 </select>
@@ -107,29 +121,25 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         <div class="mb-3 row">
                                             <label for="example-url-input" class="col-md-2 col-form-label">Email</label>
                                             <div class="col-md-10">
-                                                <input class="form-control" type="text" id="email" name="email">
+                                                <input class="form-control" type="text" id="email" name="email" value="<?php echo  $USER->email ?>">
                                             </div>
                                         </div>
 
                                         <div class="mb-3 row">
                                             <label for="example-url-input" class="col-md-2 col-form-label">User Name</label>
                                             <div class="col-md-10">
-                                                <input class="form-control" type="url" id="username" name="username">
+                                                <input class="form-control" type="url" id="username" name="username" value="<?php echo  $USER->username ?>">
                                             </div>
                                         </div>
-                                        <div class="mb-3 row">
-                                            <label for="example-url-input" class="col-md-2 col-form-label">Password</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control" type="password" id="password" name="password">
-                                            </div>
-                                        </div>
+
 
                                         <div class="row">
                                             <div class="col-12" style="display: flex; justify-content: flex-end;margin-top: 15px;">
-                                                <button class="btn btn-primary " type="submit" id="create">Create</button>
+                                                <button class="btn btn-primary " type="submit" id="update">Update</button>
 
                                             </div>
-                                            <input type="hidden" name="create">
+                                            <input type="hidden" name="update">
+                                            <input type="hidden" name="id" value="<?php echo $id ?>">
 
                                         </div>
                                     </form>
@@ -139,53 +149,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                         </div> <!-- end col -->
                     </div>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body">
 
-                                    <h4 class="card-title">Manage Users</h4>
-
-
-                                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                                        <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Type</th>
-                                                <th>Email</th>
-                                                <th>Username</th>
-                                                <th>Options</th>
-                                            </tr>
-                                        </thead>
-
-
-                                        <tbody>
-                                            <?php
-                                            $USER = new user(NULL);
-                                            foreach ($USER->all() as $user) {
-                                            ?>
-                                                <tr>
-                                                    <td><?php echo $user['name'] ?></td>
-                                                    <?php
-                                                    $USER_TYPE = new UserType($user['id'])
-                                                    ?>
-                                                    <td><?php echo $USER_TYPE->name ?></td>
-                                                    <td><?php echo $user['email']  ?></td>
-                                                    <td><?php echo $user['username']  ?></td>
-                                                    <td>
-                                                        <a href="edit-user.php?id=<?php echo $user['id'] ?>">
-                                                            <div class="badge bg-pill bg-soft-success font-size-14" type="button"><i class="fas fa-pencil-alt p-1"></i></div>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            <?php } ?>
-                                        </tbody>
-                                    </table>
-
-                                </div>
-                            </div>
-                        </div> <!-- end col -->
-                    </div>
                 </div>
             </div>
             <!-- End Page-content -->
